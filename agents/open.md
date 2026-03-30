@@ -14,9 +14,9 @@
 >    cd <path-to-AI_Memory>
 >    git pull origin main
 >    ```
->    - The canonical repo is **https://github.com/Qosil/AI_Memory_Open**
+>    - The canonical repo is **https://github.com/hassqass18/AI_Memory_Brain**
 >    - If you are in Cowork, the folder is already mounted — just confirm files are current.
->    - If the repo has not been cloned yet: `git clone https://github.com/Qosil/AI_Memory_Open.git`
+>    - If the repo has not been cloned yet: `git clone https://github.com/hassqass18/AI_Memory_Brain.git`
 >
 > 1. **Read Core Context Files:** Read these files to understand the system:
 >    - `AI_Memory_Open/Master-AI-Context.md` — System overview, project portfolio, folder structure, operational standards, shared resources, and session infrastructure

@@ -3,7 +3,7 @@
 **Document Purpose:** This is the primary operational context file for any AI assistant working on the **AI Memory system itself** — its structure, standards, policies, shared resources, cross-project coordination, and infrastructure. This is NOT a project-level context file. Each project has its own `Master-AI-Context.md` inside its `{ProjectName}_AI_Training/` folder.
 
 **Memory Design Version:** 1.1
-**Last Updated:** 2026-03-29
+**Last Updated:** 2026-03-30
 **System Owner:** Hassan Qaseem (hassan.qaseem@gc-usa.com)
 **Organization:** Provecta Group
 **Repository:** https://github.com/hassqass18/AI_Memory_Brain
@@ -40,7 +40,7 @@ The system operates at two levels:
 
 | Project | Folder | Type | Status | Description |
 |---------|--------|------|--------|-------------|
-| SierraHomes_AmericanDream | `projects/SierraHomes_AmericanDream_AI_Training/` | Real Estate Development | Phase 1 — Pre-Launch | 108-unit residential apartment tower, Nyali, Mombasa, Kenya. G+11 floors. KES 910M dev cost. KES 1.75B gross revenue. Delivery August 2029. |
+| SierraHomes_AmericanDream | `projects/SierraHomes_AmericanDream_AI_Training/` | Real Estate Development | Phase 1 — Pre-Launch / Stage 2 Active | 108-unit residential apartment tower, Nyali, Mombasa, Kenya. G+11 floors. KES 910M dev cost. KES 1.296B gross revenue. Delivery August 2029. Stage 1 complete (drawings received). Stage 2 active (permits, SPV, title). M1 marketing milestone complete. |
 
 ---
 
@@ -172,8 +172,9 @@ CRM integration is configured during setup (`setup-AI-Memory.md`).
 
 ## 9. Session History & Handover
 
-- **Latest Session:** [AI-Session-Summary-2026-03-29_2200.md](session-summary/AI-Session-Summary-2026-03-29_2200.md) — Initial setup: owner, keys, models, standards configured
-- **Latest Decisions:** [Key-Decisions-2026-03-29_2200.md](decisions-learnings/Key-Decisions-2026-03-29_2200.md) — Enterprise OS, primary model, standards, repo URL
+- **Latest Session:** [AI-Session-Summary-2026-03-30_0000.md](session-summary/AI-Session-Summary-2026-03-30_0000.md) — SierraHomes M1 milestone complete (5/5 tasks), American Dream Stage 2 activated (15 permit tasks), Notion deliverables sub-page pattern established
+- **Previous Session:** [AI-Session-Summary-2026-03-29_2200.md](session-summary/AI-Session-Summary-2026-03-29_2200.md) — Initial setup: owner, keys, models, standards configured
+- **Latest Decisions:** [Key-Decisions-2026-03-30_0000.md](decisions-learnings/Key-Decisions-2026-03-30_0000.md) — Deliverables sub-page pattern, WhatsApp-first strategy, rooftop hero differentiator, Stage 2 activation, Notion API learnings
 - **Master Indexes:** [Key-Decisions.md](Key-Decisions.md), [Sessions.md](Sessions.md)
 - **Risk Registry:** [Risk-Registry.md](Risk-Registry.md)
 - **Next Steps:** [NextSteps.md](NextSteps.md)
