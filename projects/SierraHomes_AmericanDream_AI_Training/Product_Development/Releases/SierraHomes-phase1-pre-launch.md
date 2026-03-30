@@ -60,12 +60,13 @@ Establish the legal, financial, marketing, and sales foundation required to laun
   - **Acceptance Criteria:** Signed reservation agreement template in `Legal/`; used for all pre-permit sign-ups.
   - **Status:** Not Started
 
-- [ ] **P1-LEG-005** — Submit Development Permit Application
+- [ ] **P1-LEG-005** — Submit Development Permit / Building License Application
   - **Owner:** `[Human]` — Hassan / legal counsel
   - **Priority:** 🔴 High
   - **Description:** Submit full development permit application to Mombasa County with all required architectural drawings, structural calculations, and supporting documents.
-  - **Acceptance Criteria:** Application submitted and receipt acknowledgement from Mombasa County. Application reference number logged.
-  - **Status:** Not Started
+  - **⚠️ BLOCKER:** Rajab was assigned Architectural, Structural, and Mechanical drawings in September 2025. As of 2026-03-30 these are not started and overdue by 6+ months. Hassan must chase Rajab immediately — permit application cannot proceed without these drawings. *(Risk R-010)*
+  - **Acceptance Criteria:** All drawings received from Rajab; application submitted; receipt acknowledgement from Mombasa County; application reference number logged.
+  - **Status:** Blocked — awaiting drawings from Rajab
 
 ---
 
@@ -199,19 +200,13 @@ Establish the legal, financial, marketing, and sales foundation required to laun
 
 ### Domain: Executive / Strategy
 
-- [ ] **P1-EXE-001** — Register AI Memory to GitHub
+- [x] **P1-EXE-001** — Register AI Memory to GitHub
   - **Owner:** `[Human]` — Hassan
   - **Priority:** 🔴 High
   - **Description:** Push all AI Memory files (including this initialized project memory) to GitHub repository `hassqass18/AI_Memory_Brain`.
-  - **Command:**
-    ```bash
-    cd AI_Memory_Brain
-    git add .
-    git commit -m "PROJECT_MEMORY_INIT: SierraHomes_AmericanDream full initialization"
-    git push origin main
-    ```
+  - **Note:** Automated via `git-push.sh` in repo root. Run `bash git-push.sh` from the AI_Memory_Brain directory for future pushes.
   - **Acceptance Criteria:** All files visible at https://github.com/hassqass18/AI_Memory_Brain
-  - **Status:** Not Started
+  - **Status:** ✅ Complete — Session 2 commit pushed 2026-03-30
 
 - [ ] **P1-EXE-002** — Define Equity Investor Terms & Structure
   - **Owner:** `[AI+Human]`

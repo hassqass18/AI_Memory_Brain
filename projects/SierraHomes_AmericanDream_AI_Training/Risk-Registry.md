@@ -2,7 +2,7 @@
 
 **Purpose:** Consolidated risk tracking for the SierraHomes_AmericanDream development. All significant risks are logged here with probability, impact, and mitigation strategies.
 
-**Last Updated:** 2026-03-29
+**Last Updated:** 2026-03-30
 **Owner:** Hassan Qaseem / Provecta Group
 
 ---
@@ -145,6 +145,34 @@
 
 ---
 
+### R-010 — Architectural & Structural Drawings Overdue (Rajab)
+| Field | Detail |
+|-------|--------|
+| **Category** | PMO / Legal |
+| **Risk** | Rajab was assigned Architectural, Structural, and Mechanical drawings in September 2025. As of March 2026 these have not been started — now 6+ months overdue. Without these drawings, the Building License / development permit application cannot be submitted. |
+| **Probability** | H (already materialising) |
+| **Impact** | H — Directly blocks permit application; delays construction start; pushes delivery beyond August 2029 if not resolved immediately |
+| **Phase** | Phase 1 |
+| **Status** | Open — Active blocker |
+| **Mitigation** | Hassan to chase Rajab immediately. Set hard deadline for drawings delivery. If Rajab cannot deliver, identify alternative architectural/structural engineering firm in Mombasa. Do not allow Phase 1 permit timeline to slip further. |
+| **Owner** | Human (Hassan) |
+
+---
+
+### R-011 — Alternative Site: Canon Motors (Lynx Road)
+| Field | Detail |
+|-------|--------|
+| **Category** | Strategy / Land |
+| **Risk / Opportunity** | If the current Nyali site faces unresolvable title issues, price disputes (current valuation discrepancy: ~KES 100M market value vs KES 150M claimed by vendor), or regulatory delays, development may need to relocate. A 1-acre alternative site behind the Shell Petrol Station on Lynx Road is available via Canon Motors. |
+| **Probability** | L (contingency only) |
+| **Impact** | H — Site relocation would reset permit, design, and legal process; significant delay |
+| **Phase** | Phase 1 |
+| **Status** | Open — Monitor. Sylvester to maintain Canon Motors relationship as strategic fallback. |
+| **Mitigation** | Resolve Nyali site title and valuation definitively in Phase 1. If title is clean and valuation agreed, Canon Motors site is deprioritised. Keep relationship warm — do not close the door. |
+| **Owner** | Human (Sylvester / Hassan) |
+
+---
+
 ## Closed Risks
 
 *(None yet — risks will be moved here when resolved or no longer relevant)*
@@ -164,6 +192,8 @@
 | R-007 | Operations/PMO | Contractor performance | L-M | H | Not Yet Active |
 | R-008 | Legal/Regulatory | NEMA EIA requirement | M | M | Open |
 | R-009 | Finance/Sales | 1BR margin compression | H | M | Open (Mitigated) |
+| R-010 | PMO/Legal | Architectural drawings overdue (Rajab) | H | H | **Active Blocker** |
+| R-011 | Strategy/Land | Alternative site — Canon Motors (Lynx Road) | L | H | Monitor |
 
 ---
 

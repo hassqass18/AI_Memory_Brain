@@ -2,7 +2,7 @@
 
 **Scope:** Phase 1 — Pre-Launch (Now – Q2 2026). Prioritized immediate actions for Hassan and the AI to execute.
 
-**Last Updated:** 2026-03-29
+**Last Updated:** 2026-03-30
 
 ---
 
@@ -14,17 +14,13 @@
 
 2. **[Human] Confirm NEMA EIA Requirement** — Ask legal counsel whether a NEMA Environmental Impact Assessment is required. If yes, commission immediately as it adds 3–6 months. *(Risk R-008)*
 
-3. **[AI+Human] Launch Pre-Permit Reservations Campaign** — Begin marketing to diaspora and local investors immediately. Target 20+ reservations before permit (Q3 2026). Rooftop movie theatre & bar is the centrepiece differentiator.
+3. **[Human] Chase Rajab — Architectural, Structural & Mechanical Drawings** — Rajab was assigned all three drawing packages in September 2025 and has not started. These are required to submit the building license / development permit application. This is now a critical path blocker. Also chase the Building License application itself. *(Risk R-010)*
 
-4. **[AI] Draft Investor Deck** — Prepare investor deck for the ~KES 326M equity gap. Present ~92.4% ROC, 4-phase structure, unit mix, and return waterfall. Target diaspora HNW investors and property funds. *(Risk R-004)*
+4. **[AI+Human] Launch Pre-Permit Reservations Campaign** — Begin marketing to diaspora and local investors immediately. Target 20+ reservations before permit (Q3 2026). Rooftop movie theatre & bar is the centrepiece differentiator.
 
-5. **[Human] Push AI Memory to GitHub** — Run from terminal:
-   ```bash
-   cd AI_Memory_Brain
-   git add .
-   git commit -m "Session 2: Notion populated — SierraHomes_AmericanDream"
-   git push origin main
-   ```
+5. **[AI] Draft Investor Deck** — Prepare investor deck for the ~KES 326M equity gap. Present ~92.4% ROC, 4-phase structure, unit mix, and return waterfall. Target diaspora HNW investors and property funds. *(Risk R-004)*
+
+6. **[Human] Assess Canon Motors Alternative Site** — A 1-acre alternative site behind the Shell Petrol Station on Lynx Road (owned by Canon Motors) has been identified. If current Nyali site negotiations or title issues create delays, this site should be evaluated as a viable alternative. Assign Sylvester to maintain the relationship. *(See Operations/PG-Consulting-Master-Summary-2026-03-30.md)*
 
 ---
 
@@ -60,8 +56,11 @@
 
 | Item | Date | Notes |
 |------|------|-------|
+| EcoTecture contract signed | 2026-01-06 | Contract between PG Consulting / Provecta Group and EcoTecture signed Jan 5–6, 2026. EcoTecture is confirmed as project partner. |
+| GitHub push automated | 2026-03-30 | git-push.sh script created in repo root; reads token from HassanKeys.txt; run `bash git-push.sh` from AI_Memory_Brain directory |
 | Notion page fully populated | 2026-03-30 | Project overview, pricing, 24 task checkboxes, milestones, risk registry, key decisions all live at notion.so/SierraHomes-AmericanDream-332cea280b1180abb5d0fcb7ebd17a85 |
 | Notion API format documented | 2026-03-30 | saveTransactionsFanout endpoint with spaceId/blockId/userId stored in session summary |
+| PG Consulting master summary added to Operations/ | 2026-03-30 | Cross-project financial and personnel context now linked as Tier 2 in Master-AI-Context.md |
 | SierraHomes_AmericanDream project memory initialized | 2026-03-29 | All foundation docs created: Master-AI-Context, Architecture, Phase 1 plan, all agent protocols |
 | AI Memory system initialized (root level) | 2026-03-29 | Owner, keys, models, standards all configured |
 

@@ -19,41 +19,52 @@
 
 ## 1. Project Overview
 
-SierraHomes_AmericanDream is a **108-unit residential apartment complex** located in **Nyali, Mombasa, Kenya**. The development comprises Ground + 11 floors (12 storeys) with a premium amenity stack including a rooftop movie theatre and bar, communal pool, gym, parking, and 24-hour gated security.
+SierraHomes_AmericanDream is a **108-unit residential apartment complex** located in **Nyali, Mombasa, Kenya** on **Plot MN/I/1691**. The development is a **4-tower complex** (Lincoln, Washington, Franklin, Benjamin Towers), each 11 floors, with a premium amenity stack including swimming pool, children's play area, communal gardens, gym, rooftop movie theatre and bar, and 24-hour gated security.
 
-**Sales model:** For-sale only. 40% of units (~43) sold off-plan during construction to fund ~64% of the development cost; 60% (~65 units) sold at/near completion. Total gross revenue at full sell-out: KES 1,751,000,000. Gross profit: KES 841,038,079 (~92.4% ROC).
+**Developer:** Sierra USA Homes Ltd. | **Architect:** Ecotecture Ltd. (drawings complete)
 
-**Current phase:** Phase 1 — Pre-Launch (Now – Q2 2026). Design complete, permits pending. Off-plan sales campaign launching immediately.
+**Sales model:** For-sale only. Land is acquired via a **22% equity deal** — landowners receive 23 units (7×1BR + 8×2BR + 8×3BR) + KES 42M cash in lieu of a land purchase price. Developer sells 63 units off-plan + 22 units on-market = 85 units. Total developer gross revenue: KES 1,296,000,000. Net developer profit: KES 343,998,079 (43.4% ROI on hard costs).
+
+**Unit pricing:** 1BR KES 6M/9M | 2BR KES 13M/17M | 3BR KES 18M/23M (off-plan/on-market)
+
+**Current phase:** Phase 1 — Pre-Launch (Now – Q2 2026). Architectural drawings complete. Structural/mechanical drawings and building license application overdue (Rajab Hatibu). Permits pending.
 
 ---
 
 ## 2. Development Stack
 
-| Category | Detail |
-|----------|--------|
-| Project management | Zoho Projects (via Zoho One) |
-| CRM / Sales pipeline | Zoho CRM |
-| Communication | Slack |
-| Document repository | GitHub (AI Memory), Google Drive / SharePoint (working docs) |
-| Financial modelling | Excel / Google Sheets |
-| Marketing | To be determined (campaign platform TBD) |
-| AI Memory | This repository — hassqass18/AI_Memory_Brain |
+| Category             | Detail                                                             |
+| -------------------- | ------------------------------------------------------------------ |
+| Project management   | Zoho Projects (via Zoho One)                                       |
+| CRM / Sales pipeline | Zoho CRM                                                           |
+| Communication        | Slack                                                              |
+| Document repository  | GitHub (AI Memory), Google Drive / SharePoint (working docs)       |
+| Financial modelling  | Excel / Google Sheets                                              |
+| Marketing            | Meta Ads, Google Ads, LinkedIn, Youtube, Tik-Tok, Email Marketing  |
+| AI Memory            | This repository — hassqass18/AI_Memory_Brain                       |
 
 ---
 
-## 3. Project Structure (Floor-by-Floor Overview)
+## 3. Site & Tower Configuration
 
 ```
-SierraHomes_AmericanDream — Nyali, Mombasa
-├── Ground Floor       — Lobby, parking entrance, security post, amenities access
-├── Floors 1–11        — Residential units (~9 units/floor)
-│   ├── 1BR units      — 24 total across the tower
-│   ├── 2BR units      — 36 total across the tower
-│   └── 3BR units      — 48 total across the tower
-└── Rooftop (Level 11) — Movie theatre, bar, pool terrace, gym
+SierraHomes_AmericanDream — Plot MN/I/1691, Nyali, Mombasa
+├── Lincoln Tower       — 3BR | 22 units | 2,617.58 sqft/unit | 11 floors
+├── Washington Tower    — 3BR | 22 units | 2,617.58 sqft/unit | 11 floors
+├── Benjamin Tower      — 2BR | 22 units | 1,311.18 sqft/unit | 11 floors
+└── Franklin Tower      — 1BR | 22 units |   966.44 sqft/unit | 11 floors
+                                          + additional 1BR units to reach 108 total
+Site Amenities:
+├── Swimming pool (between Washington & Lincoln Towers)
+├── Central garden
+├── Children's play area (NE corner)
+├── Manicured lawn (western boundary)
+├── 9M access road + gated entry
+└── Rooftop: Movie theatre, bar, gym
 ```
 
-**Full unit breakdown:** See [SierraHomes_AmericanDream_architecture.md](./Product_Development/SierraHomes_Tower/SierraHomes_AmericanDream_architecture.md)
+**Full unit breakdown and all dimensions:** See [SierraHomes_AmericanDream_architecture.md](./Product_Development/SierraHomes_Tower/SierraHomes_AmericanDream_architecture.md)
+**Drawing set reference:** See [Architectural-Drawings-Reference.md](./Product_Development/SierraHomes_Tower/Architectural-Drawings-Reference.md)
 
 ---
 
@@ -189,8 +200,11 @@ All changes outside formal phase stories are logged in `Product_Development/Rele
 
 ### Phase 1 — Pre-Launch (Now – Q2 2026)
 - **Phase File:** `Product_Development/Releases/SierraHomes-phase1-pre-launch.md`
-- **Completion:** 0% — Project initialized. Phase 1 actions ready to execute.
+- **Completion:** ~5% — Project initialized. P1-EXE-001 (GitHub) complete.
 - **Key milestone:** 20+ reservations before permit (Q3 2026)
+- **Active Blocker:** Rajab's architectural, structural & mechanical drawings are 6+ months overdue (assigned Sep 2025, not started as of Mar 2026). Permit application cannot proceed until drawings are delivered. *(Risk R-010)*
+- **EcoTecture:** Contract with EcoTecture (project partner) signed Jan 5–6, 2026. ✅
+- **Alternative Site:** 1-acre site on Lynx Road behind Shell Petrol Station (Canon Motors) identified as strategic fallback if Nyali title/valuation issues materialise. Sylvester managing relationship. *(Risk R-011)*
 
 ### Phase 2 — Off-Plan Launch (Q3 2026 – Q2 2027)
 - **Status:** Pending
@@ -239,9 +253,4 @@ SierraHomes_AmericanDream is one of several concurrent PG Consulting projects. D
 - **Rajab** has overdue architectural deliverables for Sierra Homes USA (drawings assigned Sep 2025, still not started)
 - **Sylvester** is handling high-level negotiations — available for strategic/executive escalation
 - **EcoTecture** is the active project partner; contract already signed
-- **Canon Motors site** (1 acre, Lynx Road, behind Shell Station) is an alternative land option still in play — relevant to any land/site risk discussions
-- **Stock tickers** tracked are building-material proxies: Steel (X, NUE), Cement (VMC), Lumber (LPX), Copper (FCX), Fuel (XOM), Paint (SHW), Glass (APD) — use for construction cost sensitivity analysis
-
----
-
-*Master AI Context for SierraHomes_AmericanDream — initialized 2026-03-29. Updated every session by closure protocol.*
+- **Canon Motors site** (1 acre, Lynx Road, behind Shell
