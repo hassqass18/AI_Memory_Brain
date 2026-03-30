@@ -31,6 +31,12 @@
 | KD-011 | 2026-03-30 | Integrations | Notion content added as structured text blocks (not databases) — speed vs. schema complexity trade-off | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
 | KD-012 | 2026-03-30 | Integrations | Notion populated via internal saveTransactionsFanout API using browser session cookies — public API CORS-blocked from sandbox | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
 | KD-013 | 2026-03-30 | PMO | Phase 1 tasks represented as 24 to_do checkboxes (20 stories + 4 exec items) grouped by domain in Notion | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
+| KD-014 | 2026-03-30 | Integrations | GitHub push automated via git-push.sh; reads token from HassanKeys.txt; runs from local terminal | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-015 | 2026-03-30 | Architecture | 4-tower complex confirmed: Lincoln (3BR), Washington (3BR), Franklin (1BR), Benjamin (2BR) on Plot MN/I/1691 | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-016 | 2026-03-30 | Finance/Land | Land deal: 22% equity — landowners get 23 units (7×1BR+8×2BR+8×3BR) + KES 42M cash; no cash land purchase | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-017 | 2026-03-30 | Finance | Per-unit construction costs confirmed: 1BR KES 4M, 2BR KES 6M, 3BR KES 10M (total KES 792M) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-018 | 2026-03-30 | Finance | Revised developer model: revenue KES 1.296B, net profit KES 344M, ROI 43.4%; equity gap ~KES 120M | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-019 | 2026-03-30 | Integrations | Zoho MCP server: zero deps, runs locally on Windows, tokens in .zoho-tokens.json; 72 tools when live | Pending | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
 
 ---
 
@@ -38,16 +44,21 @@
 
 | Keyword | Relevant Decision IDs |
 |---------|----------------------|
-| Units / unit mix / count | KD-001 |
-| Development cost / budget / construction cost / soft costs | KD-002 |
+| Units / unit mix / count | KD-001, KD-015 |
+| Development cost / budget / construction cost / soft costs | KD-002, KD-017, KD-018 |
 | Pricing / price / off-plan price / on-plan price | KD-003 |
-| Sales model / off-plan / on-plan / split | KD-004 |
-| Financing / equity / investor / gap | KD-005 |
+| Sales model / off-plan / on-plan / split | KD-004, KD-018 |
+| Financing / equity / investor / gap | KD-005, KD-018 |
 | Sales priority / sales order / margin | KD-006 |
-| Unit size / sqft / sqm / floor area | KD-007 |
+| Unit size / sqft / sqm / floor area | KD-007, KD-015 |
 | Sales launch / reservations / pre-permit | KD-008 |
 | Marketing / differentiator / rooftop / amenity | KD-009 |
 | Construction / timeline / programme / permits / completion | KD-010 |
+| Tower / building / site / plot | KD-015 |
+| Land / landowner / equity deal | KD-016 |
+| Revenue / profit / ROI / ROC | KD-018 |
+| GitHub / git / push / automation | KD-014 |
+| Zoho / CRM / projects / MCP | KD-019 |
 
 ---
 

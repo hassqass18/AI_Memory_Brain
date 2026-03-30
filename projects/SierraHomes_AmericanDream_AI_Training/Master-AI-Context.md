@@ -187,8 +187,8 @@ All changes outside formal phase stories are logged in `Product_Development/Rele
 
 ## 9. Session History & Handover
 
-- **Latest Summary:** *(updated by closure protocol)*
-- **Latest Decisions:** *(updated by closure protocol)*
+- **Latest Summary:** 2026-03-30 Session 3 — 4-tower architecture confirmed, financials revised (KES 1.296B revenue / KES 344M profit / 43.4% ROI), land deal structure (22% to landowners) confirmed, git-push.sh automated, Zoho MCP setup in progress
+- **Latest Decisions:** KD-014 (git automation), KD-015 (4-tower design), KD-016 (land deal 22% equity), KD-017 (construction costs), KD-018 (revised financials), KD-019 (Zoho MCP)
 - **Master Indexes:** [Key-Decisions.md](./Key-Decisions.md), [Sessions.md](./Sessions.md)
 - **Risk Registry:** [Risk-Registry.md](./Risk-Registry.md)
 - **Next Steps:** [NextSteps.md](./NextSteps.md)

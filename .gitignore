@@ -13,3 +13,4 @@ keys.txt
 # OS files
 .DS_Store
 Thumbs.db
+git-push.sh
