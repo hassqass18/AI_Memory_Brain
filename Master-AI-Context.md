@@ -3,7 +3,7 @@
 **Document Purpose:** This is the primary operational context file for any AI assistant working on the **AI Memory system itself** — its structure, standards, policies, shared resources, cross-project coordination, and infrastructure. This is NOT a project-level context file. Each project has its own `Master-AI-Context.md` inside its `{ProjectName}_AI_Training/` folder.
 
 **Memory Design Version:** 1.1
-**Last Updated:** 2026-03-30
+**Last Updated:** 2026-03-31
 **System Owner:** Hassan Qaseem (hassan.qaseem@gc-usa.com)
 **Organization:** Provecta Group
 **Repository:** https://github.com/hassqass18/AI_Memory_Brain
@@ -172,9 +172,9 @@ CRM integration is configured during setup (`setup-AI-Memory.md`).
 
 ## 9. Session History & Handover
 
-- **Latest Session:** [AI-Session-Summary-2026-03-30_0000.md](session-summary/AI-Session-Summary-2026-03-30_0000.md) — SierraHomes M1 milestone complete (5/5 tasks), American Dream Stage 2 activated (15 permit tasks), Notion deliverables sub-page pattern established
-- **Previous Session:** [AI-Session-Summary-2026-03-29_2200.md](session-summary/AI-Session-Summary-2026-03-29_2200.md) — Initial setup: owner, keys, models, standards configured
-- **Latest Decisions:** [Key-Decisions-2026-03-30_0000.md](decisions-learnings/Key-Decisions-2026-03-30_0000.md) — Deliverables sub-page pattern, WhatsApp-first strategy, rooftop hero differentiator, Stage 2 activation, Notion API learnings
+- **Latest Session:** [AI-Session-Summary-2026-03-31_2017.md](session-summary/AI-Session-Summary-2026-03-31_2017.md) — Marketing Agent activated; SierraHomes website built (V1) and revised (V2): Seraphic design, Leaflet neighbourhood map, 3 towers, pricing removed, tabbed floor plans section
+- **Previous Session:** [AI-Session-Summary-2026-03-30_0000.md](session-summary/AI-Session-Summary-2026-03-30_0000.md) — SierraHomes M1 milestone complete (5/5 tasks), American Dream Stage 2 activated (15 permit tasks), Notion deliverables sub-page pattern established
+- **Latest Decisions:** [Key-Decisions-2026-03-31_2017.md](decisions-learnings/Key-Decisions-2026-03-31_2017.md) — Seraphic design adopted, Leaflet map, pricing removed, 3-tower correction, floor plans section, 5 technical learnings
 - **Master Indexes:** [Key-Decisions.md](Key-Decisions.md), [Sessions.md](Sessions.md)
 - **Risk Registry:** [Risk-Registry.md](Risk-Registry.md)
 - **Next Steps:** [NextSteps.md](NextSteps.md)

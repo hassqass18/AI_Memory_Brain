@@ -2,7 +2,7 @@
 
 > **SCOPE:** This file tracks pending work on the **AI Memory system itself** — its structure, standards, policies, shared resources, and cross-project infrastructure. This is NOT a project-level file. Project-specific next steps live in each project's own `NextSteps.md`.
 
-**Last Updated:** 2026-03-30
+**Last Updated:** 2026-03-31
 
 ---
 
@@ -10,13 +10,11 @@
 
 ### High Priority
 
-1. **Push session to GitHub** — Run the following from your local terminal:
-   ```bash
-   cd AI_Memory_Brain
-   git add .
-   git commit -m "Session 2026-03-30: SierraHomes M1 complete, American Dream Stage 2 activated"
-   git push origin main
-   ```
+1. **Replace SVG floor plan placeholders with actual architectural drawings** — Website floor plan section uses illustrative SVGs. Once EcoTecture/Rajab delivers M2 assets (CGI renders + floor plan drawings), replace `<svg>` elements in `Marketing/sierrahomes-website.html` with actual images. **Blocked on Rajab delivery (6+ months overdue).**
+
+2. **Configure website form endpoint** — `sierrahomes-website.html` form action is `#` placeholder. Connect to Zoho Forms webhook or CRM endpoint before any traffic is sent to the page.
+
+3. **Confirm and publish contact details** — Phone (+254 700 000 000) and email (invest@sierrahomes.co.ke) are placeholders. Confirm correct contact details with Hassan before publishing.
 
 2. **Trigger NEMA EIA immediately** — Critical path item for American Dream. Up to 90 days. Must start now to avoid blocking Q3 2026 construction commencement. Brief a NEMA-registered environmental consultant.
 
@@ -57,6 +55,9 @@
 | American Dream Stage 2 — task creation | 2026-03-30 | 15 permit/statutory approval tasks created in Notion, all linked to project |
 | American Dream project page — Stage overview | 2026-03-30 | Stage 1 ✅ complete, Stage 2 🔄 active content added to project page |
 | Establish deliverables sub-page pattern | 2026-03-30 | Standard practice: all completed Notion tasks get a 📄 Deliverables sub-page |
+| SierraHomes website V1 built | 2026-03-31 | Full single-file HTML website — Seraphic design system, navy/gold, all sections |
+| SierraHomes website V2 revisions | 2026-03-31 | Testimonials removed; Leaflet map added (16 Nyali pins, 2-mile radius); 3 towers (Benjamin-Franklin merged); all pricing removed; Towers → Floor Plans tabbed section |
+| Marketing Agent activated | 2026-03-31 | Agent loaded with full SierraHomes context, 8 skills available |
 
 ---
 
