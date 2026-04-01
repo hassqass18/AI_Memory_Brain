@@ -54,12 +54,12 @@
 
 ## Key Decisions
 
-| Decision | Rationale |
-|----------|-----------|
-| D-006: Deliverables sub-page pattern adopted for all Notion tasks | Keeps task boards clean while making deliverables accessible in one click; established as standard for all future task completions |
-| D-007: WhatsApp-first channel strategy for diaspora/HNW segments | Confirmed by DAMAC best practices research and Kenya market data — highest conversion rate channel for East African off-plan market |
-| D-008: Rooftop cinema/bar as hero differentiator in all campaigns | Only amenity in Nyali market with zero competition; stops comparison conversation; drives sharing behaviour |
-| D-009: American Dream Stage 2 activated | Architectural drawings confirmed received from EcoTecture; permit docs prepared; SPV/title transfer in progress |
+| Decision                                                          | Rationale                                                                                                                           |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| D-006: Deliverables sub-page pattern adopted for all Notion tasks | Keeps task boards clean while making deliverables accessible in one click; established as standard for all future task completions  |
+| D-007: WhatsApp-first channel strategy for diaspora/HNW segments  | Confirmed by DAMAC best practices research and Kenya market data — highest conversion rate channel for East African off-plan market |
+| D-008: Rooftop cinema/bar as hero differentiator in all campaigns | Only amenity in Nyali market with zero competition; stops comparison conversation; drives sharing behaviour                         |
+| D-009: American Dream Stage 2 activated                           | Architectural drawings confirmed received from EcoTecture; permit docs prepared; SPV/title transfer in progress                     |
 
 ## Projects Affected
 - `SierraHomes_AmericanDream_AI_Training/Marketing/` — Buyer persona docx created

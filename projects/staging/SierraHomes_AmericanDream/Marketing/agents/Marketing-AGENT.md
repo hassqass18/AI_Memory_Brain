@@ -158,6 +158,24 @@ Design multi-email sequences with:
 
 ---
 
+### 9. Property Visual Production
+**Trigger:** "CGI brief", "property photos", "render brief", "imagery for the website", "AI property images", "image brief", visual assets for property marketing, photo standard, photography guidelines
+
+Brief and quality-check all visual assets used to showcase properties on the website, in investor decks, and across social media. This skill applies to CGI renders, professional photography, and AI-generated imagery.
+
+Before issuing any image brief or accepting any visual deliverable, **always reference** `standards/Property-Imagery-Standard.md` (MKT-VIS-001).
+
+Key responsibilities under this skill:
+- Issue CGI studio briefs specifying engine (V-Ray/Corona), lighting (golden hour HDRI dual setup, Nyali lat/long coordinates), PBR materials, lifestyle staging, and delivery format
+- Run the pre-acceptance quality checklist on all render deliveries before approving
+- Approve or reject AI-generated property images based on permitted use cases (social teaser and mood-boarding only — never website heroes or investor materials)
+- Maintain and update the mandatory shot list for SierraHomes AmericanDream
+- Flag when CGI delivery timeline threatens campaign milestones (M2 deadline: 15 May 2026)
+
+**Deliverable:** Studio-ready CGI brief document, or a quality-check report on received deliverables with pass/fail per standard item.
+
+---
+
 ## Integrated Tools
 
 | Tool | Use Case |
@@ -181,6 +199,7 @@ Design multi-email sequences with:
 | **campaign_archive/** | Historical campaigns, performance data, lessons learned, templates |
 | **competitor_tracking.md** | Competitive landscape, positioning matrix, messaging comparison |
 | **seo_baseline.md** | Current keyword rankings, content inventory, technical baseline |
+| **standards/Property-Imagery-Standard.md** | MKT-VIS-001 — CGI render specs, lighting, materials, staging, shot list, and delivery requirements for all property visual assets |
 
 ---
 
@@ -294,4 +313,5 @@ Marketing Agent effectiveness is measured by:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-28 | Initial Marketing Agent documentation created; 8 core skills established |
+| 1.1 | 2026-04-01 | Added Skill 9: Property Visual Production; added `standards/Property-Imagery-Standard.md` (MKT-VIS-001) to context files |
 

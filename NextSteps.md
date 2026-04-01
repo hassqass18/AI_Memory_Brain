@@ -58,6 +58,7 @@
 | SierraHomes website V1 built | 2026-03-31 | Full single-file HTML website — Seraphic design system, navy/gold, all sections |
 | SierraHomes website V2 revisions | 2026-03-31 | Testimonials removed; Leaflet map added (16 Nyali pins, 2-mile radius); 3 towers (Benjamin-Franklin merged); all pricing removed; Towers → Floor Plans tabbed section |
 | Marketing Agent activated | 2026-03-31 | Agent loaded with full SierraHomes context, 8 skills available |
+| DAMAC CGI research compiled | 2026-04-01 | Full production pipeline documented: V-Ray, HDRI dual-lighting, PBR materials, golden hour, lifestyle staging, ACES tone mapping, DOF. Saved to `Marketing/DAMAC-CGI-Research.md`. Includes M2 brief spec table. |
 
 ---
 

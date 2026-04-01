@@ -142,7 +142,18 @@ Root-level sessions follow the same lifecycle as project sessions:
 
 ---
 
-## 7. AI Model Preferences
+## 7. AI Workflow Rules — Common Practices
+
+> These rules are standing operating procedures derived from real session learnings. Every AI assistant working in this system MUST follow them without needing to be re-instructed.
+
+| Rule ID | Rule | Detail |
+|---------|------|--------|
+| WF-001 | **Never preview HTML files in the browser** | Do NOT start HTTP servers, navigate to localhost URLs, or attempt screenshots of local HTML files. The sandboxed browser blocks localhost connections — this always fails and wastes large numbers of tokens. **Always deliver HTML files via a `computer://` link so Hassan opens them directly in his own browser.** Applies to: websites, landing pages, email templates, HTML prototypes, any `.html` deliverable. |
+| WF-002 | **Token efficiency first** | Avoid multi-step browser automation loops unless explicitly requested. Prefer direct file operations (Read/Write/Edit) over shell commands for file tasks. Use agent tool only when local tools cannot complete the task. |
+
+---
+
+## 8. AI Model Preferences
 
 | Purpose | Model | Notes |
 |---------|-------|-------|
@@ -198,3 +209,4 @@ CRM integration is configured during setup (`setup-AI-Memory.md`).
 ---
 
 *This document is the master operational context for the AI Memory system. It is updated every root-level session by the closure protocol.*
+                                                                                                                                                                                                                   
