@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Wilson — Revenue Operations | AI Architecture | Deal Architect</title>
+  <meta name="description" content="Andre 'Hassan' Wilson — GTM specialist, deal architect, and enterprise AI practitioner. From ground zero to multi-million-dollar revenue engines across three continents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ============================================
+       RESET & GLOBAL
+       ============================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow: hidden; height: 100%; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: rgb(125, 125, 125);
+      background-color: rgb(22, 22, 22);
+      overflow: hidden;
+      height: 100%;
+    }
+    a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    img { max-width: 100%; height: auto; }
+    ::selection { background: rgb(207, 0, 15); color: #fff; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: rgb(22, 22, 22); }
+    ::-webkit-scrollbar-thumb { background: rgb(63, 60, 57); border-radius: 2px; }
+
+    /* ============================================
+       FULL-PAGE SCROLL SYSTEM
+       ============================================ */
+    .page-wrapper {
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .sections-container {
+      height: 100%;
+      transition: transform 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
+    .section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      background-color: rgb(22, 22, 22);
+    }
+    .section::-webkit-scrollbar { width: 3px; }
+    .section::-webkit-scrollbar-thumb { background: rgb(63, 60, 57); }
+    .section__inner {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 0;
+    }
+    .container {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      transition: background-color 0.3s ease, padding 0.3s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(22, 22, 22, 0.95);
+      padding: 12px 40px;
+      backdrop-filter: blur(10px);
+    }
+    .navbar__logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .navbar__logo .accent { color: rgb(207, 0, 15); }
+    .navbar__links { display: flex; gap: 8px; }
+    .navbar__link {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      border: none;
+      background: none;
+      font-family: 'Roboto', sans-serif;
+    }
+    .navbar__link:hover, .navbar__link.active { color: rgb(207, 0, 15); }
+    .navbar__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px;
+    }
+    .navbar__hamburger span {
+      width: 25px; height: 2px;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+
+    /* ============================================
+       SIDE PAGINATION DOTS
+       ============================================ */
+    .side-nav {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-nav__dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      position: relative;
+    }
+    .side-nav__dot:hover { background: rgba(255,255,255,0.6); }
+    .side-nav__dot.active {
+      background: rgb(207, 0, 15);
+      box-shadow: 0 0 10px rgba(207, 0, 15, 0.4);
+    }
+    .side-nav__dot .tooltip {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-size: 11px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .side-nav__dot:hover .tooltip { opacity: 1; }
+
+    /* ============================================
+       FIXED LEFT SOCIAL BAR (Gilber Style)
+       ============================================ */
+    .fixed-socials {
+      position: fixed;
+      left: 40px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      z-index: 999;
+    }
+    .fixed-socials__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      color: rgba(255,255,255,0.6);
+      font-size: 18px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .fixed-socials__icon:hover {
+      color: rgb(207, 0, 15);
+      transform: scale(1.15);
+    }
+
+    /* ============================================
+       ANIMATE ON SCROLL
+       ============================================ */
+    .animate-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .animate-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
+    /* ============================================
+       SECTION 1: HERO
+       ============================================ */
+    #hero {
+      background: rgb(22, 22, 22);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Ken Burns background image */
+    .hero__bg {
+      position: absolute;
+      top: 0; right: 0;
+      width: 55%; height: 100%;
+      background-image: url('hassan-hero.jpg');
+      background-size: cover;
+      background-position: top center;
+      filter: grayscale(100%);
+      animation: kenBurns 25s ease-in-out infinite alternate;
+      transform-origin: center top;
+      z-index: 0;
+    }
+    .hero__bg-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background:
+        /* Hard fade from left covering text area */
+        linear-gradient(
+          to right,
+          rgb(22, 22, 22) 0%,
+          rgb(22, 22, 22) 38%,
+          rgba(22, 22, 22, 0.7) 50%,
+          rgba(22, 22, 22, 0.15) 65%,
+          rgba(22, 22, 22, 0.05) 80%,
+          transparent 100%
+        ),
+        /* Subtle top/bottom vignette for depth */
+        linear-gradient(
+          to bottom,
+          rgba(22, 22, 22, 0.3) 0%,
+          transparent 20%,
+          transparent 80%,
+          rgba(22, 22, 22, 0.4) 100%
+        );
+      z-index: 1;
+    }
+    @keyframes kenBurns {
+      0% {
+        transform: scale(1) translate(0, 0);
+      }
+      100% {
+        transform: scale(1.08) translate(-1%, -2%);
+      }
+    }
+    .hero__content {
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+    .hero__subtitle-top {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero__name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 120px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    }
+    .hero__name .accent { color: rgb(207, 0, 15); }
+    .hero__tagline {
+      font-size: 20px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      text-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    }
+    .hero__tagline span {
+      color: rgba(255,255,255,0.4);
+      margin: 0 12px;
+    }
+    .hero__cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn {
+      display: inline-block;
+      padding: 14px 35px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border: 2px solid #fff;
+      color: #fff;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: rgb(207, 0, 15);
+      border-color: rgb(207, 0, 15);
+      color: #fff;
+    }
+    .btn--filled {
+      background: rgb(207, 0, 15);
+      border-color: rgb(207, 0, 15);
+    }
+    .btn--filled:hover {
+      background: transparent;
+      border-color: #fff;
+    }
+
+    /* ============================================
+       SECTION 2: ABOUT
+       ============================================ */
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about__label {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgb(207, 0, 15);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .about__heading {
+      font-size: 50px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 30px;
+    }
+    .about__text {
+      color: rgb(125, 125, 125);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .about__stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .stat__number {
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+    .stat__number .accent { color: rgb(207, 0, 15); }
+    .stat__label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .about__image-col {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .about__photo {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      object-position: top center;
+      filter: contrast(1.05);
+    }
+
+    /* ============================================
+       SECTION 3: EXPERIENCE / TIMELINE
+       ============================================ */
+    .experience__header {
+      margin-bottom: 60px;
+    }
+    .experience__heading {
+      font-size: 50px;
+      font-weight: 400;
+      color: #fff;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: rgba(255,255,255,0.1);
+    }
+    .timeline__item {
+      position: relative;
+      padding: 0 0 50px 30px;
+    }
+    .timeline__item::before {
+      content: '';
+      position: absolute;
+      left: -44px; top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgb(207, 0, 15);
+      box-shadow: 0 0 0 4px rgba(207,0,15,0.2);
+    }
+    .timeline__year {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgb(207, 0, 15);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .timeline__title {
+      font-size: 22px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .timeline__location {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .timeline__desc {
+      font-size: 15px;
+      color: rgb(125, 125, 125);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       SECTION 4: PROJECTS
+       ============================================ */
+    .projects__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 30px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: rgb(207, 0, 15);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-card:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-4px);
+    }
+    .project-card__icon {
+      font-size: 28px;
+      color: rgb(207, 0, 15);
+      margin-bottom: 20px;
+    }
+    .project-card__title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .project-card__category {
+      font-size: 12px;
+      color: rgb(207, 0, 15);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .project-card__desc {
+      font-size: 14px;
+      color: rgb(125, 125, 125);
+      line-height: 1.7;
+    }
+    .project-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 24px;
+      opacity: 0.85;
+      transition: opacity 0.4s ease;
+    }
+    .project-card:hover .project-card__image {
+      opacity: 1;
+    }
+
+    /* ============================================
+       SECTION 5: SKILLS
+       ============================================ */
+    .skills__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 50px;
+    }
+    .progress-bar {
+      margin-bottom: 30px;
+    }
+    .progress-bar__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .progress-bar__title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .progress-bar__pct {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+    .progress-bar__track {
+      width: 100%;
+      height: 5px;
+      background: rgba(255,255,255,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-bar__fill {
+      height: 100%;
+      background: rgb(207, 0, 15);
+      width: 0%;
+      transition: width 1.5s ease-in-out;
+    }
+
+    /* ============================================
+       SECTION 6: THOUGHT LEADERSHIP (Gilber Blog Cards)
+       ============================================ */
+    .articles__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+    /* Card container */
+    .article-card {
+      position: relative;
+      z-index: 1;
+      height: 380px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    /* Animated border — 4 edges that draw on hover */
+    .article-card__border span {
+      position: absolute;
+      z-index: 3;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    .article-card__border .border-top {
+      top: 0; left: 0;
+      width: 100%; height: 1px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s linear;
+    }
+    .article-card__border .border-right {
+      top: 0; right: 0;
+      width: 1px; height: 100%;
+      transform: scaleY(0);
+      transform-origin: center top;
+      transition: transform 0.3s linear;
+    }
+    .article-card__border .border-bottom {
+      bottom: 0; left: 0;
+      width: 100%; height: 1px;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform 0.3s linear;
+    }
+    .article-card__border .border-left {
+      top: 0; left: 0;
+      width: 1px; height: 100%;
+      transform: scaleY(0);
+      transform-origin: center bottom;
+      transition: transform 0.3s linear;
+    }
+    /* Sequential border draw on hover */
+    .article-card:hover .border-top { transform: scaleX(1); }
+    .article-card:hover .border-right { transform: scaleY(1); transition-delay: 0.3s; }
+    .article-card:hover .border-bottom { transform: scaleX(1); transition-delay: 0.6s; }
+    .article-card:hover .border-left { transform: scaleY(1); transition-delay: 0.9s; }
+    /* Background image layer */
+    .article-card__media {
+      position: absolute;
+      z-index: -1;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+    }
+    .article-card__media::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(22, 22, 22, 0.3);
+      transition: background-color 0.3s ease;
+    }
+    .article-card:hover .article-card__media::before {
+      background-color: rgb(22, 22, 22);
+    }
+    .article-card__media img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+      transform: scale(1) translateZ(0);
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+    .article-card:hover .article-card__media img {
+      transform: scale(1.05) translateZ(0);
+    }
+    /* Text content — hidden by default, fades in on hover */
+    .article-card__content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 40px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .article-card:hover .article-card__content {
+      opacity: 1;
+    }
+    .article-card__date {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .article-card__title {
+      font-size: 22px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    .article-card__excerpt {
+      font-size: 14px;
+      color: rgb(125, 125, 125);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .article-card__tag {
+      display: inline-block;
+      font-size: 11px;
+      color: rgb(207, 0, 15);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+    .article-card__readmore {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+    .article-card__readmore:hover { color: rgb(207, 0, 15); }
+    .article-card__readmore svg {
+      transition: transform 0.3s ease;
+    }
+    .article-card__readmore:hover svg { transform: translateX(5px); }
+
+    /* ============================================
+       SECTION 7: CONTACT
+       ============================================ */
+    .contact__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact__heading {
+      font-size: 50px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .contact__text {
+      color: rgb(125, 125, 125);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+    .contact__info-item {
+      margin-bottom: 24px;
+    }
+    .contact__info-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .contact__info-value {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 400;
+    }
+    .contact__info-value a { color: #fff; }
+    .contact__info-value a:hover { color: rgb(207, 0, 15); }
+    .contact__social {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .social-icon {
+      width: 44px; height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6);
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      color: #fff;
+      border-color: rgb(207, 0, 15);
+      background: rgb(207, 0, 15);
+    }
+    .contact-form { width: 100%; }
+    .form-group { margin-bottom: 30px; }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      padding: 14px 0;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-bottom-color: rgb(207, 0, 15);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.3);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      text-align: center;
+      padding: 30px 0 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ============================================
+       MOBILE NAV OVERLAY
+       ============================================ */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(22,22,22,0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav__link {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      background: none;
+      border: none;
+      font-family: 'Roboto', sans-serif;
+    }
+    .mobile-nav__link:hover { color: rgb(207, 0, 15); }
+    .mobile-nav__close {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 1199px) {
+      .hero__name { font-size: 80px; }
+      .about__heading, .experience__heading, .contact__heading { font-size: 40px; }
+      .about__grid, .contact__grid { gap: 50px; }
+      .projects__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 991px) {
+      .hero__content { text-align: center; max-width: 100%; }
+      .hero__cta-group { justify-content: center; }
+      .hero__bg {
+        width: 100%;
+        right: 0;
+        background-position: top center;
+      }
+      .hero__bg-overlay {
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(22, 22, 22, 0.8) 0%,
+            rgba(22, 22, 22, 0.55) 50%,
+            rgba(22, 22, 22, 0.8) 100%
+          );
+      }
+      .about__grid, .skills__grid, .contact__grid { grid-template-columns: 1fr; }
+      .articles__grid { grid-template-columns: 1fr 1fr; }
+      .article-card { height: 320px; }
+      .fixed-socials { display: none; }
+    }
+
+    @media (max-width: 767px) {
+      .navbar__links { display: none; }
+      .navbar__hamburger { display: flex; }
+      .navbar { padding: 15px 20px; }
+      .side-nav { display: none; }
+      .hero__name { font-size: 50px; letter-spacing: -1px; }
+      .hero__tagline { font-size: 15px; }
+      .hero__tagline span { margin: 0 6px; }
+      .about__heading, .experience__heading, .contact__heading { font-size: 32px; }
+      .projects__grid, .articles__grid { grid-template-columns: 1fr; }
+      .about__stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .stat__number { font-size: 36px; }
+      .container { padding: 0 20px; }
+      .section__inner { padding: 80px 0; }
+      .section { height: auto; min-height: 100vh; }
+      .page-wrapper, html, body { overflow-y: auto; overflow-x: hidden; height: auto; }
+      .sections-container { transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="navbar__logo">Hassan<span class="accent">.</span></a>
+    <div class="navbar__links">
+      <button class="navbar__link active" data-section="0">Home</button>
+      <button class="navbar__link" data-section="1">About</button>
+      <button class="navbar__link" data-section="2">Experience</button>
+      <button class="navbar__link" data-section="3">Projects</button>
+      <button class="navbar__link" data-section="4">Skills</button>
+      <button class="navbar__link" data-section="5">Insights</button>
+      <button class="navbar__link" data-section="6">Contact</button>
+    </div>
+    <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+    <button class="mobile-nav__link" data-section="0">Home</button>
+    <button class="mobile-nav__link" data-section="1">About</button>
+    <button class="mobile-nav__link" data-section="2">Experience</button>
+    <button class="mobile-nav__link" data-section="3">Projects</button>
+    <button class="mobile-nav__link" data-section="4">Skills</button>
+    <button class="mobile-nav__link" data-section="5">Insights</button>
+    <button class="mobile-nav__link" data-section="6">Contact</button>
+  </div>
+
+  <!-- SIDE PAGINATION -->
+  <div class="side-nav" id="sideNav">
+    <button class="side-nav__dot active" data-section="0"><span class="tooltip">Home</span></button>
+    <button class="side-nav__dot" data-section="1"><span class="tooltip">About</span></button>
+    <button class="side-nav__dot" data-section="2"><span class="tooltip">Experience</span></button>
+    <button class="side-nav__dot" data-section="3"><span class="tooltip">Projects</span></button>
+    <button class="side-nav__dot" data-section="4"><span class="tooltip">Skills</span></button>
+    <button class="side-nav__dot" data-section="5"><span class="tooltip">Insights</span></button>
+    <button class="side-nav__dot" data-section="6"><span class="tooltip">Contact</span></button>
+  </div>
+
+  <!-- FIXED LEFT SOCIAL BAR -->
+  <div class="fixed-socials">
+    <a href="https://linkedin.com/in/" target="_blank" class="fixed-socials__icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/" target="_blank" class="fixed-socials__icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://x.com/" target="_blank" class="fixed-socials__icon" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper" id="pageWrapper">
+    <div class="sections-container" id="sectionsContainer">
+
+      <!-- ========== HERO ========== -->
+      <section class="section" id="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__bg-overlay"></div>
+        <div class="section__inner">
+          <div class="container">
+            <div class="hero__content">
+              <p class="hero__subtitle-top animate-in">Revenue Operations &middot; AI Architecture &middot; Deal Architect</p>
+              <h1 class="hero__name animate-in delay-1">Hassan<span class="accent">.</span></h1>
+              <p class="hero__tagline animate-in delay-2">
+                GTM Specialist <span>|</span> Enterprise AI Practitioner <span>|</span> Cross-Continent Operator
+              </p>
+              <div class="hero__cta-group animate-in delay-3">
+                <button class="btn btn--filled" onclick="goToSection(6)">Get In Touch</button>
+                <button class="btn" onclick="goToSection(2)">View Experience</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ABOUT ========== -->
+      <section class="section" id="about">
+        <div class="section__inner">
+          <div class="container">
+            <div class="about__grid">
+              <div>
+                <p class="about__label animate-in">About Me</p>
+                <h2 class="about__heading animate-in delay-1">From Ground Zero<br>to High-Stakes Deals</h2>
+                <p class="about__text animate-in delay-2">
+                  I transform ground-zero situations into multi-million-dollar revenue engines — and deploy AI infrastructure to sustain them. From navigating government bureaucracies in Atlanta, to scaling seed capital into bilateral infrastructure deals in Kazakhstan, to negotiating a multi-million-dollar construction project in Kenya with zero local connections — I bring RevOps, GTM strategy, and cross-sector execution to any table.
+                </p>
+                <p class="about__text animate-in delay-3">
+                  As one of the first adopters of AI Memory Brain and a contributor to its Sales, Marketing, Human Psychology, and Project Management agent logic at Qosil, I prove that enterprise AI adoption requires systems thinking and operational discipline — not an ML degree.
+                </p>
+              </div>
+              <div class="about__image-col">
+                <img src="hassan-hero.jpg" alt="Hassan Wilson" class="about__photo animate-in delay-1">
+                <div class="about__stats">
+                  <div class="animate-in delay-2">
+                    <div class="stat__number">3<span class="accent">+</span></div>
+                    <div class="stat__label">Continents Operated</div>
+                  </div>
+                  <div class="animate-in delay-3">
+                    <div class="stat__number">5<span class="accent">.</span>5</div>
+                    <div class="stat__label">Years in Kazakhstan</div>
+                  </div>
+                  <div class="animate-in delay-4">
+                    <div class="stat__number">51<span class="accent">+</span></div>
+                    <div class="stat__label">AI Domain Agents</div>
+                  </div>
+                  <div class="animate-in delay-5">
+                    <div class="stat__number">MM<span class="accent">$</span></div>
+                    <div class="stat__label">Deals Architected</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== EXPERIENCE ========== -->
+      <section class="section" id="experience">
+        <div class="section__inner">
+          <div class="container">
+            <div class="experience__header">
+              <p class="about__label animate-in">Career Journey</p>
+              <h2 class="experience__heading animate-in delay-1">Experience</h2>
+            </div>
+            <div class="timeline">
+              <div class="timeline__item animate-in delay-1">
+                <div class="timeline__year">2024 &mdash; Present</div>
+                <div class="timeline__title">Enterprise AI Practitioner &amp; RevOps Consultant</div>
+                <div class="timeline__location">Qosil &middot; Nairobi, Kenya</div>
+                <div class="timeline__desc">One of the first adopters of the AI Memory Brain system, working alongside its creator at Qosil. Contributed domain expertise to the Sales, Marketing, Human Psychology, and Project Management agent logic — infusing real-world RevOps methodology and field-tested management discipline into 51 domain expert agents deployed across 20 departments.</div>
+              </div>
+              <div class="timeline__item animate-in delay-2">
+                <div class="timeline__year">2023 &mdash; Present</div>
+                <div class="timeline__title">Deal Architect &amp; Project Director</div>
+                <div class="timeline__location">Sierra Homes &middot; Mombasa, Kenya</div>
+                <div class="timeline__desc">Negotiated a multi-million-dollar construction project within one year of arriving in Kenya with zero local connections. Now managing inception-to-completion execution of a 108-unit residential tower — including permits, SPV structuring, and full GTM launch strategy.</div>
+              </div>
+              <div class="timeline__item animate-in delay-3">
+                <div class="timeline__year">2017 &mdash; 2023</div>
+                <div class="timeline__title">GTM Strategist &amp; Investment Architect</div>
+                <div class="timeline__location">Bilateral Infrastructure Projects &middot; Almaty, Kazakhstan</div>
+                <div class="timeline__desc">Scaled $250 micro-investments from 100+ investors into multi-million-dollar bilateral infrastructure projects through high-level relationships. Built cross-border investment vehicles, navigated regulatory environments, and established revenue operations from the ground up across 5.5 years.</div>
+              </div>
+              <div class="timeline__item animate-in delay-4">
+                <div class="timeline__year">2014 &mdash; 2017</div>
+                <div class="timeline__title">Revenue Operations &amp; Government Relations</div>
+                <div class="timeline__location">City of Atlanta &middot; Atlanta, GA, USA</div>
+                <div class="timeline__desc">Mastered identifying unelected influencers and decision-makers who control budgets. Developed deep expertise in navigating government bureaucracies and building revenue-generating relationships in complex political environments.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section class="section" id="projects">
+        <div class="section__inner">
+          <div class="container">
+            <p class="about__label animate-in">Selected Work</p>
+            <h2 class="experience__heading animate-in delay-1">Projects</h2>
+            <div class="projects__grid">
+              <div class="project-card animate-in delay-2">
+                <img src="ai-memory-brain.jpg" alt="AI Memory Brain team at Qosil" class="project-card__image">
+                <div class="project-card__category">Enterprise AI</div>
+                <div class="project-card__title">AI Memory Brain</div>
+                <div class="project-card__desc">Persistent memory system for AI assistants with 3-tier lazy-loading architecture, 51 domain expert agents across 20 departments, git-backed persistence, and a model-agnostic design that works with Claude, Gemini, and ChatGPT. Contributed to Sales, Marketing, Psychology, and PMO agent logic at Qosil.</div>
+              </div>
+              <div class="project-card animate-in delay-3">
+                <img src="sierra-homes.jpg" alt="Sierra Homes — American Dream Apartments" class="project-card__image">
+                <div class="project-card__category">Real Estate Development</div>
+                <div class="project-card__title">Sierra Homes — American Dream Apartments</div>
+                <div class="project-card__desc">108-unit residential apartment tower in Nyali, Mombasa, Kenya. G+11 floors. Managed inception-to-completion: drawings, permits, SPV structuring, title transfer, and full GTM marketing launch with AI-powered operations.</div>
+              </div>
+              <div class="project-card animate-in delay-4">
+                <img src="kazakhstan-bilateral.jpg" alt="Kazakhstan bilateral infrastructure team" class="project-card__image">
+                <div class="project-card__category">Cross-Border Investment</div>
+                <div class="project-card__title">Kazakhstan Bilateral Infrastructure</div>
+                <div class="project-card__desc">Scaled micro-investments from 100+ international investors into multi-million-dollar bilateral infrastructure projects. Built the entire investment pipeline, relationship architecture, and operational framework from scratch over 5.5 years.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SKILLS ========== -->
+      <section class="section" id="skills">
+        <div class="section__inner">
+          <div class="container">
+            <p class="about__label animate-in">Core Competencies</p>
+            <h2 class="experience__heading animate-in delay-1">Skills</h2>
+            <div class="skills__grid">
+              <div>
+                <div class="progress-bar animate-in delay-1">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Revenue Operations &amp; GTM Strategy</span>
+                    <span class="progress-bar__pct">95%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="95"></div></div>
+                </div>
+                <div class="progress-bar animate-in delay-2">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Enterprise AI Architecture</span>
+                    <span class="progress-bar__pct">90%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="90"></div></div>
+                </div>
+                <div class="progress-bar animate-in delay-3">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Deal Architecture &amp; Negotiation</span>
+                    <span class="progress-bar__pct">95%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="95"></div></div>
+                </div>
+                <div class="progress-bar animate-in delay-4">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Cross-Cultural Leadership</span>
+                    <span class="progress-bar__pct">92%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="92"></div></div>
+                </div>
+              </div>
+              <div>
+                <div class="progress-bar animate-in delay-1">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Stakeholder Psychology (DISC/OCEAN)</span>
+                    <span class="progress-bar__pct">88%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="88"></div></div>
+                </div>
+                <div class="progress-bar animate-in delay-2">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Project Management (CC/DE)</span>
+                    <span class="progress-bar__pct">90%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="90"></div></div>
+                </div>
+                <div class="progress-bar animate-in delay-3">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">Pipeline &amp; CRM Operations</span>
+                    <span class="progress-bar__pct">93%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="93"></div></div>
+                </div>
+                <div class="progress-bar animate-in delay-4">
+                  <div class="progress-bar__header">
+                    <span class="progress-bar__title">AI Agent Design &amp; Prompt Engineering</span>
+                    <span class="progress-bar__pct">87%</span>
+                  </div>
+                  <div class="progress-bar__track"><div class="progress-bar__fill" data-width="87"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== THOUGHT LEADERSHIP ========== -->
+      <section class="section" id="insights">
+        <div class="section__inner">
+          <div class="container">
+            <p class="about__label animate-in">Thought Leadership</p>
+            <h2 class="experience__heading animate-in delay-1">Insights</h2>
+            <div class="articles__grid">
+
+              <div class="article-card animate-in delay-2">
+                <div class="article-card__border">
+                  <span class="border-top"></span>
+                  <span class="border-right"></span>
+                  <span class="border-bottom"></span>
+                  <span class="border-left"></span>
+                </div>
+                <div class="article-card__media">
+                  <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Architecture">
+                </div>
+                <div class="article-card__content">
+                  <div class="article-card__date">AI Architecture</div>
+                  <div class="article-card__title">Why Enterprise AI Needs RevOps Thinking, Not ML Degrees</div>
+                  <div class="article-card__excerpt">The biggest bottleneck in enterprise AI isn't model accuracy — it's operational discipline. How revenue operations methodology transforms AI from a toy into a production system.</div>
+                  <span class="article-card__tag">AI Memory Brain</span>
+                </div>
+              </div>
+
+              <div class="article-card animate-in delay-3">
+                <div class="article-card__border">
+                  <span class="border-top"></span>
+                  <span class="border-right"></span>
+                  <span class="border-bottom"></span>
+                  <span class="border-left"></span>
+                </div>
+                <div class="article-card__media">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Revenue Operations">
+                </div>
+                <div class="article-card__content">
+                  <div class="article-card__date">Revenue Operations</div>
+                  <div class="article-card__title">Ground Zero GTM: Building Revenue Engines Where None Exist</div>
+                  <div class="article-card__excerpt">Lessons from three continents on entering markets with no infrastructure, no connections, and no playbook — and turning them into multi-million-dollar operations.</div>
+                  <span class="article-card__tag">GTM Strategy</span>
+                </div>
+              </div>
+
+              <div class="article-card animate-in delay-4">
+                <div class="article-card__border">
+                  <span class="border-top"></span>
+                  <span class="border-right"></span>
+                  <span class="border-bottom"></span>
+                  <span class="border-left"></span>
+                </div>
+                <div class="article-card__media">
+                  <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Enterprise AI">
+                </div>
+                <div class="article-card__content">
+                  <div class="article-card__date">Enterprise AI</div>
+                  <div class="article-card__title">The 3-Tier Memory Architecture That Solves the Stateless AI Problem</div>
+                  <div class="article-card__excerpt">How lazy-loading memory, git-backed persistence, and 51 domain expert agents create AI systems that actually remember context across sessions — without burning tokens.</div>
+                  <span class="article-card__tag">Technical Deep-Dive</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section class="section" id="contact">
+        <div class="section__inner">
+          <div class="container">
+            <div class="contact__grid">
+              <div>
+                <p class="about__label animate-in">Get In Touch</p>
+                <h2 class="contact__heading animate-in delay-1">Let's Build<br>Something Together</h2>
+                <p class="contact__text animate-in delay-2">
+                  Whether you need revenue operations consulting, enterprise AI architecture guidance, or a GTM strategy for entering new markets — I bring systems thinking and operational execution to every engagement.
+                </p>
+                <div class="animate-in delay-3">
+                  <div class="contact__info-item">
+                    <div class="contact__info-label">Email</div>
+                    <div class="contact__info-value"><a href="mailto:hassan.qaseem@gc-usa.com">hassan.qaseem@gc-usa.com</a></div>
+                  </div>
+                  <div class="contact__info-item">
+                    <div class="contact__info-label">Location</div>
+                    <div class="contact__info-value">Nairobi, Kenya &middot; Atlanta, USA</div>
+                  </div>
+                  <div class="contact__info-item">
+                    <div class="contact__info-label">LinkedIn</div>
+                    <div class="contact__info-value"><a href="https://www.linkedin.com/in/andre-hassan-wilson-221b461a2" target="_blank">Andre "Hassan" Wilson</a></div>
+                  </div>
+                </div>
+                <div class="contact__social animate-in delay-4">
+                  <a href="https://www.linkedin.com/in/andre-hassan-wilson-221b461a2" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="mailto:hassan.qaseem@gc-usa.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+              </div>
+              <div class="animate-in delay-2">
+                <form class="contact-form" id="contactForm">
+                  <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" placeholder="Subject">
+                  </div>
+                  <div class="form-group">
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn--filled">Send Message</button>
+                </form>
+              </div>
+            </div>
+            <div class="footer">
+              &copy; 2026 Andre "Hassan" Wilson. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    // ============================================
+    // FULL-PAGE SCROLL ENGINE
+    // ============================================
+    (function() {
+      var currentSection = 0;
+      var totalSections = document.querySelectorAll('.section').length;
+      var container = document.getElementById('sectionsContainer');
+      var isAnimating = false;
+      var animationDuration = 700;
+      var isMobile = window.innerWidth <= 767;
+
+      function updateNavigation() {
+        // Side dots
+        document.querySelectorAll('.side-nav__dot').forEach(function(dot, i) {
+          dot.classList.toggle('active', i === currentSection);
+        });
+        // Top nav links
+        document.querySelectorAll('.navbar__link').forEach(function(link, i) {
+          link.classList.toggle('active', i === currentSection);
+        });
+        // Navbar background
+        document.getElementById('navbar').classList.toggle('scrolled', currentSection > 0);
+      }
+
+      function triggerAnimations(sectionIndex) {
+        var section = document.querySelectorAll('.section')[sectionIndex];
+        if (!section) return;
+        var elements = section.querySelectorAll('.animate-in');
+        elements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+        // Progress bars
+        var fills = section.querySelectorAll('.progress-bar__fill');
+        fills.forEach(function(fill) {
+          var w = fill.getAttribute('data-width');
+          if (w) fill.style.width = w + '%';
+        });
+      }
+
+      function goTo(index) {
+        if (isMobile) return;
+        if (isAnimating || index < 0 || index >= totalSections || index === currentSection) return;
+        isAnimating = true;
+        currentSection = index;
+        container.style.transform = 'translateY(-' + (currentSection * 100) + 'vh)';
+        updateNavigation();
+        triggerAnimations(currentSection);
+        setTimeout(function() { isAnimating = false; }, animationDuration);
+      }
+
+      // Expose globally
+      window.goToSection = goTo;
+
+      // Mouse wheel
+      document.addEventListener('wheel', function(e) {
+        if (isMobile) return;
+        if (e.deltaY > 30) goTo(currentSection + 1);
+        else if (e.deltaY < -30) goTo(currentSection - 1);
+      }, { passive: true });
+
+      // Touch
+      var touchStart = 0;
+      document.addEventListener('touchstart', function(e) {
+        touchStart = e.touches[0].clientY;
+      }, { passive: true });
+      document.addEventListener('touchend', function(e) {
+        if (isMobile) return;
+        var diff = touchStart - e.changedTouches[0].clientY;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) goTo(currentSection + 1);
+          else goTo(currentSection - 1);
+        }
+      }, { passive: true });
+
+      // Keyboard
+      document.addEventListener('keydown', function(e) {
+        if (isMobile) return;
+        if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); goTo(currentSection + 1); }
+        if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); goTo(currentSection - 1); }
+        if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+        if (e.key === 'End') { e.preventDefault(); goTo(totalSections - 1); }
+      });
+
+      // Nav clicks
+      document.querySelectorAll('[data-section]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var idx = parseInt(this.getAttribute('data-section'));
+          if (isMobile) {
+            var target = document.querySelectorAll('.section')[idx];
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            goTo(idx);
+          }
+          // Close mobile nav
+          document.getElementById('mobileNav').classList.remove('open');
+        });
+      });
+
+      // Mobile nav
+      document.getElementById('hamburgerBtn').addEventListener('click', function() {
+        document.getElementById('mobileNav').classList.add('open');
+      });
+      document.getElementById('mobileNavClose').addEventListener('click', function() {
+        document.getElementById('mobileNav').classList.remove('open');
+      });
+
+      // Contact form
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = this.querySelector('button[type="submit"]');
+        btn.textContent = 'Message Sent!';
+        btn.style.background = 'transparent';
+        btn.style.borderColor = 'rgba(255,255,255,0.3)';
+        btn.style.color = 'rgba(255,255,255,0.5)';
+        setTimeout(function() {
+          btn.textContent = 'Send Message';
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 3000);
+      });
+
+      // Resize handler
+      window.addEventListener('resize', function() {
+        isMobile = window.innerWidth <= 767;
+        if (isMobile) {
+          container.style.transform = 'none';
+        } else {
+          container.style.transform = 'translateY(-' + (currentSection * 100) + 'vh)';
+        }
+      });
+
+      // Init: trigger hero animations
+      triggerAnimations(0);
+      updateNavigation();
+
+      // Mobile: trigger all animations on scroll
+      if (isMobile) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var els = entry.target.querySelectorAll('.animate-in');
+              els.forEach(function(el) { el.classList.add('visible'); });
+              var fills = entry.target.querySelectorAll('.progress-bar__fill');
+              fills.forEach(function(f) {
+                var w = f.getAttribute('data-width');
+                if (w) f.style.width = w + '%';
+              });
+            }
+          });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.section').forEach(function(s) { observer.observe(s); });
+      }
+    })();
+  </script>
+</body>
+</html>

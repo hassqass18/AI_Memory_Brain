@@ -2,7 +2,7 @@
 
 > **SCOPE:** This file tracks pending work on the **AI Memory system itself** — its structure, standards, policies, shared resources, and cross-project infrastructure. This is NOT a project-level file. Project-specific next steps live in each project's own `NextSteps.md`.
 
-**Last Updated:** 2026-03-31
+**Last Updated:** 2026-04-05
 
 ---
 
@@ -22,6 +22,30 @@
 
 4. **SPV incorporation** — Sierra USA Homes Ltd formation is pending. Legal action required by Hassan. Unblocks title deed transfer.
 
+5. **Aibek partner bio brief** — Not yet started. Use ACS I/C profile as framing. Research via about.me, web search, and Notion. Three-tier format (75/175/350 words). **Priority: next session.**
+
+6. **Hassan partner bio brief** — Not yet started. Use ACS S/I profile as framing. Leverage Kenya expertise and GC-USA positioning. Three-tier format. **Priority: next session.**
+
+7. **Alex data gaps checklist** — Alex must complete before formal LP outreach: military branch/rank/duration, Peace Corps exact dates, Liquidstar grant scope and total value, GE Vernova tenure, any prior roles, languages, certifications. **Owner: Alex.**
+
+8. **Rainmaker bonus language** — All partners to draft their proposals for next meeting vote (April 12, 2026). **Owner: All partners.**
+
+9. **MSIFS Investment Declaration Letter** — Draft exists in Notion (Kenyan Channels page). Needs MSIFS branding, partner signatures, and dispatch to 5 addressees. **Owner: Hassan + Alex.**
+
+6. **KenInvest OSC Registration** — Must be submitted via eprocedures.investkenya.go.ke. Required before any formal government engagement. **Owner: Hassan.**
+
+7. **GP Agreement Finalization** — Working draft has open items (#28 number mismatches, #30 4th partner placeholder removal). All partners reviewing — April 1 deadline now past due. **Owner: All partners.**
+
+8. **NIF Act 2026 — Early Engagement** — National Infrastructure Fund (signed March 9, 2026) is building first project pipeline. Identify NIF contact and submit expression of interest for Lamu grain handling. First-mover advantage window.
+
+9. **MSIFS Full PROJECT_MEMORY_INIT** — Staging folder created at `projects/staging/MSIFS/`. Run full project memory initialization when fund matures past formation phase (post first-close or post first IC-ready deal).
+
+10. **Replace personal branding website placeholder images** — Drop actual photos into `projects/staging/PersonalBranding_AndreHassanWilson/Portfolio-Site/` with filenames: `hassan-hero.jpg`, `ai-memory-brain.jpg`, `sierra-homes.jpg`, `kazakhstan-bilateral.jpg`. **Owner: Hassan.**
+
+11. **Deploy personal branding website** — Choose hosting (Netlify, Vercel, GitHub Pages, or custom domain). Connect domain. Current site is at `Portfolio-Site/index.html`.
+
+12. **Begin LinkedIn content execution** — Follow 90-day content calendar in `AI-Agent-Thought-Leadership-Reference.md`. Week 1-4: foundation posts (origin story, AI Memory Brain methodology, RevOps frameworks).
+
 ### Medium Priority
 
 1. **Begin M2 — Core Digital Assets Production** (opens 15 Apr 2026):
@@ -39,7 +63,7 @@
 ### Low Priority
 
 1. **Customise CC/DE Operating Standard** — Review Section 3 (Reporting Cadence), Section 4 (Financial Controls), Section 7 (CRM Tagging).
-2. **Create contact profiles** — Add key stakeholders (Rajab/EcoTecture, legal counsel, QS) to `contacts/` using `_PROFILE-TEMPLATE.md`.
+2. **Create contact profiles** — Add key stakeholders (Rajab/EcoTecture, legal counsel, QS) to `contacts/` using `_PROFILE-TEMPLATE.md`. *(Note: GP partner profiles for Alex, Aibek, Hassan completed 2026-04-05.)*
 3. **Customise Adaptive Communication Standard** — Set default channel, DISC preferences, information density preferences.
 
 ---
@@ -59,6 +83,23 @@
 | SierraHomes website V2 revisions | 2026-03-31 | Testimonials removed; Leaflet map added (16 Nyali pins, 2-mile radius); 3 towers (Benjamin-Franklin merged); all pricing removed; Towers → Floor Plans tabbed section |
 | Marketing Agent activated | 2026-03-31 | Agent loaded with full SierraHomes context, 8 skills available |
 | DAMAC CGI research compiled | 2026-04-01 | Full production pipeline documented: V-Ray, HDRI dual-lighting, PBR materials, golden hour, lifestyle staging, ACES tone mapping, DOF. Saved to `Marketing/DAMAC-CGI-Research.md`. Includes M2 brief spec table. |
+| SierraHomes website V3 revisions | 2026-04-01 | Hero copy, intro copy (American Dream Apartments), EcoTecture removed, floor plan tabs (ocean/garden view), rooftop restaurant, KES pricing removed, request-only CTAs, header relative, plot removed, USA + Kenya contacts added. |
+| MSIFS Notion Dashboard created | 2026-04-03 | Fund overview, investment thesis, pipeline highlights, GP team, impact framework |
+| MSIFS Action Log database created | 2026-04-03 | 49 tasks from Excel, all with Status/Priority/Assigned To/Due Date/Notes |
+| GP Agreement Overview in Notion | 2026-04-03 | Structured summary of working draft — governance, economics, vesting, incentives |
+| Kenya Government Engagement Strategy | 2026-04-03 | Agent-revised strategy with political risk, beachhead analysis, gatekeeper sequence, decision gates |
+| 7 MSIFS agents activated | 2026-04-03 | Tiered activation: Investment, Market Dev, Politics (Tier 1); Strategy, Finance, Growth, Sales (Tier 2) |
+| MSIFS project staged | 2026-04-03 | `projects/staging/MSIFS/` with README.md and activated-agents.md |
+| Personal branding project staged | 2026-04-03 | `projects/staging/PersonalBranding_AndreHassanWilson/` with 6 subdirectories, README, 9 agents activated |
+| Notion branding strategy + Kanban board | 2026-04-03 | Branding strategy page + 36-task Digital Footprint task board |
+| Competitive intelligence compiled | 2026-04-03 | AI-Agent-Thought-Leadership-Reference.md — 15+ creators, 20+ products, monetization strategy, content calendar |
+| Brand messaging corrected | 2026-04-03 | "Early adopter/contributor at Qosil" across all files and Notion |
+| Gilber design template captured | 2026-04-03 | 616-line markdown with all colors, fonts, animations, JS properties |
+| Personal branding website built | 2026-04-03 | 1,257-line single-file HTML — 7 sections, dark theme, full-page scroll, responsive, image placeholders |
+| MSIFS April 5 meeting transcript converted | 2026-04-05 | 27-page PDF → structured markdown with 6 topic sections, 50 action items, decisions log, verbatim transcript |
+| Contact profiles created — Alex, Aibek, Hassan | 2026-04-05 | DISC/OCEAN/Hofstede/Trust profiles for all 3 GP partners. Alex: D/C. Aibek: I/C. Hassan: S/I. Saved locally + to Notion |
+| 26 action items pushed to MSIFS Notion Action Log | 2026-04-05 | Organized by owner (MTG/ALX/AIB/HAS/ALL), tagged with priority, due date, and notes |
+| Alex partner bio brief v2 completed | 2026-04-05 | Three-tier bio (75/175/350 words). Full career arc discovered: UF → Peace Corps Ukraine → Liquidstar → GE Vernova → BU MBA → MSIFS. LinkedIn optimization and data gaps checklist included |
 
 ---
 

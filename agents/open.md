@@ -137,11 +137,15 @@ This protocol should be executed when the user says any of the following:
 
 ### Recent Projects (Last 5)
 *Updated during closure protocol based on last-modified date.*
-*(none yet — populated after project initialization)*
+
+1. `projects/SierraHomes_AmericanDream_AI_Training/` — 108-unit residential tower, Nyali, Mombasa. Stage 2 active. M1 complete. M2 opens 15 Apr 2026.
 
 ### Staging Projects (Last 5)
 *Updated during closure protocol based on last-modified date of folders inside `staging/`.*
-*(none yet — populated after project staging)*
+
+1. `projects/staging/MSIFS/` — $200M frontier market PE fund (East Africa + Central Asia). GP team: Alex (CEO/CIO 27%), Hassan (Regional CIO East Africa 25%), Aibek (Regional CIO Central Asia 25%), Stephen (CFO/COO 15%). Notion workspace active. 26 action items in Action Log DB. Contact profiles for all 3 GPs built. Alex bio brief v2 complete. Last modified 2026-04-05.
+2. `projects/staging/PersonalBranding_AndreHassanWilson/` — Personal branding for Andre "Hassan" Wilson. Gilber-inspired website built. 9 agents activated. Notion Kanban board with 36 tasks. Last modified 2026-04-03.
+3. `projects/staging/SierraHomes_AmericanDream/` — Staging workspace. Website V3 at `Marketing/sierra-homes-website.html`. Last modified 2026-04-01.
 
 ### Main Folder Structure
 
