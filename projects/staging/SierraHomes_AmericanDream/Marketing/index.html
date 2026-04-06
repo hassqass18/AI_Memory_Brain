@@ -127,8 +127,8 @@
     #navbar {
       position: relative; top: 0; left: 0; right: 0; z-index: 1000;
       padding: 1rem 0;
-      background: var(--navy);
-      box-shadow: 0 4px 20px rgba(13,17,51,0.18);
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(29,35,92,0.10);
       transition: box-shadow 0.4s ease;
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
@@ -158,18 +158,18 @@
     .nav-link {
       font-family: var(--font-label); font-size: 0.78rem; font-weight: 500;
       letter-spacing: 0.08em; text-transform: uppercase;
-      color: rgba(255,255,255,0.75); transition: color 0.25s; position: relative;
+      color: var(--navy); transition: color 0.25s; position: relative;
     }
     .nav-link::after {
       content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
       height: 2px; background: var(--gold); border-radius: 2px;
       transform: scaleX(0); transition: transform 0.25s;
     }
-    .nav-link:hover { color: var(--white); }
+    .nav-link:hover { color: var(--navy-dark); }
     .nav-link:hover::after { transform: scaleX(1); }
     .nav-actions { display: flex; align-items: center; gap: 1rem; }
     .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
     @media (max-width: 900px) {
       .nav-links          { display: none; }
       .hamburger          { display: flex; }
@@ -396,19 +396,19 @@
     @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } .form-row { grid-template-columns: 1fr; } }
 
     /* ── FOOTER ────────────────────────────────────────────────── */
-    footer { background: var(--dark); padding: 5rem 0 2rem; }
+    footer { background: var(--white); padding: 5rem 0 2rem; }
     .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 3.5rem; }
-    .footer-logo-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
+    .footer-logo-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
     .footer-logo-sub { font-family: var(--font-label); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
-    .footer-brand p { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 280px; }
+    .footer-brand p { font-size: 0.88rem; color: rgba(29,35,92,0.65); line-height: 1.75; max-width: 280px; }
     .footer-col-title { font-family: var(--font-label); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.45); transition: color 0.25s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07); }
-    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+    .footer-links a { font-size: 0.88rem; color: rgba(29,35,92,0.65); transition: color 0.25s; }
+    .footer-links a:hover { color: var(--navy); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; border-top: 1px solid rgba(29,35,92,0.12); }
+    .footer-copy { font-size: 0.78rem; color: rgba(29,35,92,0.5); }
     .footer-legal { display: flex; gap: 1.5rem; }
-    .footer-legal a { font-size: 0.78rem; color: rgba(255,255,255,0.3); transition: color 0.25s; }
+    .footer-legal a { font-size: 0.78rem; color: rgba(29,35,92,0.5); transition: color 0.25s; }
     .footer-legal a:hover { color: var(--gold); }
     @media (max-width: 900px) { .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
     @media (max-width: 580px) { .footer-inner { grid-template-columns: 1fr; } }
@@ -615,7 +615,7 @@
     <div class="container">
       <div class="nav-inner">
         <a href="#" class="nav-logo" aria-label="Sierra Homes American Dream">
-          <img src="assets/SierraUSAHomes_Logo_Dark.png" alt="Sierra USA Homes" class="nav-logo-img" />
+          <img src="assets/SierraUSAHomes_Logo_Transparent.png" alt="Sierra USA Homes" class="nav-logo-img" />
           <span class="nav-logo-sub">American Dream · Nyali, Mombasa</span>
         </a>
         <ul class="nav-links" role="list">
@@ -1184,7 +1184,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="assets/SierraUSAHomes_Logo_Dark.png" alt="Sierra USA Homes" class="footer-logo-img" />
+          <img src="assets/SierraUSAHomes_Logo_Transparent.png" alt="Sierra USA Homes" class="footer-logo-img" />
           <div class="footer-logo-sub">American Dream · Nyali, Mombasa</div>
           <p>108 premium American-style residences in Nyali, Mombasa. Developed by Sierra USA Homes Ltd to U.S. construction standards.</p>
         </div>
@@ -1440,6 +1440,10 @@
     }
 
     /* ── Mobile ──────────────────────────────────────── */
+    @keyframes popupSlideUpMobile {
+      from { transform: translateY(100%); }
+      to   { transform: translateY(0); }
+    }
     @media (max-width: 680px) {
       .popup-overlay { padding: 0; align-items: flex-end; }
       .popup-modal {
@@ -1451,12 +1455,8 @@
         max-height: 92vh;
         animation: popupSlideUpMobile 0.38s cubic-bezier(0.22,1,0.36,1);
       }
-      @keyframes popupSlideUpMobile {
-        from { transform: translateY(100%); }
-        to   { transform: translateY(0); }
-      }
-      .popup-visual { grid-row: 1; }
-      .popup-content { grid-row: 2; padding: 1.6rem 1.4rem 2rem; }
+      .popup-visual { grid-row: 1; min-height: 0; }
+      .popup-content { grid-row: 2; padding: 1.6rem 1.4rem 2rem; min-height: 0; overflow-y: auto; }
       .popup-fields { grid-template-columns: 1fr; }
       .popup-heading { font-size: 1.55rem; }
       .popup-body { font-size: 0.84rem; margin-bottom: 1rem; }
@@ -1569,12 +1569,24 @@
         if (sessionStorage.getItem(POPUP_KEY)) return;
         sessionStorage.setItem(POPUP_KEY, '1');
         popupEl.classList.add('open');
+        // iOS Safari requires position:fixed on body to prevent background scroll
+        var scrollY = window.scrollY || window.pageYOffset;
+        document.body.dataset.scrollY = scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollY + 'px';
+        document.body.style.width = '100%';
         document.documentElement.style.overflow = 'hidden';
       }
 
       function closePopup() {
         popupEl.classList.remove('open');
+        // Restore scroll position after unlocking body
+        var scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
         document.documentElement.style.overflow = '';
+        window.scrollTo(0, scrollY);
       }
 
       // Scroll depth trigger — fires once at 60%

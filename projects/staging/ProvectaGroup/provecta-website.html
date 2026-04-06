@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provecta Group — Strategic Business Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== BRAND TOKENS ===== */
+    :root {
+      --blue:    #1E65B0;
+      --navy:    #0D2147;
+      --cream:   #F8F4EC;
+      --gold:    #C8A96E;
+      --white:   #FFFFFF;
+      --charcoal:#1A1A2E;
+      --muted:   #6B7280;
+      --light-bg:#F0EDE6;
+      --border:  #E2DDD4;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; color: var(--charcoal); background: var(--white); }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .section-label::before { content: ''; width: 36px; height: 2px; background: var(--gold); display: inline-block; }
+    .section-title { font-size: 42px; font-weight: 700; line-height: 1.18; color: var(--navy); margin-bottom: 18px; }
+    .section-title span { color: var(--blue); }
+    .section-sub { font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 560px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; transition: all 0.25s ease; border: 2px solid transparent; }
+    .btn-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .btn-primary:hover { background: var(--blue); border-color: var(--blue); }
+    .btn-outline { background: transparent; color: var(--gold); border-color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--navy); }
+    .btn-gold { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .btn-gold:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .section-pad { padding: 110px 0; }
+    .bg-cream { background: var(--cream); }
+    .bg-navy { background: var(--navy); }
+    .text-center { text-align: center; }
+    .text-white { color: var(--white) !important; }
+    .flex { display: flex; }
+    .grid { display: grid; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(13,33,71,0.10);
+      height: 78px;
+    }
+    .header-inner { height: 78px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark {
+      width: 42px; height: 42px; background: var(--blue); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 700; color: var(--white); letter-spacing: -1px;
+    }
+    .logo-text { font-size: 20px; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
+    .logo-text span { color: var(--blue); }
+    nav ul { display: flex; align-items: center; gap: 32px; }
+    nav ul li a { font-size: 14px; font-weight: 500; color: var(--charcoal); letter-spacing: 0.02em; transition: color 0.2s; }
+    nav ul li a:hover { color: var(--blue); }
+    .nav-cta { margin-left: 20px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 55%, #163055 100%);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding-top: 78px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80') center/cover no-repeat;
+      opacity: 0.07;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+    .hero-label { font-size: 13px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+    .hero-label::before { content: ''; width: 36px; height: 2px; background: var(--gold); }
+    .hero h1 { font-size: 58px; font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 24px; }
+    .hero h1 span { color: var(--gold); }
+    .hero-body { font-size: 17px; color: rgba(255,255,255,0.72); line-height: 1.8; margin-bottom: 38px; max-width: 480px; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-image-card {
+      background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;
+      padding: 36px; position: relative;
+    }
+    .hero-card-inner {
+      background: linear-gradient(160deg, rgba(30,101,176,0.25), rgba(200,169,110,0.15));
+      border-radius: 12px; padding: 32px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { font-size: 38px; font-weight: 700; color: var(--gold); line-height: 1; }
+    .hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 6px; font-weight: 500; }
+    .hero-card-title { grid-column: 1/-1; font-size: 15px; font-weight: 600; color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 16px; margin-bottom: 8px; }
+
+    /* ===== INTRO ===== */
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .intro-image-wrap { position: relative; }
+    .intro-image {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 16px;
+      background: linear-gradient(160deg, var(--blue), var(--navy));
+    }
+    .intro-image-placeholder {
+      width: 100%; aspect-ratio: 4/5; border-radius: 16px;
+      background: linear-gradient(160deg, #2a6fc2 0%, var(--navy) 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 16px;
+    }
+    .intro-image-placeholder svg { opacity: 0.4; }
+    .intro-badge {
+      position: absolute; bottom: 32px; left: -24px;
+      background: var(--white); border-radius: 12px;
+      padding: 20px 24px; box-shadow: 0 8px 32px rgba(13,33,71,0.16);
+      display: flex; align-items: center; gap: 14px;
+    }
+    .badge-icon { width: 48px; height: 48px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .badge-num { font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1; }
+    .badge-text { font-size: 13px; color: var(--muted); }
+    .intro-content .section-sub { max-width: 100%; margin-bottom: 20px; }
+    .intro-features { margin: 28px 0 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .intro-feature { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--charcoal); }
+    .intro-feature::before { content: ''; width: 20px; height: 20px; min-width: 20px; background: var(--blue); border-radius: 50%; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M16.7 5.3a1 1 0 0 0-1.4 0L8 12.6 4.7 9.3a1 1 0 1 0-1.4 1.4l4 4a1 1 0 0 0 1.4 0l8-8a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E"); background-size: 12px; background-repeat: no-repeat; background-position: center; }
+
+    /* ===== SERVICES ===== */
+    .services-header { text-align: center; margin-bottom: 60px; }
+    .services-header .section-label { justify-content: center; }
+    .services-header .section-sub { margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .service-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 14px; padding: 36px 28px;
+      transition: all 0.3s ease; position: relative; overflow: hidden;
+    }
+    .service-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 4px; background: var(--blue); transform: scaleX(0);
+      transition: transform 0.3s ease; transform-origin: left;
+    }
+    .service-card:hover { box-shadow: 0 12px 48px rgba(13,33,71,0.12); transform: translateY(-4px); }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-num { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 20px; }
+    .service-icon { width: 56px; height: 56px; background: var(--cream); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .service-icon svg { width: 28px; height: 28px; stroke: var(--blue); fill: none; stroke-width: 1.8; }
+    .service-title { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .service-desc { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+    .read-more { font-size: 13px; font-weight: 600; color: var(--blue); letter-spacing: 0.04em; display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+    .read-more:hover { gap: 10px; }
+
+    /* ===== STATS BANNER ===== */
+    .stats-banner { padding: 80px 0; background: var(--navy); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
+    .stat-item { padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 52px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+    .stat-label { font-size: 15px; color: rgba(255,255,255,0.65); font-weight: 500; }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .why-tabs { display: flex; gap: 0; margin-bottom: 36px; border-bottom: 2px solid var(--border); }
+    .why-tab { padding: 12px 24px; font-size: 14px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+    .why-tab.active { color: var(--blue); border-color: var(--blue); }
+    .why-features { display: grid; gap: 20px; }
+    .why-feature { display: flex; gap: 16px; align-items: flex-start; }
+    .why-feature-icon { min-width: 44px; height: 44px; background: var(--cream); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .why-feature-icon svg { width: 22px; height: 22px; stroke: var(--blue); fill: none; stroke-width: 1.8; }
+    .why-feature-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .why-feature-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+    .why-image-wrap {
+      border-radius: 16px; overflow: hidden;
+      aspect-ratio: 5/6; position: relative;
+      background: var(--navy);
+    }
+    .why-image-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+    }
+    .why-image-accent {
+      position: absolute; bottom: 28px; left: -24px;
+      background: var(--white); border-radius: 12px;
+      padding: 18px 22px; box-shadow: 0 8px 32px rgba(13,33,71,0.16);
+      display: flex; align-items: center; gap: 14px;
+    }
+    .why-accent-bar { width: 4px; height: 48px; background: linear-gradient(180deg, var(--blue), var(--gold)); border-radius: 4px; }
+    .why-accent-text-top { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .why-accent-text-bot { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+    /* ===== PROCESS ===== */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+    .process-grid::before {
+      content: ''; position: absolute; top: 48px; left: 10%; right: 10%;
+      height: 2px; background: var(--border); z-index: 0;
+    }
+    .process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+    .process-num {
+      width: 96px; height: 96px; margin: 0 auto 28px;
+      background: var(--white); border: 2px solid var(--border);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 2px;
+      box-shadow: 0 4px 20px rgba(13,33,71,0.08);
+      transition: all 0.3s;
+    }
+    .process-step:hover .process-num { background: var(--blue); border-color: var(--blue); }
+    .process-step:hover .step-n { color: var(--white); }
+    .step-n { font-size: 26px; font-weight: 700; color: var(--navy); line-height: 1; }
+    .step-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); }
+    .process-title { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .process-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ===== EXPERTISE & VALUE ===== */
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .expertise-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: 14px;
+      padding: 40px 32px; transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .expertise-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--gold));
+      transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+    }
+    .expertise-card:hover { box-shadow: 0 14px 52px rgba(13,33,71,0.12); transform: translateY(-5px); }
+    .expertise-card:hover::before { transform: scaleX(1); }
+    .expertise-icon { width: 60px; height: 60px; background: var(--cream); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .expertise-icon svg { width: 30px; height: 30px; stroke: var(--blue); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .expertise-title { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .expertise-desc { font-size: 15px; color: var(--muted); line-height: 1.78; margin-bottom: 22px; }
+    .expertise-outcomes { border-top: 1px solid var(--border); padding-top: 20px; display: grid; gap: 10px; }
+    .expertise-outcome { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--charcoal); font-weight: 500; line-height: 1.5; }
+    .expertise-outcome::before { content: ''; min-width: 18px; height: 18px; background: var(--blue); border-radius: 50%; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath d='M16.7 5.3a1 1 0 0 0-1.4 0L8 12.6 4.7 9.3a1 1 0 1 0-1.4 1.4l4 4a1 1 0 0 0 1.4 0l8-8a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E"); background-size: 11px; background-repeat: no-repeat; background-position: center; margin-top: 2px; }
+    .value-banner { background: var(--cream); border-radius: 16px; padding: 52px 60px; margin-top: 52px; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; text-align: center; }
+    .value-item { padding: 20px; border-right: 1px solid var(--border); }
+    .value-item:last-child { border-right: none; }
+    .value-num { font-size: 40px; font-weight: 700; color: var(--blue); line-height: 1; margin-bottom: 8px; }
+    .value-label { font-size: 14px; color: var(--muted); font-weight: 500; line-height: 1.5; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { background: var(--navy); padding: 110px 0; }
+    .testimonial-wrap { max-width: 760px; margin: 0 auto; text-align: center; }
+    .testimonial-quote { font-size: 20px; line-height: 1.75; color: rgba(255,255,255,0.85); font-style: italic; margin-bottom: 40px; position: relative; padding-top: 40px; }
+    .testimonial-quote::before { content: '"'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 80px; color: var(--gold); opacity: 0.4; line-height: 1; font-style: normal; }
+    .testimonial-client { display: flex; align-items: center; justify-content: center; gap: 16px; }
+    .client-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: var(--white); }
+    .client-name { font-size: 16px; font-weight: 700; color: var(--white); }
+    .client-title { font-size: 13px; color: var(--gold); font-weight: 500; }
+    .testimonial-dots { display: flex; justify-content: center; gap: 8px; margin-top: 44px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; }
+    .dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+
+    /* ===== BLOG ===== */
+    .blog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .blog-card { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--white); transition: all 0.3s; }
+    .blog-card:hover { box-shadow: 0 12px 48px rgba(13,33,71,0.12); transform: translateY(-4px); }
+    .blog-img { aspect-ratio: 16/10; background: linear-gradient(135deg, #2a6fc2, var(--navy)); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .blog-img-placeholder { font-size: 40px; opacity: 0.2; color: var(--white); }
+    .blog-body { padding: 24px; }
+    .blog-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .blog-date { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .blog-cat { font-size: 12px; font-weight: 600; color: var(--blue); background: rgba(30,101,176,0.08); padding: 3px 10px; border-radius: 4px; }
+    .blog-title { font-size: 17px; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 12px; }
+    .blog-title:hover { color: var(--blue); }
+    .blog-excerpt { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+
+    /* ===== CTA BAND ===== */
+    .cta-band {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+      padding: 80px 0; text-align: center;
+    }
+    .cta-band h2 { font-size: 40px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+    .cta-band p { font-size: 17px; color: rgba(255,255,255,0.72); margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ===== FOOTER ===== */
+    footer { background: #07162E; padding: 80px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 60px; }
+    .footer-brand .logo-text { color: var(--white); font-size: 22px; }
+    .footer-tagline { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.8; margin: 18px 0 24px; max-width: 280px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .footer-social:hover { background: var(--blue); border-color: var(--blue); }
+    .footer-social svg { width: 16px; height: 16px; stroke: rgba(255,255,255,0.65); fill: none; stroke-width: 2; }
+    .footer-col-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 24px; position: relative; padding-bottom: 14px; }
+    .footer-col-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 32px; height: 2px; background: var(--gold); }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links li a { font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.2s; display: flex; align-items: center; gap: 8px; }
+    .footer-links li a::before { content: '→'; font-size: 12px; color: var(--gold); }
+    .footer-links li a:hover { color: var(--white); }
+    .newsletter-text { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.75; margin-bottom: 20px; }
+    .newsletter-form { display: flex; gap: 0; }
+    .newsletter-form input { flex: 1; padding: 12px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-right: none; border-radius: 6px 0 0 6px; color: var(--white); font-family: inherit; font-size: 14px; outline: none; }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .newsletter-form button { padding: 12px 20px; background: var(--gold); color: var(--navy); border: none; border-radius: 0 6px 6px 0; font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+    .contact-item { display: flex; gap: 12px; margin-bottom: 16px; align-items: flex-start; }
+    .contact-item svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 2; min-width: 18px; margin-top: 2px; }
+    .contact-item span { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--gold); }
+
+    /* ===== SCROLL INDICATOR ===== */
+    .scroll-top { position: fixed; bottom: 30px; right: 30px; width: 44px; height: 44px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 16px rgba(30,101,176,0.4); z-index: 999; }
+    .scroll-top svg { width: 20px; height: 20px; stroke: var(--white); fill: none; stroke-width: 2.5; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <div class="logo-mark">P</div>
+      <span class="logo-text">Provecta <span>Group</span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="btn btn-primary nav-cta" style="padding:10px 22px">Free Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-label">Trusted Business Advisors Since 2006</div>
+      <h1>Strategic Consulting That Drives <span>Real Results</span></h1>
+      <p class="hero-body">We partner with organizations to solve complex challenges, accelerate growth, and build the operational clarity needed to compete in a changing world.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn btn-gold">Explore Services</a>
+        <a href="#" class="btn" style="color:#fff;border-color:rgba(255,255,255,0.35)">Learn More →</a>
+      </div>
+    </div>
+    <div class="hero-image-card">
+      <div class="hero-card-inner">
+        <div class="hero-card-title">Performance at a Glance — FY 2025</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Clients Served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">18</div>
+          <div class="hero-stat-label">Years in Business</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">95%</div>
+          <div class="hero-stat-label">Client Retention</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">40+</div>
+          <div class="hero-stat-label">Industry Awards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="section-pad">
+  <div class="container intro-grid">
+    <div class="intro-image-wrap">
+      <div class="intro-image-placeholder">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round">
+          <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/>
+        </svg>
+      </div>
+      <div class="intro-badge">
+        <div class="badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <div>
+          <div class="badge-num">40+</div>
+          <div class="badge-text">Industry Awards</div>
+        </div>
+      </div>
+    </div>
+    <div class="intro-content">
+      <div class="section-label">About Provecta Group</div>
+      <h2 class="section-title">We Turn Complex <span>Business Challenges</span> Into Clear Advantages</h2>
+      <p class="section-sub">Since 2006, Provecta Group has been the strategic partner of choice for growth-oriented organizations across North America, Europe, and emerging markets. Our integrated approach combines financial expertise, operational rigor, and leadership development.</p>
+      <p class="section-sub" style="margin-top:14px">We don't just deliver recommendations — we work alongside your team to implement solutions that produce measurable, lasting outcomes.</p>
+      <div class="intro-features">
+        <div class="intro-feature">Data-Driven Strategy</div>
+        <div class="intro-feature">Financial Expertise</div>
+        <div class="intro-feature">Operational Excellence</div>
+        <div class="intro-feature">Global Perspective</div>
+        <div class="intro-feature">Risk Management</div>
+        <div class="intro-feature">Leadership Development</div>
+      </div>
+      <div style="display:flex;gap:14px">
+        <a href="#" class="btn btn-primary">Our Approach</a>
+        <a href="#" class="btn btn-outline">View Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section-pad bg-cream">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Core <span>Services</span> Built for Impact</h2>
+      <p class="section-sub">From foundational strategy to front-line execution, our practice areas are designed to deliver value at every stage of your organization's journey.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <h4 class="service-title">Strategy & Planning</h4>
+        <p class="service-desc">We design market-entry strategies, competitive positioning frameworks, and long-range growth roadmaps that align your entire organization behind a single, executable vision.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4 class="service-title">Financial Consulting</h4>
+        <p class="service-desc">Our financial advisory team helps clients optimize capital structure, model risk scenarios, improve cash flow visibility, and navigate complex regulatory environments with confidence.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h4 class="service-title">Business Development</h4>
+        <p class="service-desc">We identify and activate new revenue streams — from partnership structures and M&A targeting to channel expansion and go-to-market strategy for new products and geographies.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h4 class="service-title">Operational Excellence</h4>
+        <p class="service-desc">We audit processes, eliminate inefficiencies, and implement lean frameworks that reduce costs, improve throughput, and free your leadership to focus on strategic priorities.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BANNER ===== -->
+<div class="stats-banner">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Clients Served Worldwide</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">18</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">95%</div>
+        <div class="stat-label">Client Retention Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">Industry Awards & Recognition</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="section-pad">
+  <div class="container why-grid">
+    <div>
+      <div class="section-label">Why Provecta</div>
+      <h2 class="section-title">The <span>Difference</span> Is in How We Work</h2>
+      <p class="section-sub" style="margin-bottom:32px">We integrate deeply with your organization — not as outside advisors, but as an extension of your leadership team focused on sustainable performance.</p>
+      <div class="why-tabs">
+        <div class="why-tab active">Our Philosophy</div>
+        <div class="why-tab">Our Approach</div>
+        <div class="why-tab">Our Vision</div>
+      </div>
+      <div class="why-features">
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Risk Management Consulting</div>
+            <div class="why-feature-desc">We quantify exposure, stress-test assumptions, and build governance frameworks that let you move fast without moving blind.</div>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Leadership Development</div>
+            <div class="why-feature-desc">We coach executives and senior teams on the skills, behaviors, and decision-making frameworks that define enduring organizational strength.</div>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Supply Chain Optimization</div>
+            <div class="why-feature-desc">We redesign procurement, logistics, and vendor relationships to reduce cost exposure and build resilience against supply disruptions.</div>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Customer Relationship Strategy</div>
+            <div class="why-feature-desc">We help you understand, segment, and retain your most valuable customers — increasing lifetime value and reducing acquisition cost.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85"
+        alt="Provecta Group consultants collaborating in a modern boardroom"
+      />
+      <div class="why-image-accent">
+        <div class="why-accent-bar"></div>
+        <div>
+          <div class="why-accent-text-top">Trusted by 500+ Organizations</div>
+          <div class="why-accent-text-bot">Across 22 industries worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section-pad bg-cream">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:60px">
+      <div class="section-label" style="justify-content:center">How We Work</div>
+      <h2 class="section-title">Our Four-Step <span>Engagement Process</span></h2>
+      <p class="section-sub" style="margin:0 auto">A structured yet flexible methodology that ensures clarity, accountability, and results from day one through final delivery.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-num"><span class="step-label">Step</span><span class="step-n">01</span></div>
+        <h4 class="process-title">Initial Consultation</h4>
+        <p class="process-desc">We listen first. A deep-dive discovery session maps your current state, defines success, and surfaces hidden constraints that shape the engagement scope.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num"><span class="step-label">Step</span><span class="step-n">02</span></div>
+        <h4 class="process-title">Tailored Strategy</h4>
+        <p class="process-desc">Using your data and our frameworks, we develop a prioritized action plan aligned with your resources, timeline, and risk tolerance.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num"><span class="step-label">Step</span><span class="step-n">03</span></div>
+        <h4 class="process-title">Implementation</h4>
+        <p class="process-desc">Our consultants embed with your team for hands-on execution — tracking milestones, removing blockers, and keeping stakeholders aligned throughout.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num"><span class="step-label">Step</span><span class="step-n">04</span></div>
+        <h4 class="process-title">Review & Optimize</h4>
+        <p class="process-desc">We measure outcomes against targets, capture learnings, and deliver a post-engagement playbook that empowers your team to sustain the gains independently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERTISE & VALUE ===== -->
+<section class="section-pad">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <div class="section-label" style="justify-content:center">Our Expertise</div>
+      <h2 class="section-title">Deep Capabilities, <span>Measurable Value</span></h2>
+      <p class="section-sub" style="margin:0 auto">Every engagement is anchored in proven domain expertise and a relentless focus on outcomes that matter — not just deliverables, but lasting impact on your bottom line.</p>
+    </div>
+    <div class="expertise-grid">
+
+      <!-- Card 1 -->
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 20h20M6 20V10l6-6 6 6v10"/><path d="M9 20v-5h6v5"/></svg>
+        </div>
+        <h3 class="expertise-title">Corporate Strategy</h3>
+        <p class="expertise-desc">We help leadership teams define where to compete, how to win, and what to stop doing — translating vision into an actionable, resourced roadmap.</p>
+        <div class="expertise-outcomes">
+          <div class="expertise-outcome">Market entry & competitive positioning</div>
+          <div class="expertise-outcome">Portfolio rationalization & prioritization</div>
+          <div class="expertise-outcome">M&A target identification & integration</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="expertise-title">Financial Performance</h3>
+        <p class="expertise-desc">From margin expansion to capital optimization, we bring financial rigor to every layer of the business — identifying value that's already there, waiting to be unlocked.</p>
+        <div class="expertise-outcomes">
+          <div class="expertise-outcome">Margin & cost structure optimization</div>
+          <div class="expertise-outcome">Cash flow modeling & working capital</div>
+          <div class="expertise-outcome">CFO advisory & board-level reporting</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+        </div>
+        <h3 class="expertise-title">Operational Excellence</h3>
+        <p class="expertise-desc">We audit, redesign, and streamline the processes that govern how work gets done — reducing friction, eliminating waste, and building scalable operating models.</p>
+        <div class="expertise-outcomes">
+          <div class="expertise-outcome">Process redesign & lean transformation</div>
+          <div class="expertise-outcome">Supply chain resilience & optimization</div>
+          <div class="expertise-outcome">KPI frameworks & performance systems</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="expertise-title">Growth & Revenue</h3>
+        <p class="expertise-desc">We identify and activate the highest-value growth levers — from new market channels to product expansion — backed by customer data and commercial modeling.</p>
+        <div class="expertise-outcomes">
+          <div class="expertise-outcome">Go-to-market strategy & channel design</div>
+          <div class="expertise-outcome">Revenue model innovation</div>
+          <div class="expertise-outcome">Customer segmentation & retention</div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="expertise-title">Risk & Governance</h3>
+        <p class="expertise-desc">We help boards and executive teams understand, quantify, and manage the risks that matter most — building governance structures that enable confident decision-making.</p>
+        <div class="expertise-outcomes">
+          <div class="expertise-outcome">Enterprise risk identification & mapping</div>
+          <div class="expertise-outcome">Regulatory compliance frameworks</div>
+          <div class="expertise-outcome">Board governance & reporting design</div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="expertise-card">
+        <div class="expertise-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="expertise-title">Leadership & Change</h3>
+        <p class="expertise-desc">Sustainable transformation requires people, not just plans. We develop executive capability and guide organizations through change with clarity, alignment, and momentum.</p>
+        <div class="expertise-outcomes">
+          <div class="expertise-outcome">Executive coaching & team alignment</div>
+          <div class="expertise-outcome">Change management & communication</div>
+          <div class="expertise-outcome">Organizational design & capability building</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Value Banner -->
+    <div class="value-banner">
+      <div class="value-item">
+        <div class="value-num">$2.4B+</div>
+        <div class="value-label">Client Value<br>Generated</div>
+      </div>
+      <div class="value-item">
+        <div class="value-num">30%</div>
+        <div class="value-label">Avg. Margin<br>Improvement</div>
+      </div>
+      <div class="value-item">
+        <div class="value-num">22</div>
+        <div class="value-label">Industries<br>Served</div>
+      </div>
+      <div class="value-item">
+        <div class="value-num">4.9/5</div>
+        <div class="value-label">Client Satisfaction<br>Score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:20px">
+      <div class="section-label text-white" style="justify-content:center;color:var(--gold)">Client Voices</div>
+      <h2 class="section-title text-white">What Our <span>Clients Say</span></h2>
+    </div>
+    <div class="testimonial-wrap">
+      <p class="testimonial-quote">Provecta Group completely transformed how we think about our financial strategy. They didn't come in with a generic playbook — they invested time understanding our specific context and delivered a roadmap we could actually execute. Twelve months later, we're operating at a margin we didn't think was possible.</p>
+      <div class="testimonial-client">
+        <div class="client-avatar">DL</div>
+        <div>
+          <div class="client-name">David Laurence</div>
+          <div class="client-title">CEO, Meridian Capital Holdings</div>
+        </div>
+      </div>
+      <div class="testimonial-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section class="section-pad bg-cream">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <div class="section-label">Insights & Ideas</div>
+        <h2 class="section-title">Latest from <span>The Provecta Blog</span></h2>
+      </div>
+      <a href="#" class="btn btn-outline">View All Articles</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-img"><div class="blog-img-placeholder">📊</div></div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-date">March 28, 2026</span><span class="blog-cat">Strategy</span></div>
+          <a href="#" class="blog-title">Why Most Growth Strategies Fail in Year Two — and How to Build One That Doesn't</a>
+          <p class="blog-excerpt">The problem isn't ambition. It's the gap between strategy design and operational readiness. Here's how leading organizations close it.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background:linear-gradient(135deg,#1a4a8a,#0a1830)"><div class="blog-img-placeholder">💰</div></div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-date">March 14, 2026</span><span class="blog-cat">Finance</span></div>
+          <a href="#" class="blog-title">Capital Allocation in Uncertain Markets: A Framework for CFOs</a>
+          <p class="blog-excerpt">When macro signals conflict, disciplined capital allocation becomes a competitive advantage. We share the five-step framework our CFO clients rely on.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background:linear-gradient(135deg,#c8a96e,#8a6e3a)"><div class="blog-img-placeholder">🔄</div></div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-date">February 27, 2026</span><span class="blog-cat">Operations</span></div>
+          <a href="#" class="blog-title">The Hidden Cost of Process Complexity — and the Lean Playbook to Eliminate It</a>
+          <p class="blog-excerpt">Most organizations don't realize how much revenue leaks through inefficient processes until they measure it. Here's what we typically find — and fix.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Accelerate Your Growth?</h2>
+    <p>Schedule a complimentary 45-minute consultation with one of our senior advisors. No obligation — just a focused conversation about where you want to go.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-gold">Book a Free Consultation</a>
+      <a href="#" class="btn" style="color:#fff;border-color:rgba(255,255,255,0.35)">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo footer-brand" style="margin-bottom:0">
+          <div class="logo-mark">P</div>
+          <span class="logo-text">Provecta <span>Group</span></span>
+        </div>
+        <p class="footer-tagline">We partner with growth-oriented organizations to solve complex challenges, accelerate performance, and build lasting operational excellence.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="footer-social"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" class="footer-social"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="footer-social"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Insights Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contact Info</div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>1200 Bay Street, Suite 1400<br>Toronto, ON  M5R 2A5, Canada</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.3a16 16 0 0 0 6.29 6.29l1.06-1.07a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+1 (416) 800-4500</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>advisory@provectagroup.com</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Stay Informed</div>
+        <p class="newsletter-text">Subscribe to receive our latest insights, industry analysis, and thought leadership directly in your inbox.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© Provecta Group 2026. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<a href="#" class="scroll-top">
+  <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</a>
+
+</body>
+</html>

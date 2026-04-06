@@ -10,17 +10,20 @@
 
 | Field | Value |
 |-------|-------|
-| **Full Name** | Aibex (full name TBD) |
+| **Full Name** | Aibek Sabirov |
 | **Organization** | MSIFS (Multinational Strategic Investment Fund) |
-| **Role/Title** | General Partner / Deal Origination & Technical Evaluation Lead |
+| **Role/Title** | Regional CIO — Central Asia / Deal Origination & Technical Evaluation Lead |
 | **Project Affiliations** | MSIFS Fund 1, Kazakhstan Mining Pipeline, Indonesia Oil Storage, Critical Minerals |
 | **Zoho CRM ID** | TBD |
 | **CRM Module** | Contact |
 | **Primary Channel** | WhatsApp / Zoom |
 | **Phone** | TBD |
 | **Email** | TBD |
-| **Time Zone** | US Eastern (Boston-area) / occasionally Kazakhstan time (UTC+5/6) |
-| **Location** | Boston, MA (currently completing graduate studies — graduation May 15) |
+| **Time Zone** | US Eastern (Boston-area) / Kazakhstan time (UTC+5/6) |
+| **Location** | Boston, MA (currently completing graduate studies — graduation May 15, 2026) |
+| **Citizenship** | Kazakhstan |
+| **Hometown** | Astana, Kazakhstan |
+| **LinkedIn** | linkedin.com/in/aibek-sabirov |
 | **CC/DE Agent Tier** | Tier 1: Core Partner |
 
 ---
