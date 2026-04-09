@@ -1,0 +1,6 @@
+# Zoho credentials (NEVER commit these)
+.zoho-config.json
+.zoho-tokens.json
+
+# Node
+node_modules/

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zoho": {
+      "command": "node",
+      "args": ["/REPLACE/WITH/ACTUAL/PATH/zoho-mcp-server/src/index.js"]
+    }
+  }
+}

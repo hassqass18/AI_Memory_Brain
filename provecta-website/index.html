@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provecta Group — Revenue Operations Consulting</title>
+  <meta name="description" content="Provecta Group designs and optimizes Revenue Operations systems for high-growth companies. AI-powered RevOps architecture, GTM alignment, CRM optimization, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       DESIGN TOKENS — Provecta
+    ═══════════════════════════════════════════════════════════ */
+    :root {
+      --blue:         #2468B0;
+      --blue-mid:     #1A54A0;
+      --blue-dark:    #0F3A73;
+      --blue-deeper:  #081E3F;
+      --blue-light:   #3A80CC;
+      --blue-pale:    #EBF3FF;
+      --blue-glow:    rgba(36,104,176,0.18);
+      --electric:     #4FC3F7;
+      --electric-dim: rgba(79,195,247,0.15);
+      --white:        #FFFFFF;
+      --offwhite:     #F7F9FC;
+      --fog:          #EEF2F8;
+      --dark:         #060F20;
+      --text:         #1A2540;
+      --mid:          #4A5880;
+      --light-text:   #8B96B2;
+      --border:       rgba(36,104,176,0.15);
+      --border-light: rgba(36,104,176,0.08);
+
+      --shadow-sm:    0 2px 12px rgba(8,30,63,0.06);
+      --shadow-md:    0 8px 32px rgba(8,30,63,0.10);
+      --shadow-lg:    0 20px 60px rgba(8,30,63,0.14);
+      --shadow-blue:  0 8px 32px rgba(36,104,176,0.22);
+      --shadow-card:  0 4px 24px rgba(8,30,63,0.07);
+
+      --radius-sm:    12px;
+      --radius-md:    20px;
+      --radius-lg:    28px;
+      --radius-pill:  999px;
+      --font-head:    'Sora', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --transition:   0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.1; }
+    h1 { font-size: clamp(2.6rem,5vw,4.4rem); font-weight: 800; }
+    h2 { font-size: clamp(2rem,3.5vw,3rem); font-weight: 700; }
+    h3 { font-size: clamp(1.2rem,2vw,1.55rem); font-weight: 600; }
+    h4 { font-size: 1.05rem; font-weight: 600; }
+    p  { color: var(--mid); font-size: 1rem; line-height: 1.8; }
+
+    .container       { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .container--wide { max-width: 1380px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 7rem 0; }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 28px; height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--electric));
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: var(--shadow-blue);
+    }
+    .btn-primary:hover {
+      background: var(--blue-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(36,104,176,0.32);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--blue);
+      border: 2px solid var(--blue);
+    }
+    .btn-outline:hover {
+      background: var(--blue);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-2px);
+    }
+    .btn-audit {
+      background: linear-gradient(135deg, #2468B0 0%, #4FC3F7 100%);
+      color: var(--white);
+      font-size: 1rem;
+      padding: 1rem 2.2rem;
+      box-shadow: 0 10px 40px rgba(36,104,176,0.35);
+    }
+    .btn-audit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 50px rgba(36,104,176,0.45);
+    }
+    .btn svg { flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      transition: var(--transition);
+    }
+    .nav.scrolled {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-sm);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 0;
+    }
+    .nav__logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+    .nav__logo-text {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--blue-dark);
+      letter-spacing: -0.01em;
+    }
+    .nav__logo-text span {
+      color: var(--blue);
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav__links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--mid);
+      transition: color var(--transition);
+    }
+    .nav__links a:hover { color: var(--blue); }
+    .nav__cta { display: flex; align-items: center; gap: 1rem; }
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--blue-dark);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Mobile menu */
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .nav__mobile.open {
+      display: flex;
+      opacity: 1;
+      pointer-events: all;
+    }
+    .nav__mobile a {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+    .nav__mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--mid);
+    }
+
+    @media (max-width: 900px) {
+      .nav__links, .nav__cta .btn-outline { display: none; }
+      .nav__hamburger { display: flex; }
+    }
+    @media (max-width: 640px) {
+      .nav__cta .btn-primary { display: none; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--blue-deeper) 0%, var(--blue-dark) 40%, var(--blue-mid) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 9rem 0 6rem;
+    }
+    .hero__bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(79,195,247,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(79,195,247,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .hero__glow-1 {
+      position: absolute;
+      top: -15%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(36,104,176,0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__glow-2 {
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(79,195,247,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(79,195,247,0.15);
+      border: 1px solid rgba(79,195,247,0.3);
+      border-radius: var(--radius-pill);
+      padding: 0.45rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--electric);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero__badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--electric);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero__headline {
+      color: var(--white);
+      margin-bottom: 1.4rem;
+    }
+    .hero__headline span {
+      background: linear-gradient(90deg, #4FC3F7, #89D8FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero__sub {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      max-width: 520px;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .hero__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero__stat-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .hero__stat-num span { color: var(--electric); }
+    .hero__stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.2rem;
+    }
+    .hero__visual {
+      position: relative;
+    }
+    .hero__dashboard {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      backdrop-filter: blur(20px);
+    }
+    .hero__dash-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero__dash-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .hero__dash-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      margin-left: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    .hero__dash-metric {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero__dash-metric-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .hero__dash-metric-value {
+      font-family: var(--font-head);
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.15rem;
+    }
+    .hero__dash-metric-delta {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-pill);
+    }
+    .delta-up { background: rgba(52,211,153,0.15); color: #34D399; }
+    .delta-down { background: rgba(239,68,68,0.12); color: #F87171; }
+    .hero__dash-bar-section { margin-top: 1.2rem; }
+    .hero__dash-bar-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 0.4rem;
+    }
+    .hero__dash-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.6rem;
+    }
+    .hero__dash-bar-name {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      width: 60px;
+      flex-shrink: 0;
+    }
+    .hero__dash-bar-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .hero__dash-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--blue-light), var(--electric));
+    }
+    .hero__dash-bar-pct {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      width: 32px;
+      text-align: right;
+    }
+    .hero__ai-tag {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      background: linear-gradient(135deg, #2468B0, #4FC3F7);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1.2rem;
+      box-shadow: 0 8px 24px rgba(36,104,176,0.4);
+    }
+    .hero__ai-tag-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero__ai-tag-value {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-top: 0.15rem;
+    }
+    .hero__ai-card {
+      position: absolute;
+      bottom: -1.2rem;
+      left: -1.2rem;
+      background: rgba(255,255,255,0.95);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.3rem;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 200px;
+    }
+    .hero__ai-card-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), var(--electric));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .hero__ai-card-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--mid);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero__ai-card-val {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .hero__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero__visual { display: none; }
+      .hero__stats { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 480px) {
+      .hero__stats { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       TRUST BAR
+    ═══════════════════════════════════════════════════════════ */
+    .trust {
+      padding: 2.5rem 0;
+      background: var(--offwhite);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .trust__label {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--light-text);
+      margin-bottom: 1.5rem;
+    }
+    .trust__logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .trust__logo-item {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--light-text);
+      letter-spacing: -0.02em;
+      opacity: 0.6;
+      transition: opacity var(--transition);
+    }
+    .trust__logo-item:hover { opacity: 1; }
+
+    /* ═══════════════════════════════════════════════════════════
+       WHAT WE DO — INTRO
+    ═══════════════════════════════════════════════════════════ */
+    .intro { background: var(--white); }
+    .intro__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    .intro__headline { color: var(--text); margin-bottom: 1.2rem; }
+    .intro__headline span { color: var(--blue); }
+    .intro__body { margin-bottom: 2rem; }
+    .intro__pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .intro__pillar {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: var(--offwhite);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 0.9rem 1.2rem;
+      transition: var(--transition);
+    }
+    .intro__pillar:hover {
+      border-color: var(--blue);
+      background: var(--blue-pale);
+    }
+    .intro__pillar-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .intro__pillar-text {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .intro__visual {
+      position: relative;
+    }
+    .intro__bowtie {
+      background: linear-gradient(135deg, var(--blue-deeper), var(--blue-dark));
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      color: var(--white);
+    }
+    .intro__bt-title {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--electric);
+      margin-bottom: 1.5rem;
+    }
+    .intro__bt-stages {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .intro__bt-stage {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem 0.5rem;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      position: relative;
+    }
+    .intro__bt-arrow {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.25);
+      padding: 0 0.2rem;
+      flex-shrink: 0;
+    }
+    .intro__bt-center {
+      background: linear-gradient(135deg, var(--blue), var(--electric));
+      color: var(--white) !important;
+      font-size: 0.7rem !important;
+      padding: 1.1rem 0.5rem !important;
+    }
+    .intro__bt-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+    .intro__bt-metric {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 0.9rem;
+    }
+    .intro__bt-metric-num {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--electric);
+    }
+    .intro__bt-metric-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .intro__grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SERVICES
+    ═══════════════════════════════════════════════════════════ */
+    .services { background: var(--offwhite); }
+    .services__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 4rem;
+    }
+    .services__headline { color: var(--text); margin-bottom: 1rem; }
+    .services__sub { font-size: 1.05rem; }
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--electric));
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-blue);
+      border-color: var(--blue);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card--featured {
+      background: linear-gradient(135deg, var(--blue-deeper), var(--blue-dark));
+      border-color: rgba(255,255,255,0.1);
+      grid-column: span 1;
+    }
+    .service-card--featured:hover {
+      border-color: var(--electric);
+    }
+    .service-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+      background: var(--blue-pale);
+    }
+    .service-card--featured .service-icon {
+      background: rgba(79,195,247,0.15);
+    }
+    .service-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+      background: var(--electric-dim);
+      color: var(--blue);
+      margin-bottom: 0.8rem;
+    }
+    .service-card--featured .service-tag {
+      background: rgba(79,195,247,0.15);
+      color: var(--electric);
+    }
+    .service-card h3 {
+      color: var(--text);
+      margin-bottom: 0.7rem;
+      font-size: 1.15rem;
+    }
+    .service-card--featured h3 { color: var(--white); }
+    .service-card p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+    .service-card--featured p { color: rgba(255,255,255,0.6); }
+    .service-deliverables {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .service-deliverables li {
+      font-size: 0.82rem;
+      color: var(--mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      line-height: 1.5;
+    }
+    .service-card--featured .service-deliverables li {
+      color: rgba(255,255,255,0.6);
+    }
+    .service-deliverables li::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+      margin-top: 0.45em;
+      flex-shrink: 0;
+    }
+    .service-card--featured .service-deliverables li::before {
+      background: var(--electric);
+    }
+
+    @media (max-width: 1000px) {
+      .services__grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 640px) {
+      .services__grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       AI ARCHITECTURE SECTION
+    ═══════════════════════════════════════════════════════════ */
+    .ai-section {
+      background: linear-gradient(160deg, var(--blue-deeper) 0%, #0A2550 60%, var(--blue-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .ai-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(79,195,247,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(79,195,247,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .ai-section .eyebrow { color: var(--electric); }
+    .ai-section .eyebrow::before {
+      background: linear-gradient(90deg, var(--electric), transparent);
+    }
+    .ai__inner { position: relative; z-index: 1; }
+    .ai__header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4.5rem;
+    }
+    .ai__headline {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .ai__headline span {
+      background: linear-gradient(90deg, #4FC3F7, #89D8FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ai__sub { color: rgba(255,255,255,0.6); font-size: 1.05rem; }
+    .ai__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .ai__stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .ai__layer {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(79,195,247,0.15);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      transition: var(--transition);
+    }
+    .ai__layer:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(79,195,247,0.35);
+    }
+    .ai__layer-header {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+    .ai__layer-num {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: rgba(79,195,247,0.15);
+      border: 1px solid rgba(79,195,247,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--electric);
+      flex-shrink: 0;
+    }
+    .ai__layer-name {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .ai__layer-desc {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+    }
+    .ai__layer-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+    }
+    .ai__chip {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.22rem 0.6rem;
+      border-radius: var(--radius-pill);
+      background: rgba(79,195,247,0.1);
+      border: 1px solid rgba(79,195,247,0.2);
+      color: rgba(79,195,247,0.9);
+    }
+    .ai__visual {
+      position: sticky;
+      top: 6rem;
+    }
+    .ai__flow-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+    .ai__flow-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--electric);
+      margin-bottom: 1.5rem;
+    }
+    .ai__flow-node {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.9rem 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      margin-bottom: 0.6rem;
+    }
+    .ai__flow-node-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ai__flow-node-text { font-size: 0.82rem; color: rgba(255,255,255,0.75); font-weight: 500; }
+    .ai__flow-connector {
+      width: 2px;
+      height: 18px;
+      background: linear-gradient(to bottom, rgba(79,195,247,0.4), rgba(79,195,247,0.1));
+      margin: 0 1rem 0.6rem;
+      border-radius: 2px;
+    }
+    .ai__outcome {
+      margin-top: 1.5rem;
+      padding: 1.2rem;
+      background: linear-gradient(135deg, rgba(36,104,176,0.3), rgba(79,195,247,0.15));
+      border: 1px solid rgba(79,195,247,0.25);
+      border-radius: var(--radius-md);
+    }
+    .ai__outcome-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--electric);
+      margin-bottom: 0.4rem;
+    }
+    .ai__outcome-text {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    @media (max-width: 900px) {
+      .ai__grid { grid-template-columns: 1fr; }
+      .ai__visual { position: static; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       PROCESS
+    ═══════════════════════════════════════════════════════════ */
+    .process { background: var(--white); }
+    .process__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+    .process__steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process__steps::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(12.5% + 1rem);
+      right: calc(12.5% + 1rem);
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--electric), var(--blue));
+      z-index: 0;
+    }
+    .process__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .process__step-num {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--blue);
+      margin-bottom: 1.4rem;
+      box-shadow: 0 0 0 6px rgba(36,104,176,0.08);
+      transition: var(--transition);
+    }
+    .process__step:hover .process__step-num {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 0 0 8px rgba(36,104,176,0.12), var(--shadow-blue);
+    }
+    .process__step h4 { margin-bottom: 0.5rem; }
+    .process__step p { font-size: 0.83rem; }
+
+    @media (max-width: 800px) {
+      .process__steps { grid-template-columns: repeat(2,1fr); gap: 2rem; }
+      .process__steps::before { display: none; }
+    }
+    @media (max-width: 480px) {
+      .process__steps { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       AUDIT CTA SECTION — FREE REVOPS AUDIT
+    ═══════════════════════════════════════════════════════════ */
+    .audit-section {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 60%, var(--blue-deeper) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .audit-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(79,195,247,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    }
+    .audit__inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .audit__left .eyebrow { color: var(--electric); }
+    .audit__left .eyebrow::before {
+      background: linear-gradient(90deg, var(--electric), transparent);
+    }
+    .audit__headline {
+      color: var(--white);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-bottom: 1.2rem;
+    }
+    .audit__headline span {
+      background: linear-gradient(90deg, #4FC3F7, #89D8FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .audit__desc {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    .audit__checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+    .audit__checklist li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .audit__check {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(79,195,247,0.2);
+      border: 1.5px solid rgba(79,195,247,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .audit__trust-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    /* FORM CARD */
+    .audit__form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+    }
+    .audit__form-title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .audit__form-sub {
+      font-size: 0.85rem;
+      color: var(--mid);
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--offwhite);
+      border: 1.5px solid var(--fog);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: var(--text);
+      transition: var(--transition);
+      outline: none;
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(36,104,176,0.08);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--light-text);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+    }
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-blue);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(36,104,176,0.35);
+    }
+    .form-note {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--light-text);
+      margin-top: 0.9rem;
+    }
+    /* Thank You State */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .form-success-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--electric));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+    .form-success h3 {
+      font-size: 1.3rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .form-success p {
+      font-size: 0.88rem;
+      color: var(--mid);
+    }
+
+    @media (max-width: 900px) {
+      .audit__inner { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 480px) {
+      .form-row { grid-template-columns: 1fr; }
+      .audit__form-card { padding: 1.8rem; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESULTS / SOCIAL PROOF
+    ═══════════════════════════════════════════════════════════ */
+    .results { background: var(--offwhite); }
+    .results__header {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 4rem;
+    }
+    .results__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .result-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    .result-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .result-card__quote {
+      font-size: 0.92rem;
+      color: var(--mid);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .result-card__quote::before {
+      content: '"';
+      font-family: var(--font-head);
+      font-size: 2rem;
+      color: var(--blue);
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .result-card__author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .result-card__avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--electric));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .result-card__name {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+    .result-card__role {
+      font-size: 0.75rem;
+      color: var(--light-text);
+      margin-top: 0.1rem;
+    }
+    .result-card__stat {
+      margin-top: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .result-card__stat-num {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--blue);
+    }
+    .result-card__stat-label {
+      font-size: 0.78rem;
+      color: var(--mid);
+      line-height: 1.3;
+    }
+
+    @media (max-width: 900px) {
+      .results__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 580px) {
+      .results__grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FINAL CTA BAND
+    ═══════════════════════════════════════════════════════════ */
+    .cta-band {
+      background: var(--white);
+      padding: 5rem 0;
+    }
+    .cta-band__inner {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .cta-band__headline {
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .cta-band__headline span { color: var(--blue); }
+    .cta-band__sub {
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
+    .cta-band__actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════ */
+    .footer {
+      background: var(--blue-deeper);
+      color: var(--white);
+      padding: 4rem 0 2rem;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer__brand { max-width: 280px; }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .footer__logo img {
+      width: 38px; height: 38px;
+      border-radius: 9px;
+    }
+    .footer__logo-text {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+    }
+    .footer__tagline {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .footer__col-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1rem;
+    }
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer__links a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+    .footer__links a:hover { color: var(--electric); }
+    .footer__bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer__copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer__legal-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer__legal-links a {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      transition: color var(--transition);
+    }
+    .footer__legal-links a:hover { color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 900px) {
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+      .footer__brand { max-width: 100%; grid-column: span 2; }
+    }
+    @media (max-width: 480px) {
+      .footer__grid { grid-template-columns: 1fr; }
+      .footer__brand { grid-column: span 1; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       UTILITIES
+    ═══════════════════════════════════════════════════════════ */
+    .text-center { text-align: center; }
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    section { padding: 7rem 0; }
+    @media (max-width: 768px) { section { padding: 5rem 0; } }
+    @media (max-width: 480px) { section { padding: 4rem 0; } }
+
+    /* SCROLL ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       COMPREHENSIVE MOBILE OPTIMIZATIONS
+    ═══════════════════════════════════════════════════════════ */
+
+    /* Prevent iOS font-size zoom on input focus */
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+
+    /* Minimum touch target sizes */
+    .btn, button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn {
+      min-height: 44px;
+    }
+
+    /* ── TABLET (≤900px) ── */
+    @media (max-width: 900px) {
+      .container { padding: 0 1.5rem; }
+
+      /* Nav */
+      .nav { padding: 0.8rem 0; }
+
+      /* Hero */
+      .hero { padding: 7rem 0 4rem; min-height: auto; }
+      .hero__headline { font-size: clamp(2.2rem, 7vw, 3rem); }
+      .hero__sub { font-size: 1rem; }
+      .hero__actions { gap: 0.75rem; }
+      .hero__stats { gap: 1rem; padding-top: 2rem; margin-top: 2.5rem; }
+      .hero__stat-num { font-size: 1.6rem; }
+
+      /* Trust */
+      .trust__logos { gap: 1.5rem; }
+
+      /* Services */
+      .services__header { margin-bottom: 3rem; }
+
+      /* AI Section */
+      .ai__header { margin-bottom: 3rem; }
+
+      /* Process */
+      .process__header { margin-bottom: 3rem; }
+
+      /* Results */
+      .results__header { margin-bottom: 3rem; }
+
+      /* Audit */
+      .audit-section { padding: 5rem 0; }
+      .audit__headline { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+
+      /* Footer */
+      .footer { padding: 3rem 0 1.5rem; }
+      .footer__grid { gap: 2rem; margin-bottom: 2rem; }
+    }
+
+    /* ── MOBILE (≤640px) ── */
+    @media (max-width: 640px) {
+      .container { padding: 0 1.2rem; }
+
+      /* Typography */
+      h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+      h2 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+      h3 { font-size: clamp(1.1rem, 4vw, 1.3rem); }
+
+      /* Nav */
+      .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
+
+      /* Hero */
+      .hero { padding: 6rem 0 3.5rem; }
+      .hero__badge { font-size: 0.68rem; padding: 0.4rem 0.9rem; }
+      .hero__headline { margin-bottom: 1rem; }
+      .hero__sub { font-size: 0.95rem; margin-bottom: 2rem; max-width: 100%; }
+      .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+      .hero__actions .btn {
+        justify-content: center;
+        width: 100%;
+        padding: 1rem 1.5rem;
+      }
+      .hero__stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+      }
+      .hero__stat-num { font-size: 1.4rem; }
+      .hero__stat-label { font-size: 0.7rem; }
+
+      /* Trust bar */
+      .trust { padding: 2rem 0; }
+      .trust__logos { gap: 1.2rem; }
+      .trust__logo-item { font-size: 0.82rem; }
+
+      /* Intro bow-tie */
+      .intro__bt-stages { gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; }
+      .intro__bt-stage { padding: 0.7rem 0.3rem; font-size: 0.6rem !important; min-width: 44px; }
+      .intro__bt-metrics { grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 1.2rem; }
+      .intro__bt-metric-num { font-size: 1.2rem; }
+
+      /* Services */
+      .service-card { padding: 1.6rem; }
+      .service-icon { width: 44px; height: 44px; }
+
+      /* AI Section */
+      .ai__layer { padding: 1.3rem; }
+      .ai__layer-chips { gap: 0.3rem; }
+      .ai__chip { font-size: 0.65rem; }
+      .ai__flow-card { padding: 1.5rem; }
+
+      /* Process steps */
+      .process__step { padding: 0 0.5rem; }
+      .process__step-num { width: 52px; height: 52px; font-size: 0.95rem; }
+
+      /* Audit form */
+      .audit-section { padding: 4rem 0; }
+      .audit__checklist { gap: 0.65rem; }
+      .audit__checklist li { font-size: 0.85rem; }
+      .audit__form-card { padding: 1.6rem 1.4rem; border-radius: var(--radius-md); }
+      .audit__form-title { font-size: 1.15rem; }
+      .form-submit { font-size: 0.9rem; padding: 0.95rem 1rem; }
+
+      /* Results */
+      .result-card { padding: 1.6rem; }
+
+      /* CTA Band */
+      .cta-band { padding: 4rem 0; }
+      .cta-band__actions { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .cta-band__actions .btn { width: 100%; max-width: 340px; justify-content: center; }
+
+      /* Footer */
+      .footer__bottom { flex-direction: column; text-align: center; gap: 0.75rem; }
+      .footer__legal-links { justify-content: center; }
+    }
+
+    /* ── SMALL MOBILE (≤390px) ── */
+    @media (max-width: 390px) {
+      .container { padding: 0 1rem; }
+
+      h1 { font-size: 1.9rem; }
+      h2 { font-size: 1.6rem; }
+
+      .hero { padding: 5.5rem 0 3rem; }
+      .hero__stats { grid-template-columns: 1fr 1fr; }
+      .hero__stats > div:last-child { grid-column: span 2; text-align: center; }
+
+      .btn-audit { font-size: 0.88rem; padding: 0.9rem 1.4rem; }
+
+      .service-card { padding: 1.4rem; }
+      .audit__form-card { padding: 1.3rem 1.1rem; }
+
+      .intro__bt-metrics { grid-template-columns: 1fr 1fr; }
+
+      .trust__logos { gap: 0.8rem; }
+      .trust__logo-item { font-size: 0.75rem; }
+    }
+
+    /* ── MOBILE NAV ACTIVE STATE ── */
+    @media (max-width: 900px) {
+      .nav__mobile {
+        padding: 2rem 1.5rem;
+      }
+      .nav__mobile a {
+        font-size: 1.4rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--fog);
+        width: 100%;
+        text-align: center;
+      }
+      .nav__mobile a:last-child {
+        border-bottom: none;
+        margin-top: 0.5rem;
+        background: var(--blue);
+        color: var(--white) !important;
+        padding: 0.8rem 2rem;
+        border-radius: var(--radius-pill);
+        border-bottom: none;
+      }
+    }
+
+    /* ── SAFE AREA (iPhone notch/home bar) ── */
+    @supports (padding: env(safe-area-inset-bottom)) {
+      .footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+      }
+      .nav {
+        padding-top: calc(1rem + env(safe-area-inset-top));
+      }
+    }
+
+    /* ── TOUCH SCROLL for horizontal overflow ── */
+    .intro__bt-stages {
+      scrollbar-width: none;
+    }
+    .intro__bt-stages::-webkit-scrollbar { display: none; }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+      * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════ -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="provecta_logo.png" alt="Provecta Group logo" />
+        <span class="nav__logo-text">Provecta <span>Group</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#ai-architecture">AI Architecture</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#audit">Free Audit</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#audit" class="btn btn-outline">Get Free Audit</a>
+        <a href="mailto:hassan.qaseem@gc-usa.com" class="btn btn-primary">Contact Us</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav__mobile" id="mobileMenu">
+  <button class="nav__mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#ai-architecture" onclick="toggleMenu()">AI Architecture</a>
+  <a href="#process" onclick="toggleMenu()">Our Process</a>
+  <a href="#results" onclick="toggleMenu()">Results</a>
+  <a href="#audit" onclick="toggleMenu()" style="color:var(--blue);">Get Free Audit →</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero__bg-grid"></div>
+  <div class="hero__glow-1"></div>
+  <div class="hero__glow-2"></div>
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">Revenue Operations + AI</div>
+        <h1 class="hero__headline">
+          Build a Revenue Engine That <span>Scales Itself</span>
+        </h1>
+        <p class="hero__sub">
+          Provecta Group designs, optimizes, and AI-powers Revenue Operations systems for high-growth companies — aligning Sales, Marketing, and Customer Success into one predictable machine.
+        </p>
+        <div class="hero__actions">
+          <a href="#audit" class="btn btn-audit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
+            Get Your Free RevOps Audit
+          </a>
+          <a href="#services" class="btn btn-ghost" style="justify-content:center;">Explore Services</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-num">3<span>x</span></div>
+            <div class="hero__stat-label">Average pipeline velocity increase</div>
+          </div>
+          <div>
+            <div class="hero__stat-num">40<span>%</span></div>
+            <div class="hero__stat-label">Reduction in RevOps overhead</div>
+          </div>
+          <div>
+            <div class="hero__stat-num">90<span>d</span></div>
+            <div class="hero__stat-label">To a fully operational RevOps system</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Visual -->
+      <div class="hero__visual">
+        <div class="hero__ai-tag">
+          <div class="hero__ai-tag-label">AI Forecast</div>
+          <div class="hero__ai-tag-value">↑ $2.4M ARR</div>
+        </div>
+        <div class="hero__dashboard">
+          <div class="hero__dash-header">
+            <div class="hero__dash-dot" style="background:#34D399;"></div>
+            <div class="hero__dash-dot" style="background:#F59E0B;"></div>
+            <div class="hero__dash-dot" style="background:#F87171;"></div>
+            <div class="hero__dash-title">Revenue Operations Dashboard</div>
+          </div>
+          <div class="hero__dash-metric">
+            <span class="hero__dash-metric-label">Pipeline Value</span>
+            <div style="display:flex;align-items:center;gap:0.6rem">
+              <span class="hero__dash-metric-value" style="color:#fff;">$4.8M</span>
+              <span class="hero__dash-metric-delta delta-up">↑ 32%</span>
+            </div>
+          </div>
+          <div class="hero__dash-metric">
+            <span class="hero__dash-metric-label">Win Rate</span>
+            <div style="display:flex;align-items:center;gap:0.6rem">
+              <span class="hero__dash-metric-value" style="color:#fff;">38.4%</span>
+              <span class="hero__dash-metric-delta delta-up">↑ 11pts</span>
+            </div>
+          </div>
+          <div class="hero__dash-metric">
+            <span class="hero__dash-metric-label">Sales Cycle</span>
+            <div style="display:flex;align-items:center;gap:0.6rem">
+              <span class="hero__dash-metric-value" style="color:#fff;">28 days</span>
+              <span class="hero__dash-metric-delta delta-up">↓ 14d</span>
+            </div>
+          </div>
+          <div class="hero__dash-bar-section">
+            <div class="hero__dash-bar-label">Stage Conversion</div>
+            <div class="hero__dash-bar-row">
+              <div class="hero__dash-bar-name">MQL→SQL</div>
+              <div class="hero__dash-bar-track"><div class="hero__dash-bar-fill" style="width:72%"></div></div>
+              <div class="hero__dash-bar-pct">72%</div>
+            </div>
+            <div class="hero__dash-bar-row">
+              <div class="hero__dash-bar-name">SQL→Opp</div>
+              <div class="hero__dash-bar-track"><div class="hero__dash-bar-fill" style="width:55%"></div></div>
+              <div class="hero__dash-bar-pct">55%</div>
+            </div>
+            <div class="hero__dash-bar-row">
+              <div class="hero__dash-bar-name">Opp→Win</div>
+              <div class="hero__dash-bar-track"><div class="hero__dash-bar-fill" style="width:38%"></div></div>
+              <div class="hero__dash-bar-pct">38%</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__ai-card">
+          <div class="hero__ai-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div class="hero__ai-card-label">AI Insight</div>
+            <div class="hero__ai-card-val">3 deals at risk</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     TRUST BAR
+═══════════════════════════════════════════════════ -->
+<div class="trust">
+  <div class="container">
+    <div class="trust__label">Trusted by Growth-Stage & Enterprise Teams</div>
+    <div class="trust__logos">
+      <div class="trust__logo-item">SaaS Ventures</div>
+      <div class="trust__logo-item">Meridian Capital</div>
+      <div class="trust__logo-item">PeakRoute</div>
+      <div class="trust__logo-item">Synova Health</div>
+      <div class="trust__logo-item">Arcturus Growth</div>
+      <div class="trust__logo-item">CoreBridge</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     INTRO — WHAT WE DO
+═══════════════════════════════════════════════════ -->
+<section class="intro" id="about">
+  <div class="container">
+    <div class="intro__grid">
+      <div class="intro__left">
+        <div class="eyebrow">What We Do</div>
+        <h2 class="intro__headline">Revenue Operations Is a <span>System</span>, Not a Department</h2>
+        <p class="intro__body">
+          Most companies treat RevOps as a support function. We treat it as a precision-engineered growth system — where every stage of the customer lifecycle is instrumented, automated, and continuously optimized. Our approach spans the full Bow Tie: from demand generation to closed-won to post-sale expansion.
+        </p>
+        <div class="intro__pillars">
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="intro__pillar-text">Predictable, data-driven pipeline forecasting</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="intro__pillar-text">Full GTM alignment — Sales, Marketing & CS unified</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="intro__pillar-text">AI-augmented insights and workflow automation</div>
+          </div>
+          <div class="intro__pillar">
+            <div class="intro__pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="intro__pillar-text">Single Source of Truth across your entire revenue stack</div>
+          </div>
+        </div>
+      </div>
+      <div class="intro__visual fade-in">
+        <div class="intro__bowtie">
+          <div class="intro__bt-title">The Revenue Bow Tie — Provecta Model</div>
+          <div class="intro__bt-stages">
+            <div class="intro__bt-stage" style="font-size:0.65rem;">Lead Gen</div>
+            <div class="intro__bt-arrow">→</div>
+            <div class="intro__bt-stage" style="font-size:0.65rem;">Qualify</div>
+            <div class="intro__bt-arrow">→</div>
+            <div class="intro__bt-stage intro__bt-center">Close</div>
+            <div class="intro__bt-arrow">→</div>
+            <div class="intro__bt-stage" style="font-size:0.65rem;">Adopt</div>
+            <div class="intro__bt-arrow">→</div>
+            <div class="intro__bt-stage" style="font-size:0.65rem;">Expand</div>
+          </div>
+          <div class="intro__bt-metrics">
+            <div class="intro__bt-metric">
+              <div class="intro__bt-metric-num">97%</div>
+              <div class="intro__bt-metric-label">Data accuracy after SSoT build</div>
+            </div>
+            <div class="intro__bt-metric">
+              <div class="intro__bt-metric-num">2.8x</div>
+              <div class="intro__bt-metric-label">NRR lift from expansion plays</div>
+            </div>
+            <div class="intro__bt-metric">
+              <div class="intro__bt-metric-num">18%</div>
+              <div class="intro__bt-metric-label">Avg CAC reduction post-alignment</div>
+            </div>
+            <div class="intro__bt-metric">
+              <div class="intro__bt-metric-num">60d</div>
+              <div class="intro__bt-metric-label">Avg time to first RevOps dashboard</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services__header fade-in">
+      <div class="eyebrow text-center" style="justify-content:center;">Our Services</div>
+      <h2 class="services__headline">Every Layer of Your Revenue Engine, Covered</h2>
+      <p class="services__sub">From foundational architecture to AI-powered automation — we design and build the systems that make revenue growth predictable.</p>
+    </div>
+
+    <div class="services__grid">
+
+      <!-- Service 1 -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2468B0" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <span class="service-tag">Foundation</span>
+        <h3>RevOps Architecture & Design</h3>
+        <p>Build or redesign your Revenue Operations infrastructure from first principles — creating a unified system where Marketing, Sales, and Customer Success operate from shared data, definitions, and SLAs.</p>
+        <ul class="service-deliverables">
+          <li>Revenue process mapping & gap analysis</li>
+          <li>Lead lifecycle & funnel stage definition</li>
+          <li>SLA framework across GTM teams</li>
+          <li>Shared KPI & metric alignment</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2468B0" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <span class="service-tag">Intelligence</span>
+        <h3>AI-Powered Revenue Intelligence</h3>
+        <p>Move beyond static dashboards. We deploy AI forecasting models, lead scoring engines, and deal-health monitors that surface actionable signals before opportunities are lost.</p>
+        <ul class="service-deliverables">
+          <li>AI pipeline forecasting & scenario modeling</li>
+          <li>Predictive lead & account scoring</li>
+          <li>Deal risk detection & alerting</li>
+          <li>Churn prediction & expansion triggers</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 — Featured (AI) -->
+      <div class="service-card service-card--featured fade-in">
+        <div class="service-icon" style="background:rgba(79,195,247,0.15)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="service-tag">AI-Native</span>
+        <h3 style="color:white;">AI Workflow Automation</h3>
+        <p>Eliminate manual RevOps work. We identify and automate your highest-friction workflows — from lead routing and follow-up sequencing to reporting generation and CRM hygiene.</p>
+        <ul class="service-deliverables">
+          <li>End-to-end lead routing automation</li>
+          <li>AI-drafted outreach & follow-up sequences</li>
+          <li>Automated CRM data enrichment & hygiene</li>
+          <li>Real-time revenue reporting pipelines</li>
+        </ul>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2468B0" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="service-tag">Alignment</span>
+        <h3>GTM Alignment & Enablement</h3>
+        <p>Unify your go-to-market engine. We build the playbooks, training, and shared language your teams need to operate as one coordinated revenue organization.</p>
+        <ul class="service-deliverables">
+          <li>ICP definition & segmentation strategy</li>
+          <li>Sales playbooks & qualification frameworks</li>
+          <li>Cross-functional onboarding programs</li>
+          <li>GTM motion design (PLG, Sales-led, hybrid)</li>
+        </ul>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2468B0" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <span class="service-tag">Tech Stack</span>
+        <h3>CRM Implementation & Optimization</h3>
+        <p>Design and deploy a CRM that your team actually uses. We implement, configure, and continuously optimize your CRM as the central hub of your revenue operations.</p>
+        <ul class="service-deliverables">
+          <li>CRM architecture design & implementation</li>
+          <li>Pipeline & workflow configuration</li>
+          <li>Data migration & deduplication</li>
+          <li>Ongoing optimization & admin support</li>
+        </ul>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2468B0" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <span class="service-tag">Analytics</span>
+        <h3>Data Infrastructure & Reporting</h3>
+        <p>Build the Single Source of Truth your leadership team needs to make fast, confident decisions. From data pipelines to executive dashboards — we turn your revenue data into clarity.</p>
+        <ul class="service-deliverables">
+          <li>Revenue data warehouse design</li>
+          <li>Executive & board-level dashboards</li>
+          <li>Attribution modeling & ROI reporting</li>
+          <li>Automated weekly revenue reviews</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     AI ARCHITECTURE
+═══════════════════════════════════════════════════ -->
+<section class="ai-section" id="ai-architecture">
+  <div class="container ai__inner">
+    <div class="ai__header fade-in">
+      <div class="eyebrow text-center" style="justify-content:center;">AI Architecture</div>
+      <h2 class="ai__headline">We Don't Just Consult — We <span>Build AI In</span></h2>
+      <p class="ai__sub">Every Provecta engagement layers AI into the RevOps stack — not as a bolt-on, but as a structural component of how your revenue system thinks, learns, and acts.</p>
+    </div>
+    <div class="ai__grid">
+      <div class="ai__stack">
+        <div class="ai__layer fade-in">
+          <div class="ai__layer-header">
+            <div class="ai__layer-num">01</div>
+            <div class="ai__layer-name">Data Foundation Layer</div>
+          </div>
+          <div class="ai__layer-desc">A clean, unified data layer is the prerequisite for everything else. We build your revenue data model — normalizing CRM, marketing, finance, and product data into a single schema AI can reason over.</div>
+          <div class="ai__layer-chips">
+            <span class="ai__chip">CRM Data Model</span>
+            <span class="ai__chip">Unified Schema</span>
+            <span class="ai__chip">Event Tracking</span>
+            <span class="ai__chip">Data Quality</span>
+          </div>
+        </div>
+
+        <div class="ai__layer fade-in">
+          <div class="ai__layer-header">
+            <div class="ai__layer-num">02</div>
+            <div class="ai__layer-name">Intelligence & Signal Layer</div>
+          </div>
+          <div class="ai__layer-desc">AI models trained on your specific pipeline history surface signals your team can act on: which deals are at risk, which leads are ready, and where the next quarter's number is actually coming from.</div>
+          <div class="ai__layer-chips">
+            <span class="ai__chip">Lead Scoring</span>
+            <span class="ai__chip">Pipeline Forecasting</span>
+            <span class="ai__chip">Deal Health AI</span>
+            <span class="ai__chip">Churn Prediction</span>
+          </div>
+        </div>
+
+        <div class="ai__layer fade-in">
+          <div class="ai__layer-header">
+            <div class="ai__layer-num">03</div>
+            <div class="ai__layer-name">Automation & Action Layer</div>
+          </div>
+          <div class="ai__layer-desc">AI doesn't just surface insight — it acts. We build automation agents that route leads, draft outreach, update CRM records, trigger alerts, and generate weekly revenue reports without human input.</div>
+          <div class="ai__layer-chips">
+            <span class="ai__chip">AI Agents</span>
+            <span class="ai__chip">Lead Routing</span>
+            <span class="ai__chip">Outreach Drafting</span>
+            <span class="ai__chip">CRM Hygiene</span>
+          </div>
+        </div>
+
+        <div class="ai__layer fade-in">
+          <div class="ai__layer-header">
+            <div class="ai__layer-num">04</div>
+            <div class="ai__layer-name">Oversight & Optimization Layer</div>
+          </div>
+          <div class="ai__layer-desc">AI systems degrade without governance. We build monitoring loops, accuracy tracking, and human-in-the-loop override mechanisms — so your AI RevOps stack improves over time instead of drifting.</div>
+          <div class="ai__layer-chips">
+            <span class="ai__chip">Model Monitoring</span>
+            <span class="ai__chip">Feedback Loops</span>
+            <span class="ai__chip">Human Override</span>
+            <span class="ai__chip">Performance Tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Flow Visual -->
+      <div class="ai__visual fade-in">
+        <div class="ai__flow-card">
+          <div class="ai__flow-title">AI RevOps in Action — Live Flow</div>
+
+          <div class="ai__flow-node">
+            <div class="ai__flow-node-icon" style="background:rgba(59,130,246,0.2)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="ai__flow-node-text">Form fill / Intent signal received</div>
+          </div>
+          <div class="ai__flow-connector"></div>
+          <div class="ai__flow-node">
+            <div class="ai__flow-node-icon" style="background:rgba(79,195,247,0.15)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="ai__flow-node-text">AI scores lead (firmographic + behavioral)</div>
+          </div>
+          <div class="ai__flow-connector"></div>
+          <div class="ai__flow-node">
+            <div class="ai__flow-node-icon" style="background:rgba(52,211,153,0.15)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div class="ai__flow-node-text">CRM record created & enriched automatically</div>
+          </div>
+          <div class="ai__flow-connector"></div>
+          <div class="ai__flow-node">
+            <div class="ai__flow-node-icon" style="background:rgba(245,158,11,0.15)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <div class="ai__flow-node-text">Routed to right rep with AI-drafted outreach</div>
+          </div>
+          <div class="ai__flow-connector"></div>
+          <div class="ai__flow-node">
+            <div class="ai__flow-node-icon" style="background:rgba(139,92,246,0.15)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="ai__flow-node-text">Deal health monitored & forecast updated</div>
+          </div>
+
+          <div class="ai__outcome">
+            <div class="ai__outcome-label">Outcome</div>
+            <div class="ai__outcome-text">Zero manual work. Rep gets warm lead, right context, right moment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PROCESS
+═══════════════════════════════════════════════════ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="process__header fade-in">
+      <div class="eyebrow text-center" style="justify-content:center;">Our Process</div>
+      <h2>From Audit to Operational in 90 Days</h2>
+      <p class="mt-2">A structured, milestone-driven engagement that delivers a working RevOps system — not a deck.</p>
+    </div>
+    <div class="process__steps">
+      <div class="process__step fade-in">
+        <div class="process__step-num">01</div>
+        <h4>Diagnose</h4>
+        <p>Free RevOps audit of your current state — pipeline, tech stack, data quality, team alignment, and AI readiness.</p>
+      </div>
+      <div class="process__step fade-in">
+        <div class="process__step-num">02</div>
+        <h4>Architect</h4>
+        <p>Design the full revenue operations blueprint — process maps, tech stack specs, data model, AI layer plan, and 90-day roadmap.</p>
+      </div>
+      <div class="process__step fade-in">
+        <div class="process__step-num">03</div>
+        <h4>Build</h4>
+        <p>Hands-on implementation: CRM, automations, AI models, dashboards, playbooks, and team enablement — all delivered, not just recommended.</p>
+      </div>
+      <div class="process__step fade-in">
+        <div class="process__step-num">04</div>
+        <h4>Optimize</h4>
+        <p>Ongoing performance reviews, AI model tuning, and quarterly RevOps sprints to continuously improve the revenue machine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     RESULTS
+═══════════════════════════════════════════════════ -->
+<section class="results" id="results">
+  <div class="container">
+    <div class="results__header fade-in">
+      <div class="eyebrow text-center" style="justify-content:center;">Client Results</div>
+      <h2>What Happens When RevOps Works</h2>
+      <p class="mt-2">Real outcomes from companies that built their revenue engine with Provecta.</p>
+    </div>
+    <div class="results__grid">
+
+      <div class="result-card fade-in">
+        <div class="result-card__quote">Provecta didn't just fix our pipeline reporting — they rebuilt the entire engine underneath it. Within 60 days we had clarity on our forecast that we never had before.</div>
+        <div class="result-card__author">
+          <div class="result-card__avatar">MK</div>
+          <div>
+            <div class="result-card__name">Marcus K.</div>
+            <div class="result-card__role">CRO, Series B SaaS Company</div>
+          </div>
+        </div>
+        <div class="result-card__stat">
+          <div class="result-card__stat-num">3.2x</div>
+          <div class="result-card__stat-label">Pipeline velocity increase in 90 days</div>
+        </div>
+      </div>
+
+      <div class="result-card fade-in">
+        <div class="result-card__quote">The AI lead scoring alone saved my team 6 hours a week. We now focus exclusively on accounts that are actually ready to buy. It changed how we sell.</div>
+        <div class="result-card__author">
+          <div class="result-card__avatar">SL</div>
+          <div>
+            <div class="result-card__name">Sarah L.</div>
+            <div class="result-card__role">VP Sales, B2B Tech Platform</div>
+          </div>
+        </div>
+        <div class="result-card__stat">
+          <div class="result-card__stat-num">41%</div>
+          <div class="result-card__stat-label">Increase in qualified opportunity rate</div>
+        </div>
+      </div>
+
+      <div class="result-card fade-in">
+        <div class="result-card__quote">We had three different CRMs and no single source of truth. Provecta consolidated everything, built our AI dashboard, and now we close every board meeting in 20 minutes.</div>
+        <div class="result-card__author">
+          <div class="result-card__avatar">DR</div>
+          <div>
+            <div class="result-card__name">Diana R.</div>
+            <div class="result-card__role">CEO, Growth-Stage Services Firm</div>
+          </div>
+        </div>
+        <div class="result-card__stat">
+          <div class="result-card__stat-num">$1.2M</div>
+          <div class="result-card__stat-label">Recovered pipeline from CRM consolidation</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FREE REVOPS AUDIT — LEAD CAPTURE
+═══════════════════════════════════════════════════ -->
+<section class="audit-section" id="audit">
+  <div class="container">
+    <div class="audit__inner">
+      <div class="audit__left">
+        <div class="eyebrow">Free RevOps Audit</div>
+        <h2 class="audit__headline">Find Out Exactly What's <span>Holding Your Revenue Back</span></h2>
+        <p class="audit__desc">
+          In 45 minutes, our RevOps team will assess your current state — pipeline health, CRM data quality, GTM alignment, tech stack, and AI readiness — and deliver a prioritized action plan at no cost.
+        </p>
+        <ul class="audit__checklist">
+          <li>
+            <div class="audit__check">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Pipeline health & stage conversion analysis
+          </li>
+          <li>
+            <div class="audit__check">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            CRM data quality & tech stack review
+          </li>
+          <li>
+            <div class="audit__check">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            GTM team alignment assessment
+          </li>
+          <li>
+            <div class="audit__check">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            AI readiness score & opportunity map
+          </li>
+          <li>
+            <div class="audit__check">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4FC3F7" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Prioritized 90-day RevOps action plan
+          </li>
+        </ul>
+        <p class="audit__trust-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          100% confidential. No sales pitch. No obligation.
+        </p>
+      </div>
+
+      <div class="audit__right">
+        <div class="audit__form-card">
+          <!-- Form State -->
+          <div id="auditForm">
+            <div class="audit__form-title">Request Your Free Audit</div>
+            <p class="audit__form-sub">Takes 2 minutes. We'll reach out within 1 business day to schedule your session.</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" id="firstName" placeholder="Hassan" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" id="lastName" placeholder="Wilson" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Work Email *</label>
+              <input type="email" id="email" placeholder="you@company.com" required />
+            </div>
+            <div class="form-group">
+              <label>Company Name *</label>
+              <input type="text" id="company" placeholder="Acme Corp" required />
+            </div>
+            <div class="form-group">
+              <label>Your Role</label>
+              <select id="role">
+                <option value="">Select your role</option>
+                <option>CRO / Chief Revenue Officer</option>
+                <option>VP Sales</option>
+                <option>VP Marketing</option>
+                <option>VP Customer Success</option>
+                <option>RevOps Lead / Manager</option>
+                <option>CEO / Founder</option>
+                <option>COO / Operations</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Current CRM / Primary Sales Tool</label>
+              <select id="crm">
+                <option value="">Select your CRM</option>
+                <option>Salesforce</option>
+                <option>HubSpot</option>
+                <option>Zoho CRM</option>
+                <option>Pipedrive</option>
+                <option>Monday.com</option>
+                <option>Notion / Spreadsheets</option>
+                <option>No CRM yet</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Biggest RevOps Challenge Right Now</label>
+              <textarea id="challenge" rows="3" placeholder="e.g. Our pipeline data is unreliable, we can't forecast accurately, Marketing and Sales aren't aligned on what a qualified lead is..."></textarea>
+            </div>
+            <button class="form-submit" onclick="submitAuditForm()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Claim My Free RevOps Audit
+            </button>
+            <p class="form-note">🔒 Your information is never shared or sold.</p>
+          </div>
+
+          <!-- Success State -->
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>You're booked in!</h3>
+            <p>We've received your request and will reach out within 1 business day to schedule your free RevOps audit. Check your inbox — something good is coming.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band__inner fade-in">
+      <div class="eyebrow text-center" style="justify-content:center;">Ready to Start?</div>
+      <h2 class="cta-band__headline">Your Revenue Engine Is <span>One Audit Away</span></h2>
+      <p class="cta-band__sub">Stop guessing what's broken. Get clarity, get a plan, and get moving — all at no cost.</p>
+      <div class="cta-band__actions">
+        <a href="#audit" class="btn btn-audit">Get Your Free RevOps Audit</a>
+        <a href="mailto:hassan.qaseem@gc-usa.com" class="btn btn-outline">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="provecta_logo.png" alt="Provecta Group" />
+          <div class="footer__logo-text">Provecta Group</div>
+        </div>
+        <p class="footer__tagline">Designing and building AI-powered Revenue Operations systems for companies serious about predictable, scalable growth.</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <ul class="footer__links">
+          <li><a href="#services">RevOps Architecture</a></li>
+          <li><a href="#services">AI Revenue Intelligence</a></li>
+          <li><a href="#services">GTM Alignment</a></li>
+          <li><a href="#services">CRM Optimization</a></li>
+          <li><a href="#services">Data & Analytics</a></li>
+          <li><a href="#services">AI Automation</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="#about">About Provecta</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#results">Client Results</a></li>
+          <li><a href="#ai-architecture">AI Architecture</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Get Started</div>
+        <ul class="footer__links">
+          <li><a href="#audit">Free RevOps Audit</a></li>
+          <li><a href="mailto:hassan.qaseem@gc-usa.com">Contact Us</a></li>
+        </ul>
+        <div style="margin-top:1.5rem;">
+          <div class="footer__col-title">Contact</div>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.7;">hassan.qaseem@gc-usa.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copy">© 2026 Provecta Group. All rights reserved.</div>
+      <div class="footer__legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════ -->
+<script>
+  /* ── NAV SCROLL ── */
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  /* ── MOBILE MENU ── */
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  /* ── SCROLL FADE IN ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  /* ── FORM SUBMIT ── */
+  function submitAuditForm() {
+    const required = ['firstName', 'lastName', 'email', 'company'];
+    let valid = true;
+    required.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) {
+        el.style.borderColor = '#F87171';
+        el.focus();
+        valid = false;
+      } else {
+        el.style.borderColor = '';
+      }
+    });
+
+    // Basic email check
+    const emailEl = document.getElementById('email');
+    if (valid && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+      emailEl.style.borderColor = '#F87171';
+      emailEl.focus();
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    // Simulate submission
+    document.getElementById('auditForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+
+    // In production: POST to your backend / CRM / Zapier webhook here
+  }
+
+  /* ── Smooth scroll for anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>

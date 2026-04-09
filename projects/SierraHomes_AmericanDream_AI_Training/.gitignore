@@ -1,0 +1,16 @@
+# Credentials and tokens — NEVER commit
+.env
+.env.*
+*.keystore
+*-tokens.json
+*-config.json
+*Keys.txt
+keys.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

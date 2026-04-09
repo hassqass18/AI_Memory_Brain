@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>{{EMAIL_SUBJECT}}</title>
+  <!--[if mso]>
+  <noscript>
+    <xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    /* ── RESET ── */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #EAEBEF; }
+
+    /* ── LINKS ── */
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    #MessageViewBody a { color: inherit; text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media only screen and (max-width: 620px) {
+      .email-wrapper   { width: 100% !important; }
+      .full-width      { width: 100% !important; display: block !important; }
+      .col-left        { width: 100% !important; display: block !important; padding-bottom: 16px !important; }
+      .col-right       { width: 100% !important; display: block !important; }
+      .hero-img        { height: 220px !important; }
+      .title-text      { font-size: 20px !important; }
+      .price-text      { font-size: 18px !important; }
+      .headline-text   { font-size: 22px !important; }
+      .body-text       { font-size: 14px !important; }
+      .cta-btn         { width: 100% !important; display: block !important; }
+      .footer-left     { width: 100% !important; display: block !important; padding-bottom: 16px !important; text-align: center !important; }
+      .footer-right    { width: 100% !important; display: block !important; text-align: center !important; }
+      .footer-divider  { display: none !important; }
+      .pad             { padding: 24px 20px !important; }
+    }
+  </style>
+</head>
+<body id="body" style="background-color:#EAEBEF; margin:0; padding:0;">
+
+  <!-- ░░ PREHEADER (hidden preview text) ░░ -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    {{PREHEADER_TEXT}}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <!-- ░░ OUTER WRAPPER ░░ -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#EAEBEF;">
+    <tr>
+      <td align="center" style="padding: 24px 12px;">
+
+        <!-- ════════════════════════════════════════
+             EMAIL CARD (600px)
+        ════════════════════════════════════════ -->
+        <table class="email-wrapper" border="0" cellpadding="0" cellspacing="0" width="600"
+               style="background-color:#ffffff; border-radius:4px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 1 — HEADER (logo on navy)       │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td align="center" style="background-color:#141847; padding: 18px 32px;">
+              <img src="{{LOGO_URL}}"
+                   alt="Sierra USA Homes — American Dream Apartments"
+                   width="160" height="50"
+                   style="display:block; width:160px; height:auto; max-width:160px;" />
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 2 — HERO IMAGE (full-width)     │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td style="padding:0; margin:0; line-height:0;">
+              <img class="hero-img" src="{{HERO_IMAGE_URL}}"
+                   alt="American Dream Apartments — Nyali, Mombasa"
+                   width="600" height="280"
+                   style="display:block; width:100%; height:280px; object-fit:cover; max-width:600px;" />
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 3 — TITLE BANNER (navy bar)     │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td style="padding:0; background-color:#1D235C;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <!-- Left: Development name -->
+                  <td class="col-left" width="58%"
+                      style="padding: 16px 20px 16px 28px; vertical-align:middle; border-right: 2px solid #D4AF1A;">
+                    <span style="font-family: Georgia, 'Times New Roman', serif;
+                                 font-size: 11px; font-weight: normal; letter-spacing: 0.12em;
+                                 text-transform: uppercase; color: rgba(255,255,255,0.65);
+                                 display: block; margin-bottom: 4px;">
+                      Pre-Launch · Nyali, Mombasa
+                    </span>
+                    <span class="title-text"
+                          style="font-family: Georgia, 'Times New Roman', serif;
+                                 font-size: 22px; font-weight: bold; color: #ffffff;
+                                 letter-spacing: 0.02em; line-height: 1.2; display: block;">
+                      AMERICAN DREAM<br>APARTMENTS
+                    </span>
+                  </td>
+                  <!-- Right: Price / offering label -->
+                  <td class="col-right" width="42%"
+                      style="padding: 16px 28px 16px 20px; vertical-align:middle; text-align:center;">
+                    <span style="font-family: Arial, Helvetica, sans-serif;
+                                 font-size: 10px; font-weight: bold; letter-spacing: 0.16em;
+                                 text-transform: uppercase; color: #D4AF1A; display: block; margin-bottom: 4px;">
+                      FROM
+                    </span>
+                    <span class="price-text"
+                          style="font-family: Georgia, 'Times New Roman', serif;
+                                 font-size: 22px; font-weight: bold; color: #ffffff; display: block;">
+                      {{BANNER_PRICE}}
+                    </span>
+                    <span style="font-family: Arial, Helvetica, sans-serif;
+                                 font-size: 10px; color: rgba(255,255,255,0.6); display:block; margin-top:2px;">
+                      {{BANNER_UNIT_TYPE}}
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 4 — PRIMARY CONTENT BLOCK       │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td style="background-color:#ffffff; padding: 32px 32px 20px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <!-- Main copy (left ~68%) -->
+                  <td class="col-left" width="68%" style="vertical-align: top; padding-right: 20px;">
+
+                    <!-- Eyebrow label -->
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 10px; font-weight: bold; letter-spacing: 0.2em;
+                               text-transform: uppercase; color: #D4AF1A;
+                               margin: 0 0 8px 0; padding: 0;">
+                      {{EMAIL_EYEBROW}}
+                    </p>
+
+                    <!-- Section headline -->
+                    <h1 class="headline-text"
+                        style="font-family: Georgia, 'Times New Roman', serif;
+                               font-size: 26px; font-weight: bold; color: #141847;
+                               line-height: 1.2; margin: 0 0 14px 0; padding: 0;">
+                      {{EMAIL_HEADLINE}}
+                    </h1>
+
+                    <!-- Gold divider rule -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="48" style="margin-bottom:14px;">
+                      <tr>
+                        <td style="background-color:#D4AF1A; height:3px; border-radius:2px;"></td>
+                      </tr>
+                    </table>
+
+                    <!-- Body copy -->
+                    <p class="body-text"
+                       style="font-family: Arial, Helvetica, sans-serif;
+                              font-size: 14px; line-height: 1.75; color: #444444;
+                              margin: 0 0 12px 0; padding: 0;">
+                      {{EMAIL_BODY_PARA_1}}
+                    </p>
+                    <p class="body-text"
+                       style="font-family: Arial, Helvetica, sans-serif;
+                              font-size: 14px; line-height: 1.75; color: #444444;
+                              margin: 0; padding: 0;">
+                      {{EMAIL_BODY_PARA_2}}
+                    </p>
+                  </td>
+
+                  <!-- Stats / QR panel (right ~32%) -->
+                  <td class="col-right" width="32%" style="vertical-align: top; text-align: center;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                           style="background-color:#F5F2EC; border-radius:8px; overflow:hidden;">
+                      <tr>
+                        <td style="padding: 16px 12px; text-align:center;">
+                          <p style="font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 10px; font-weight: bold; letter-spacing: 0.14em;
+                                    text-transform: uppercase; color: #D4AF1A;
+                                    margin: 0 0 10px 0;">
+                            Key Facts
+                          </p>
+                          <!-- Stat 1 -->
+                          <p style="font-family: Georgia, serif; font-size: 22px; font-weight:bold;
+                                    color: #1D235C; margin:0; padding:0; line-height:1;">
+                            {{STAT_1_VALUE}}
+                          </p>
+                          <p style="font-family: Arial, sans-serif; font-size: 9px; color: #888888;
+                                    text-transform:uppercase; letter-spacing:0.08em;
+                                    margin:2px 0 10px; padding:0;">
+                            {{STAT_1_LABEL}}
+                          </p>
+                          <!-- Divider -->
+                          <table border="0" cellpadding="0" cellspacing="0" width="80%" style="margin: 0 auto 10px;">
+                            <tr><td style="background-color:#D4AF1A; height:1px;"></td></tr>
+                          </table>
+                          <!-- Stat 2 -->
+                          <p style="font-family: Georgia, serif; font-size: 22px; font-weight:bold;
+                                    color: #1D235C; margin:0; padding:0; line-height:1;">
+                            {{STAT_2_VALUE}}
+                          </p>
+                          <p style="font-family: Arial, sans-serif; font-size: 9px; color: #888888;
+                                    text-transform:uppercase; letter-spacing:0.08em;
+                                    margin:2px 0 10px; padding:0;">
+                            {{STAT_2_LABEL}}
+                          </p>
+                          <!-- Divider -->
+                          <table border="0" cellpadding="0" cellspacing="0" width="80%" style="margin: 0 auto 10px;">
+                            <tr><td style="background-color:#D4AF1A; height:1px;"></td></tr>
+                          </table>
+                          <!-- Stat 3 -->
+                          <p style="font-family: Georgia, serif; font-size: 22px; font-weight:bold;
+                                    color: #1D235C; margin:0; padding:0; line-height:1;">
+                            {{STAT_3_VALUE}}
+                          </p>
+                          <p style="font-family: Arial, sans-serif; font-size: 9px; color: #888888;
+                                    text-transform:uppercase; letter-spacing:0.08em;
+                                    margin:2px 0 0; padding:0;">
+                            {{STAT_3_LABEL}}
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 5 — FEATURE BLOCK               │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td style="background-color:#ffffff; padding: 8px 32px 28px;">
+
+              <!-- Gold thin rule separator -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:22px;">
+                <tr><td style="background-color:#EAEBEF; height:1px;"></td></tr>
+              </table>
+
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <!-- Feature text (left ~56%) -->
+                  <td class="col-left" width="56%" style="vertical-align: top; padding-right: 20px;">
+
+                    <!-- Feature eyebrow with gold accent line -->
+                    <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 8px;">
+                      <tr>
+                        <td style="background-color:#D4AF1A; width:3px; border-radius:2px;"></td>
+                        <td style="padding-left: 10px;">
+                          <span style="font-family: Arial, Helvetica, sans-serif;
+                                       font-size: 10px; font-weight: bold; letter-spacing: 0.18em;
+                                       text-transform: uppercase; color: #D4AF1A;">
+                            {{FEATURE_EYEBROW}}
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Feature sub-headline -->
+                    <h2 style="font-family: Georgia, 'Times New Roman', serif;
+                               font-size: 16px; font-weight: bold; color: #1D235C;
+                               line-height: 1.35; margin: 0 0 12px 0; padding: 0;">
+                      <span style="color: #D4AF1A;">{{FEATURE_ACCENT_WORD}} </span>{{FEATURE_HEADLINE_REST}}
+                    </h2>
+
+                    <!-- Feature body -->
+                    <p class="body-text"
+                       style="font-family: Arial, Helvetica, sans-serif;
+                              font-size: 13px; line-height: 1.75; color: #555555;
+                              margin: 0; padding: 0;">
+                      {{FEATURE_BODY}}
+                    </p>
+                  </td>
+
+                  <!-- Feature image (right ~44%) -->
+                  <td class="col-right" width="44%" style="vertical-align: top;">
+                    <img src="{{FEATURE_IMAGE_URL}}"
+                         alt="{{FEATURE_IMAGE_ALT}}"
+                         width="240" height="160"
+                         style="display:block; width:100%; height:160px; object-fit:cover;
+                                border-radius:8px; max-width:240px;" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 6 — CTA BUTTON                  │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td align="center" style="background-color:#F5F2EC; padding: 28px 32px;">
+              <p style="font-family: Arial, Helvetica, sans-serif;
+                         font-size: 13px; color: #666666; margin: 0 0 16px; padding:0; text-align:center;">
+                {{CTA_SUBTEXT}}
+              </p>
+              <!-- Bulletproof button -->
+              <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                <tr>
+                  <td align="center" style="border-radius: 100px; background-color: #D4AF1A;">
+                    <a href="{{CTA_URL}}" class="cta-btn"
+                       style="display: inline-block; padding: 14px 40px;
+                              font-family: Arial, Helvetica, sans-serif;
+                              font-size: 13px; font-weight: bold; letter-spacing: 0.08em;
+                              text-transform: uppercase; color: #141847;
+                              text-decoration: none; border-radius: 100px;
+                              mso-padding-alt: 0; text-underline-color: #D4AF1A;">
+                      <!--[if mso]><i style="letter-spacing:40px; mso-font-width:-100%; mso-text-raise:25pt;">&nbsp;</i><![endif]-->
+                      {{CTA_LABEL}}
+                      <!--[if mso]><i style="letter-spacing:40px; mso-font-width:-100%;">&nbsp;</i><![endif]-->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 7 — CONTACT FOOTER (navy)       │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td style="background-color:#141847; padding: 0;">
+              <!-- Gold top accent stripe -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr><td style="background-color:#D4AF1A; height:4px;"></td></tr>
+              </table>
+
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <!-- Left: address + web -->
+                  <td class="footer-left" width="52%"
+                      style="padding: 20px 0 20px 28px; vertical-align: middle;">
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 11px; font-weight: bold; color: #ffffff;
+                               margin: 0 0 4px; padding: 0; letter-spacing: 0.04em;">
+                      Get In Touch
+                    </p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 11px; color: rgba(255,255,255,0.55);
+                               margin: 0 0 2px; padding: 0; line-height: 1.6;">
+                      📍 Tileland, Links Road, Nyali, Mombasa
+                    </p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 11px; color: rgba(255,255,255,0.55);
+                               margin: 0 0 2px; padding: 0; line-height: 1.6;">
+                      🌐 <a href="https://sierrahomesusa.com"
+                            style="color: #D4AF1A; text-decoration: none;">sierrahomesusa.com</a>
+                    </p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 11px; color: rgba(255,255,255,0.55);
+                               margin: 0; padding: 0; line-height: 1.6;">
+                      ✉️ <a href="mailto:info@sierrahomesusa.com"
+                            style="color: #D4AF1A; text-decoration: none;">info@sierrahomesusa.com</a>
+                    </p>
+                  </td>
+
+                  <!-- Gold vertical divider -->
+                  <td class="footer-divider" width="4px"
+                      style="background-color: rgba(212,175,26,0.35); width:1px; padding:0;">
+                  </td>
+
+                  <!-- Right: phone + CTA -->
+                  <td class="footer-right" width="48%"
+                      style="padding: 20px 28px 20px 24px; vertical-align: middle; text-align: center;">
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 11px; color: rgba(255,255,255,0.6);
+                               margin: 0 0 4px; padding: 0; letter-spacing: 0.06em; text-transform: uppercase;">
+                      Call For Booking
+                    </p>
+                    <p style="font-family: Georgia, 'Times New Roman', serif;
+                               font-size: 20px; font-weight: bold; color: #ffffff;
+                               margin: 0; padding: 0;">
+                      <a href="tel:+254705127753"
+                         style="color: #ffffff; text-decoration: none;">+254 705 127 753</a>
+                    </p>
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                               font-size: 11px; color: #D4AF1A;
+                               margin: 4px 0 0; padding: 0;">
+                      Available Mon–Sat, 8am–6pm EAT
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ┌──────────────────────────────────────────┐ -->
+          <!-- │  SECTION 8 — LEGAL FOOTER                │ -->
+          <!-- └──────────────────────────────────────────┘ -->
+          <tr>
+            <td align="center"
+                style="background-color:#0D1133; padding: 16px 32px;
+                       font-family: Arial, Helvetica, sans-serif;
+                       font-size: 10px; color: rgba(255,255,255,0.35); line-height: 1.6;">
+              <p style="margin: 0 0 6px; padding:0;">
+                © 2026 Sierra USA Homes Ltd. All rights reserved. | American Dream Apartments, Plot MN/I/1691, Nyali, Mombasa, Kenya.
+              </p>
+              <p style="margin: 0; padding:0;">
+                You received this email because you expressed interest in American Dream Apartments.
+                <a href="{{UNSUBSCRIBE_URL}}" style="color: rgba(255,255,255,0.45); text-decoration: underline;">Unsubscribe</a>
+                &nbsp;·&nbsp;
+                <a href="{{PRIVACY_URL}}" style="color: rgba(255,255,255,0.45); text-decoration: underline;">Privacy Policy</a>
+                &nbsp;·&nbsp;
+                <a href="{{VIEW_ONLINE_URL}}" style="color: rgba(255,255,255,0.45); text-decoration: underline;">View in browser</a>
+              </p>
+              <p style="margin: 6px 0 0; padding:0; color:rgba(255,255,255,0.2);">
+                Prices quoted are pre-launch indicative figures and subject to change. Images are artist impressions only.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- END EMAIL CARD -->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

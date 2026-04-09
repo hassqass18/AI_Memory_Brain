@@ -1,0 +1,18 @@
+{
+  "name": "zoho-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Zoho Suite — CRM, Projects, Books, Desk, Campaigns, Sign, Sprints",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "zoho-mcp-server": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "setup": "node src/setup.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
