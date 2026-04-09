@@ -21,7 +21,7 @@
 | **Plot Number** | MN/I/1691 |
 | **Location** | Nyali, Mombasa County, Kenya |
 | **Architect** | Ecotecture Ltd. |
-| **Total Units** | 108 |
+| **Total Units** | 88 |
 | **Design Status** | Architectural drawings complete — permits pending |
 
 ---
@@ -36,11 +36,11 @@
 |-------|-----------|------:|------------------:|----------------------:|
 | **Lincoln Tower** | 3 Bedroom | 22 | 2,617.58 | 59,278.01 |
 | **Washington Tower** | 3 Bedroom | 22 | 2,617.58 | 59,278.01 |
-| **Benjamin Tower** | 2 Bedroom (large) | 22 | 1,311.18 | Part of 54,651.96 |
+| **Benjamin Tower** | 2 Bedroom        | 22 | 1,311.18 | Part of 54,651.96 |
 | **Franklin Tower** | 1/2 Bedroom (small) | 22 | 966.44 | Part of 54,651.96 |
 | **Total** | | **88** (towers) + **20** (additional 1BR) | | **173,207.98** |
 
-> **Note:** Franklin Tower's 966.44 sqft units are the smallest unit type — priced and modelled as the 1BR tier. Benjamin Tower units are the 2BR tier. Lincoln and Washington are the 3BR tier. Additional 1BR units (to reach 108 total) are incorporated per the "ROI Breakdown (Additional 1 Bdrms)" financial model.
+> **Note:** Franklin Tower's 966.44 sqft units are the smallest unit type — priced and modelled as the 1BR tier. Benjamin Tower units are the 2BR tier. Lincoln and Washington are the 3BR tier. Additional 1BR units (to reach 88 total) are incorporated per the "ROI Breakdown (Additional 1 Bdrms)" financial model.
 
 ### 2.2 Tower Floor Configuration
 
@@ -71,7 +71,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | 1 Bedroom | 24 | Franklin + additional | 966.44 | 89.8 | 6,000,000 | 9,000,000 | 6,209 | 9,313 |
 | 2 Bedroom | 36 | Benjamin | 1,311.18 | 121.8 | 13,000,000 | 17,000,000 | 9,916 | 12,966 |
 | 3 Bedroom | 48 | Lincoln + Washington | 2,617.58 | 243.2 | 18,000,000 | 23,000,000 | 6,877 | 8,790 |
-| **Total** | **108** | | | | | | | |
+| **Total** | **88** | | | | | | | |
 
 ### 3.1 Unit Internal Specifications (from Drawings)
 
@@ -126,7 +126,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | **Parking** | On-site (ratio to be confirmed) |
 | **Lifts** | Each tower has a lift (confirmed on floor plans) |
 | **Gym / Fitness Centre** | On-site residents' gym |
-| **Rooftop Movie Theatre & Bar** | Premium differentiator — centrepiece of marketing |
+| **Lounge Style Clubhouse & Bar** | Premium differentiator — centrepiece of marketing |
 
 ---
 
@@ -139,7 +139,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | 1 Bedroom | 4,000,000 | 24 | 96,000,000 |
 | 2 Bedroom | 6,000,000 | 36 | 216,000,000 |
 | 3 Bedroom | 10,000,000 | 48 | 480,000,000 |
-| **Total** | | **108** | **792,000,000** |
+| **Total** | | **88** | **792,000,000** |
 
 ### 5.2 Soft Costs — Itemised (Confirmed from Financial Model)
 
@@ -184,7 +184,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | Fractional residual (0.76 units) — paid in cash | — | 42,040,000 |
 | **Total Landowner Value** | | **~425,040,000** |
 
-> Note: 22% of 108 units = 23.76 units. 23 full units allocated + 0.76 units compensated in cash at KES 42,040,000.
+> Note: 22% of 88 units = 23.76 units. 23 full units allocated + 0.76 units compensated in cash at KES 42,040,000.
 
 ### 6.2 Developer Sales Programme
 
@@ -204,7 +204,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | 3 Bedroom | 22 | 23,000,000 | 506,000,000 |
 | **On-Market Total** | **22** | | **506,000,000** |
 
-> **Unit allocation summary:** 63 off-plan (developer) + 22 on-market (developer) + 23 (landowners) = **108 total** ✓
+> **Unit allocation summary:** 63 off-plan (developer) + 22 on-market (developer) + 23 (landowners) = **88 total** ✓
 
 ### 6.3 Financial Summary
 

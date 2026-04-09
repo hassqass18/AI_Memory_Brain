@@ -101,7 +101,7 @@
 | Booking Amount | TBC |
 | Deposit % | TBC |
 | Installment Period | TBC months |
-| Office Address | Tileland, Links Road, Nyali |
+| Office Address | Ziwani Road, Nyali |
 | Hero Render | `assets/renders/09_Render_Exterior_Angle2.jpg` |
 | Interior Render 1 | `assets/renders/13_Render_Perspective1.jpg` |
 | Interior Render 2 | `assets/renders/14_Render_Perspective2.jpg` |

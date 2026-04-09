@@ -25,8 +25,8 @@
 | Floor 9 | Residential | 9 |
 | Floor 10 | Residential | 9 |
 | Floor 11 | Residential (part) + Rooftop Amenities | 9 |
-| Rooftop | Movie Theatre, Bar, Pool Terrace, Gym | — |
-| **Total** | | **108** |
+| Rooftop | Lounge Style Clubhouse, Bar, Pool Terrace, Gym | — |
+| **Total** | | **88** |
 
 *Note: Exact unit count per floor (9 avg) and unit type distribution per floor to be confirmed by architect. The layout below represents the intended distribution — subject to final architectural drawings.*
 
@@ -36,10 +36,10 @@
 
 | Type | Total Units | % | Size (sqft) | Size (sqm) | Off-Plan Price (KES) | On-Plan Price (KES) |
 |------|------------:|--:|------------:|-----------:|---------------------:|--------------------:|
-| 1 Bedroom (1BR) | 24 | 22% | 966 | 89.7 | 6,000,000 | 9,000,000 |
-| 2 Bedroom (2BR) | 36 | 33% | 1,311 | 121.8 | 13,000,000 | 17,000,000 |
-| 3 Bedroom (3BR) | 48 | 44% | 2,617 | 243.1 | 18,000,000 | 23,000,000 |
-| **Total** | **108** | **100%** | | | | |
+| 1 Bedroom (1BR) | 22 | 25% | 966 | 89.7 | 6,000,000 | 9,000,000 |
+| 2 Bedroom (2BR) | 22 | 25% | 1,311 | 121.8 | 13,000,000 | 17,000,000 |
+| 3 Bedroom (3BR) | 44 | 50% | 2,617 | 243.1 | 18,000,000 | 23,000,000 |
+| **Total** | **88** | **100%** | | | | |
 
 ---
 
@@ -85,7 +85,7 @@
 
 | Feature | Description |
 |---------|-------------|
-| **Movie Theatre** | Outdoor or semi-covered rooftop cinema — centrepiece marketing differentiator |
+| **Lounge Style Clubhouse** | Outdoor or semi-covered Lounge Style Clubhouse — centrepiece marketing differentiator |
 | **Bar & Lounge** | Rooftop bar with city/ocean views |
 | **Pool Terrace** | Communal swimming pool with seating |
 | **Gym / Fitness Centre** | Residents' gym |
@@ -112,7 +112,7 @@ Examples:
 | Feature | Location | Notes |
 |---------|----------|-------|
 | Lobby / Reception | Ground Floor | 24-hour staffed |
-| Lifts (Elevators) | All floors | Minimum 2 lifts for 108 units |
+| Lifts (Elevators) | All floors | Minimum 2 lifts for 88 units |
 | Stairwells | All floors | Minimum 2 fire-rated stairwells |
 | Parking | Basement or Podium | Ratio TBD — confirm with architect |
 | Bin Stores / Waste | Ground Floor | |
@@ -120,7 +120,7 @@ Examples:
 | CCTV / Security Control | Ground Floor security post | |
 | Swimming Pool | Ground level or podium | Communal — residents only |
 | Gym | Rooftop or dedicated floor | |
-| Movie Theatre & Bar | Rooftop | |
+| Lounge Style Clubhouse & Bar | Rooftop | |
 
 ---
 

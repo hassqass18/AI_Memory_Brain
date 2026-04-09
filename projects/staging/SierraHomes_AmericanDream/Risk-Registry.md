@@ -42,7 +42,7 @@
 | **Impact** | H — Insufficient deposit revenue to fund construction; equity gap widens; project viability threatened |
 | **Phase** | Phase 1 / 2 |
 | **Status** | Open |
-| **Mitigation** | Launch diaspora campaign immediately; use rooftop movie theatre & bar as centrepiece differentiator; offer early-bird incentives; prioritize 3BR and 2BR (higher margins); engage real estate agents in diaspora hubs (UK, USA, Canada) |
+| **Mitigation** | Launch diaspora campaign immediately; use rooftop Lounge Style Clubhouse & bar as centrepiece differentiator; offer early-bird incentives; prioritize 3BR and 2BR (higher margins); engage real estate agents in diaspora hubs (UK, USA, Canada) |
 | **Owner** | AI+Human |
 
 ---

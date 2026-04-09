@@ -157,7 +157,7 @@ The following shots are required for the M2 CGI production package. Mark as comp
 
 | # | Shot | Priority | Notes |
 |---|------|----------|-------|
-| 1 | **Rooftop cinema/bar — hero lifestyle** | CRITICAL | #1 SierraHomes differentiator; golden hour + dusk variants; 8+ figures |
+| 1 | **Lounge Style Clubhouse — hero lifestyle** | CRITICAL | #1 SierraHomes differentiator; golden hour + dusk variants; 8+ figures |
 | 2 | Building facade — full three-tower composition | High | Day + golden hour; ocean visible in background |
 | 3 | Pool deck — aerial looking down, lifestyle | High | Animated water; figures; cabanas |
 | 4 | Ground entrance — vehicular arrival | High | 2–3 vehicles; doorman/concierge figures; signage |

@@ -2,7 +2,7 @@
 
 **Category:** Real Estate Development (Product)
 **Location:** Nyali, Mombasa, Kenya
-**Scale:** 108-unit apartment complex
+**Scale:** 88-unit apartment complex
 **Owner:** Hassan Qaseem / Provecta Group
 **Stage:** Staging (Ideation & Preparation)
 

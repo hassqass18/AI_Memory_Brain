@@ -102,7 +102,7 @@ Before construction commencement, all of the following must be in place:
 | Concrete | Minimum grade as specified by structural engineer; cube tests per Kenya Standard |
 | MEP | Kenya Bureau of Standards (KEBS) and manufacturer specifications |
 | Fire Safety | Kenya Fire Prevention and Protection Rules; fire escape routes certified |
-| Lifts | Certified lift installation — minimum 2 lifts for 108 units |
+| Lifts | Certified lift installation — minimum 2 lifts for 88 units |
 | Finishes | Developer's specification schedule (to be prepared by architect) |
 | Rooftop Pool | Structural engineering sign-off for rooftop water load |
 

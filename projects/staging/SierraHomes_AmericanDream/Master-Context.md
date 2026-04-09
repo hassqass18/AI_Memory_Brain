@@ -11,7 +11,7 @@
 
 ## Project Vision
 
-SierraHomes_AmericanDream is a 108-unit apartment complex located in Nyali, Mombasa. The project delivers high-quality residential units to the Mombasa property market, targeting residents and investors seeking modern, well-located housing in one of Kenya's premier coastal urban areas.
+SierraHomes_AmericanDream is a 88-unit apartment complex located in Nyali, Mombasa. The project delivers high-quality residential units to the Mombasa property market, targeting residents and investors seeking modern, well-located housing in one of Kenya's premier coastal urban areas.
 
 ---
 
@@ -169,7 +169,7 @@ Once these three documents are complete and approved, this project will be promo
 
 ### Vision & Goals
 
-- **Vision Statement:** SierraHomes_AmericanDream is a 108-unit residential apartment complex located in Nyali, Mombasa, Kenya. It delivers modern, high-quality housing to one of East Africa's most desirable coastal urban markets, targeting diaspora buyers, local property investors, and international investors seeking premium Mombasa real estate.
+- **Vision Statement:** SierraHomes_AmericanDream is a 88-unit residential apartment complex located in Nyali, Mombasa, Kenya. It delivers modern, high-quality housing to one of East Africa's most desirable coastal urban markets, targeting diaspora buyers, local property investors, and international investors seeking premium Mombasa real estate.
 - **Primary Goal:** Achieve 40% off-plan unit sales (~43 units) during construction to recoup the bulk of the development budget, then sell the remaining 60% (~65 units) at or near completion to realise project profit.
 - **Sales Model:** For-sale only (no rental). Off-plan sales are the primary construction financing mechanism alongside the development budget.
 - **Secondary Goals:**
@@ -197,18 +197,18 @@ Once these three documents are complete and approved, this project will be promo
 
 | Type | Units | % of Total | Off-Plan Price (KES) | On-Plan Price (KES) | Premium |
 |------|------:|----------:|---------------------:|--------------------:|--------:|
-| 1 Bedroom | 24 | 22% | 6,000,000 | 9,000,000 | +50% |
-| 2 Bedroom | 36 | 33% | 13,000,000 | 17,000,000 | +31% |
-| 3 Bedroom | 48 | 44% | 18,000,000 | 23,000,000 | +28% |
-| **Total** | **108*** | **100%** | | | |
+| 1 Bedroom | 22 | 25% | 6,000,000 | 9,000,000 | +50% |
+| 2 Bedroom | 22 | 25% | 13,000,000 | 17,000,000 | +31% |
+| 3 Bedroom | 44 | 50% | 18,000,000 | 23,000,000 | +28% |
+| **Total** | **88*** | **100%** | | | |
 
-> ✅ **Unit Count Confirmed:** 108 units total — 24×1BR + 36×2BR + 48×3BR.
+> ✅ **Unit Count Confirmed:** 88 units total — 22×1BR + 22×2BR + 44×3BR.
 
 ---
 
 ### Revenue Projections
 
-**Assumptions:** 40% off-plan / 60% on-plan split applied proportionally across all unit types. Based on 108 units.
+**Assumptions:** 40% off-plan / 60% on-plan split applied proportionally across all unit types. Based on 88 units.
 
 #### Off-Plan Sales (40% ≈ 43 units)
 
@@ -274,7 +274,7 @@ Once these three documents are complete and approved, this project will be promo
 | Item | Detail |
 |------|--------|
 | Location | Nyali, Mombasa, Kenya |
-| Total units | 108 units confirmed (24×1BR + 36×2BR + 48×3BR) |
+| Total units | 88 units confirmed (22×1BR + 22×2BR + 44×3BR) |
 | Current status | Design complete, awaiting permits |
 | Construction start | Upon permit approval |
 | Target delivery | August 2029 |
@@ -293,7 +293,7 @@ Once these three documents are complete and approved, this project will be promo
 |-----------|--------|
 | Building Type | Residential apartment tower |
 | Storeys | Ground + 11 (12 floors total) |
-| Total Units | 108 |
+| Total Units | 88 |
 | Units per Floor | ~9 (average) |
 | Location | Nyali, Mombasa, Kenya |
 | Status | Design complete — awaiting permits |
@@ -304,14 +304,14 @@ Once these three documents are complete and approved, this project will be promo
 
 | Type | Count | Size (sqft) | Size (sqm) | Off-Plan Price (KES) | On-Plan Price (KES) | Price/sqft (off-plan) | Price/sqft (on-plan) |
 |------|------:|------------:|-----------:|---------------------:|--------------------:|----------------------:|---------------------:|
-| 1 Bedroom | 24 | 966 | 89.7 | 6,000,000 | 9,000,000 | 6,211 | 9,317 |
-| 2 Bedroom | 36 | 1,311 | 121.8 | 13,000,000 | 17,000,000 | 9,916 | 12,968 |
-| 3 Bedroom | 48 | 2,617 | 243.1 | 18,000,000 | 23,000,000 | 6,878 | 8,791 |
-| **Total / Avg** | **108** | **—** | **—** | | | | |
+| 1 Bedroom | 22 | 966 | 89.7 | 6,000,000 | 9,000,000 | 6,211 | 9,317 |
+| 2 Bedroom | 22 | 1,311 | 121.8 | 13,000,000 | 17,000,000 | 9,916 | 12,968 |
+| 3 Bedroom | 44 | 2,617 | 243.1 | 18,000,000 | 23,000,000 | 6,878 | 8,791 |
+| **Total / Avg** | **88** | **—** | **—** | | | | |
 
 **Total Gross Floor Area (residential):**
 - 195,996 sqft / 18,208 sqm
-- Calculation: (24 × 966) + (36 × 1,311) + (48 × 2,617)
+- Calculation: (22 × 966) + (22 × 1,311) + (44 × 2,617)
 
 ---
 
@@ -323,9 +323,9 @@ Once these three documents are complete and approved, this project will be promo
 | Parking | Basement or podium parking (ratio TBD) |
 | Swimming Pool | Communal pool (level/location TBD) |
 | Gym / Fitness Centre | On-site residents' gym |
-| Rooftop Movie Theatre & Bar | Premium rooftop amenity — key market differentiator for Nyali |
+| Lounge Style Clubhouse & Bar | Premium rooftop amenity — key market differentiator for Nyali |
 
-> **Note:** The rooftop movie theatre and bar is a premium amenity uncommon in the Mombasa residential market. This should be a centrepiece of the off-plan marketing campaign targeting diaspora and investor buyers.
+> **Note:** The rooftop Lounge Style Clubhouse and bar is a premium amenity uncommon in the Mombasa residential market. This should be a centrepiece of the off-plan marketing campaign targeting diaspora and investor buyers.
 
 ---
 
@@ -429,7 +429,7 @@ Once these three documents are complete and approved, this project will be promo
 | MEP & finishes phase | **Q1–Q3 2028** | Internal fit-out, common areas, amenities |
 | Snagging & certification | **Q4 2028 – Q2 2029** | NCA inspection, county sign-off |
 | Practical completion / handover begins | **August 2029** | First keys handed to buyers |
-| Full sell-out target | **August 2030** | All 108 units sold within 12 months of delivery |
+| Full sell-out target | **August 2030** | All 88 units sold within 12 months of delivery |
 
 ---
 
@@ -490,7 +490,7 @@ Once these three documents are complete and approved, this project will be promo
 | Level 8 to Level 11 complete (topped out) | Q2 2028 |
 | MEP (mechanical, electrical, plumbing) complete | Q4 2028 |
 | Internal finishes complete | Q1 2029 |
-| Rooftop amenities (movie theatre, bar, pool area) complete | Q2 2029 |
+| Rooftop amenities (Lounge Style Clubhouse, bar, pool area) complete | Q2 2029 |
 | Snagging and punch-list | Q2 – Q3 2029 |
 | NCA inspection and certificate of occupation | Q3 2029 |
 | Practical completion | **August 2029** |

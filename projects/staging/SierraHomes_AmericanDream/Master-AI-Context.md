@@ -19,7 +19,7 @@
 
 ## 1. Project Overview
 
-SierraHomes_AmericanDream is a **108-unit residential apartment complex** located in **Nyali, Mombasa, Kenya** on **Plot MN/I/1691**. The development is a **4-tower complex** (Lincoln, Washington, Franklin, Benjamin Towers), each 11 floors, with a premium amenity stack including swimming pool, children's play area, communal gardens, gym, rooftop movie theatre and bar, and 24-hour gated security.
+SierraHomes_AmericanDream is a **88-unit residential apartment complex** located in **Nyali, Mombasa, Kenya** on **Plot MN/I/1691**. The development is a **4-tower complex** (Lincoln, Washington, Franklin, Benjamin Towers), each 11 floors, with a premium amenity stack including swimming pool, children's play area, communal gardens, gym, rooftop Lounge Style Clubhouse and bar, and 24-hour gated security.
 
 **Developer:** Sierra USA Homes Ltd. | **Architect:** Ecotecture Ltd. (drawings complete)
 
@@ -53,7 +53,7 @@ SierraHomes_AmericanDream — Plot MN/I/1691, Nyali, Mombasa
 ├── Washington Tower    — 3BR | 22 units | 2,617.58 sqft/unit | 11 floors
 ├── Benjamin Tower      — 2BR | 22 units | 1,311.18 sqft/unit | 11 floors
 └── Franklin Tower      — 1BR | 22 units |   966.44 sqft/unit | 11 floors
-                                          + additional 1BR units to reach 108 total
+                                          + additional 1BR units to reach 88 total
 Site Amenities:
 ├── Swimming pool (between Washington & Lincoln Towers)
 ├── Central garden

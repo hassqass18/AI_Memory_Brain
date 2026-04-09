@@ -31,15 +31,15 @@ Total sequence: **18 days** from first opt-in to final email.
 
 ## Step 1 — Domain Authentication (REQUIRED before activation)
 
-Emails sent from `hello@sierrahomesusa.com` will be blocked by DMARC unless SPF and DKIM are configured for `sierrahomesusa.com`.
+Emails sent from `Info@SierraUSAHomes.com` will be blocked by DMARC unless SPF and DKIM are configured for `SierraUSAHomes.com`.
 
 ### SPF Record
 
-Add this TXT record to your DNS (at your domain registrar or DNS provider for `sierrahomesusa.com`):
+Add this TXT record to your DNS (at your domain registrar or DNS provider for `SierraUSAHomes.com`):
 
 ```
 Type:  TXT
-Name:  @  (or sierrahomesusa.com)
+Name:  @  (or SierraUSAHomes.com)
 Value: v=spf1 include:zcsend.net ~all
 TTL:   3600
 ```
@@ -49,7 +49,7 @@ TTL:   3600
 ### DKIM Record
 
 1. In Zoho Campaigns: go to **Settings → Sender Email Addresses**
-2. Click **Add Sender Email**, enter `hello@sierrahomesusa.com`
+2. Click **Add Sender Email**, enter `Info@SierraUSAHomes.com`
 3. Zoho will generate a DKIM key — it gives you a CNAME or TXT record to add to DNS
 4. Add that record at your DNS provider
 5. Click **Verify** in Zoho once DNS propagates (can take up to 24–48 hours)
@@ -60,8 +60,8 @@ Add a DMARC policy to protect the domain:
 
 ```
 Type:  TXT
-Name:  _dmarc.sierrahomesusa.com
-Value: v=DMARC1; p=none; rua=mailto:dmarc@sierrahomesusa.com
+Name:  _dmarc.SierraUSAHomes.com
+Value: v=DMARC1; p=none; rua=mailto:dmarc@SierraUSAHomes.com
 TTL:   3600
 ```
 
@@ -72,10 +72,10 @@ Start with `p=none` (monitoring only), then upgrade to `p=quarantine` once deliv
 ## Step 2 — Add Verified Sender in Zoho Campaigns
 
 1. Go to **Settings → Sender Email Addresses**
-2. Add `hello@sierrahomesusa.com` as the sender address
+2. Add `Info@SierraUSAHomes.com` as the sender address
 3. Complete domain verification (from Step 1)
 4. Set **From Name:** `Sierra USA Homes`
-5. Set **Reply-To:** `info@sierrahomesusa.com`
+5. Set **Reply-To:** `Info@SierraUSAHomes.com`
 
 ---
 
@@ -103,7 +103,7 @@ For each email node:
 5. Set:
    - **Subject line** — see table below
    - **From name:** Sierra USA Homes
-   - **From email:** hello@sierrahomesusa.com
+   - **From email:** Info@SierraUSAHomes.com
 6. Click **Save**
 
 ### Subject Lines
@@ -112,7 +112,7 @@ For each email node:
 |---|---|
 | Email 1 | Welcome to American Dream Apartments — Nyali's Most Anticipated Launch |
 | Email 2 | Why the Smartest Buyers Always Enter Off-Plan |
-| Email 3 | Life Above Nyali — There's a Rooftop Cinema Waiting for You |
+| Email 3 | Life Above Nyali — There's a Lounge Style Clubhouse Waiting for You |
 | Email 4 | 1, 2 & 3-Bedroom — Find Your Floor Plan at American Dream |
 | Email 5 | Why Serious Investors Are Already Moving on American Dream |
 | Email 6 | Pre-Launch Window Closing — Reserve Before Prices Rise |

@@ -5,7 +5,7 @@
 > **Platform:** Zoho Campaigns
 > **Trigger:** Lead form submission / WhatsApp opt-in
 > **Sequence length:** 6 emails over 18 days
-> **Goal:** Convert interest → Reservation Agreement (KES 250,000 booking fee)
+> **Goal:** Convert interest → Reservation Agreement (a reservation fee)
 
 ---
 
@@ -32,15 +32,15 @@
 | Field | Value |
 |-------|-------|
 | `{{EMAIL_SUBJECT}}` | Welcome to American Dream Apartments — Nyali's Most Anticipated Launch |
-| `{{PREHEADER_TEXT}}` | 108 premium residences. American-style design. Rooftop cinema. Nyali, Mombasa. |
+| `{{PREHEADER_TEXT}}` | 88 premium residences. American-style design. Rooftop cinema. Nyali, Mombasa. |
 | `{{HERO_IMAGE_URL}}` | assets/renders/09_Render_Exterior_Angle2.jpg |
 | `{{BANNER_PRICE}}` | KES 10,000,000 |
 | `{{BANNER_UNIT_TYPE}}` | 1-Bedroom · Pre-Launch Price |
 | `{{EMAIL_EYEBROW}}` | Welcome to the Pre-Launch |
 | `{{EMAIL_HEADLINE}}` | Your American Dream Starts Here |
 | `{{EMAIL_BODY_PARA_1}}` | Thank you for registering your interest in American Dream Apartments — the most ambitious residential development Nyali has ever seen. You're now among the first to access pre-launch pricing, floor plans, and exclusive reservation terms before we open to the public. |
-| `{{EMAIL_BODY_PARA_2}}` | American Dream Apartments is a 108-unit, 3-tower complex in the heart of Nyali, Mombasa — delivering premium American-style living with amenities you won't find anywhere else on the Coast. We'll be sharing everything over the coming days. |
-| `{{STAT_1_VALUE}}` | 108 |
+| `{{EMAIL_BODY_PARA_2}}` | American Dream Apartments is a 88-unit, 3-tower complex in the heart of Nyali, Mombasa — delivering premium American-style living with amenities you won't find anywhere else on the Coast. We'll be sharing everything over the coming days. |
+| `{{STAT_1_VALUE}}` | 88 |
 | `{{STAT_1_LABEL}}` | Residences Across 3 Towers |
 | `{{STAT_2_VALUE}}` | Aug 2029 |
 | `{{STAT_2_LABEL}}` | Projected Completion |
@@ -49,12 +49,12 @@
 | `{{FEATURE_EYEBROW}}` | Why American Dream |
 | `{{FEATURE_ACCENT_WORD}}` | NOTHING ELSE |
 | `{{FEATURE_HEADLINE_REST}}` | LIKE IT IN NYALI |
-| `{{FEATURE_BODY}}` | We've built in amenities that simply don't exist in Mombasa residential developments today — a rooftop open-air cinema, a rooftop bar, a resort-style swimming pool, manicured gardens, a children's play area, a fully equipped gym, and 24-hour gated security. This isn't just a home. It's a lifestyle. |
+| `{{FEATURE_BODY}}` | We've built in amenities that simply don't exist in Mombasa residential developments today — a Lounge Style Clubhouse, a resort-style swimming pool, manicured gardens, a children's play area, a fully equipped gym, and 24-hour gated security. This isn't just a home. It's a lifestyle. |
 | `{{FEATURE_IMAGE_URL}}` | assets/renders/14_Render_Perspective2.jpg |
 | `{{FEATURE_IMAGE_ALT}}` | American Dream Apartments — Pool between towers |
 | `{{CTA_SUBTEXT}}` | Ready to see what's waiting for you? View the full development overview. |
 | `{{CTA_LABEL}}` | Explore American Dream |
-| `{{CTA_URL}}` | https://sierrahomesusa.com |
+| `{{CTA_URL}}` | https://SierraUSAHomes.com |
 
 ---
 
@@ -85,12 +85,12 @@
 | `{{FEATURE_EYEBROW}}` | How the Reservation Works |
 | `{{FEATURE_ACCENT_WORD}}` | RESERVE TODAY,|
 | `{{FEATURE_HEADLINE_REST}}` | SIGN YOUR SPA WHEN THE PERMIT LANDS |
-| `{{FEATURE_BODY}}` | We're currently in pre-permit phase. You reserve your unit with a KES 250,000 booking fee today — fully refundable if for any reason the project does not proceed. Once the building permit is issued (expected Q3 2026), your reservation converts to a formal Sale and Purchase Agreement with your full payment plan locked in. No rush. No pressure. Total security. |
+| `{{FEATURE_BODY}}` | We're currently in pre-permit phase. You reserve your unit with a a reservation fee — fully refundable if for any reason the project does not proceed. Once the building permit is issued (expected Q3 2026), your reservation converts to a formal Sale and Purchase Agreement with your full payment plan locked in. No rush. No pressure. Total security. |
 | `{{FEATURE_IMAGE_URL}}` | assets/renders/12_Render_Exterior_Angle5.jpg |
 | `{{FEATURE_IMAGE_ALT}}` | American Dream Apartments — Pool courtyard |
 | `{{CTA_SUBTEXT}}` | Have questions about the reservation process? We're ready to walk you through it. |
 | `{{CTA_LABEL}}` | Talk to Our Sales Team |
-| `{{CTA_URL}}` | https://sierrahomesusa.com/contact |
+| `{{CTA_URL}}` | https://SierraUSAHomes.com/contact |
 
 ---
 
@@ -103,30 +103,30 @@
 
 | Field | Value |
 |-------|-------|
-| `{{EMAIL_SUBJECT}}` | Life Above Nyali — There's a Rooftop Cinema Waiting for You |
-| `{{PREHEADER_TEXT}}` | A rooftop bar. An open-air cinema. A pool between towers. This is American Dream. |
+| `{{EMAIL_SUBJECT}}` | Life Above Nyali — There's a Lounge Style Clubhouse Waiting for You |
+| `{{PREHEADER_TEXT}}` | A Rooftop Restaurant. An Lounge Style Clubhouse. A pool between towers. This is American Dream. |
 | `{{HERO_IMAGE_URL}}` | assets/renders/14_Render_Perspective2.jpg |
-| `{{BANNER_PRICE}}` | Rooftop Cinema & Bar |
+| `{{BANNER_PRICE}}` | Lounge Style Clubhouse & Rooftop Restaurant |
 | `{{BANNER_UNIT_TYPE}}` | The Only One in Mombasa |
 | `{{EMAIL_EYEBROW}}` | Resort-Style Amenities |
 | `{{EMAIL_HEADLINE}}` | Your Home Should Feel Like a Holiday |
-| `{{EMAIL_BODY_PARA_1}}` | Most residential developments in Mombasa offer a pool. Maybe a gym. American Dream Apartments offers something Mombasa has never seen in a residential building — a rooftop open-air cinema and bar. Picture watching a film under the stars with the Indian Ocean in the distance, surrounded by neighbours who chose the same lifestyle you did. |
+| `{{EMAIL_BODY_PARA_1}}` | Most residential developments in Mombasa offer a pool. Maybe a gym. American Dream Apartments offers something Mombasa has never seen in a residential building — a Lounge Style Clubhouse. Picture watching a film under the stars with the Indian Ocean in the distance, surrounded by neighbours who chose the same lifestyle you did. |
 | `{{EMAIL_BODY_PARA_2}}` | Below the rooftop, life is just as considered. A resort-style pool sits between our three towers — Lincoln, Washington, and Franklin — with landscaped gardens wrapping the full site. There's a fully equipped gym, a children's play area in the northeast corner, and 24-hour gated security so you're always protected. |
 | `{{STAT_1_VALUE}}` | 3 |
 | `{{STAT_1_LABEL}}` | Iconic Towers |
 | `{{STAT_2_VALUE}}` | 1 |
-| `{{STAT_2_LABEL}}` | Rooftop Cinema — First in Mombasa |
-| `{{STAT_3_VALUE}}` | 108 |
+| `{{STAT_2_LABEL}}` | Lounge Style Clubhouse — First in Mombasa |
+| `{{STAT_3_VALUE}}` | 88 |
 | `{{STAT_3_LABEL}}` | Families. One Community. |
 | `{{FEATURE_EYEBROW}}` | Full Amenity List |
 | `{{FEATURE_ACCENT_WORD}}` | EVERYTHING |
 | `{{FEATURE_HEADLINE_REST}}` | YOU NEED. NOTHING YOU DON'T. |
-| `{{FEATURE_BODY}}` | Swimming Pool · Rooftop Open-Air Cinema · Rooftop Bar · Fully Equipped Gym · Children's Play Area · Central Manicured Gardens · 24-Hour Gated Security · Dedicated Parking · 9M Access Road · High-Speed Lifts · Backup Generator · Water Storage. Every amenity was chosen for a single reason: to make the way you live genuinely better. |
+| `{{FEATURE_BODY}}` | Swimming Pool · Rooftop Open-Air Cinema · Rooftop Restaurant · Fully Equipped Gym · Children's Play Area · Central Manicured Gardens · 24-Hour Gated Security · Dedicated Parking · 9M Access Road · High-Speed Lifts · Backup Generator · Water Storage. Every amenity was chosen for a single reason: to make the way you live genuinely better. |
 | `{{FEATURE_IMAGE_URL}}` | assets/renders/15_Render_Perspective3.jpg |
 | `{{FEATURE_IMAGE_ALT}}` | American Dream Apartments — Gardens and play area |
 | `{{CTA_SUBTEXT}}` | Want to see the full development? Download our brochure. |
 | `{{CTA_LABEL}}` | Download the Brochure |
-| `{{CTA_URL}}` | https://sierrahomesusa.com/brochure |
+| `{{CTA_URL}}` | https://SierraUSAHomes.com/brochure |
 
 ---
 
@@ -140,29 +140,29 @@
 | Field | Value |
 |-------|-------|
 | `{{EMAIL_SUBJECT}}` | 1, 2 & 3-Bedroom — Find Your Floor Plan at American Dream |
-| `{{PREHEADER_TEXT}}` | From 966 sqft to 2,617 sqft — generous American-style living in every layout. |
+| `{{PREHEADER_TEXT}}` | From 966 sqft (90 m²) (90 m²) to 2,617 sqft (243 m²) (243 m²) — generous American-style living in every layout. |
 | `{{HERO_IMAGE_URL}}` | assets/renders/08_Render_Exterior_Angle1.jpg |
 | `{{BANNER_PRICE}}` | From KES 10,000,000 |
 | `{{BANNER_UNIT_TYPE}}` | 1BR · 2BR · 3BR Available Now |
 | `{{EMAIL_EYEBROW}}` | Unit Types & Pre-Launch Pricing |
 | `{{EMAIL_HEADLINE}}` | Spacious, Considered, American-Style |
-| `{{EMAIL_BODY_PARA_1}}` | Every unit at American Dream Apartments was designed with one philosophy: space is not a luxury, it's a right. Our 1-bedrooms start at 966 sqft — larger than many 2-bedroom apartments in the market. Our 3-bedrooms in Lincoln and Washington Towers reach 2,617 sqft — genuinely expansive family homes. |
+| `{{EMAIL_BODY_PARA_1}}` | Every unit at American Dream Apartments was designed with one philosophy: space is not a luxury, it's a right. Our 1-bedrooms start at 966 sqft (90 m²) (90 m²) (90 m²) — larger than many 2-bedroom apartments in the market. Our 3-bedrooms in Lincoln and Washington Towers reach 2,617 sqft (243 m²) (243 m²) (243 m²) — genuinely expansive family homes. |
 | `{{EMAIL_BODY_PARA_2}}` | Every layout features open-plan living, private balconies, and finishes that reflect the American-style standard the development is named for. Pre-launch pricing is available now across all unit types — and once the permit lands, these prices will not be repeated. |
 | `{{STAT_1_VALUE}}` | KES 10M |
-| `{{STAT_1_LABEL}}` | 1-Bedroom · 966 sqft · Franklin Tower |
+| `{{STAT_1_LABEL}}` | 1-Bedroom · 966 sqft (90 m²) (90 m²) · Franklin Tower |
 | `{{STAT_2_VALUE}}` | KES 17M |
-| `{{STAT_2_LABEL}}` | 2-Bedroom · 1,311 sqft · Franklin Tower |
+| `{{STAT_2_LABEL}}` | 2-Bedroom · 1,311 sqft (122 m²) (122 m²) · Franklin Tower |
 | `{{STAT_3_VALUE}}` | KES 23M |
-| `{{STAT_3_LABEL}}` | 3-Bedroom · 2,617 sqft · Lincoln & Washington |
+| `{{STAT_3_LABEL}}` | 3-Bedroom · 2,617 sqft (243 m²) (243 m²) · Lincoln & Washington |
 | `{{FEATURE_EYEBROW}}` | Payment Structure |
 | `{{FEATURE_ACCENT_WORD}}` | FLEXIBLE |
 | `{{FEATURE_HEADLINE_REST}}` | TERMS BUILT AROUND YOUR LIFE |
-| `{{FEATURE_BODY}}` | Reservation: KES 250,000 to secure your unit today. Deposit: 30% of purchase price payable upon ground breaking (Q3 2026). Balance: Payable in equal monthly instalments over 36 months through construction — so your payments build alongside your home. We work with you. Not against you. |
+| `{{FEATURE_BODY}}` | Reservation: Contact us to secure your unit today. Deposit: 30% of purchase price payable upon ground breaking (Q3 2026). Balance: Payable in equal monthly instalments over 36 months through construction — so your payments build alongside your home. We work with you. Not against you. |
 | `{{FEATURE_IMAGE_URL}}` | assets/renders/16_Render_Perspective4.jpg |
 | `{{FEATURE_IMAGE_ALT}}` | American Dream Apartments — Aerial view of full development |
 | `{{CTA_SUBTEXT}}` | Ready to choose your unit? View all floor plans and availability. |
 | `{{CTA_LABEL}}` | View Floor Plans |
-| `{{CTA_URL}}` | https://sierrahomesusa.com/floor-plans |
+| `{{CTA_URL}}` | https://SierraUSAHomes.com/floor-plans |
 
 ---
 
@@ -198,7 +198,7 @@
 | `{{FEATURE_IMAGE_ALT}}` | American Dream Apartments — Exterior perspective |
 | `{{CTA_SUBTEXT}}` | Want to see the full investor summary? Schedule a 15-minute call with our team. |
 | `{{CTA_LABEL}}` | Schedule an Investor Call |
-| `{{CTA_URL}}` | https://sierrahomesusa.com/investor-call |
+| `{{CTA_URL}}` | https://SierraUSAHomes.com/investor-call |
 
 ---
 
@@ -219,7 +219,7 @@
 | `{{EMAIL_EYEBROW}}` | Final Pre-Launch Notice |
 | `{{EMAIL_HEADLINE}}` | This Price Will Not Come Around Again |
 | `{{EMAIL_BODY_PARA_1}}` | Over the last few weeks, you've seen what American Dream Apartments is. You know the amenities, the floor plans, the pricing, and the investment case. This is the last email in this sequence — and the most important one. The pre-launch pricing window closes when the building permit is issued. At that point, prices across all unit types will be revised upward to reflect the de-risked, permitted asset. |
-| `{{EMAIL_BODY_PARA_2}}` | A reservation today costs KES 250,000 and locks in your pre-launch price across the full payment term. It is fully transferable and refundable if the project does not proceed. There is no simpler, lower-risk way to secure your position in what will become the most recognised residential address in Nyali. |
+| `{{EMAIL_BODY_PARA_2}}` | A reservation today locks in your pre-launch price across the full payment term. It is fully transferable and refundable if the project does not proceed. There is no simpler, lower-risk way to secure your position in what will become the most recognised residential address in Nyali. |
 | `{{STAT_1_VALUE}}` | KES 250K |
 | `{{STAT_1_LABEL}}` | To Reserve Your Unit Today |
 | `{{STAT_2_VALUE}}` | Q3 2026 |
@@ -229,12 +229,12 @@
 | `{{FEATURE_EYEBROW}}` | What Happens When You Reserve |
 | `{{FEATURE_ACCENT_WORD}}` | THREE STEPS |
 | `{{FEATURE_HEADLINE_REST}}` | TO SECURING YOUR AMERICAN DREAM |
-| `{{FEATURE_BODY}}` | Step 1 — Pay your KES 250,000 reservation fee and receive your Reservation Agreement confirming your unit, floor, and pre-launch price. Step 2 — On permit receipt (Q3 2026), your reservation converts to a formal Sale and Purchase Agreement with your 30% deposit and 36-month payment plan activated. Step 3 — August 2029: collect your keys. |
+| `{{FEATURE_BODY}}` | Step 1 — Pay your reservation fee and receive your Reservation Agreement confirming your unit, floor, and pre-launch price. Step 2 — On permit receipt (Q3 2026), your reservation converts to a formal Sale and Purchase Agreement with your 30% deposit and 36-month payment plan activated. Step 3 — August 2029: collect your keys. |
 | `{{FEATURE_IMAGE_URL}}` | assets/renders/09_Render_Exterior_Angle2.jpg |
 | `{{FEATURE_IMAGE_ALT}}` | American Dream Apartments — Three towers, Nyali |
-| `{{CTA_SUBTEXT}}` | KES 250,000 reserves your unit. Fully refundable. No risk. |
+| `{{CTA_SUBTEXT}}` | Contact us to reserve your unit today. |
 | `{{CTA_LABEL}}` | Reserve My Unit Now |
-| `{{CTA_URL}}` | https://sierrahomesusa.com/reserve |
+| `{{CTA_URL}}` | https://SierraUSAHomes.com/reserve |
 
 ---
 
@@ -284,7 +284,7 @@ Use this table to quickly fill in `SierraHomes_Email_Master_Template.html` for a
 - **Campaign type:** Autoresponder / Automation Workflow
 - **Trigger:** Contact added to "American Dream Leads" list
 - **From name:** Sierra USA Homes
-- **From email:** hello@sierrahomesusa.com
-- **Reply-to:** info@sierrahomesusa.com
+- **From email:** Info@SierraUSAHomes.com
+- **Reply-to:** Info@SierraUSAHomes.com
 - **Tracking:** Enable open tracking, click tracking, unsubscribe tracking
 - **A/B test subjects:** Run A/B on Email 2 and Email 6 subject lines (highest-impact emails)
