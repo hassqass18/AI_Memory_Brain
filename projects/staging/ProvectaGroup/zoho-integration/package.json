@@ -1,0 +1,11 @@
+{
+  "name": "provecta-zoho-integration",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Provecta Group website → Zoho CRM integration via Netlify Functions",
+  "scripts": {
+    "setup-zoho": "node setup-zoho.js",
+    "test-revops": "node test-forms.js revops",
+    "test-ai": "node test-forms.js ai"
+  }
+}

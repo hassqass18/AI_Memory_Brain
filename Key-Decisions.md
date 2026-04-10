@@ -94,6 +94,12 @@ When performing any action that matches a keyword below, read the referenced det
 | agents, asset, Media, Portfolio-Site, operational | D-051: Asset-only folders do not need agents/ subfolders — only operational departments | Key-Decisions-2026-04-09_1100.md | 2026-04-09 |
 | LinkedIn, Creator Mode, 404, desktop, workaround | L-030: LinkedIn Creator Mode inaccessible via desktop in 2026 — use mobile app | Key-Decisions-2026-04-09_1100.md | 2026-04-09 |
 | staging, infrastructure, continuity, memory, anchor | L-031: Staging folders without core infrastructure files break AI Memory continuity | Key-Decisions-2026-04-09_1100.md | 2026-04-09 |
+| cross-link, nav, Provecta, AIMemoryBrain, mutual | D-052: AIMemoryBrain and Provecta Group sites cross-linked via nav | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
+| popup, assessment, Provecta, AMB, lead capture | D-053: AMB-styled 7-question AI readiness assessment popup embedded in Provecta site | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
+| scroll, trigger, popup, 60%, intent | D-054: Popup scroll-triggered at 60% page depth (replaces time-based triggers) | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
+| Netlify, index.html, homepage, zip, deployment | D-055: Provecta site renamed index.html as Netlify homepage in joint zip | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
+| Netlify, 404, index.html, zip, static host | L-032: Netlify 404 if no index.html at zip root — always rename primary HTML to index.html | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
+| Chrome, local, staging, live site, clarification | L-033: "The project website" defaults to live domain — clarify local vs live with user | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
 
 ---
 
@@ -115,7 +121,9 @@ When performing any action that matches a keyword below, read the referenced det
 
 **Sierra Homes + Ecotecture Contract session (2026-04-08):** Applied 20 of 23 Sylvester Harding comments to Sierra Homes website. Map pin updated to exact site coordinates via Plus Code decoding (-4.032713, 39.715828). Website zip rebuilt. Ecotecture PM contract legally reviewed (14 issues: 3 Critical, 4 High, 4 Medium, 3 Low). Contract revised based on construction cost transcript + legal review: 8 changes including NCIA arbitration, 6-month DLP, Sierra Homes USA Limited, Russian language removed. Contractor entity changed to Provecta Group Limited (Mombasa, Kenya). Article 3 Trademarks removed. Final clean contract delivered as Ecotecture_PM_Contract_FINAL_v2.docx.
 
-**LinkedIn optimization + Staging audit session (2026-04-09):** Completed LinkedIn 7-item optimization: removed old skills (Marketing Strategy, Market Analysis, Strategic Planning, Closing Contracts, Team Building), added 5 AI skills (AI Strategy, AI Implementation, Business Process Automation, Knowledge Management, Workflow Design). Creator Mode confirmed inaccessible via desktop in 2026 — mobile app only (D-049). Full staging folder audit conducted: 4 of 5 folders missing core infrastructure. All remediated: AIMemoryBrain, MSIFS, PersonalBranding, ProvectaGroup each received Master-Context.md, Key-Decisions.md, Sessions.md, NextSteps.md, agents/open.md, agents/closure.md, decisions-learnings/session-protocol.md, and department agents/. SierraHomes_AmericanDream confirmed compliant.
+**LinkedIn optimization + Staging audit session (2026-04-09 AM):** Completed LinkedIn 7-item optimization: removed old skills (Marketing Strategy, Market Analysis, Strategic Planning, Closing Contracts, Team Building), added 5 AI skills (AI Strategy, AI Implementation, Business Process Automation, Knowledge Management, Workflow Design). Creator Mode confirmed inaccessible via desktop in 2026 — mobile app only (D-049). Full staging folder audit conducted: 4 of 5 folders missing core infrastructure. All remediated: AIMemoryBrain, MSIFS, PersonalBranding, ProvectaGroup each received Master-Context.md, Key-Decisions.md, Sessions.md, NextSteps.md, agents/open.md, agents/closure.md, decisions-learnings/session-protocol.md, and department agents/. SierraHomes_AmericanDream confirmed compliant.
+
+**AIMemoryBrain landing page + ProvectaGroup popup session (2026-04-09 PM):** Completed AMB landing page compare section (showPanel() JS, #compare nav link). Cross-linked AMB and Provecta Group sites via nav. Built full AMB-styled 3-stage popup for Provecta Group site: lead capture form → 7-question AI readiness assessment → instant score results with dimension bars and personalized recommendation. Scroll-trigger at 60% page depth replaces time-based triggers. Packaged both sites into Netlify-ready zip (v3: index.html + ai-memory-brain.html + provecta_logo.png). Fixed Netlify 404 caused by missing index.html at root.
 
 ---
 
@@ -133,8 +141,9 @@ When performing any action that matches a keyword below, read the referenced det
 | Key-Decisions-2026-04-06_0000.md | 2026-04-06 | Personal branding website edits, experience section redesign, skills expansion, resume modal, 2026 resume standards research, gap analysis, resume rebuild (RevOps & AI Consultant headline, 2-page hybrid format), git index blocker, scroll fix |
 | Key-Decisions-2026-04-08_0000.md | 2026-04-08 | Sierra Homes Sylvester comments, map pin Plus Code, zip rebuild, Ecotecture legal review, contract revision, Provecta Group Limited Mombasa, NCIA, DLP, Article 3 removed, finalized contract |
 | Key-Decisions-2026-04-09_1100.md | 2026-04-09 | LinkedIn optimization complete, Creator Mode desktop blocked, staging audit, AIMemoryBrain/MSIFS/PersonalBranding/ProvectaGroup remediated |
+| Key-Decisions-2026-04-09_1900.md | 2026-04-09 | AMB compare section completed, Provecta↔AMB cross-links, 7-question AI readiness popup, scroll trigger, Netlify zip packaging, index.html fix |
 
-**Last Updated:** 2026-04-09
+**Last Updated:** 2026-04-09 (PM session)
 
 ---
 

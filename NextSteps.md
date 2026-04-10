@@ -2,7 +2,7 @@
 
 > **SCOPE:** This file tracks pending work on the **AI Memory system itself** — its structure, standards, policies, shared resources, and cross-project infrastructure. This is NOT a project-level file. Project-specific next steps live in each project's own `NextSteps.md`.
 
-**Last Updated:** 2026-04-09
+**Last Updated:** 2026-04-09 (PM session)
 
 ---
 
@@ -11,6 +11,10 @@
 ### High Priority
 
 0. **Enable Creator Mode on LinkedIn (mobile app)** — Open LinkedIn mobile app → View Profile → Resources → Creator Mode toggle. Cannot be done via desktop (2026 UI change). **Owner: Hassan. 5 minutes.**
+
+0b. **Wire Stripe payment to AMB Blueprint modal** — `handlePurchase()` in `ai-memory-brain-landing.html` has a `// TODO: Replace with Stripe Checkout` comment. Add Stripe Payment Link URL (e.g., `window.location.href = 'https://buy.stripe.com/...'`). **Owner: Hassan. 10 minutes.**
+
+0c. **Upload provecta-x-ai-memory-brain-v3.zip to Netlify** — Replace v2 with the fixed zip (index.html at root). Located at `projects/staging/provecta-x-ai-memory-brain-v3.zip`. **Owner: Hassan.**
 
 1. **Create project case studies for personal branding website** — The "Proof" pillar (40%) of the Three-Pillar Authority Framework is missing from the site. Build 2–3 in-depth case studies: AI Memory Brain implementation, Sierra Homes GTM launch, Kazakhstan bilateral deal architecture. Required before any serious client or LP outreach. **Priority: next session.**
 
@@ -120,6 +124,10 @@
 | Ecotecture PM contract revised and finalized | 2026-04-08 | 8 changes from transcript + legal review; Provecta Group Limited (Mombasa); Art. 3 removed; Final_v2.docx delivered |
 | LinkedIn profile fully optimized for AMB GTM launch | 2026-04-09 | Old skills deleted; AI skills added (AI Strategy, AI Implementation, BPA, Knowledge Mgmt, Workflow Design). Open to Work off. Headline, About, URL all optimized. |
 | Staging folder audit + full remediation | 2026-04-09 | 4 of 5 staging folders (AIMemoryBrain, MSIFS, PersonalBranding, ProvectaGroup) brought to full staging.md compliance. All core files + department agents created. |
+| AMB compare section — showPanel() JS + nav link | 2026-04-09 | Interactive competitor comparison section fully functional. 7 tabs, #compare nav link added. |
+| Provecta ↔ AMB cross-links | 2026-04-09 | Both sites nav-linked. AMB nav: "Provecta Group ↗". Provecta nav: "AI Memory Brain ↗" (teal). |
+| AI readiness assessment popup — Provecta Group site | 2026-04-09 | Full AMB-styled 3-stage modal: lead capture + 7-question survey + scored results. Scroll-triggered at 60%. |
+| Joint Netlify-ready zip — provecta-x-ai-memory-brain-v3.zip | 2026-04-09 | Flat zip with index.html (Provecta), ai-memory-brain.html, provecta_logo.png. Ready to upload to Netlify. |
 
 ---
 

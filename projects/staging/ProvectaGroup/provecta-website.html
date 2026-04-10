@@ -1722,6 +1722,7 @@
         <li><a href="#process">Our Process</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#audit">Free Audit</a></li>
+        <li><a href="../AIMemoryBrain/Marketing/ai-memory-brain-landing.html" target="_blank" rel="noopener" style="color:#4FC3F7;font-weight:600;">AI Memory Brain ↗</a></li>
       </ul>
       <div class="nav__cta">
         <a href="#audit" class="btn btn-outline">Get Free Audit</a>
@@ -2499,8 +2500,8 @@
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  /* ── FORM SUBMIT ── */
-  function submitAuditForm() {
+  /* ── FORM SUBMIT — RevOps Audit → Zoho CRM ── */
+  async function submitAuditForm() {
     const required = ['firstName', 'lastName', 'email', 'company'];
     let valid = true;
     required.forEach(id => {
@@ -2514,7 +2515,6 @@
       }
     });
 
-    // Basic email check
     const emailEl = document.getElementById('email');
     if (valid && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
       emailEl.style.borderColor = '#F87171';
@@ -2524,11 +2524,35 @@
 
     if (!valid) return;
 
-    // Simulate submission
+    // Show loading state
+    const btn = document.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+
+    try {
+      await fetch('/api/revops-audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: document.getElementById('firstName').value.trim(),
+          lastName:  document.getElementById('lastName').value.trim(),
+          email:     document.getElementById('email').value.trim(),
+          company:   document.getElementById('company').value.trim(),
+          role:      document.getElementById('role').value,
+          crm:       document.getElementById('crm').value,
+          challenge: document.getElementById('challenge').value.trim(),
+        }),
+      });
+    } catch (e) {
+      console.warn('CRM submission error', e);
+    } finally {
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
+
     document.getElementById('auditForm').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
-
-    // In production: POST to your backend / CRM / Zapier webhook here
   }
 
   /* ── Smooth scroll for anchor links ── */
@@ -2541,6 +2565,921 @@
       }
     });
   });
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     AI MEMORY BRAIN — ASSESSMENT POPUP
+     Styled in AMB design language (black / white / teal)
+     Trigger: auto 8s delay + sticky banner CTA
+═══════════════════════════════════════════════════════════ -->
+<style>
+  /* ── AMB Popup tokens ── */
+  :root {
+    --amb-bg:        #000000;
+    --amb-text:      #ffffff;
+    --amb-muted:     rgba(255,255,255,0.55);
+    --amb-dim:       rgba(255,255,255,0.28);
+    --amb-border:    rgba(255,255,255,0.12);
+    --amb-border-md: rgba(255,255,255,0.25);
+    --amb-teal:      #4FC3F7;
+    --amb-teal-dim:  rgba(79,195,247,0.12);
+    --amb-green:     #4ade80;
+    --amb-overlay:   rgba(0,0,0,0.82);
+    --amb-font:      'Inter', system-ui, sans-serif;
+  }
+
+  /* ── Sticky banner at top ── */
+  #amb-banner {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 9000;
+    background: #000;
+    border-bottom: 1px solid rgba(79,195,247,0.3);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-family: var(--amb-font);
+    transform: translateY(-100%);
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  }
+  #amb-banner.visible { transform: translateY(0); }
+  #amb-banner-text {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.01em;
+  }
+  #amb-banner-text strong { color: #fff; }
+  #amb-banner-cta {
+    background: var(--amb-teal);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--amb-font);
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+  #amb-banner-cta:hover { opacity: 0.85; }
+  #amb-banner-close {
+    background: none; border: none; cursor: pointer;
+    color: rgba(255,255,255,0.4);
+    font-size: 1.1rem; line-height: 1;
+    padding: 2px 6px;
+    font-family: var(--amb-font);
+    transition: color 0.2s;
+    margin-left: 8px;
+  }
+  #amb-banner-close:hover { color: #fff; }
+
+  /* ── Modal overlay ── */
+  #amb-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--amb-overlay);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #amb-modal.open { display: flex; }
+
+  /* ── Modal shell ── */
+  #amb-modal-box {
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 680px;
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 48px 48px 40px;
+    font-family: var(--amb-font);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.15) transparent;
+  }
+  #amb-modal-box::-webkit-scrollbar { width: 4px; }
+  #amb-modal-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+  /* ── Close X ── */
+  #amb-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none; border: none;
+    color: rgba(255,255,255,0.35);
+    font-size: 1.4rem; line-height: 1;
+    cursor: pointer;
+    font-family: var(--amb-font);
+    transition: color 0.2s;
+  }
+  #amb-close:hover { color: #fff; }
+
+  /* ── Step: Lead capture (step 1) ── */
+  #amb-step-lead { display: block; }
+  #amb-step-survey { display: none; }
+  #amb-step-result { display: none; }
+
+  /* ── Eyebrow ── */
+  .amb-eyebrow {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amb-teal);
+    margin-bottom: 14px;
+  }
+
+  /* ── Heading ── */
+  .amb-h1 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .amb-sub {
+    font-size: 0.9rem;
+    color: var(--amb-muted);
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  /* ── Form ── */
+  .amb-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .amb-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+  .amb-field label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amb-dim);
+  }
+  .amb-field input {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--amb-border);
+    border-radius: 6px;
+    padding: 11px 14px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: var(--amb-font);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .amb-field input:focus { border-color: var(--amb-teal); background: rgba(79,195,247,0.04); }
+  .amb-field input::placeholder { color: rgba(255,255,255,0.2); }
+
+  /* ── Primary button ── */
+  .amb-btn-primary {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--amb-font);
+    transition: opacity 0.2s;
+    margin-top: 6px;
+  }
+  .amb-btn-primary:hover { opacity: 0.88; }
+
+  .amb-legal {
+    font-size: 0.7rem;
+    color: var(--amb-dim);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── Divider ── */
+  .amb-divider {
+    border: none;
+    border-top: 1px solid var(--amb-border);
+    margin: 28px 0;
+  }
+
+  /* ── Proof strip ── */
+  .amb-proof {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .amb-proof-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--amb-green);
+    flex-shrink: 0;
+  }
+  .amb-proof-text { font-size: 0.78rem; color: var(--amb-muted); }
+
+  /* ── Survey: progress bar ── */
+  .amb-progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .amb-progress-bar {
+    flex: 1;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .amb-progress-fill {
+    height: 100%;
+    background: var(--amb-teal);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+  .amb-progress-label {
+    font-size: 0.7rem;
+    color: var(--amb-dim);
+    white-space: nowrap;
+  }
+
+  /* ── Survey question ── */
+  .amb-q { display: none; }
+  .amb-q.active { display: block; }
+  .amb-q-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+    margin-bottom: 20px;
+  }
+  .amb-options { display: flex; flex-direction: column; gap: 10px; }
+  .amb-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    border: 1px solid var(--amb-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .amb-option:hover { border-color: var(--amb-border-md); background: rgba(255,255,255,0.03); }
+  .amb-option.selected { border-color: var(--amb-teal); background: var(--amb-teal-dim); }
+  .amb-option input[type="radio"] { display: none; }
+  .amb-option-bullet {
+    width: 18px; height: 18px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .amb-option.selected .amb-option-bullet {
+    border-color: var(--amb-teal);
+    background: var(--amb-teal);
+  }
+  .amb-option.selected .amb-option-bullet::after {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #000;
+  }
+  .amb-option-text { font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
+  .amb-option-sub { font-size: 0.75rem; color: var(--amb-muted); margin-top: 2px; }
+
+  /* ── Survey nav buttons ── */
+  .amb-q-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    gap: 12px;
+  }
+  .amb-btn-back {
+    background: none;
+    border: 1px solid var(--amb-border);
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--amb-muted);
+    font-size: 0.82rem;
+    font-family: var(--amb-font);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .amb-btn-back:hover { border-color: var(--amb-border-md); color: #fff; }
+  .amb-btn-next {
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 28px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--amb-font);
+    transition: opacity 0.2s;
+  }
+  .amb-btn-next:hover { opacity: 0.88; }
+
+  /* ── Result screen ── */
+  .amb-result-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 1.5px solid var(--amb-teal);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .amb-score-bar-wrap {
+    margin: 24px 0;
+  }
+  .amb-score-label {
+    display: flex; justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--amb-muted);
+    margin-bottom: 6px;
+  }
+  .amb-score-track {
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+  .amb-score-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 1s ease;
+  }
+  .amb-score-fill.high   { background: var(--amb-green); }
+  .amb-score-fill.medium { background: var(--amb-teal); }
+  .amb-score-fill.low    { background: rgba(255,255,255,0.3); }
+
+  .amb-result-insights {
+    border: 1px solid var(--amb-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .amb-insight-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--amb-border);
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .amb-insight-row:last-child { border-bottom: none; }
+  .amb-insight-key { color: var(--amb-muted); width: 140px; flex-shrink: 0; font-size: 0.76rem; }
+
+  .amb-result-cta {
+    background: var(--amb-teal);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 24px;
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--amb-font);
+    margin-top: 8px;
+    transition: opacity 0.2s;
+  }
+  .amb-result-cta:hover { opacity: 0.88; }
+
+  @media (max-width: 560px) {
+    #amb-modal-box { padding: 32px 22px 28px; }
+    .amb-form-row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ── Sticky banner ── -->
+<div id="amb-banner">
+  <span id="amb-banner-text"><strong>Is your organization AI-ready?</strong> Take the free 2-min assessment →</span>
+  <button id="amb-banner-cta" onclick="ambOpenModal()">Start Free Assessment</button>
+  <button id="amb-banner-close" onclick="ambCloseBanner()" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- ── Modal ── -->
+<div id="amb-modal" role="dialog" aria-modal="true" aria-labelledby="amb-modal-title" onclick="ambOverlayClick(event)">
+  <div id="amb-modal-box">
+    <button id="amb-close" onclick="ambCloseModal()" aria-label="Close">✕</button>
+
+    <!-- STEP 1: Lead capture -->
+    <div id="amb-step-lead">
+      <div class="amb-eyebrow">AI Memory Brain × Provecta Group</div>
+      <h2 class="amb-h1" id="amb-modal-title">AI-enable your entire<br>organization.</h2>
+      <p class="amb-sub">See exactly where your team is losing time to repetitive prompting, lost context, and AI that forgets everything. Takes 2 minutes. Results are instant.</p>
+
+      <div class="amb-proof">
+        <div class="amb-proof-dot"></div>
+        <span class="amb-proof-text">Free assessment — no credit card required. Used by 40+ revenue teams.</span>
+      </div>
+
+      <form id="amb-lead-form" onsubmit="ambSubmitLead(event)">
+        <div class="amb-form-row">
+          <div class="amb-field">
+            <label for="amb-first">First name</label>
+            <input id="amb-first" name="first" type="text" placeholder="Hassan" required />
+          </div>
+          <div class="amb-field">
+            <label for="amb-last">Last name</label>
+            <input id="amb-last" name="last" type="text" placeholder="Qaseem" required />
+          </div>
+        </div>
+        <div class="amb-field">
+          <label for="amb-email">Work email</label>
+          <input id="amb-email" name="email" type="email" placeholder="you@company.com" required />
+        </div>
+        <div class="amb-field">
+          <label for="amb-company">Company</label>
+          <input id="amb-company" name="company" type="text" placeholder="Provecta Group" required />
+        </div>
+        <div class="amb-field">
+          <label for="amb-role">Your role</label>
+          <input id="amb-role" name="role" type="text" placeholder="CEO, RevOps Lead, CTO…" required />
+        </div>
+        <button class="amb-btn-primary" type="submit">Start My Free Assessment →</button>
+      </form>
+      <p class="amb-legal">By continuing you agree to receive your personalized AI readiness report. We don't spam.</p>
+    </div>
+
+    <!-- STEP 2: Survey -->
+    <div id="amb-step-survey">
+      <div class="amb-eyebrow">AI Readiness Assessment</div>
+      <h2 class="amb-h1">Let's build your<br>AI readiness score.</h2>
+      <p class="amb-sub" style="margin-bottom:20px;">Answer honestly — this powers your personalized action plan.</p>
+
+      <div class="amb-progress-wrap">
+        <div class="amb-progress-bar"><div class="amb-progress-fill" id="amb-prog-fill" style="width:0%"></div></div>
+        <span class="amb-progress-label" id="amb-prog-label">Question 1 of 7</span>
+      </div>
+
+      <!-- Q1 -->
+      <div class="amb-q active" id="amb-q1">
+        <p class="amb-q-label">How many people in your organization use AI tools (ChatGPT, Claude, Copilot, etc.) on a daily basis?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,1,'none')">
+            <input type="radio" name="q1" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">None — we haven't adopted AI tools yet<span class="amb-option-sub">AI is on our radar but not in the workflow</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,1,'few')">
+            <input type="radio" name="q1" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">1–5 people (early adopters only)<span class="amb-option-sub">A handful of individuals experiment on their own</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,1,'some')">
+            <input type="radio" name="q1" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">6–25 people (growing adoption)<span class="amb-option-sub">Some teams are using it, but inconsistently</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,1,'most')">
+            <input type="radio" name="q1" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">25+ people (widespread use)<span class="amb-option-sub">AI is part of our daily operations</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <span></span>
+          <button class="amb-btn-next" onclick="ambNext(1)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="amb-q" id="amb-q2">
+        <p class="amb-q-label">When your team uses AI, how much context do they have to re-explain each session?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,2,'always')">
+            <input type="radio" name="q2" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Always — every session starts from scratch<span class="amb-option-sub">The AI has no memory of previous conversations</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,2,'often')">
+            <input type="radio" name="q2" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Often — we paste in context manually<span class="amb-option-sub">We've built workarounds but they're inconsistent</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,2,'sometimes')">
+            <input type="radio" name="q2" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Sometimes — some workflows have memory, others don't<span class="amb-option-sub">It depends on the tool and team</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,2,'rarely')">
+            <input type="radio" name="q2" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Rarely — our AI remembers most context<span class="amb-option-sub">We have a persistent memory system in place</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <button class="amb-btn-back" onclick="ambBack(2)">← Back</button>
+          <button class="amb-btn-next" onclick="ambNext(2)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="amb-q" id="amb-q3">
+        <p class="amb-q-label">Which departments in your organization would most benefit from AI memory?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,3,'sales')">
+            <input type="radio" name="q3" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Sales & Revenue<span class="amb-option-sub">CRM context, deal history, call prep</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,3,'ops')">
+            <input type="radio" name="q3" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Operations & RevOps<span class="amb-option-sub">SOPs, project context, process documentation</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,3,'marketing')">
+            <input type="radio" name="q3" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Marketing & Content<span class="amb-option-sub">Brand voice, campaign history, audience data</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,3,'all')">
+            <input type="radio" name="q3" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">All of the above — entire org<span class="amb-option-sub">We want AI memory embedded at every level</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <button class="amb-btn-back" onclick="ambBack(3)">← Back</button>
+          <button class="amb-btn-next" onclick="ambNext(3)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="amb-q" id="amb-q4">
+        <p class="amb-q-label">How does your team currently store institutional knowledge (SOPs, client context, playbooks)?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,4,'nowhere')">
+            <input type="radio" name="q4" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Mostly in people's heads<span class="amb-option-sub">When someone leaves, we lose the knowledge</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,4,'scattered')">
+            <input type="radio" name="q4" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Scattered docs (Google Drive, Notion, email threads)<span class="amb-option-sub">It exists but is hard to find and use</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,4,'structured')">
+            <input type="radio" name="q4" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Structured wiki or CRM<span class="amb-option-sub">We have a system but AI can't access it</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,4,'ai-ready')">
+            <input type="radio" name="q4" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">AI-ready knowledge base<span class="amb-option-sub">Our docs are structured and piped into our AI workflows</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <button class="amb-btn-back" onclick="ambBack(4)">← Back</button>
+          <button class="amb-btn-next" onclick="ambNext(4)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="amb-q" id="amb-q5">
+        <p class="amb-q-label">What's your biggest blocker to scaling AI across the organization?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,5,'not-sure')">
+            <input type="radio" name="q5" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">We don't know where to start<span class="amb-option-sub">No clear roadmap or strategy</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,5,'tools')">
+            <input type="radio" name="q5" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Too many tools, no unified system<span class="amb-option-sub">Everyone uses different AI tools in isolation</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,5,'memory')">
+            <input type="radio" name="q5" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">AI doesn't retain context between sessions<span class="amb-option-sub">Every conversation starts from zero</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,5,'trust')">
+            <input type="radio" name="q5" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Team adoption and trust<span class="amb-option-sub">People aren't confident in AI outputs</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <button class="amb-btn-back" onclick="ambBack(5)">← Back</button>
+          <button class="amb-btn-next" onclick="ambNext(5)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="amb-q" id="amb-q6">
+        <p class="amb-q-label">How much time per week does your team collectively lose to re-explaining context to AI tools?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,6,'low')">
+            <input type="radio" name="q6" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Less than 1 hour total<span class="amb-option-sub">Not a major pain point yet</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,6,'medium')">
+            <input type="radio" name="q6" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">1–5 hours per week<span class="amb-option-sub">Noticeable friction in our workflows</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,6,'high')">
+            <input type="radio" name="q6" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">5–15 hours per week<span class="amb-option-sub">Significant drag on productivity</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,6,'critical')">
+            <input type="radio" name="q6" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">15+ hours per week<span class="amb-option-sub">This is costing us real money and momentum</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <button class="amb-btn-back" onclick="ambBack(6)">← Back</button>
+          <button class="amb-btn-next" onclick="ambNext(6)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="amb-q" id="amb-q7">
+        <p class="amb-q-label">What's your timeline for deploying an AI memory system across your organization?</p>
+        <div class="amb-options">
+          <label class="amb-option" onclick="ambSelect(this,7,'now')">
+            <input type="radio" name="q7" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Immediately — we're ready to move<span class="amb-option-sub">We want to start this quarter</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,7,'soon')">
+            <input type="radio" name="q7" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Within 3 months<span class="amb-option-sub">Planning and budget are in motion</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,7,'exploring')">
+            <input type="radio" name="q7" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">Still exploring options<span class="amb-option-sub">We want to understand the landscape first</span></span>
+          </label>
+          <label class="amb-option" onclick="ambSelect(this,7,'future')">
+            <input type="radio" name="q7" /><span class="amb-option-bullet"></span>
+            <span class="amb-option-text">6+ months out<span class="amb-option-sub">Not an immediate priority but want to be informed</span></span>
+          </label>
+        </div>
+        <div class="amb-q-nav">
+          <button class="amb-btn-back" onclick="ambBack(7)">← Back</button>
+          <button class="amb-btn-next" onclick="ambShowResult()">See My Results →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: Result -->
+    <div id="amb-step-result">
+      <div class="amb-eyebrow">Your AI Readiness Report</div>
+      <div class="amb-result-icon" id="amb-result-icon">🧠</div>
+      <h2 class="amb-h1" id="amb-result-title">Loading your score…</h2>
+      <p class="amb-sub" id="amb-result-desc"></p>
+
+      <div class="amb-score-bar-wrap" id="amb-score-bars"></div>
+
+      <div class="amb-result-insights" id="amb-result-insights"></div>
+
+      <p class="amb-sub" id="amb-result-rec" style="margin-top:16px;margin-bottom:0;"></p>
+
+      <button class="amb-result-cta" onclick="ambBookCall()">Book Your Free AI Strategy Call →</button>
+      <p class="amb-legal" style="margin-top:12px;">A Provecta Group × AI Memory Brain specialist will reach out within 1 business day.</p>
+    </div>
+
+  </div><!-- /amb-modal-box -->
+</div><!-- /amb-modal -->
+
+<script>
+  /* ═══════════════════════════════════════════════
+     AI MEMORY BRAIN ASSESSMENT — JS
+  ═══════════════════════════════════════════════ */
+
+  const ambAnswers = {};
+  const AMB_TOTAL_Q = 7;
+
+  /* ── Banner ── */
+  function ambShowBanner() {
+    document.getElementById('amb-banner').classList.add('visible');
+  }
+  function ambCloseBanner() {
+    document.getElementById('amb-banner').classList.remove('visible');
+    sessionStorage.setItem('amb-banner-dismissed','1');
+  }
+
+  /* ── Modal open/close ── */
+  function ambOpenModal() {
+    document.getElementById('amb-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function ambCloseModal() {
+    document.getElementById('amb-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function ambOverlayClick(e) {
+    if (e.target === document.getElementById('amb-modal')) ambCloseModal();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') ambCloseModal(); });
+
+  /* ── Step 1: submit lead — capture data, move to quiz ── */
+  function ambSubmitLead(e) {
+    e.preventDefault();
+    ambAnswers._lead = {
+      first:   document.getElementById('amb-first').value.trim(),
+      last:    document.getElementById('amb-last').value.trim(),
+      email:   document.getElementById('amb-email').value.trim(),
+      company: document.getElementById('amb-company').value.trim(),
+      role:    document.getElementById('amb-role').value.trim(),
+    };
+    // CRM submission fires after scoring in ambShowResult()
+    document.getElementById('amb-step-lead').style.display = 'none';
+    document.getElementById('amb-step-survey').style.display = 'block';
+    ambUpdateProgress(1);
+    document.getElementById('amb-modal-box').scrollTop = 0;
+  }
+
+  /* ── Option select ── */
+  function ambSelect(el, qNum, val) {
+    el.closest('.amb-options').querySelectorAll('.amb-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    ambAnswers['q'+qNum] = val;
+  }
+
+  /* ── Progress ── */
+  function ambUpdateProgress(qNum) {
+    const pct = Math.round(((qNum - 1) / AMB_TOTAL_Q) * 100);
+    document.getElementById('amb-prog-fill').style.width = pct + '%';
+    document.getElementById('amb-prog-label').textContent = 'Question ' + qNum + ' of ' + AMB_TOTAL_Q;
+  }
+
+  /* ── Next / Back ── */
+  function ambNext(qNum) {
+    if (!ambAnswers['q'+qNum]) {
+      // Shake effect if no answer
+      const q = document.getElementById('amb-q'+qNum);
+      q.style.animation = 'none';
+      q.offsetHeight;
+      q.style.animation = 'ambShake 0.35s ease';
+      return;
+    }
+    document.getElementById('amb-q'+qNum).classList.remove('active');
+    document.getElementById('amb-q'+(qNum+1)).classList.add('active');
+    ambUpdateProgress(qNum + 1);
+    document.getElementById('amb-modal-box').scrollTop = 0;
+  }
+  function ambBack(qNum) {
+    document.getElementById('amb-q'+qNum).classList.remove('active');
+    document.getElementById('amb-q'+(qNum-1)).classList.add('active');
+    ambUpdateProgress(qNum - 1);
+    document.getElementById('amb-modal-box').scrollTop = 0;
+  }
+
+  /* ── Score calculation ── */
+  function ambCalcScore() {
+    const scoreMap = {
+      q1: { none: 0, few: 1, some: 2, most: 3 },
+      q2: { always: 0, often: 1, sometimes: 2, rarely: 3 },
+      q3: { sales: 1, ops: 1, marketing: 1, all: 3 },
+      q4: { nowhere: 0, scattered: 1, structured: 2, 'ai-ready': 3 },
+      q5: { 'not-sure': 0, tools: 1, memory: 2, trust: 1 },
+      q6: { low: 1, medium: 2, high: 3, critical: 3 },
+      q7: { now: 3, soon: 2, exploring: 1, future: 0 },
+    };
+    let total = 0;
+    for (let q in scoreMap) {
+      total += (scoreMap[q][ambAnswers[q]] || 0);
+    }
+    return total; // max 21
+  }
+
+  /* ── Show result ── */
+  function ambShowResult() {
+    if (!ambAnswers['q7']) {
+      const q = document.getElementById('amb-q7');
+      q.style.animation = 'none'; q.offsetHeight;
+      q.style.animation = 'ambShake 0.35s ease';
+      return;
+    }
+
+    const score = ambCalcScore();
+    const pct   = Math.round((score / 21) * 100);
+
+    // Fire AI Audit → Zoho CRM (non-blocking, runs in background)
+    if (ambAnswers._lead) {
+      fetch('/api/ai-audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          first:   ambAnswers._lead.first,
+          last:    ambAnswers._lead.last,
+          email:   ambAnswers._lead.email,
+          company: ambAnswers._lead.company,
+          role:    ambAnswers._lead.role,
+          answers: ambAnswers,
+          score:   score,
+        }),
+      }).catch(e => console.warn('AI audit CRM error', e));
+    }
+
+    let tier, title, desc, rec, fillClass;
+    if (pct >= 65) {
+      tier = 'Advanced'; fillClass = 'high';
+      title = 'You\'re AI-active — now make it permanent.';
+      desc  = 'Your team uses AI daily but is still losing time re-explaining context. A persistent memory layer would multiply the ROI you\'re already seeing.';
+      rec   = '→ Recommended: Done-For-You SMB deployment. We\'ll install AI Memory Brain across your entire org in 30 days.';
+    } else if (pct >= 35) {
+      tier = 'Developing'; fillClass = 'medium';
+      title = 'You\'re building momentum — unlock the next level.';
+      desc  = 'AI adoption is growing in your org, but fragmented tools and lost context are slowing you down. A unified memory architecture changes everything.';
+      rec   = '→ Recommended: Start with the DIY Blueprint to map your memory architecture, then consider a full Done-For-You build.';
+    } else {
+      tier = 'Early Stage'; fillClass = 'low';
+      title = 'You\'re at the starting line — and that\'s an advantage.';
+      desc  = 'Most organizations at your stage skip straight to tools without building the memory foundation. Getting this right now means compounding gains for years.';
+      rec   = '→ Recommended: Free AI Strategy Call to build your roadmap. No commitment required.';
+    }
+
+    document.getElementById('amb-step-survey').style.display = 'none';
+    document.getElementById('amb-step-result').style.display = 'block';
+    document.getElementById('amb-result-icon').textContent = pct >= 65 ? '⚡' : pct >= 35 ? '🚀' : '🌱';
+    document.getElementById('amb-result-title').textContent = title;
+    document.getElementById('amb-result-desc').textContent  = desc;
+    document.getElementById('amb-result-rec').textContent   = rec;
+
+    // Score bars
+    const bars = document.getElementById('amb-score-bars');
+    const dims = [
+      { label: 'AI Adoption',      key: 'q1', max: 3 },
+      { label: 'Memory Continuity',key: 'q2', max: 3 },
+      { label: 'Knowledge Mgmt',   key: 'q4', max: 3 },
+      { label: 'Readiness to Act', key: 'q7', max: 3 },
+    ];
+    const dimScoreMap = {
+      q1: { none: 0, few: 1, some: 2, most: 3 },
+      q2: { always: 0, often: 1, sometimes: 2, rarely: 3 },
+      q4: { nowhere: 0, scattered: 1, structured: 2, 'ai-ready': 3 },
+      q7: { now: 3, soon: 2, exploring: 1, future: 0 },
+    };
+    bars.innerHTML = dims.map(d => {
+      const s = dimScoreMap[d.key][ambAnswers[d.key]] || 0;
+      const p = Math.round((s / d.max) * 100);
+      return `
+        <div class="amb-score-label"><span>${d.label}</span><span>${p}%</span></div>
+        <div class="amb-score-track"><div class="amb-score-fill ${fillClass}" style="width:0%" data-target="${p}"></div></div>
+      `;
+    }).join('');
+
+    // Insights
+    const insightMap = {
+      q3: { sales:'Primary opportunity: Sales AI memory', ops:'Primary opportunity: RevOps AI memory', marketing:'Primary opportunity: Marketing AI memory', all:'Org-wide AI enablement — full deployment recommended' },
+      q5: { 'not-sure':'Key gap: Clear AI strategy & roadmap', tools:'Key gap: Unified AI memory system', memory:'Key gap: Persistent context layer', trust:'Key gap: Team training & AI literacy' },
+      q6: { low:'Time lost: <1 hr/wk', medium:'Time lost: 1–5 hrs/wk (~$500–2k/mo)', high:'Time lost: 5–15 hrs/wk (~$2k–6k/mo)', critical:'Time lost: 15+ hrs/wk (significant cost)' },
+    };
+    const insightsEl = document.getElementById('amb-result-insights');
+    insightsEl.innerHTML = `
+      <div class="amb-insight-row"><span class="amb-insight-key">AI Readiness Score</span><span>${pct}% — ${tier}</span></div>
+      <div class="amb-insight-row"><span class="amb-insight-key">Opportunity</span><span>${insightMap.q3[ambAnswers.q3] || '—'}</span></div>
+      <div class="amb-insight-row"><span class="amb-insight-key">Biggest Gap</span><span>${insightMap.q5[ambAnswers.q5] || '—'}</span></div>
+      <div class="amb-insight-row"><span class="amb-insight-key">Productivity Impact</span><span>${insightMap.q6[ambAnswers.q6] || '—'}</span></div>
+    `;
+
+    document.getElementById('amb-modal-box').scrollTop = 0;
+
+    // Animate bars after render
+    setTimeout(() => {
+      document.querySelectorAll('.amb-score-fill[data-target]').forEach(el => {
+        el.style.width = el.getAttribute('data-target') + '%';
+      });
+    }, 100);
+  }
+
+  /* ── Book call ── */
+  function ambBookCall() {
+    window.open('mailto:hassan.qaseem@gc-usa.com?subject=AI Readiness Assessment — ' + (ambAnswers._lead ? ambAnswers._lead.company : 'Inquiry') + '&body=Hi Hassan,%0A%0AI just completed the AI readiness assessment on the Provecta Group website and would love to discuss next steps.%0A%0AScore: ' + Math.round((ambCalcScore()/21)*100) + '%25%0A%0AThanks!', '_blank');
+  }
+
+  /* ── Shake keyframes ── */
+  const ambStyle = document.createElement('style');
+  ambStyle.textContent = '@keyframes ambShake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }';
+  document.head.appendChild(ambStyle);
+
+  /* ── Scroll-trigger: show banner at 60% page depth, modal at 60% if banner dismissed ── */
+  let ambTriggered = false;
+  window.addEventListener('scroll', function ambScrollWatch() {
+    if (ambTriggered) return;
+    const scrolled  = window.scrollY + window.innerHeight;
+    const pageTotal = document.documentElement.scrollHeight;
+    if (scrolled / pageTotal >= 0.60) {
+      ambTriggered = true;
+      if (!sessionStorage.getItem('amb-banner-dismissed') && !sessionStorage.getItem('amb-modal-seen')) {
+        ambShowBanner();
+      } else if (!sessionStorage.getItem('amb-modal-seen')) {
+        sessionStorage.setItem('amb-modal-seen', '1');
+        ambOpenModal();
+      }
+      window.removeEventListener('scroll', ambScrollWatch);
+    }
+  }, { passive: true });
 </script>
 </body>
 </html>

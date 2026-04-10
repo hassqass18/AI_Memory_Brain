@@ -4,7 +4,7 @@
 **Category:** Consulting & Operations Firm
 **Owner:** Hassan Wilson — Founder & Managing Director
 **Stage:** Staging (Active Operations)
-**Last Updated:** 2026-04-09
+**Last Updated:** 2026-04-10
 
 ---
 
@@ -28,6 +28,26 @@ Provecta Group is a boutique consulting and operations firm delivering Revenue O
 
 ---
 
+## Prospects / Pipeline
+
+| Prospect | Document | Stage |
+|----------|----------|-------|
+| Premier Realty | `Premier_Realty_Proposal_2026.docx` + `Premier_Realty_Market_Analysis_2026.docx` | 🔄 Analysis delivered — follow-up pending |
+
+---
+
+## Digital Infrastructure
+
+| Asset | URL / Location | Status |
+|-------|---------------|--------|
+| Provecta Group Website | `pgco.world` (Netlify) | ✅ Live — SSL provisioned |
+| AI Memory Brain Landing Page | `pgco.world/AIMemoryBrain/Marketing/ai-memory-brain-landing.html` | ✅ Live — Mobile optimized |
+| Zoho CRM | Zoho One account | 🔄 Live — Workflow rules pending manual setup |
+| Netlify PAT | `nfp_KBFqbNdJn1x92MxGkyLyH2Te7rRaTKw7583d` | ✅ Active — Expires ~2026-07-10 |
+| Netlify Site ID | `0ac794dd-d20a-400d-b764-ec974fd4b6ea` | ✅ Active |
+
+---
+
 ## Key Documents
 
 | Document | Location | Status |
@@ -36,8 +56,12 @@ Provecta Group is a boutique consulting and operations firm delivering Revenue O
 | Ecotecture PM Contract (PDF) | `Legal/Ecotecture_PM_Contract_SIGNED.pdf` | ✅ Archived |
 | RevOps SOP | `Provecta_RevOps_SOP.docx` | ✅ Complete |
 | Brand Template | `Provecta-Brand-Template.md` | ✅ Complete |
-| Website | `provecta-website.html` | 🔄 Live (HTML) |
+| Website Source | `deploy-pgco/index.html` (local sandbox) | ✅ Live at pgco.world |
+| AI Memory Brain Landing Page | `deploy-pgco/AIMemoryBrain/Marketing/ai-memory-brain-landing.html` | ✅ Live — Mobile responsive |
+| Premier Realty Proposal | `Premier_Realty_Proposal_2026.docx` | ✅ Complete |
+| Premier Realty Market Analysis | `Premier_Realty_Market_Analysis_2026.docx` | ✅ Complete |
 | Construction Cost Review | `Operations/Construction Cost and Contract Review Transcript.txt` | ✅ Archived |
+| Zoho Nurture Campaigns | `zoho-integration/NURTURE-CAMPAIGNS.md` | 📋 Plan only — sequences not yet built |
 
 ---
 
@@ -59,10 +83,10 @@ Provecta Group is a boutique consulting and operations firm delivering Revenue O
 **Status:** [x] Complete — RevOps SOP and Brand Template built
 
 ### Document 2: Operational Architecture
-**Status:** [~] In Progress — SOPs active, Zoho CRM integration pending
+**Status:** [~] In Progress — SOPs active, website live, Zoho CRM partially configured (workflow rules pending)
 
 ### Document 3: Business Development Plan
-**Status:** [ ] Not Started — pipeline strategy needed
+**Status:** [~] In Progress — Premier Realty prospect materials built; pipeline strategy needed
 
 ---
 
