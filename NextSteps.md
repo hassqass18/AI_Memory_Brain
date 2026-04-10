@@ -2,7 +2,7 @@
 
 > **SCOPE:** This file tracks pending work on the **AI Memory system itself** — its structure, standards, policies, shared resources, and cross-project infrastructure. This is NOT a project-level file. Project-specific next steps live in each project's own `NextSteps.md`.
 
-**Last Updated:** 2026-04-10
+**Last Updated:** 2026-04-11
 
 ---
 
@@ -125,6 +125,9 @@
 | LinkedIn profile fully optimized for AMB GTM launch | 2026-04-09 | Old skills deleted; AI skills added (AI Strategy, AI Implementation, BPA, Knowledge Mgmt, Workflow Design). Open to Work off. Headline, About, URL all optimized. |
 | Staging folder audit + full remediation | 2026-04-09 | 4 of 5 staging folders (AIMemoryBrain, MSIFS, PersonalBranding, ProvectaGroup) brought to full staging.md compliance. All core files + department agents created. |
 | LifeOS project staged and fully built | 2026-04-10/11 | All 3 staging documents complete. Domain logs, action queue (15 active items), Q2 OKRs (G001 Fitness, G002 Finance, G003 AMB GTM) all seeded. **Launching Sunday April 12, 2026.** |
+| Sierra Homes file consolidation — AI_Training → staging | 2026-04-11 | All files from SierraHomes_AmericanDream_AI_Training merged into projects/staging/SierraHomes_AmericanDream. Canonical folder confirmed. AI Training folder ready for deletion. KD-049. |
+| Master-Context.md updated — SierraHomes staging | 2026-04-11 | Available Agents table expanded (Product_Development, Security, TechSupport). Available Deliverables & Content Files section created — all 40+ project files now discoverable from session init. KD-050. |
+| ProvectaGroup Legal/ and Operations/ created | 2026-04-11 | Ecotecture PM contracts (PDF + SIGNED.docx + SIGNED.pdf) + Construction Cost transcript moved to projects/staging/ProvectaGroup. KD-049. |
 | AMB compare section — showPanel() JS + nav link | 2026-04-09 | Interactive competitor comparison section fully functional. 7 tabs, #compare nav link added. |
 | Provecta ↔ AMB cross-links | 2026-04-09 | Both sites nav-linked. AMB nav: "Provecta Group ↗". Provecta nav: "AI Memory Brain ↗" (teal). |
 | AI readiness assessment popup — Provecta Group site | 2026-04-09 | Full AMB-styled 3-stage modal: lead capture + 7-question survey + scored results. Scroll-triggered at 60%. |

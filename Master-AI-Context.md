@@ -3,7 +3,7 @@
 **Document Purpose:** This is the primary operational context file for any AI assistant working on the **AI Memory system itself** — its structure, standards, policies, shared resources, cross-project coordination, and infrastructure. This is NOT a project-level context file. Each project has its own `Master-AI-Context.md` inside its `{ProjectName}_AI_Training/` folder.
 
 **Memory Design Version:** 1.1
-**Last Updated:** 2026-04-01
+**Last Updated:** 2026-04-11
 **System Owner:** Hassan Qaseem (hassan.qaseem@gc-usa.com)
 **Organization:** Provecta Group
 **Repository:** https://github.com/hassqass18/AI_Memory_Brain
@@ -194,9 +194,9 @@ CRM integration is configured during setup (`setup-AI-Memory.md`).
 
 ## 9. Session History & Handover
 
-- **Latest Session:** [AI-Session-Summary-2026-04-10_1500.md](session-summary/AI-Session-Summary-2026-04-10_1500.md) — LifeOS full staging: all 3 documents complete (Project Context, Architecture/Design, Release Plan). 8 department folders, domain logs, Q2 OKRs (G001 Fitness, G002 Financial Clarity, G003 AMB GTM), action queue (15 active items). Launch date: Sunday April 12, 2026.
-- **Previous Session:** [AI-Session-Summary-2026-04-10_0900.md](session-summary/AI-Session-Summary-2026-04-10_0900.md) — Premier Realty company intelligence profile (15 sections). Provecta RevOps & AI proposal (KES 1,150,000, 3-quarter roadmap, SPICED analysis). Word document delivered.
-- **Latest Decisions:** [Key-Decisions-2026-04-10_1700.md](decisions-learnings/Key-Decisions-2026-04-10_1700.md) — Q2 OKRs confirmed (G001/G002/G003), Phase 1 simultaneous activation, 30-day habit ramp, Phase 2 gate criteria, fully operational definition (Month 3+), launch date April 12
+- **Latest Session:** [AI-Session-Summary-2026-04-11_1559.md](session-summary/AI-Session-Summary-2026-04-11_1559.md) — Sierra Homes file consolidation (AI_Training → staging), ProvectaGroup Legal/Operations folders created, SierraHomes Master-Context.md updated (agents expanded, full deliverables index added). Root + SierraHomes closure run. D-049, D-050, L-030.
+- **Previous Session:** [AI-Session-Summary-2026-04-10_1500.md](session-summary/AI-Session-Summary-2026-04-10_1500.md) — LifeOS full staging: all 3 documents complete (Project Context, Architecture/Design, Release Plan). 8 department folders, domain logs, Q2 OKRs (G001 Fitness, G002 Financial Clarity, G003 AMB GTM), action queue (15 active items). Launch date: Sunday April 12, 2026.
+- **Latest Decisions:** [Key-Decisions-2026-04-11_1559.md](decisions-learnings/Key-Decisions-2026-04-11_1559.md) — D-049: SierraHomes staging confirmed canonical; D-050: Master-Context.md updated with full agent + deliverables index; L-030: sandbox bash clock offset (use `date` not `date -u`)
 - **Master Indexes:** [Key-Decisions.md](Key-Decisions.md), [Sessions.md](Sessions.md)
 - **Risk Registry:** [Risk-Registry.md](Risk-Registry.md)
 - **Next Steps:** [NextSteps.md](NextSteps.md)

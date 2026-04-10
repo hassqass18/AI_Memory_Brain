@@ -64,6 +64,12 @@
 - **Merge stats:** 38 new files copied, 91 files updated. 6 lock/temp files skipped.
 - **Canonical path:** `staging/SierraHomes_AmericanDream` is the single source of truth going forward.
 
+### KD-030: Master-Context.md updated — Available Agents and Available Deliverables sections added
+- **Context:** `Master-Context.md` (the file loaded by `agents/open.md`) was last updated 2026-03-29 and did not reference the new agent folders (Product_Development, Security, TechSupport) or any of the deliverable files now present in the project.
+- **Decision:** Updated `Master-Context.md` to add: (1) three new rows to the Available Agents table — `Product_Development/agents/`, `Security/agents/`, `TechSupport/agents/`; (2) a new "Available Deliverables & Content Files" section cross-referencing all content files by department (Finance, Marketing, Email, Assets, Product Development, Operations, Session History).
+- **Impact:** All project agents now have immediate visibility of every content file from the first load of Master-Context.md — no manual folder scanning needed.
+- **Last Updated:** 2026-04-11
+
 ---
 
 ## Learnings & Technical Notes

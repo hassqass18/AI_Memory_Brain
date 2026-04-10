@@ -2,7 +2,7 @@
 
 **Purpose:** Master index of all key decisions made across all sessions. Drill down into the linked decision files for full context and rationale.
 
-**Last Updated:** 2026-03-30
+**Last Updated:** 2026-04-11
 
 ---
 
@@ -47,6 +47,7 @@
 | KD-027 | 2026-04-11 | Marketing | All 7 amenity icons exported as 256×256 PNG (gold on navy) to Marketing/Amenity_Icons/ | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 | KD-028 | 2026-04-11 | Marketing | QR code (sierrausahomes.com) added to top-right corner of Banner 1 | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 | KD-029 | 2026-04-11 | PMO | Project files consolidated — canonical folder is staging/SierraHomes_AmericanDream; AI Training folder retired | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-030 | 2026-04-11 | PMO | Master-Context.md updated — Available Agents expanded (Product_Dev, Security, TechSupport) + Available Deliverables section added | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 
 ---
 
@@ -75,6 +76,7 @@
 | Icons / amenity / PNG / SVG | KD-027 |
 | QR code / banner | KD-028 |
 | Folder / staging / consolidation | KD-029 |
+| Master-Context / deliverables / agents / index | KD-030 |
 
 ---
 

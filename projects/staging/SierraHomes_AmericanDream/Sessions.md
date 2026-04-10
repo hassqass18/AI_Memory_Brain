@@ -2,7 +2,7 @@
 
 **Purpose:** Master index of all AI working sessions. Provides a quick reference to understand what was done in previous sessions. Drill down into the linked session files for full detail.
 
-**Last Updated:** 2026-03-30
+**Last Updated:** 2026-04-11
 
 ---
 
@@ -17,10 +17,11 @@
 | 5 | 2026-04-10 | Six Phase 1 deliverables executed: cash flow model, investor returns, 15-slide investor deck, unit tracker, sales brochure, 6× expo banners. All formula-verified and error-free. | KD-020 to KD-023 (pricing, amenity rename, sqft+sqm) | `session-summary/AI-Session-Summary-2026-04-10_0000.md` |
 | 6 | 2026-04-10 | Banner redesigns: B2 (all floor plans + prices), B3 (all 7 amenities with SVG icons), B4 (location map started). Images embedded as base64. Floor plan display fixed. | Continued from KD-020–023 | `session-summary/AI-Session-Summary-2026-04-10_2149.md` |
 | 7 | 2026-04-11 | Realistic map (OSM-verified POI pins, CartoDB tiles), Provecta Group retired, website/email updated, SVG amenity icons on B1, 7 amenity PNGs exported, QR code on B1, banners exported to PDF, all files consolidated into staging/ | KD-024 to KD-029 | `session-summary/AI-Session-Summary-2026-04-11.md` |
+| 8 | 2026-04-11 | Master-Context.md updated — Available Agents table expanded (Product_Development, Security, TechSupport added); Available Deliverables & Content Files section created indexing all project files by department | KD-030 | *(root-level session — no separate project session file)* |
 
 ---
 
-## Session Count: 7
+## Session Count: 8
 
 ---
 

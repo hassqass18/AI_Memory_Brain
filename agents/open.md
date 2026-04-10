@@ -138,8 +138,9 @@ This protocol should be executed when the user says any of the following:
 ### Recent Projects (Last 5)
 *Updated during closure protocol based on last-modified date.*
 
-1. `projects/SierraHomes_AmericanDream_AI_Training/` — 108-unit residential tower, Nyali, Mombasa. Stage 2 active. M1 complete. M2 opens 15 Apr 2026.
-2. `contacts/Keziah-Okanga-Profile.md` — Karen luxury real estate consultant (Pam Golding + Choice Homes). Full intelligence profile. Social media proposal (v2, three-platform) delivered 2026-04-10. Next: send proposal, book 30-min call.
+1. `projects/staging/SierraHomes_AmericanDream/` — File consolidation complete (AI_Training → staging). Master-Context.md updated with full agents + deliverables index. Canonical folder confirmed. AI Training folder ready for deletion. Last modified 2026-04-11.
+2. `projects/staging/ProvectaGroup/` — Legal/ and Operations/ folders created. Ecotecture PM contracts + Construction Cost transcript added. Last modified 2026-04-11.
+3. `contacts/Keziah-Okanga-Profile.md` — Karen luxury real estate consultant (Pam Golding + Choice Homes). Full intelligence profile. Social media proposal (v2, three-platform) delivered 2026-04-10. Next: send proposal, book 30-min call.
 
 ### Staging Projects (Last 6)
 *Updated during closure protocol based on last-modified date of folders inside `staging/`.*
@@ -149,7 +150,7 @@ This protocol should be executed when the user says any of the following:
 3. `projects/staging/ProvectaGroup/` — Provecta Group consulting firm. Website live at pgco.world (Netlify, SSL active). AI Memory Brain landing page live. Premier Realty Market Analysis doc created. **Premier Realty RevOps & AI Proposal built (KES 1,150,000, Q2–Q4 2026) — 2026-04-10.** Next: send proposal to Premier Realty, Zoho CRM setup, Stripe wiring, LinkedIn posts. Last modified 2026-04-10.
 4. `projects/staging/PersonalBranding_AndreHassanWilson/` — Personal branding for Andre "Hassan" Wilson. Gilber-inspired website built. 2026-standard resume built. LinkedIn fully optimized for AMB founder positioning. **Next: project case studies, first LinkedIn posts.** Last modified 2026-04-09.
 5. `projects/staging/MSIFS/` — $200M frontier market PE fund (East Africa + Central Asia). GP team: Alex 27%, Hassan 25%, Aibek 25%, Stephen 15%. Notion workspace active. **Next: GP Agreement signed, advisory board, LP outreach.** Last modified 2026-04-09.
-6. `projects/staging/SierraHomes_AmericanDream/` — Staging workspace. Website updated (Sylvester Harding 20 comments, map pin -4.032713/39.715828, zip rebuilt). Ecotecture PM contract finalized. Last modified 2026-04-09.
+6. `projects/staging/SierraHomes_AmericanDream/` — File consolidation complete (all AI_Training files merged in). Master-Context.md updated — agents expanded (Product_Development, Security, TechSupport) + full deliverables index added (40+ files). Canonical folder. Last modified 2026-04-11.
 
 ### Main Folder Structure
 

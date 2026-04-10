@@ -56,6 +56,8 @@
 
 | Item | Date | Notes |
 |------|------|-------|
+| Master-Context.md updated with full agent + deliverables index | 2026-04-11 | Available Agents table expanded (Product_Development, Security, TechSupport). Available Deliverables & Content Files section added — all project files now discoverable from session init. KD-030. |
+| File consolidation — AI Training → Staging | 2026-04-11 | All files from SierraHomes_AmericanDream_AI_Training merged into staging/SierraHomes_AmericanDream. Canonical folder confirmed. AI Training folder ready for deletion. KD-029. |
 | EcoTecture contract signed | 2026-01-06 | Contract between PG Consulting / Provecta Group and EcoTecture signed Jan 5–6, 2026. EcoTecture is confirmed as project partner. |
 | GitHub push automated | 2026-03-30 | git-push.sh script created in repo root; reads token from HassanKeys.txt; run `bash git-push.sh` from AI_Memory_Brain directory |
 | Notion page fully populated | 2026-03-30 | Project overview, pricing, 24 task checkboxes, milestones, risk registry, key decisions all live at notion.so/SierraHomes-AmericanDream-332cea280b1180abb5d0fcb7ebd17a85 |
