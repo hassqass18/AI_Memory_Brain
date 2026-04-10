@@ -1,59 +1,95 @@
-# SierraHomes_AmericanDream — Staging Project
+# SierraHomes_AmericanDream — AI Training Memory
 
-**Category:** Real Estate Development (Product)
-**Location:** Nyali, Mombasa, Kenya
-**Scale:** 88-unit apartment complex
-**Owner:** Hassan Qaseem / Provecta Group
-**Stage:** Staging (Ideation & Preparation)
-
----
-
-## Quick Links
-
-- **Master Context:** [Master-Context.md](./Master-Context.md) — Start here every session
-- **Decisions Index:** [Key-Decisions.md](./Key-Decisions.md)
-- **Sessions Index:** [Sessions.md](./Sessions.md)
-- **Progress:** [NextSteps.md](./NextSteps.md)
+**Project:** SierraHomes_AmericanDream
+**Owner:** Hassan Qaseem (hassan.qaseem@gc-usa.com)
+**Organization:** Provecta Group
+**Role:** Founder / Project Owner
+**Created:** 2026-03-29
+**Memory Version:** 1.1
+**Repository:** https://github.com/hassqass18/AI_Memory_Brain
 
 ---
 
-## Current Status
+## What Is This Folder?
 
-| Document | Status |
-|---------|--------|
-| Document 1: Project Context | 🔄 In Progress |
-| Document 2: Architecture/Design | ⏸ Not Started |
-| Document 3: Release Plan | ⏸ Not Started |
+This is the **AI context memory** for the SierraHomes_AmericanDream project — a 108-unit residential apartment complex in Nyali, Mombasa, Kenya. It contains everything an AI assistant needs to understand the project, pick up where the last session left off, and execute work without losing context between sessions.
+
+**This folder is NOT construction documents or source code.** It is a structured knowledge base that lives inside the `AI_Memory_Brain` repository.
+
+---
+
+## How to Use This Memory
+
+### Starting a Session
+Execute `agents/open.md` — the session initialization protocol.
+> Say: "Execute open.md" or "Run the session initialization protocol"
+
+### Ending a Session
+Execute `agents/closure.md` — the session closure protocol.
+> Say: "Execute closure.md" or "Run the session closure protocol"
+
+### Planning a New Phase/Release
+Execute `agents/plan-release.md` — the iterative release planning protocol.
+> Say: "Execute plan-release.md" or "Plan the next phase"
+
+---
+
+## Project Snapshot
+
+| Item | Detail |
+|------|--------|
+| Location | Nyali, Mombasa, Kenya |
+| Scale | 108 units — Ground + 11 floors |
+| Unit Mix | 24×1BR · 36×2BR · 48×3BR |
+| Total GFA | 195,996 sqft / 18,208 sqm |
+| Dev Cost | KES 909,961,921 |
+| Gross Revenue | KES 1,751,000,000 |
+| Gross Profit | KES 841,038,079 (~92.4% ROC) |
+| Target Delivery | August 2029 |
+| Current Phase | Phase 1 — Pre-Launch |
 
 ---
 
 ## Folder Structure
 
-```
-SierraHomes_AmericanDream/
-├── Master-Context.md          # Master staging context — read first every session
-├── Key-Decisions.md           # Decision keyword index
-├── Sessions.md                # Session keyword index
-├── NextSteps.md               # Progress tracker and open questions
-├── README.md                  # This file
-├── agents/                    # Session open/closure protocols
-├── decisions-learnings/       # Timestamped decision logs
-├── Finance/agents/            # Finance & Investment agents
-├── Investment/agents/         # Investment agents (dedicated)
-├── Legal/agents/              # Legal agents
-├── Operations/agents/         # Operations & Field Ops & Infrastructure agents
-├── Infrastructure/agents/     # Infrastructure agents (dedicated)
-├── Marketing/agents/          # Marketing & Market Development agents
-├── Sales/agents/              # Sales agents
-├── Executive/agents/          # Strategy, PMO, Growth, Human Psychology agents
-├── PMO/agents/                # PMO agents (dedicated)
-└── People-n-Culture/agents/   # People & Culture agents
-```
+| Folder / File | Purpose |
+|---------------|---------|
+| `agents/open.md` | Session start protocol |
+| `agents/closure.md` | Session end protocol |
+| `agents/plan-release.md` | Iterative phase planning protocol |
+| `Master-AI-Context.md` | Master AI instructions and project overview |
+| `NextSteps.md` | Prioritized roadmap and immediate actions |
+| `Key-Decisions.md` | Index of all key decisions |
+| `Sessions.md` | Index of all session summaries |
+| `Risk-Registry.md` | Consolidated risk tracking |
+| `session-summary/` | Timestamped session summaries |
+| `decisions-learnings/` | Timestamped decision logs |
+| `Finance/` | Financial models, budgets, investor docs |
+| `Investment/` | Investor deck, capital stack, returns analysis |
+| `Marketing/` | Sales campaigns, brochures, diaspora outreach |
+| `Sales/` | Off-plan pipeline, buyer CRM, SPA tracker |
+| `Legal/` | Title, permits, SPAs, compliance |
+| `Security/` | Site security, risk reports |
+| `Operations/` | Construction management, facilities runbooks |
+| `PMO/` | Project programme, contractor management |
+| `Executive/` | Board decks, investor updates, strategy |
+| `People-n-Culture/` | Staffing plan, property management team |
+| `Product_Development/SierraHomes_Tower/` | Building design docs, construction specs |
+| `Product_Development/Releases/` | Phase plans, change log |
+| `connectors/` | API key inventory, Zoho/Slack/GitHub config |
+| `assets/` | Renders, floor plans, branding assets |
 
 ---
 
-## Ready to Launch?
+## Quick Reference
 
-When all three foundation documents are complete, execute:
+- **Sales Model:** 40% off-plan (~43 units) / 60% on-plan (~65 units)
+- **Target Buyers:** Kenyan diaspora, local investors, international investors
+- **Financing Gap:** ~KES 326M via equity investors
+- **Permit Expected:** Q3 2026
+- **Star Amenity:** Rooftop movie theatre & bar
+- **Current Release:** Phase 1 — Pre-Launch (Now – Q2 2026)
 
-> "Initialize SierraHomes_AmericanDream via PROJECT_MEMORY_INIT.md"
+---
+
+*SierraHomes_AmericanDream AI Memory — initialized 2026-03-29*

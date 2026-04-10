@@ -20,7 +20,7 @@
 
 | ID | Date | Phase | Area | Summary | Owner | Status |
 |----|------|-------|------|---------|-------|--------|
-| change-Phase1-2026-03-29-2200 | 2026-03-29 | 1 | Architecture | Unit count corrected from 106 to 108 (24×1BR + 36×2BR + 48×3BR = 108). Hassan confirmed 108 is correct. Now updated to 88. | `[Human]` | Complete |
+| change-Phase1-2026-03-29-2200 | 2026-03-29 | 1 | Architecture | Unit count corrected from 106 to 108 (24×1BR + 36×2BR + 48×3BR = 108). Hassan confirmed 108 is correct. | `[Human]` | Complete |
 
 ---
 
@@ -33,13 +33,13 @@
 **Label:** `[Human]`
 **Status:** Complete
 
-**Description:** During project initialization, the unit count was initially entered as 106. Upon final confirmation with Hassan, the correct total is 88 units (24×1BR + 36×2BR + 48×3BR). All project memory documents updated to reflect 88 units.
+**Description:** During project initialization, the unit count was initially entered as 106. Upon final confirmation with Hassan, the correct total is 108 units (24×1BR + 36×2BR + 48×3BR). All project memory documents updated to reflect 108 units.
 
 **Files Updated:**
 - `Master-AI-Context.md` — unit count corrected
 - `Product_Development/SierraHomes_Tower/SierraHomes_AmericanDream_architecture.md` — unit count corrected
 - `README.md` — unit count corrected
-- `Product_Development/Releases/SierraHomes-phase1-pre-launch.md` — created with correct 88 unit count
+- `Product_Development/Releases/SierraHomes-phase1-pre-launch.md` — created with correct 108 unit count
 
 **Decision Reference:** KD-001
 

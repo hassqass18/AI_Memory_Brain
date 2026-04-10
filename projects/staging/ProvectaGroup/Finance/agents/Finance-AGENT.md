@@ -263,3 +263,4 @@ Memory_Agents/Finance/
 - For revenue strategy and forecasting, this agent pairs with the **Sales Agent** and **Growth-n-Revenue Agent**.
 - All outputs can be exported as `.xlsx`, `.pdf`, or `.docx` using the corresponding file creation skills.
 - Plugin source files are located at: `/mnt/.remote-plugins/plugin_019Lx8xk8i8t4ogLBPVJ2L98/skills/`
+                                                                                                                                                                                                                                                                         

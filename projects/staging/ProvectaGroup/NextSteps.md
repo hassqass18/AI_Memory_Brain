@@ -9,11 +9,20 @@
 
 ## Immediate Priorities
 
-- [ ] **Zoho CRM:** Create workflow rules manually (Settings > Automation > Workflow Rules — API v9 doesn't support programmatic creation)
-- [ ] **Zoho Campaigns:** Create "RevOps Prospects" and "AI Prospects" mailing lists (requires Campaigns-scoped OAuth token, separate from CRM token)
+- [ ] **Zoho CRM — Workflow Rule (manual):** API v9 required; create via UI: Settings → Automation → Workflow Rules → + New Rule
+  - Module: Leads | Trigger: Record Created | Condition: Lead Source = "RevOps Audit"
+  - Actions: (a) Tag: `revops-audit-inbound` (b) Task: "RevOps Audit — Review & Score Lead" (Due: 1 day, Priority: High) (c) Email: Day 0 template
+- [ ] **Zoho CRM — Day 0 Email Template:** Settings → Templates → + New Template. Subject: "{{First_Name}}, your RevOps audit is in". Body: see `zoho-integration/NURTURE-CAMPAIGNS.md`
+- [x] **Zoho Campaigns — OAuth Token generated** (2026-04-10). Scopes: `ZohoCampaigns.campaign.ALL ZohoCampaigns.contact.ALL`. Stored in `keys.md` and `.env.production`.
+- [x] **Zoho Campaigns — "RevOps Prospects" list created** (2026-04-10). List key: `3z0efbf2ee7068ec12ea9c34ff9363050d1600bf3feec9ce99688c87c79e6a2c3c`.
+- [x] **Zoho Campaigns — "AI Prospects" list created** (2026-04-10). List key: `3z1a248309983c8667a7c21bc43fdc99a4d6460c6ab817811bba430349cf97491e`.
+- [ ] **Zoho Forms — Build Audit Form:** Build 39-question form per `RevOps_Audit_Zoho_Blueprint_v1.docx`. Integrate to CRM Leads module. Set hidden field: Lead_Source = "RevOps Audit".
+- [ ] **Deploy Updated Netlify Function:** Push `zoho-integration/netlify/functions/revops-audit.js` (now maps all 39 fields) to Netlify. Set env vars: ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, ZOHO_REFRESH_TOKEN.
 - [ ] **Stripe:** Wire Blueprint modal on AI Memory Brain landing page to Stripe (needs Stripe publishable key + checkout session)
 - [ ] **LinkedIn posts:** Publish AI Memory Brain launch content
-- [ ] **Nurturing sequences:** Build RevOps (6 emails / 21 days) and AI Audit (6 emails / 25 days) sequences per `zoho-integration/NURTURE-CAMPAIGNS.md`
+- [x] **Nurturing sequences — RevOps (5 emails / 21 days):** Branded HTML templates complete. Mobile + tablet optimized. File: `zoho-integration/revops-nurture-emails-branded.html`. Sender: hassan.qaseem@gc-usa.com (pending verification — use hassanrqaseem@gmail.com as placeholder). Upload manually to Zoho Campaigns workflow MESSAGE blocks.
+- [x] **Nurturing sequences — AI Audit (6 emails / 25 days):** Branded HTML templates complete. Mobile + tablet optimized. File: `zoho-integration/ai-audit-nurture-emails-branded.html`. Days 0/3/7/12/18/25. Day 18 has 3 subject variants (budget/time/default). Upload manually to Zoho Campaigns workflow MESSAGE blocks.
+- [ ] **Zoho Campaigns — Wire workflow canvases:** For both RevOps and AI Audit workflows: connect Trigger → Wait nodes → MESSAGE blocks per day schedule. Set sender to hassan.qaseem@gc-usa.com once email verified.
 
 ## Near-Term
 
@@ -33,6 +42,9 @@ When Provecta Group has 3+ active clients and recurring MRR, consider promoting 
 
 ## Completed
 
+- [x] **RevOps Audit Zoho Forms Blueprint built** — `RevOps_Audit_Zoho_Blueprint_v1.docx` (39 questions / 8 sections / full ICP scoring + discovery call framework)
+- [x] **34 custom CRM fields created via API** — All Leads module fields live in Zoho CRM as of 2026-04-10 (31 new + 2 already existed + 1 as text type due to textarea limit)
+- [x] **revops-audit.js netlify function updated** — Full 39-field mapping deployed. All blueprint fields map to Zoho CRM API names.
 - [x] Ecotecture PM contract signed and archived
 - [x] RevOps SOP built (`Provecta_RevOps_SOP.docx`)
 - [x] Brand template established (`Provecta-Brand-Template.md`)

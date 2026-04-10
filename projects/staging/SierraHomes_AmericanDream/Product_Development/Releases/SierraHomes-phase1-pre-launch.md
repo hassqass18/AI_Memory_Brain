@@ -114,14 +114,14 @@ Establish the legal, financial, marketing, and sales foundation required to laun
 - [ ] **P1-MKT-001** — Develop Brand Identity & Project Name
   - **Owner:** `[AI+Human]`
   - **Priority:** 🔴 High
-  - **Description:** Finalise the marketing brand for SierraHomes_AmericanDream: project name, tagline, logo/wordmark, colour palette, typography. Position around the rooftop Lounge Style Clubhouse & bar differentiator and premium Nyali location.
+  - **Description:** Finalise the marketing brand for SierraHomes_AmericanDream: project name, tagline, logo/wordmark, colour palette, typography. Position around the rooftop movie theatre & bar differentiator and premium Nyali location.
   - **Acceptance Criteria:** Brand guidelines document in `Marketing/`; approved by Hassan.
   - **Status:** Not Started
 
 - [ ] **P1-MKT-002** — Create Sales Brochure
   - **Owner:** `[AI+Human]`
   - **Priority:** 🔴 High
-  - **Description:** Design and write a premium sales brochure covering: project overview, location benefits (Nyali/Mombasa), unit types and pricing, amenities (rooftop Lounge Style Clubhouse, pool, gym), floor plans, delivery date, and developer credentials.
+  - **Description:** Design and write a premium sales brochure covering: project overview, location benefits (Nyali/Mombasa), unit types and pricing, amenities (rooftop movie theatre, pool, gym), floor plans, delivery date, and developer credentials.
   - **Acceptance Criteria:** Brochure PDF in `Marketing/`; approved by Hassan; ready for distribution.
   - **Status:** Not Started
 
@@ -153,21 +153,21 @@ Establish the legal, financial, marketing, and sales foundation required to laun
 - [ ] **P1-SAL-001** — Set Up Zoho CRM — SierraHomes Pipeline
   - **Owner:** `[AI+Human]`
   - **Priority:** 🔴 High
-  - **Description:** Configure Zoho CRM for SierraHomes_AmericanDream: create pipeline stages (Enquiry → Qualified → Reservation → SPA Signed → Completed Sale), unit availability tracker (88 units by type), custom fields for buyer profile (diaspora/local, finance type, preferred unit type).
+  - **Description:** Configure Zoho CRM for SierraHomes_AmericanDream: create pipeline stages (Enquiry → Qualified → Reservation → SPA Signed → Completed Sale), unit availability tracker (108 units by type), custom fields for buyer profile (diaspora/local, finance type, preferred unit type).
   - **Acceptance Criteria:** CRM live and ready to log first enquiries; Hassan can access and operate.
   - **Status:** Not Started
 
 - [ ] **P1-SAL-002** — Build Unit Availability Tracker
   - **Owner:** `[AI]`
   - **Priority:** 🔴 High
-  - **Description:** Create a unit availability and sales tracker spreadsheet: all 88 units (24×1BR, 36×2BR, 48×3BR), status (Available / Reserved / SPA Signed / Sold), buyer name, price, deposit received, and balance. Linked to CRM where possible.
+  - **Description:** Create a unit availability and sales tracker spreadsheet: all 108 units (24×1BR, 36×2BR, 48×3BR), status (Available / Reserved / SPA Signed / Sold), buyer name, price, deposit received, and balance. Linked to CRM where possible.
   - **Acceptance Criteria:** Tracker in `Sales/`; updated in real-time by AI as units are reserved.
   - **Status:** Not Started
 
 - [ ] **P1-SAL-003** — Develop Sales Pitch Script & FAQs
   - **Owner:** `[AI+Human]`
   - **Priority:** 🟡 Medium
-  - **Description:** Write a sales pitch script for Hassan and any sales agents: project overview, key selling points (rooftop Lounge Style Clubhouse, Nyali location, off-plan pricing, delivery 2029), objection handling, and call to action. Include buyer FAQ document.
+  - **Description:** Write a sales pitch script for Hassan and any sales agents: project overview, key selling points (rooftop movie theatre, Nyali location, off-plan pricing, delivery 2029), objection handling, and call to action. Include buyer FAQ document.
   - **Acceptance Criteria:** Pitch script and FAQ document in `Sales/`; approved by Hassan.
   - **Status:** Not Started
 

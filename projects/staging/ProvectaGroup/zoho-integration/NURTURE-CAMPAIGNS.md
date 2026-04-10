@@ -1,5 +1,17 @@
 # Provecta Group — Zoho Nurture Campaign Blueprint
-**Last Updated:** 2026-04-09
+**Last Updated:** 2026-04-10
+
+## Live Zoho Campaigns Setup Status (as of 2026-04-10)
+
+| Resource | Status | Key / ID |
+|----------|--------|----------|
+| Campaigns OAuth Token | ✅ Active | See `.env.production` → `ZOHO_CAMPAIGNS_REFRESH_TOKEN` |
+| Campaigns API base URL | ✅ Confirmed | `https://campaigns.zoho.com/api/v1.1` (no `/json/` prefix) |
+| "RevOps Prospects" list | ✅ Created | `3z0efbf2ee7068ec12ea9c34ff9363050d1600bf3feec9ce99688c87c79e6a2c3c` |
+| "AI Prospects" list | ✅ Created | `3z1a248309983c8667a7c21bc43fdc99a4d6460c6ab817811bba430349cf97491e` |
+| Nurture email sequences | ⬜ Pending | Build in Campaigns UI → Automation → Autoresponders |
+
+---
 
 ---
 

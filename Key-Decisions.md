@@ -2,7 +2,7 @@
 
 > **SCOPE:** This file indexes decisions about the **AI Memory system itself** — its structure, standards, policies, shared resources, and cross-project infrastructure. This is NOT a project-level file. Project-specific decisions live in each project's own `Key-Decisions.md`.
 
-**Last Updated:** 2026-04-05
+**Last Updated:** 2026-04-10
 
 ---
 
@@ -100,6 +100,25 @@ When performing any action that matches a keyword below, read the referenced det
 | Netlify, index.html, homepage, zip, deployment | D-055: Provecta site renamed index.html as Netlify homepage in joint zip | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
 | Netlify, 404, index.html, zip, static host | L-032: Netlify 404 if no index.html at zip root — always rename primary HTML to index.html | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
 | Chrome, local, staging, live site, clarification | L-033: "The project website" defaults to live domain — clarify local vs live with user | Key-Decisions-2026-04-09_1900.md | 2026-04-09 |
+| Keziah, Facebook, engagement, primary, Kenya, real estate | D-056: Facebook elevated to primary platform in Keziah social media strategy | Key-Decisions-2026-04-10_1348.md | 2026-04-10 |
+| three-platform, Meta, cross-post, Instagram, LinkedIn, social | D-057: Three-platform strategy adopted — Facebook primary + Instagram cross-post + LinkedIn authority | Key-Decisions-2026-04-10_1348.md | 2026-04-10 |
+| social media, platform, audit, existing, engagement, Kenya | L-035: Always audit existing platform performance before prescribing social media strategy | Key-Decisions-2026-04-10_1348.md | 2026-04-10 |
+| docx, overwrite, permission, version, workspace, cp | L-036: docx permission conflict when overwriting open workspace files — use versioned filenames | Key-Decisions-2026-04-10_1348.md | 2026-04-10 |
+| Premier Realty, company profile, contacts, template | D-058: Premier Realty profiled as first company-level contact — adapted template is now standard for companies | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| PRL, ranking, Kenya, land sales, mid-tier, #27 | D-059: PRL ranked #27 Kenya land sales — mid-tier market position confirmed | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| Provecta, proposal, RevOps, KES, pricing, 3 quarters | D-060: Provecta RevOps proposal priced at KES 1,150,000 over Q2–Q4 2026 | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| SPICED, proposal, demonstration, methodology, applied | D-061: SPICED framework applied directly to PRL inside the proposal as capability demonstration | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| engagement, phased, Q2, Q3, Q4, foundation, activation, scale | D-062: 3-quarter phased engagement structure adopted for PRL (Foundation → Activation → Scale) | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| Instagram, YouTube, WebFetch, JS, blocked, social media | L-037: Instagram and YouTube block WebFetch — JS-only rendering; use search results or mobile | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| Facebook, WebFetch, likes, Google, search snippet | L-038: Facebook page likes recoverable via Google search snippet, not direct WebFetch | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| Kenya, real estate, ranking, Gazebo, Finsco, competitive | L-039: Kenya real estate ranking sites (Gazebo, Finsco, Tuko) are best competitive intelligence source | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| BuyRentKenya, agent profile, listing volume, proxy, research | L-040: BuyRentKenya agent profiles are reliable listing volume proxy for Kenya real estate companies | Key-Decisions-2026-04-10_0900.md | 2026-04-10 |
+| LifeOS, personal OS, life management, staging, Hassan | D-063: LifeOS staged as personal life management system | Key-Decisions-2026-04-10_1500.md | 2026-04-10 |
+| LifeOS, domains, health, finance, relationships, projects, goals, plans | D-064: Six domains in scope for LifeOS | Key-Decisions-2026-04-10_1500.md | 2026-04-10 |
+| LifeOS, intake, check-in, hybrid, daily log, structured | D-065: Hybrid intake model adopted for LifeOS (daily check-in + structured logs) | Key-Decisions-2026-04-10_1500.md | 2026-04-10 |
+| LifeOS, output, briefing, action queue, decision support | D-066: Full output stack adopted (weekly briefing + live action queue + on-demand decisions) | Key-Decisions-2026-04-10_1500.md | 2026-04-10 |
+| LifeOS, OKR, Q2, fitness, finance, AMB GTM, goals | D-067: LifeOS Q2 2026 OKRs set — Fitness, Financial Clarity, AMB GTM Launch | Key-Decisions-2026-04-10_1700.md | 2026-04-10 |
+| LifeOS, staging, complete, PROJECT_MEMORY_INIT, ready | D-068: LifeOS staging 100% complete — all 3 documents done, ready for initialization | Key-Decisions-2026-04-10_1700.md | 2026-04-10 |
 
 ---
 
@@ -125,6 +144,12 @@ When performing any action that matches a keyword below, read the referenced det
 
 **AIMemoryBrain landing page + ProvectaGroup popup session (2026-04-09 PM):** Completed AMB landing page compare section (showPanel() JS, #compare nav link). Cross-linked AMB and Provecta Group sites via nav. Built full AMB-styled 3-stage popup for Provecta Group site: lead capture form → 7-question AI readiness assessment → instant score results with dimension bars and personalized recommendation. Scroll-trigger at 60% page depth replaces time-based triggers. Packaged both sites into Netlify-ready zip (v3: index.html + ai-memory-brain.html + provecta_logo.png). Fixed Netlify 404 caused by missing index.html at root.
 
+**Keziah Okanga social media proposal session (2026-04-10):** Read Keziah's contact profile (I/S DISC, Les Roches, 15 years, 100+ transactions, Karen specialist). Created polished 6-section social media proposal (v1) as Word document — navy/gold, five content pillars, 90-day plan, KPI table. User confirmed Facebook is her highest-engagement platform → revised to three-platform strategy (Facebook primary + Instagram cross-post + LinkedIn authority). Two docx decisions and two learnings captured (platform audit standard; docx versioning on permission conflict).
+
+**Premier Realty company profile + Provecta proposal session (2026-04-10):** Built full company intelligence profile for Premier Realty Limited (PRL) — 15-section markdown at contacts/PremierRealty-Profile.md. PRL profiled via WebFetch + WebSearch: 20-year firm, 18 employees, ranked #27 Kenya land sales, 188 LinkedIn followers, 5 active land projects (Pana Ranch, Limuru III, Konza City View, Thika Road, Juja), 200+ BuyRentKenya listings. 10 strategic gaps identified; 10 growth recommendations documented. Company-profile template adaptation established as standard (D-058). Built 8-section Provecta RevOps & AI proposal (Premier_Realty_Proposal_2026.docx): cover page, executive summary, SPICED analysis, opportunity quantification, 3-quarter roadmap, KPIs, investment (KES 1,150,000), why Provecta, next steps. Validated (301 paragraphs). 4 research learnings documented (Instagram/YouTube WebFetch blocked, Facebook likes via Google search, Kenya ranking sites, BuyRentKenya proxy).
+
+**LifeOS full staging session (2026-04-10/11):** New project staged — LifeOS, a personal life management system treating life like a program. All 3 staging documents completed: (1) Project Context — vision, 6 domains, success metrics, assumptions; (2) Architecture/Design — 6 domain log schemas, hybrid check-in protocol (free narration + follow-ups), Urgency×Impact action queue (4-tier matrix), 4 session workflows, executive briefing template, phase activation plan; (3) Release Plan — Q2 OKRs (G001 Fitness, G002 Financial Clarity, G003 AMB GTM), Day 1 protocol, 30-day habit formation ramp (Week 1: show up → Week 4: first briefing), Phase 1/2/3 milestones. All 8 department folders created with agents distributed. 9 domain/operational files created. Action queue seeded with 20 items; Hassan closed 9, 7 successors added. Launch date confirmed: **Sunday April 12, 2026.**
+
 ---
 
 ## File Chronology
@@ -142,8 +167,13 @@ When performing any action that matches a keyword below, read the referenced det
 | Key-Decisions-2026-04-08_0000.md | 2026-04-08 | Sierra Homes Sylvester comments, map pin Plus Code, zip rebuild, Ecotecture legal review, contract revision, Provecta Group Limited Mombasa, NCIA, DLP, Article 3 removed, finalized contract |
 | Key-Decisions-2026-04-09_1100.md | 2026-04-09 | LinkedIn optimization complete, Creator Mode desktop blocked, staging audit, AIMemoryBrain/MSIFS/PersonalBranding/ProvectaGroup remediated |
 | Key-Decisions-2026-04-09_1900.md | 2026-04-09 | AMB compare section completed, Provecta↔AMB cross-links, 7-question AI readiness popup, scroll trigger, Netlify zip packaging, index.html fix |
+| Key-Decisions-2026-04-10_1348.md | 2026-04-10 | Keziah Okanga social media proposal, Facebook primary platform, three-platform strategy, Meta cross-posting, platform audit standard, docx versioning |
+| Key-Decisions-2026-04-10_0900.md | 2026-04-10 | Premier Realty company profile, PRL #27 land sales, Provecta RevOps proposal KES 1.15M, SPICED applied to proposal, 3-quarter phased engagement, Instagram/YouTube WebFetch blocked, BuyRentKenya proxy |
+| Key-Decisions-2026-04-10_1500.md | 2026-04-10 | LifeOS staging initiated, project name confirmed, 6 life domains (Health, Finance, Relationships, Projects-Work, Goals-Ideas, Plans), hybrid intake model (free narration + Claude follow-ups), full output stack (briefing + queue + on-demand) |
+| Key-Decisions-2026-04-10_1600.md | 2026-04-10 | LifeOS Document 2 architecture — check-in style (free narration not forms), Urgency×Impact queue (4-tier), on-demand executive briefing, Phase 1 domain selection, append-only log format, queue pre-seeded from root NextSteps |
+| Key-Decisions-2026-04-10_1700.md | 2026-04-10 | LifeOS Document 3 release — Q2 OKRs confirmed (G001 Fitness, G002 Financial Clarity, G003 AMB GTM), Phase 1 simultaneous activation, 30-day habit formation ramp, Phase 2 gate criteria, fully operational definition (Month 3+), launch date April 12 |
 
-**Last Updated:** 2026-04-09 (PM session)
+**Last Updated:** 2026-04-11
 
 ---
 

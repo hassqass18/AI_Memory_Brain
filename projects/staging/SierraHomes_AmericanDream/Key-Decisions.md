@@ -1,34 +1,81 @@
-# Key Decisions Index — SierraHomes_AmericanDream Staging
+# Key Decisions Index — SierraHomes_AmericanDream
 
-This is a keyword-searchable index of all architectural and product decisions made during staging.
+**Purpose:** Master index of all key decisions made across all sessions. Drill down into the linked decision files for full context and rationale.
+
+**Last Updated:** 2026-03-30
+
+---
 
 ## How to Use
 
-When working on SierraHomes_AmericanDream, search this index for relevant keywords. If a keyword matches your current task, read the linked decision file for full context.
-
-| **Date** | **Keywords** | **File** | **Summary** |
-|----------|-------------|----------|-------------|
-| 2026-03-29 | project name, category, vision, location, Nyali, Mombasa, 106 units | decisions-learnings/Key-Decisions-2026-03-29_2200.md | Project initiated — 106-unit apartment complex in Nyali, Mombasa |
-| 2026-03-29 | sales model, off-plan, on-plan, unit mix, pricing, 1BR, 2BR, 3BR, diaspora, investors, delivery, August 2029, development cost, revenue, gross profit, ROC, financing gap | decisions-learnings/Key-Decisions-2026-03-29_2230.md | Document 1 complete — sales model, unit mix, pricing, revenue projections, buyer segments, delivery date confirmed |
-| 2026-03-29 | building design, G+11, storeys, unit sizes, sqft, sqm, GFA, amenities, rooftop, Lounge Style Clubhouse, pool, gym, parking, contractor, tender, equity investors, hard costs, soft costs, cost/sqft, management model, permits, NCA, NEMA | decisions-learnings/Key-Decisions-2026-03-29_2300.md | Document 2 complete — building config, unit specs, amenities, construction model, cost structure, financing, legal/regulatory |
-| 2026-03-29 | release plan, timeline, permit Q3 2026, pre-launch, off-plan launch, groundbreaking, construction milestones, on-plan sales, handover August 2029, sell-out, revenue phasing, risks, acceptance criteria | decisions-learnings/Key-Decisions-2026-03-29_2330.md | Document 3 complete — full release plan, 4-phase timeline, construction milestones, risk register |
+1. Scan this index for keywords matching the current task
+2. If a match is found, open the linked decision file for full context
+3. Do NOT re-decide issues already recorded here unless new information has emerged — reference the prior decision instead
 
 ---
 
-## Keyword Reference
+## Decision Index
 
-- **Vision & Goals:** Decisions about project vision, goals, success metrics
-- **Unit Mix:** Decisions about apartment types, sizes, configurations
-- **Target Market:** Decisions about buyer/tenant profile, market positioning
-- **Financial Model:** Decisions about pricing, costs, financing, ROI
-- **Legal & Regulatory:** Decisions about land title, permits, compliance
-- **Construction:** Decisions about contractors, timeline, phasing
-- **Sales & Leasing:** Decisions about sales strategy, off-plan, launch
-- **Operations:** Decisions about property management model post-delivery
-- **Branding:** Decisions about project name, identity, positioning
+| ID | Date | Area | Summary | Status | File |
+|----|------|------|---------|--------|------|
+| KD-001 | 2026-03-29 | Architecture | 108 units confirmed: 24×1BR, 36×2BR, 48×3BR across G+11 floors | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-002 | 2026-03-29 | Finance | Total development cost: KES 909,961,921 (KES 792M hard + KES 118M soft) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-003 | 2026-03-29 | Sales | Pricing confirmed: 1BR KES 6M/9M, 2BR KES 13M/17M, 3BR KES 18M/23M (off/on-plan) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-004 | 2026-03-29 | Sales | Sales model: 40% off-plan (43 units, KES 584M) / 60% on-plan (65 units, KES 1.167B) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-005 | 2026-03-29 | Finance | Financing structure: off-plan sales fund ~64% of dev cost; ~KES 326M gap via equity investors | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-006 | 2026-03-29 | Sales | Sales priority order: 3BR first → 2BR → 1BR (margin protection; 1BR blended margin below avg dev cost) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-007 | 2026-03-29 | Architecture | Unit sizes confirmed: 1BR 966sqft/89.7sqm, 2BR 1,311sqft/121.8sqm, 3BR 2,617sqft/243.1sqm | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-008 | 2026-03-29 | Strategy | Sales launch immediately (pre-permit reservations → convert to SPAs on permit receipt) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-009 | 2026-03-29 | Marketing | Rooftop movie theatre & bar designated as centrepiece marketing differentiator | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-010 | 2026-03-29 | PMO | Construction start Q3 2026 (on permit); Practical Completion August 2029; ~36-month build | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-011 | 2026-03-30 | Integrations | Notion content added as structured text blocks (not databases) — speed vs. schema complexity trade-off | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
+| KD-012 | 2026-03-30 | Integrations | Notion populated via internal saveTransactionsFanout API using browser session cookies — public API CORS-blocked from sandbox | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
+| KD-013 | 2026-03-30 | PMO | Phase 1 tasks represented as 24 to_do checkboxes (20 stories + 4 exec items) grouped by domain in Notion | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
+| KD-014 | 2026-03-30 | Integrations | GitHub push automated via git-push.sh; reads token from HassanKeys.txt; runs from local terminal | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-015 | 2026-03-30 | Architecture | 4-tower complex confirmed: Lincoln (3BR), Washington (3BR), Franklin (1BR), Benjamin (2BR) on Plot MN/I/1691 | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-016 | 2026-03-30 | Finance/Land | Land deal: 22% equity — landowners get 23 units (7×1BR+8×2BR+8×3BR) + KES 42M cash; no cash land purchase | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-017 | 2026-03-30 | Finance | Per-unit construction costs confirmed: 1BR KES 4M, 2BR KES 6M, 3BR KES 10M (total KES 792M) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-018 | 2026-03-30 | Finance | Revised developer model: revenue KES 1.296B, net profit KES 344M, ROI 43.4%; equity gap ~KES 120M | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-019 | 2026-03-30 | Integrations | Zoho MCP server: zero deps, runs locally on Windows, tokens in .zoho-tokens.json; 72 tools when live | Pending | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-020 | 2026-04-10 | Finance | Pricing revised: 1BR KES 10M/13M, 2BR KES 17M/22M, 3BR KES 23M/30M (off/on-market) | Confirmed | `decisions-learnings/Key-Decisions-2026-04-10_2149.md` |
+| KD-021 | 2026-04-10 | Finance | Revenue revised: KES 1,720,000,000 total (1,060M off-plan + 660M on-market); Profit KES 810M; ROI 89% | Confirmed | `decisions-learnings/Key-Decisions-2026-04-10_2149.md` |
+| KD-022 | 2026-04-10 | Marketing | Rooftop amenity renamed to "Rooftop Lounge & Restaurant" (was "cinema and bar") — applies everywhere | Confirmed | `decisions-learnings/Key-Decisions-2026-04-10_2149.md` |
+| KD-023 | 2026-04-10 | Marketing | Unit sizes shown in both sqft AND sqm in all project documents and deliverables | Confirmed | `decisions-learnings/Key-Decisions-2026-04-10_2149.md` |
+| KD-024 | 2026-04-11 | Branding | Provecta Group retired — never reference in any deliverable; replace with "Sierra USA Homes Ltd" | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-025 | 2026-04-11 | Branding | Contact details updated: website → sierrausahomes.com; email → sales@sierrausahomes.com | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-026 | 2026-04-11 | Marketing | Banner 4 map replaced with realistic Leaflet/CartoDB map; POIs verified via OSM Nominatim | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-027 | 2026-04-11 | Marketing | All 7 amenity icons exported as 256×256 PNG (gold on navy) to Marketing/Amenity_Icons/ | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-028 | 2026-04-11 | Marketing | QR code (sierrausahomes.com) added to top-right corner of Banner 1 | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-029 | 2026-04-11 | PMO | Project files consolidated — canonical folder is staging/SierraHomes_AmericanDream; AI Training folder retired | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 
 ---
 
-## Recent Decisions
+## Decision Areas Reference
 
-- **2026-03-29:** Project SierraHomes_AmericanDream initiated — 106-unit apartment complex, Nyali Mombasa, Product category. Owner: Hassan Qaseem / Provecta Group.
+| Keyword | Relevant Decision IDs |
+|---------|----------------------|
+| Units / unit mix / count | KD-001, KD-015 |
+| Development cost / budget / construction cost | KD-002, KD-017, KD-021 |
+| Pricing / price / off-plan / on-market | KD-003, KD-020 |
+| Sales model / off-plan / on-plan / split | KD-004, KD-021 |
+| Financing / equity / investor / gap | KD-005, KD-021 |
+| Sales priority / sales order / margin | KD-006 |
+| Unit size / sqft / sqm / floor area | KD-007, KD-015, KD-023 |
+| Sales launch / reservations / pre-permit | KD-008 |
+| Marketing / differentiator / rooftop / amenity | KD-009, KD-022, KD-027 |
+| Construction / timeline / programme / permits | KD-010 |
+| Tower / building / site / plot | KD-015 |
+| Land / landowner / equity deal | KD-016 |
+| Revenue / profit / ROI / ROC | KD-018, KD-021 |
+| GitHub / git / push / automation | KD-014 |
+| Zoho / CRM / projects / MCP | KD-019 |
+| Branding / company name / Provecta Group | KD-024 |
+| Contact / email / website | KD-025 |
+| Map / location / POI / Leaflet / coordinates | KD-026 |
+| Icons / amenity / PNG / SVG | KD-027 |
+| QR code / banner | KD-028 |
+| Folder / staging / consolidation | KD-029 |
+
+---
+
+*Updated by closure protocol after every session.*

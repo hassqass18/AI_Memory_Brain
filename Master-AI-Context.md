@@ -42,6 +42,17 @@ The system operates at two levels:
 |---------|--------|------|--------|-------------|
 | SierraHomes_AmericanDream | `projects/SierraHomes_AmericanDream_AI_Training/` | Real Estate Development | Phase 1 — Pre-Launch / Stage 2 Active | 108-unit residential apartment tower, Nyali, Mombasa, Kenya. G+11 floors. KES 910M dev cost. KES 1.296B gross revenue. Delivery August 2029. Stage 1 complete (drawings received). Stage 2 active (permits, SPV, title). M1 marketing milestone complete. |
 
+**Staging Projects** (`projects/staging/`):
+
+| Project | Folder | Status | Description |
+|---------|--------|--------|-------------|
+| AIMemoryBrain | `projects/staging/AIMemoryBrain/` | Staging | AI Memory Brain product — AMB landing page + Provecta Group site. Both live at Netlify (v3 pending upload). |
+| MSIFS | `projects/staging/MSIFS/` | Staging | Mid-Scale Infrastructure Fund of Sustainability — GP agreement, government engagement, LP outreach. |
+| PersonalBranding_AndreHassanWilson | `projects/staging/PersonalBranding_AndreHassanWilson/` | Staging | Hassan's personal brand — portfolio site, LinkedIn, 90-day content calendar, RevOps resume. |
+| ProvectaGroup | `projects/staging/ProvectaGroup/` | Staging | Provecta Group Ltd — RevOps & AI consulting. Premier Realty proposal (KES 1.15M) delivered. |
+| SierraHomes_AmericanDream | `projects/staging/SierraHomes_AmericanDream/` | Staging | Sierra Homes marketing and sales (staging copy). |
+| LifeOS | `projects/staging/LifeOS/` | Staging → **Launching April 12** | Personal life management system. All 3 staging documents complete. 8 domains, hybrid check-in, action queue (15 active), Q2 OKRs seeded. |
+
 ---
 
 ## 3. Directory Structure
@@ -183,9 +194,9 @@ CRM integration is configured during setup (`setup-AI-Memory.md`).
 
 ## 9. Session History & Handover
 
-- **Latest Session:** [AI-Session-Summary-2026-04-06_0000.md](session-summary/AI-Session-Summary-2026-04-06_0000.md) — Personal branding website: experience section redesigned + copy revised, skills expanded 8→12, Download Resume modal added (name + email), Hero CTA updated. 2026 resume standards researched. Gap analysis on existing resume. Full 2026-standard resume built (Andre-Wilson-Resume-2026.docx).
-- **Previous Session:** [AI-Session-Summary-2026-04-05_2200.md](session-summary/AI-Session-Summary-2026-04-05_2200.md) — MSIFS meeting transcript processed; DISC/OCEAN profiles built for Alex, Hassan, Aibek; 26 action items pushed to Notion; Alex bio brief v2 completed.
-- **Latest Decisions:** [Key-Decisions-2026-04-06_0000.md](decisions-learnings/Key-Decisions-2026-04-06_0000.md) — RevOps & AI Consultant headline adopted, YATR corrected, T-Mobile removed, Freedom Builders reframed, I/O Psychology featured, executive summary cross-continent lead, case studies as next priority
+- **Latest Session:** [AI-Session-Summary-2026-04-10_1500.md](session-summary/AI-Session-Summary-2026-04-10_1500.md) — LifeOS full staging: all 3 documents complete (Project Context, Architecture/Design, Release Plan). 8 department folders, domain logs, Q2 OKRs (G001 Fitness, G002 Financial Clarity, G003 AMB GTM), action queue (15 active items). Launch date: Sunday April 12, 2026.
+- **Previous Session:** [AI-Session-Summary-2026-04-10_0900.md](session-summary/AI-Session-Summary-2026-04-10_0900.md) — Premier Realty company intelligence profile (15 sections). Provecta RevOps & AI proposal (KES 1,150,000, 3-quarter roadmap, SPICED analysis). Word document delivered.
+- **Latest Decisions:** [Key-Decisions-2026-04-10_1700.md](decisions-learnings/Key-Decisions-2026-04-10_1700.md) — Q2 OKRs confirmed (G001/G002/G003), Phase 1 simultaneous activation, 30-day habit ramp, Phase 2 gate criteria, fully operational definition (Month 3+), launch date April 12
 - **Master Indexes:** [Key-Decisions.md](Key-Decisions.md), [Sessions.md](Sessions.md)
 - **Risk Registry:** [Risk-Registry.md](Risk-Registry.md)
 - **Next Steps:** [NextSteps.md](NextSteps.md)

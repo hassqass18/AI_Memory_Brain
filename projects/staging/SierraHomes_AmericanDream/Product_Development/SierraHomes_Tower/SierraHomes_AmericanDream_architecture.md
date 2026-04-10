@@ -3,7 +3,7 @@
 **Document Purpose:** This is the authoritative architectural and financial design document for SierraHomes_AmericanDream. It defines the site configuration, tower layout, unit specifications, construction approach, legal/regulatory framework, financial model, and operational design. All AI assistants must read this document when working on any aspect of the development.
 
 **Memory Design Version:** 1.2
-**Last Updated:** 2026-03-30
+**Last Updated:** 2026-04-10
 **Status:** Architectural drawings complete (Ecotecture Ltd.) — permits pending
 **Source Documents:**
 - `Architectural-Drawings-Reference.md` — Drawing set: Plot MN/I/1691, Nyali-Mombasa (Drawing No. 01–06, Ecotecture Ltd., 2026)
@@ -17,11 +17,11 @@
 |-----------|--------|
 | **Project Name** | American Dream Apartments |
 | **Developer** | Sierra USA Homes Ltd. (trading as Sierra Homes) |
-| **Parent Company** | Provecta Group |
+| **Website** | sierrausahomes.com |
 | **Plot Number** | MN/I/1691 |
 | **Location** | Nyali, Mombasa County, Kenya |
 | **Architect** | Ecotecture Ltd. |
-| **Total Units** | 88 |
+| **Total Units** | 108 |
 | **Design Status** | Architectural drawings complete — permits pending |
 
 ---
@@ -32,15 +32,15 @@
 
 ### 2.1 Tower Summary
 
-| Tower | Unit Type | Units | Unit Size (sqft) | Built-Up Area (sqft) |
-|-------|-----------|------:|------------------:|----------------------:|
-| **Lincoln Tower** | 3 Bedroom | 22 | 2,617.58 | 59,278.01 |
-| **Washington Tower** | 3 Bedroom | 22 | 2,617.58 | 59,278.01 |
-| **Benjamin Tower** | 2 Bedroom        | 22 | 1,311.18 | Part of 54,651.96 |
-| **Franklin Tower** | 1/2 Bedroom (small) | 22 | 966.44 | Part of 54,651.96 |
-| **Total** | | **88** (towers) + **20** (additional 1BR) | | **173,207.98** |
+| Tower | Unit Type | Units | Unit Size (sqft / sqm) | Built-Up Area (sqft / sqm) |
+|-------|-----------|------:|------------------------:|----------------------------:|
+| **Lincoln Tower** | 3 Bedroom | 22 | 2,617.58 sqft / 243.2 sqm | 59,278 sqft / 5,508 sqm |
+| **Washington Tower** | 3 Bedroom | 22 | 2,617.58 sqft / 243.2 sqm | 59,278 sqft / 5,508 sqm |
+| **Benjamin Tower** | 2 Bedroom (large) | 22 | 1,311.18 sqft / 121.8 sqm | Part of 54,652 sqft / 5,078 sqm |
+| **Franklin Tower** | 1/2 Bedroom (small) | 22 | 966.44 sqft / 89.8 sqm | Part of 54,652 sqft / 5,078 sqm |
+| **Total** | | **88** (towers) + **20** (additional 1BR) | | **173,208 sqft / 16,093 sqm** |
 
-> **Note:** Franklin Tower's 966.44 sqft units are the smallest unit type — priced and modelled as the 1BR tier. Benjamin Tower units are the 2BR tier. Lincoln and Washington are the 3BR tier. Additional 1BR units (to reach 88 total) are incorporated per the "ROI Breakdown (Additional 1 Bdrms)" financial model.
+> **Note:** Franklin Tower's 966.44 sqft units are the smallest unit type — priced and modelled as the 1BR tier. Benjamin Tower units are the 2BR tier. Lincoln and Washington are the 3BR tier. Additional 1BR units (to reach 108 total) are incorporated per the "ROI Breakdown (Additional 1 Bdrms)" financial model.
 
 ### 2.2 Tower Floor Configuration
 
@@ -55,12 +55,12 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 
 ### 2.3 Total Built-Up Area
 
-| Area | Sqft |
-|------|-----:|
-| Franklin–Benjamin Tower (combined building) | 54,651.96 |
-| Lincoln Tower | 59,278.01 |
-| Washington Tower | 59,278.01 |
-| **Total Built-Up** | **173,207.98** |
+| Area | Sqft | Sqm |
+|------|-----:|----:|
+| Franklin–Benjamin Tower (combined building) | 54,652 | 5,078 |
+| Lincoln Tower | 59,278 | 5,508 |
+| Washington Tower | 59,278 | 5,508 |
+| **Total Built-Up** | **173,208** | **16,093** |
 
 ---
 
@@ -68,10 +68,10 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 
 | Type | Count | Tower | Size (sqft) | Size (sqm) | Off-Plan Price (KES) | On-Market Price (KES) | Price/sqft (off) | Price/sqft (on) |
 |------|------:|-------|------------:|-----------:|---------------------:|----------------------:|-----------------:|----------------:|
-| 1 Bedroom | 24 | Franklin + additional | 966.44 | 89.8 | 6,000,000 | 9,000,000 | 6,209 | 9,313 |
-| 2 Bedroom | 36 | Benjamin | 1,311.18 | 121.8 | 13,000,000 | 17,000,000 | 9,916 | 12,966 |
-| 3 Bedroom | 48 | Lincoln + Washington | 2,617.58 | 243.2 | 18,000,000 | 23,000,000 | 6,877 | 8,790 |
-| **Total** | **88** | | | | | | | |
+| 1 Bedroom | 24 | Franklin + additional | 966.44 | 89.8 | 10,000,000 | 13,000,000 | 10,348 | 13,452 |
+| 2 Bedroom | 36 | Benjamin | 1,311.18 | 121.8 | 17,000,000 | 22,000,000 | 12,966 | 16,779 |
+| 3 Bedroom | 48 | Lincoln + Washington | 2,617.58 | 243.2 | 23,000,000 | 30,000,000 | 8,793 | 11,461 |
+| **Total** | **108** | | | | | | | |
 
 ### 3.1 Unit Internal Specifications (from Drawings)
 
@@ -126,7 +126,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | **Parking** | On-site (ratio to be confirmed) |
 | **Lifts** | Each tower has a lift (confirmed on floor plans) |
 | **Gym / Fitness Centre** | On-site residents' gym |
-| **Lounge Style Clubhouse & Bar** | Premium differentiator — centrepiece of marketing |
+| **Rooftop Lounge & Restaurant** | Premium differentiator — centrepiece of marketing |
 
 ---
 
@@ -139,7 +139,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | 1 Bedroom | 4,000,000 | 24 | 96,000,000 |
 | 2 Bedroom | 6,000,000 | 36 | 216,000,000 |
 | 3 Bedroom | 10,000,000 | 48 | 480,000,000 |
-| **Total** | | **88** | **792,000,000** |
+| **Total** | | **108** | **792,000,000** |
 
 ### 5.2 Soft Costs — Itemised (Confirmed from Financial Model)
 
@@ -177,14 +177,14 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 
 | Landowner Allocation | Units | Value (KES) |
 |----------------------|------:|------------:|
-| 1 Bedroom × 7 | 7 | 63,000,000 (at off-plan) |
-| 2 Bedroom × 8 | 8 | 104,000,000 (at off-plan) |
-| 3 Bedroom × 8 | 8 | 144,000,000 (at off-plan) |
+| 1 Bedroom × 7 | 7 | 70,000,000 (at off-plan) |
+| 2 Bedroom × 8 | 8 | 136,000,000 (at off-plan) |
+| 3 Bedroom × 8 | 8 | 184,000,000 (at off-plan) |
 | **Total Units to Landowners** | **23** | |
 | Fractional residual (0.76 units) — paid in cash | — | 42,040,000 |
-| **Total Landowner Value** | | **~425,040,000** |
+| **Total Landowner Value** | | **~432,040,000** |
 
-> Note: 22% of 88 units = 23.76 units. 23 full units allocated + 0.76 units compensated in cash at KES 42,040,000.
+> Note: 22% of 108 units = 23.76 units. 23 full units allocated + 0.76 units compensated in cash at KES 42,040,000.
 
 ### 6.2 Developer Sales Programme
 
@@ -192,40 +192,40 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 
 | Unit Type | Units | Price (KES) | Revenue (KES) |
 |-----------|------:|------------:|--------------:|
-| 1 Bedroom | 17 | 6,000,000 | 102,000,000 |
-| 2 Bedroom | 28 | 13,000,000 | 364,000,000 |
-| 3 Bedroom | 18 | 18,000,000 | 324,000,000 |
-| **Off-Plan Total** | **63** | | **790,000,000** |
+| 1 Bedroom | 17 | 10,000,000 | 170,000,000 |
+| 2 Bedroom | 28 | 17,000,000 | 476,000,000 |
+| 3 Bedroom | 18 | 23,000,000 | 414,000,000 |
+| **Off-Plan Total** | **63** | | **1,060,000,000** |
 
 **On-Market Sales (developer revenue):**
 
 | Unit Type | Units | Price (KES) | Revenue (KES) |
 |-----------|------:|------------:|--------------:|
-| 3 Bedroom | 22 | 23,000,000 | 506,000,000 |
-| **On-Market Total** | **22** | | **506,000,000** |
+| 3 Bedroom | 22 | 30,000,000 | 660,000,000 |
+| **On-Market Total** | **22** | | **660,000,000** |
 
-> **Unit allocation summary:** 63 off-plan (developer) + 22 on-market (developer) + 23 (landowners) = **88 total** ✓
+> **Unit allocation summary:** 63 off-plan (developer) + 22 on-market (developer) + 23 (landowners) = **108 total** ✓
 
 ### 6.3 Financial Summary
 
 | Metric | KES |
 |--------|----:|
-| Total Off-Plan Revenue | 790,000,000 |
-| Total On-Market Revenue | 506,000,000 |
-| **Total Gross Revenue** | **1,296,000,000** |
+| Total Off-Plan Revenue | 1,060,000,000 |
+| Total On-Market Revenue | 660,000,000 |
+| **Total Gross Revenue** | **1,720,000,000** |
 | Total Development Cost | (909,961,921) |
-| **Net Developer Profit** | **343,998,079** |
-| **Developer ROI (on hard costs)** | **43.4%** |
+| **Net Developer Profit** | **810,038,079** |
+| **Developer ROI (on dev cost)** | **89.0%** |
 
 ### 6.4 Financing Structure
 
 | Source | KES | Notes |
 |--------|----:|-------|
-| Off-plan sales deposits & staged payments | 790,000,000 | Primary construction financing |
-| Equity investors (bridge gap) | ~119,961,921 | Residual gap after off-plan revenue |
-| **Total** | **909,961,921** | |
+| Off-plan sales deposits & staged payments | 1,060,000,000 | Primary construction financing (fully covers dev cost) |
+| Equity investors (bridge / timing gap) | ~120,000,000 | Bridge finance for early construction before sales receipts |
+| **Total** | **1,180,000,000** | |
 
-> **Equity gap note:** With 790M from off-plan sales, the construction funding gap is ~120M (vs the previously modelled 326M). This significantly reduces equity investor dilution risk.
+> **Equity gap note:** With 1,060M from off-plan sales exceeding the 910M dev cost, equity investors serve as bridge finance only — repaid from early sales milestones. This materially de-risks the equity position.
 
 ---
 
@@ -237,7 +237,7 @@ Each tower runs from **1st to 11th floor** (11 floors), with **2 units per floor
 | Off-plan target | 63 units (17×1BR + 28×2BR + 18×3BR) |
 | On-market target | 22×3BR after construction completion |
 | Landowner units | 23 units (not available for developer sales) |
-| Off-plan discount | 28–50% below on-market price |
+| Off-plan discount | 23–30% below on-market price |
 | Sales priority | 3BR → 2BR → 1BR (margin management) |
 | Target buyers | Kenyan diaspora (primary), local investors (primary), international (secondary) |
 

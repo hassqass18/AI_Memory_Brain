@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>RevOps Nurture Emails — Days 2, 5, 8, 14, 21</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; background: #f5f5f5; padding: 20px; }
+  .email-block { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 40px; padding: 30px; }
+  .day-label { font-size: 12px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .subject-line { font-size: 16px; font-weight: bold; color: #222; background: #f0f7ff; border-left: 4px solid #0066cc; padding: 10px 14px; margin-bottom: 16px; border-radius: 0 4px 4px 0; }
+  h2 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+  pre { background: #f9f9f9; border: 1px solid #ddd; padding: 16px; border-radius: 4px; overflow-x: auto; font-size: 13px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word; }
+  .note { background: #fffbe6; border: 1px solid #ffe58f; padding: 10px 14px; border-radius: 4px; font-size: 13px; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+
+<h1>RevOps Nurture Sequence — HTML Email Templates</h1>
+<p>Paste each HTML block into Zoho Campaigns → Create Content → Code/HTML view. CTA links point to your Google Calendar booking page.</p>
+<div class="note">⚠️ Zoho merge tag format: <code>{{First Name}}</code>, <code>{{Company}}</code>, <code>{{Designation}}</code>, <code>{{Unsubscribe}}</code></div>
+
+<!-- ═══════════════════════════════════════════ DAY 2 ═══════════════════════════════════════════ -->
+<div class="email-block">
+  <div class="day-label">Day 2 — CRM-Specific Insight</div>
+  <div class="subject-line">Subject: The RevOps gap most {{Designation}}s don't see until it's too late</div>
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;/head&gt;
+&lt;body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,sans-serif;"&gt;
+&lt;table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:30px 0;"&gt;
+  &lt;tr&gt;&lt;td align="center"&gt;
+    &lt;table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:6px;overflow:hidden;"&gt;
+      &lt;tr&gt;&lt;td style="padding:40px 48px;"&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Hi {{First Name}},&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;There's one RevOps gap I see in almost every Salesforce, HubSpot, and Pipedrive setup — and most revenue leaders don't catch it until it's already costing them 15–20% of their pipeline.&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;It's not a tool problem. It's a &lt;strong&gt;data hygiene + stage definition&lt;/strong&gt; problem.&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Deals are moving through the pipeline based on &lt;em&gt;activity&lt;/em&gt;, not buyer intent — which means your forecast is telling you what your reps did, not what's actually going to close.&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Does this sound familiar?&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Reply "yes" and I'll send you the 3-point checklist I use to audit this in the first 20 minutes of every RevOps review.&lt;/p&gt;
+        &lt;p style="margin:0 0 4px;font-size:16px;line-height:1.6;color:#333;"&gt;— Hassan Wilson&lt;/p&gt;
+        &lt;p style="margin:0;font-size:16px;line-height:1.6;color:#333;"&gt;Provecta Group&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td style="padding:16px 48px 24px;border-top:1px solid #eee;"&gt;
+        &lt;p style="margin:0;font-size:11px;color:#999;"&gt;You're receiving this because you requested a RevOps audit at pgco.world. &lt;a href="{{Unsubscribe}}" style="color:#999;"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<!-- ═══════════════════════════════════════════ DAY 5 ═══════════════════════════════════════════ -->
+<div class="email-block">
+  <div class="day-label">Day 5 — Social Proof</div>
+  <div class="subject-line">Subject: How a similar company went from broken pipeline to 40% forecast accuracy</div>
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;/head&gt;
+&lt;body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,sans-serif;"&gt;
+&lt;table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:30px 0;"&gt;
+  &lt;tr&gt;&lt;td align="center"&gt;
+    &lt;table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:6px;overflow:hidden;"&gt;
+      &lt;tr&gt;&lt;td style="padding:40px 48px;"&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Hi {{First Name}},&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;I want to share a quick story that might resonate with what you're working through.&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Earlier this year I worked with a property development company that had the same challenge: pipeline visibility was broken, forecast accuracy was around 25%, and the team was spending 3+ hours a week manually compiling deal reports.&lt;/p&gt;
+        &lt;p style="margin:0 0 12px;font-size:16px;line-height:1.6;color:#333;"&gt;In 6 weeks, we:&lt;/p&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 20px;"&gt;
+          &lt;tr&gt;&lt;td style="padding:4px 0;font-size:16px;line-height:1.6;color:#333;"&gt;→ Rebuilt their stage definitions around buyer milestones (not sales activities)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td style="padding:4px 0;font-size:16px;line-height:1.6;color:#333;"&gt;→ Cleaned 18 months of deal data and set up automated stage-entry criteria&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td style="padding:4px 0;font-size:16px;line-height:1.6;color:#333;"&gt;→ Deployed a weekly pipeline health score that surfaces at-risk deals automatically&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Forecast accuracy went from 25% to 67% in the first quarter. Pipeline review meetings dropped from 90 minutes to 30.&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Want to see if this applies to your setup? Reply and I'll walk you through the exact framework — no pitch, just the process.&lt;/p&gt;
+        &lt;p style="margin:0 0 4px;font-size:16px;line-height:1.6;color:#333;"&gt;— Hassan Wilson&lt;/p&gt;
+        &lt;p style="margin:0;font-size:16px;line-height:1.6;color:#333;"&gt;Provecta Group&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td style="padding:16px 48px 24px;border-top:1px solid #eee;"&gt;
+        &lt;p style="margin:0;font-size:11px;color:#999;"&gt;&lt;a href="{{Unsubscribe}}" style="color:#999;"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<!-- ═══════════════════════════════════════════ DAY 8 ═══════════════════════════════════════════ -->
+<div class="email-block">
+  <div class="day-label">Day 8 — Audit Delivery + CTA</div>
+  <div class="subject-line">Subject: {{First Name}} — here's what I found in your RevOps setup</div>
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;/head&gt;
+&lt;body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,sans-serif;"&gt;
+&lt;table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:30px 0;"&gt;
+  &lt;tr&gt;&lt;td align="center"&gt;
+    &lt;table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:6px;overflow:hidden;"&gt;
+      &lt;tr&gt;&lt;td style="padding:40px 48px;"&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Hi {{First Name}},&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Based on what you shared about your setup, here are 3 things I'd flag in a full audit:&lt;/p&gt;
+
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 20px;width:100%;"&gt;
+          &lt;tr&gt;&lt;td style="padding:16px;background:#f8f8f8;border-left:3px solid #0066cc;border-radius:0 4px 4px 0;margin-bottom:12px;"&gt;
+            &lt;p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#222;"&gt;1. Lead-to-opportunity conversion is likely a black box.&lt;/p&gt;
+            &lt;p style="margin:0;font-size:15px;line-height:1.6;color:#555;"&gt;Most teams track this manually or not at all. Without automated conversion tracking, you can't identify where prospects are falling out — and you're optimising blind.&lt;/p&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 20px;width:100%;"&gt;
+          &lt;tr&gt;&lt;td style="padding:16px;background:#f8f8f8;border-left:3px solid #0066cc;border-radius:0 4px 4px 0;"&gt;
+            &lt;p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#222;"&gt;2. Your pipeline stages probably don't match buyer stages.&lt;/p&gt;
+            &lt;p style="margin:0;font-size:15px;line-height:1.6;color:#555;"&gt;This is the #1 cause of forecast inaccuracy. If stage advancement is rep-driven rather than milestone-driven, your pipeline numbers are lagging indicators — not predictive ones.&lt;/p&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 28px;width:100%;"&gt;
+          &lt;tr&gt;&lt;td style="padding:16px;background:#f8f8f8;border-left:3px solid #0066cc;border-radius:0 4px 4px 0;"&gt;
+            &lt;p style="margin:0 0 6px;font-size:15px;font-weight:bold;color:#222;"&gt;3. Reporting is almost certainly reactive, not proactive.&lt;/p&gt;
+            &lt;p style="margin:0;font-size:15px;line-height:1.6;color:#555;"&gt;End-of-week deal summaries, manual exports, copy-paste into decks — this pattern shows up in 8 out of 10 RevOps audits I do. The fix is simpler than most teams expect.&lt;/p&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+
+        &lt;p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#333;"&gt;If any of these hit home, let's get 30 minutes on the calendar. I'll walk you through a RevOps Roadmap specific to your setup — no generic frameworks, no upsell agenda.&lt;/p&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 28px;"&gt;
+          &lt;tr&gt;&lt;td style="background:#0066cc;border-radius:4px;"&gt;
+            &lt;a href="https://calendar.app.google/aCKhD12u6t3Khjta6" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;"&gt;Book Your RevOps Roadmap Call →&lt;/a&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="margin:0 0 4px;font-size:16px;line-height:1.6;color:#333;"&gt;— Hassan Wilson&lt;/p&gt;
+        &lt;p style="margin:0;font-size:16px;line-height:1.6;color:#333;"&gt;Provecta Group&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td style="padding:16px 48px 24px;border-top:1px solid #eee;"&gt;
+        &lt;p style="margin:0;font-size:11px;color:#999;"&gt;&lt;a href="{{Unsubscribe}}" style="color:#999;"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<!-- ═══════════════════════════════════════════ DAY 14 ═══════════════════════════════════════════ -->
+<div class="email-block">
+  <div class="day-label">Day 14 — Follow-up (no call booked)</div>
+  <div class="subject-line">Subject: Still thinking it over?</div>
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;/head&gt;
+&lt;body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,sans-serif;"&gt;
+&lt;table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:30px 0;"&gt;
+  &lt;tr&gt;&lt;td align="center"&gt;
+    &lt;table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:6px;overflow:hidden;"&gt;
+      &lt;tr&gt;&lt;td style="padding:40px 48px;"&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Hi {{First Name}},&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;A lot of {{Designation}}s I talk to are juggling 10 things at once — I get it.&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;The RevOps Roadmap call isn't a commitment to anything. It's 30 minutes to get clarity on what's actually holding your pipeline back, and whether there's a fix worth prioritising right now.&lt;/p&gt;
+        &lt;p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#333;"&gt;Whenever you're ready, the calendar is open:&lt;/p&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 28px;"&gt;
+          &lt;tr&gt;&lt;td style="background:#0066cc;border-radius:4px;"&gt;
+            &lt;a href="https://calendar.app.google/aCKhD12u6t3Khjta6" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;"&gt;Book a 30-min RevOps Roadmap Call →&lt;/a&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;No pressure either way.&lt;/p&gt;
+        &lt;p style="margin:0 0 4px;font-size:16px;line-height:1.6;color:#333;"&gt;— Hassan Wilson&lt;/p&gt;
+        &lt;p style="margin:0;font-size:16px;line-height:1.6;color:#333;"&gt;Provecta Group&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td style="padding:16px 48px 24px;border-top:1px solid #eee;"&gt;
+        &lt;p style="margin:0;font-size:11px;color:#999;"&gt;&lt;a href="{{Unsubscribe}}" style="color:#999;"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<!-- ═══════════════════════════════════════════ DAY 21 ═══════════════════════════════════════════ -->
+<div class="email-block">
+  <div class="day-label">Day 21 — Value-add + Soft Close</div>
+  <div class="subject-line">Subject: One RevOps resource before I close your file</div>
+  <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&lt;/head&gt;
+&lt;body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,sans-serif;"&gt;
+&lt;table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:30px 0;"&gt;
+  &lt;tr&gt;&lt;td align="center"&gt;
+    &lt;table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:6px;overflow:hidden;"&gt;
+      &lt;tr&gt;&lt;td style="padding:40px 48px;"&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Hi {{First Name}},&lt;/p&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Last one from me — I want to leave you with something useful regardless of whether we work together.&lt;/p&gt;
+        &lt;p style="margin:0 0 12px;font-size:16px;line-height:1.6;color:#333;"&gt;This is the &lt;strong&gt;RevOps Pipeline Health Framework&lt;/strong&gt; I use in every client engagement. It covers:&lt;/p&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 20px;"&gt;
+          &lt;tr&gt;&lt;td style="padding:4px 0;font-size:16px;line-height:1.6;color:#333;"&gt;→ The 5 pipeline metrics that actually predict close rate (not vanity metrics)&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td style="padding:4px 0;font-size:16px;line-height:1.6;color:#333;"&gt;→ A stage-definition template you can drop into any CRM&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td style="padding:4px 0;font-size:16px;line-height:1.6;color:#333;"&gt;→ The 3-question weekly deal review that replaces 90-minute pipeline calls&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="margin:0 0 20px;font-size:16px;line-height:1.6;color:#333;"&gt;Use it as-is or adapt it to your setup. No strings attached.&lt;/p&gt;
+        &lt;p style="margin:0 0 24px;font-size:16px;line-height:1.6;color:#333;"&gt;And if you ever want me to walk you through how to apply it specifically to {{Company}} — the offer stands. Just hit reply or book a call below.&lt;/p&gt;
+        &lt;table cellpadding="0" cellspacing="0" style="margin:0 0 28px;"&gt;
+          &lt;tr&gt;&lt;td style="background:#0066cc;border-radius:4px;"&gt;
+            &lt;a href="https://calendar.app.google/aCKhD12u6t3Khjta6" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;"&gt;Book a Call with Hassan →&lt;/a&gt;
+          &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;p style="margin:0 0 4px;font-size:16px;line-height:1.6;color:#333;"&gt;— Hassan Wilson&lt;/p&gt;
+        &lt;p style="margin:0;font-size:16px;line-height:1.6;color:#333;"&gt;Provecta Group&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td style="padding:16px 48px 24px;border-top:1px solid #eee;"&gt;
+        &lt;p style="margin:0;font-size:11px;color:#999;"&gt;&lt;a href="{{Unsubscribe}}" style="color:#999;"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<hr style="border:none;border-top:2px solid #ddd;margin:40px 0;">
+<h2>Quick Reference — Subjects + Delays</h2>
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
+  <tr style="background:#0066cc;color:white;">
+    <th style="padding:10px;text-align:left;">Day</th>
+    <th style="padding:10px;text-align:left;">Delay from previous</th>
+    <th style="padding:10px;text-align:left;">Subject line</th>
+  </tr>
+  <tr style="background:#f9f9f9;"><td style="padding:10px;border-bottom:1px solid #eee;">Day 2</td><td style="padding:10px;border-bottom:1px solid #eee;">2 days after signup</td><td style="padding:10px;border-bottom:1px solid #eee;">The RevOps gap most {{Designation}}s don't see until it's too late</td></tr>
+  <tr><td style="padding:10px;border-bottom:1px solid #eee;">Day 5</td><td style="padding:10px;border-bottom:1px solid #eee;">Wait 3 more days</td><td style="padding:10px;border-bottom:1px solid #eee;">How a similar company went from broken pipeline to 40% forecast accuracy</td></tr>
+  <tr style="background:#f9f9f9;"><td style="padding:10px;border-bottom:1px solid #eee;">Day 8</td><td style="padding:10px;border-bottom:1px solid #eee;">Wait 3 more days</td><td style="padding:10px;border-bottom:1px solid #eee;">{{First Name}} — here's what I found in your RevOps setup</td></tr>
+  <tr><td style="padding:10px;border-bottom:1px solid #eee;">Day 14</td><td style="padding:10px;border-bottom:1px solid #eee;">Wait 6 more days</td><td style="padding:10px;border-bottom:1px solid #eee;">Still thinking it over?</td></tr>
+  <tr style="background:#f9f9f9;"><td style="padding:10px;">Day 21</td><td style="padding:10px;">Wait 7 more days</td><td style="padding:10px;">One RevOps resource before I close your file</td></tr>
+</table>
+
+</body>
+</html>
