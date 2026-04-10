@@ -9,7 +9,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 from PIL import Image as PILImg
 
-BASE    = "/sessions/quirky-brave-hypatia/mnt/AI_Memory_Brain/projects/staging/SierraHomes_AmericanDream/Marketing"
+BASE    = "/sessions/zen-blissful-volta/mnt/AI_Memory_Brain/projects/staging/SierraHomes_AmericanDream/Marketing"
 RENDERS = f"{BASE}/assets/renders"
 LOGO    = f"{BASE}/assets/Sierra_Homes_USA_Logo_highres.png"
 OUTPUT  = f"{BASE}/SierraHomes_AmericanDream_Flyer_2Sided.pdf"
@@ -233,7 +233,7 @@ def build_page1(c):
     # ── T&C ─────────────────────────────────────────────────────────────────
     c.setFillColor(MGRAY); c.setFont("Helvetica", 7.5)
     c.drawString(MRG, y - 11,
-        "T&C:   · Deposit: 30% of the sale price payable upon ground breaking")
+        "T&C:   · Deposit: 30% of the sale price payable")
     c.drawString(MRG + 26, y - 22,
         "· Balance: Payable in equal monthly installments over 36 months")
 
@@ -311,7 +311,7 @@ def build_page2(c):
     c.drawString(MRG + 4, y - STRIP_H + 62, "RESORT-STYLE LIVING IN NYALI")
     c.setFillColor(WHITE); c.setFont("Helvetica", 9.5)
     c.drawString(MRG + 4, y - STRIP_H + 43, "Lounge Style Clubhouse  ·  Resort Style Pool  ·  Rooftop Restaurant")
-    c.drawString(MRG + 4, y - STRIP_H + 26, "Professional Gym  ·  Spa & Wellness Centre  ·  24-Hr Gated Security")
+    c.drawString(MRG + 4, y - STRIP_H + 26, "Professional Gym  ·  Proximity to Malls & Schools  ·  24-Hr Gated Security")
     c.setStrokeColor(GOLD); c.setLineWidth(1.5)
     c.rect(0, y - STRIP_H, W, STRIP_H, fill=0, stroke=1)
 
@@ -325,13 +325,13 @@ def build_page2(c):
     y -= 32
 
     AMENITIES = [
-        ("LOUNGE STYLE CLUBHOUSE",  "Premium lounge, entertainment & social spaces — a Nyali first."),
-        ("ROOFTOP RESTAURANT",      "Indoor rooftop restaurant with ocean-view dining."),
+        ("LOUNGE STYLE CLUBHOUSE",  "Premium lounge, rooftop movie nights & projector screening area."),
+        ("ROOFTOP RESTAURANT",       "Enclosed restaurant with breathtaking ocean views & fine dining."),
         ("RESORT STYLE POOL",       "Resort-style pool set in lush landscaped gardens."),
         ("PROFESSIONAL GYM",        "Full cardio & strength training. No membership required."),
         ("24-HR GATED SECURITY",    "Manned guards, CCTV, and controlled access 24/7."),
         ("CHILDREN'S PLAY AREA",    "Dedicated play zones and courtyard gardens for families."),
-        ("SPA & WELLNESS CENTRE",   "Dedicated on-site spa and relaxation facilities."),
+        ("PROXIMITY TO AMENITIES",   "Near shopping malls, hospitals, schools & key conveniences."),
         ("GAMES ROOM",              "Social entertainment space for all residents."),
     ]
 
