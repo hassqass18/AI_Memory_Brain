@@ -199,46 +199,44 @@ From search result snippet (linkedin.com/posts/hassanwilson...):
 *Written April 2026 — "Why Hassan is an asset to the partners"*
 
 ### Short (80 words)
-Andre "Hassan" Wilson is the Regional CIO for East Africa at MSIFS and the only partner who has lived on the ground in both of the fund's target regions — six years in Kazakhstan and a permanent operational base in Nairobi and Mombasa. That dual residency is not incidental. It is the reason Hassan bridges the fund's two pillars in ways no other partner can. His active East Africa pipeline, Islamic finance relationships, and the AI infrastructure the team runs on make him irreplaceable.
+Andre "Hassan" Wilson is the Regional CIO for East Africa at MSIFS, bringing six years of living and working in Kazakhstan alongside a permanent operational base in Nairobi and Mombasa. That dual-region fluency gives the partnership rare cultural and relational depth across both investment geographies. His active East Africa pipeline, direct access to Islamic finance structures through established community relationships, and his background in Pan-African entrepreneurship and global supply chain bring dimensions to the team that deepen every conversation the fund has with LPs and partners.
 
 ### Medium (175 words)
-Andre "Hassan" Wilson holds a distinction no other partner in MSIFS can claim: he has lived and worked for six years in Kazakhstan, and now operates permanently out of Nairobi and Mombasa, Kenya. He is the only member of the team with on-the-ground experience in both of the fund's target regions — and that geographical depth is the foundation of everything he brings to the partnership.
+Andre "Hassan" Wilson is the Regional CIO for East Africa at MSIFS, with a professional foundation built across two of the fund's core investment regions. He spent six years living and working in Kazakhstan before establishing his permanent operational base in Nairobi and Mombasa — accumulating the cultural fluency, community relationships, and ground-level market knowledge that only sustained presence produces.
 
-In East Africa, Hassan's value is structural. His active pipeline includes the Lamu Port/LAPSSET grain handling project ($45M+), the Tanzania LNG Hub in Mtwara, and Mozambique dry port infrastructure at Nacala and Maputo, supported by working relationships with the LAPSSET Corridor Development Authority, Kenya Invest, and Tanzania Investment Centre. His relationship with the Grand Imam of Lamu opens Islamic finance structures and Sharia-compliant LP conversations that no credential can replicate. In Central Asia, his six Kazakhstan years give the partnership a relationship and cultural layer that perfectly complements Aibek Sabirov's technical and institutional expertise — together, they give MSIFS the deepest Kazakhstan presence of any frontier fund in the market.
+In East Africa, Hassan leads an active pipeline that includes the Lamu Port/LAPSSET grain handling project ($45M+), the Tanzania LNG Hub in Mtwara, and Mozambique dry port infrastructure at Nacala and Maputo. His working relationships with the LAPSSET Corridor Development Authority, Kenya Invest, and Tanzania Investment Centre are active and ongoing. His relationship with the Grand Imam of Lamu enables Islamic finance structures and Sharia-compliant conversations across a majority-Muslim region — an access point that reflects years of authentic community engagement. His six years in Kazakhstan add a personal and relational dimension to the fund's Central Asia work, enriching the team's collective presence in the region.
 
-He is also the fund's technology builder: AI Memory Brain, the platform the partnership operates on, is his creation. He studied at Grambling State University (HBCU) and is based between Atlanta and Nairobi.
+His entrepreneurial track record — GeniusCo, Provecta Group, YATR — reflects a career built on opening markets and building trust across cultures. He studied at Grambling State University (HBCU) and is based between Atlanta and Nairobi.
 
 ### Long (350 words)
-Andre "Hassan" Wilson is the Regional CIO for East Africa at MSIFS, and the single most geographically connected member of the partnership. He has lived for six years in Kazakhstan and is now permanently based in East Africa — meaning he is the only GP with ground-level experience in both regions the fund is built to serve. That is not a bullet point. It is a structural advantage that shapes every conversation he has with LPs, co-investors, and deal counterparties in both geographies.
+Andre "Hassan" Wilson is the Regional CIO for East Africa at MSIFS. His career has taken him across two of the fund's core investment regions — six years living and working in Kazakhstan, followed by a committed, permanent operational presence in Nairobi and Mombasa — and the relationships, cultural understanding, and market knowledge built through that sustained engagement form the foundation of what he contributes to the partnership.
 
-His Kazakhstan years are not just biographical context. Six years of living and working in the country built relationships, cultural fluency, and business intelligence that sit alongside — and complement — Aibek Sabirov's technical and institutional expertise in the energy sector. Where Aibek commands Kazakhstan's oil and gas industry and government ministry relationships, Hassan brings a different dimension of the country: personal networks, community trust, and the kind of cross-cultural access that comes only from years of lived presence. Together, they give MSIFS a multi-layered Kazakhstan footprint that no competitor can replicate with a single regional contact.
+Hassan's six years in Kazakhstan were formative professionally and personally. Living and working in the country gave him a depth of cultural fluency and community connection in Central Asia that complements the team's technical and institutional expertise in the region. His perspective on Kazakhstan is shaped by years of direct experience — not academic study or conference attendance — and that ground-level understanding enriches the fund's collective approach to Central Asia deal origination and relationship development.
 
-In East Africa, Hassan's contribution is equally irreplaceable. Based in Nairobi and Mombasa, he operates where the fund's deals are born. His active pipeline — Lamu Port/LAPSSET ($45M+), Tanzania LNG Hub (Mtwara), Mozambique dry ports (Nacala/Maputo) — is underpinned by working relationships with the LAPSSET Corridor Development Authority, Kenya Invest, Tanzania Investment Centre, and the Grand Imam of Lamu. That last relationship is a genuine differentiator: in a majority-Muslim port region, it opens Islamic finance structures, Sharia-compliant deal instruments, and LP conversations that simply cannot be accessed through cold outreach or credentials. In a fund that operates across East Africa and Central Asia — both predominantly Muslim regions — this is not a footnote. It is a competitive moat.
+In East Africa, Hassan is the partnership's operational anchor. Based in Nairobi and Mombasa, he leads an active deal pipeline that includes the Lamu Port/LAPSSET grain handling project ($45M+), the Tanzania LNG Hub in Mtwara, and Mozambique dry port infrastructure at Nacala and Maputo. These are not prospecting targets — they are active engagements, underpinned by working relationships with the LAPSSET Corridor Development Authority, Kenya Invest, Tanzania Investment Centre, and MCN Associates. His relationship with the Grand Imam of Lamu is a meaningful part of this foundation. In a majority-Muslim port region, it enables genuine community trust, Islamic finance structures, and Sharia-compliant deal instruments that reflect the values and economic frameworks of the communities MSIFS serves. Across East Africa and Central Asia — both predominantly Muslim regions — this kind of access reflects years of authentic relationship-building.
 
-Beyond deal origination, Hassan is the fund's operational technology architect. As founder of AI Memory Brain — an AI platform built to eliminate context loss in complex, distributed operations — he did not buy a tool for the fund; he built one. The MSIFS project workspace runs on his system. His entrepreneurial ecosystem (GeniusCo, Provecta Group, YATR's East Africa coastal operations, black2black.us Pan-African supply chain platform) gives the partnership access to African-American family offices, HBCU-affiliated investors, and diaspora capital networks that no other GP can reach. He studied at Grambling State University and is based between Atlanta, Georgia and Nairobi, Kenya.
+Hassan's career is rooted in Pan-African entrepreneurship and cross-cultural commerce. As founder of GeniusCo (est. 1996, dedicated to giving underserved businesses the tools to compete), Provecta Group, and contributor to black2black.us — a platform focused on Black-owned global supply chain education — he has spent decades building commercial networks across African-American, HBCU-affiliated, and diaspora business communities. His role as Director of Sales and Business Development at YATR, operating across East Africa's coastal markets, reflects a career built on opening doors and building long-term commercial trust. He studied at Grambling State University and is based between Atlanta, Georgia and Nairobi, Kenya.
 
 ### Partnership Value Pillars
-- **Dual-region lived experience** — 6 years in Kazakhstan + permanent East Africa base; only GP with ground presence in both target regions
-- **East Africa ground operations** — permanent Nairobi/Mombasa base; LAPSSET, Kenya Invest, MCN Associates pipeline active
-- **Islamic finance access** — Grand Imam of Lamu; Sharia-compliant structure relationships across both regions
-- **Kazakhstan bridge** — 6 years on the ground complements Aibek's technical expertise; together they give MSIFS the deepest Kazakhstan presence of any frontier fund
-- **AI Memory Brain** — the fund's own operational technology, built by Hassan; not bought, built
-- **Pan-African LP network** — HBCU alumni, African-American family offices, Freedom Nation / GeniusCo ecosystem
+- **Dual-region experience** — 6 years in Kazakhstan + permanent East Africa base; genuine cultural and relational depth across both investment geographies
+- **East Africa ground operations** — permanent Nairobi/Mombasa base; active LAPSSET, Kenya Invest, MCN Associates pipeline
+- **Islamic finance access** — Grand Imam of Lamu relationship; Sharia-compliant structures and community trust across majority-Muslim East Africa and Central Asia
+- **Pan-African LP and deal network** — HBCU alumni, African-American family offices, GeniusCo and diaspora business ecosystem
+- **Commercial and BD track record** — Director of Sales & BD (YATR), Provecta Group, GeniusCo; a career built on opening markets and building lasting partnerships
 
 ---
 
 ## Recommended LinkedIn Optimization
 
 **Suggested headline:**
-> Regional CIO — East Africa & Central Asia | 6 Years Kazakhstan + East Africa Operations | Founder, AI Memory Brain | MSIFS
+> Regional CIO — East Africa | 6 Years Kazakhstan + East Africa Operations | Frontier Infrastructure Investor | MSIFS
 
 **Suggested about section themes:**
-- The only MSIFS partner with lived experience in both target regions: 6 years Kazakhstan + permanent East Africa base
+- Six years in Kazakhstan, now permanently based in East Africa — genuine dual-region fluency built through presence, not research
 - "Gooch Gone Global" — this isn't a tagline, it's a documented life. Kazakhstan, Kenya, Morocco, Poland, Indiana
 - From Grambling State (HBCU) → GeniusCo ("giving the underdog power to compete") → MSIFS (giving emerging markets institutional capital)
-- AI Memory Brain: built a system that never forgets; the fund literally runs on it
 - LAPSSET + YATR: land corridors and coastlines — two sides of East Africa's infrastructure story
-- Islamic finance access: Grand Imam of Lamu in majority-Muslim East Africa and Central Asia — structural LP advantage
+- Islamic finance access: Grand Imam of Lamu in majority-Muslim East Africa and Central Asia — built through authentic community engagement
 
 ---
 

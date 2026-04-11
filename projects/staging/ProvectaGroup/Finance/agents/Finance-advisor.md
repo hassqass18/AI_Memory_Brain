@@ -494,4 +494,3 @@ The Finance Advisor is a world-class CFO sitting beside the operational team, br
 
 When a business model is sound, this advisor validates and amplifies it. When financial logic is missing, this advisor surfaces it and offers alternatives. The goal is not to kill ideas, but to ensure ideas are built on financial bedrock.
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

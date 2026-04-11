@@ -5,7 +5,7 @@
 **Category:** Investment Fund Formation
 **Owner:** Andre "Hassan" Wilson — Regional CIO, East Africa
 **Stage:** Staging (Active Formation — LP Conversations April 2026)
-**Last Updated:** 2026-04-09
+**Last Updated:** 2026-04-10
 
 ---
 
@@ -38,6 +38,7 @@
 - **Advisory Board Pitch:** `MSIFS-Advisory-Board-Pitch.docx` ✅ Complete
 - **Advisory Board Candidates:** `Potential Advisory Board Candidates.xlsx` ✅ Available
 - **Project Overview:** `MSIFS_Project_Overview_Feb2026.docx` ✅ Background
+- **GP Partnership Bios:** `GP-Branding/MSIFS-GP-Partnership-Bios.docx` ✅ Complete (April 2026) — 3-tier bios (80/175/350 words) for all 4 GPs, partnership-value frame
 
 ---
 
@@ -73,6 +74,29 @@
 - **GP Agreement Overview:** Structured summary of working draft
 - **Kenya Government Engagement Strategy:** Research-backed next steps
 - **Kenya / Kazakhstan:** Regional intelligence pages
+
+---
+
+## GP Branding (April 2026)
+
+**Status:** Active — deep research complete, profiles populated, partnership bios written
+
+**Folder:** `GP-Branding/` — one subfolder per GP, each is single source of truth for all branding assets
+
+| GP | Folder | Profile Status |
+|----|--------|---------------|
+| Alexander Orta | `GP-Branding/Alexander-Orta/profile.md` | ✅ Complete — CERAWeek, Poets & Quants, Liquidstar, Susilo Institute, MS Quant Econ |
+| Andre "Hassan" Wilson | `GP-Branding/Andre-Hassan-Wilson/profile.md` | ✅ Complete — 6 years Kazakhstan, East Africa pipeline, GeniusCo/Provecta, DISC S/I |
+| Aibek Sabirov | `GP-Branding/Aibek-Sabirov/profile.md` | ✅ Complete — Kashagan/NCOC N.V., May 2026 graduation, DISC I/C, multilingual |
+| Stephen Habetz | `GP-Branding/Stephen-Habetz/profile.md` | ✅ Complete — CFA Aug 2024, Moelis energy IB, Morgan Stanley, Notre Dame Meyer Fellow |
+
+**Master Research File:** `GP-Branding/_Master-GP-Research.md` — consolidated research log, open questions, GP Branding Questionnaire draft
+
+**Open Actions:**
+- [ ] GP Branding Questionnaire: send to all 4 GPs (especially Hassan — Kazakhstan work history; Alex — military dates, Peace Corps)
+- [ ] Professional headshots: none yet collected
+- [ ] LinkedIn copy: headlines and about sections drafted in profiles, not yet approved/published
+- [ ] Fund digital presence decision: website vs. LinkedIn-only
 
 ---
 
