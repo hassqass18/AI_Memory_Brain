@@ -122,6 +122,7 @@ When performing any action that matches a keyword below, read the referenced det
 | SierraHomes, staging, canonical, AI Training, consolidation | D-049 (root): SierraHomes staging confirmed as canonical folder; AI_Training folder retired | Key-Decisions-2026-04-11_1559.md | 2026-04-11 |
 | Master-Context, deliverables, agents, index, SierraHomes | D-050 (root): SierraHomes Master-Context.md updated — Available Agents expanded + Available Deliverables section added | Key-Decisions-2026-04-11_1559.md | 2026-04-11 |
 | sandbox, clock, date, bash, offset, timestamp | L-030 (root): Sandbox bash clock offset — use `date` not `date -u` in Cowork | Key-Decisions-2026-04-11_1559.md | 2026-04-11 |
+| git, push, GitHub, command prompt, terminal, closure | D-069: Always provide git push commands for user's terminal at session close — root-level standard. User is on Windows CMD: use `del` not `rm`, backslashes in paths, repo root is C:\Users\swozz\Documents\AI_Memory_Brain | Key-Decisions-2026-04-11_0114.md | 2026-04-11 |
 
 ---
 

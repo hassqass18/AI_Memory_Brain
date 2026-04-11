@@ -4,7 +4,7 @@
 **Category:** Personal Brand Development
 **Owner:** Andre "Hassan" Wilson (hassan.qaseem@gc-usa.com)
 **Stage:** Staging (Active Execution)
-**Last Updated:** 2026-04-09
+**Last Updated:** 2026-04-11
 
 ---
 
@@ -43,7 +43,7 @@
 - ✅ About: AMB hook copy live (94% stat hook)
 - ✅ URL: linkedin.com/in/hassanwilson
 - ✅ Skills: AI Strategy, AI Implementation, Business Process Automation, Knowledge Management, Workflow Design
-- ⏳ Creator Mode: Pending (mobile app required)
+- ✅ Creator Mode: Completed equivalent — "Make follow primary" enabled (2026-04-11). Creator Mode was retired by LinkedIn March 2024.
 
 ---
 
@@ -56,6 +56,7 @@
 | Brand Strategy | `Brand-Strategy/` | ✅ Active |
 | LinkedIn Folder | `LinkedIn/` | ✅ Optimized |
 | Media / Photos | `Media/` | ✅ Available |
+| Case Studies (12) | `Content/case-studies/` | ✅ Complete (2026-04-11) |
 
 ---
 
@@ -79,4 +80,4 @@
 **Status:** [x] Complete — LinkedIn optimized, Portfolio site built, Resume current
 
 ### Document 3: Content & Growth Plan
-**Status:** [~] In Progress — LinkedIn Week 1 content active, case studies pending
+**Status:** [~] In Progress — 12 case studies complete (2026-04-11). Next: add case studies to portfolio site, publish first LinkedIn post.

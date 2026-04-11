@@ -11,7 +11,19 @@
 
 - [x] Enable Creator Mode on LinkedIn — LinkedIn retired Creator Mode (March 2024). Completed equivalent: enabled "Make follow primary" in Settings > Visibility > Followers (2026-04-11)
 - [ ] Publish first LinkedIn post (from AMB content calendar)
-- [ ] Build 3 project case studies (Kazakhstan bilateral, Kenya SierraHomes, AMB launch)
+- [x] Build 12 case studies / testimonials (2026-04-11) — see Content/case-studies/
+  - Qosil (Kazakhstan market entry, 2018–2025)
+  - Freedom Builders / Solar Decathlon Africa 2019
+  - Freedom Nation (revenue restructure)
+  - Discovery into Kazakhstan
+  - Khorgos FEZ Deal ($5M acquisition)
+  - Beep-One (fleet pipeline, 90 days)
+  - YATR (363 listings across 7 markets)
+  - Round Robin & Restrict CC (Zendesk — 20% user growth)
+  - Sayyad Lifestyle Brand (founder testimonial)
+  - Striker Marketing (RevOps overhaul)
+  - Discovery into Kenya
+  - AI Memory Brain (founder case study)
 - [ ] Record LinkedIn profile video (60-second brand intro)
 
 ## Near-Term
