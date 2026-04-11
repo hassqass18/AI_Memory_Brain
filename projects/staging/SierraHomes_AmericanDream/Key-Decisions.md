@@ -18,7 +18,7 @@
 
 | ID | Date | Area | Summary | Status | File |
 |----|------|------|---------|--------|------|
-| KD-001 | 2026-03-29 | Architecture | 108 units confirmed: 24×1BR, 36×2BR, 48×3BR across G+11 floors | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
+| KD-001 | 2026-03-29 | Architecture | 88 units confirmed: 22×1BR, 22×2BR, 44×3BR across G+11 floors | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
 | KD-002 | 2026-03-29 | Finance | Total development cost: KES 909,961,921 (KES 792M hard + KES 118M soft) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
 | KD-003 | 2026-03-29 | Sales | Pricing confirmed: 1BR KES 6M/9M, 2BR KES 13M/17M, 3BR KES 18M/23M (off/on-plan) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
 | KD-004 | 2026-03-29 | Sales | Sales model: 40% off-plan (43 units, KES 584M) / 60% on-plan (65 units, KES 1.167B) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-29_2200.md` |
@@ -32,7 +32,7 @@
 | KD-012 | 2026-03-30 | Integrations | Notion populated via internal saveTransactionsFanout API using browser session cookies — public API CORS-blocked from sandbox | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
 | KD-013 | 2026-03-30 | PMO | Phase 1 tasks represented as 24 to_do checkboxes (20 stories + 4 exec items) grouped by domain in Notion | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_0900.md` |
 | KD-014 | 2026-03-30 | Integrations | GitHub push automated via git-push.sh; reads token from HassanKeys.txt; runs from local terminal | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
-| KD-015 | 2026-03-30 | Architecture | 4-tower complex confirmed: Lincoln (3BR), Washington (3BR), Franklin (1BR), Benjamin (2BR) on Plot MN/I/1691 | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
+| KD-015 | 2026-03-30 | Architecture | 3-tower complex confirmed: Lincoln (3BR), Washington (3BR), Franklin (1BR), Benjamin (2BR) on Plot MN/I/1691 | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
 | KD-016 | 2026-03-30 | Finance/Land | Land deal: 22% equity — landowners get 23 units (7×1BR+8×2BR+8×3BR) + KES 42M cash; no cash land purchase | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
 | KD-017 | 2026-03-30 | Finance | Per-unit construction costs confirmed: 1BR KES 4M, 2BR KES 6M, 3BR KES 10M (total KES 792M) | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
 | KD-018 | 2026-03-30 | Finance | Revised developer model: revenue KES 1.296B, net profit KES 344M, ROI 43.4%; equity gap ~KES 120M | Confirmed | `decisions-learnings/Key-Decisions-2026-03-30_1200.md` |
@@ -48,6 +48,7 @@
 | KD-028 | 2026-04-11 | Marketing | QR code (sierrausahomes.com) added to top-right corner of Banner 1 | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 | KD-029 | 2026-04-11 | PMO | Project files consolidated — canonical folder is staging/SierraHomes_AmericanDream; AI Training folder retired | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 | KD-030 | 2026-04-11 | PMO | Master-Context.md updated — Available Agents expanded (Product_Dev, Security, TechSupport) + Available Deliverables section added | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
+| KD-031 | 2026-04-11 | Architecture | Unit count corrected to 88 (22×1BR + 22×2BR + 44×3BR); 3 towers; Benjamin-Franklin is one combined building | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11_0900.md` |
 
 ---
 
@@ -77,6 +78,7 @@
 | QR code / banner | KD-028 |
 | Folder / staging / consolidation | KD-029 |
 | Master-Context / deliverables / agents / index | KD-030 |
+| Unit count / 88 units / tower count / Benjamin-Franklin | KD-031 |
 
 ---
 

@@ -547,7 +547,7 @@ Once these three documents are complete and approved, this project will be promo
 ### Acceptance Criteria (Staging Complete)
 
 This project is ready for PROJECT_MEMORY_INIT.md when:
-- [ ] Unit count finalised (108 confirmed ✅)
+- [ ] Unit count finalised (88 confirmed ✅)
 - [ ] Pricing confirmed (all three types, off/on-plan ✅)
 - [ ] Development budget confirmed (KES 909,961,921 ✅)
 - [ ] Financing structure agreed (equity investors ✅)

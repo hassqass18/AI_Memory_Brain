@@ -3,14 +3,14 @@
 **Project:** MSIFS — Multinational Strategic Investment Funds (Fund 1)
 **Owner:** Hassan Wilson (Regional CIO — East Africa)
 **Current Stage:** Active Formation — LP Conversations April 2026
-**Last Updated:** 2026-04-10
+**Last Updated:** 2026-04-11
 
 ---
 
 ## Immediate Priorities
 
 - [ ] Finalize and execute GP Agreement — all 4 GPs signed
-- [ ] Advisory Board: confirm 3–5 members from `Potential Advisory Board Candidates.xlsx`
+- [ ] Advisory Board: begin outreach to candidates from `Potential Advisory Board Candidates.xlsx` using `MSIFS-Advisory-Board-Pitch.docx` — target 3–5 confirmed members by mid-2026
 - [ ] Begin LP outreach — first 10 qualified conversations
 - [ ] Kenya government engagement: execute strategy from Notion page
 - [ ] Finance Model v2: complete LP waterfall scenarios and IRR sensitivity
@@ -54,6 +54,10 @@ When ready to promote to full project, execute `PROJECT_MEMORY_INIT.md`:
 - [x] Infrastructure Finance Model v2 built
 - [x] Advisory Board pitch deck complete
 - [x] Advisory Board candidate list built
+- [x] Advisory board best practices research compiled (Advisory-Board-Pitch-Best-Practices.md)
+- [x] Advisory board professional pitch document created (MSIFS-Advisory-Board-Pitch.docx)
+- [x] Advisory board compensation structure defined (D-044)
+- [x] Advisory board recruitment sequencing and timeline established (D-046)
 - [x] RevOps consultancies research completed
 - [x] Notion workspace active with 49+ action items
 - [x] GP Branding initiative launched — deep internet research complete on all 4 GPs

@@ -16,6 +16,10 @@ When working on MSIFS, search this index for relevant keywords. If a keyword mat
 | 2026-04-10 | partnership-value-bio, internal-alignment, complementarity | `decisions-learnings/Key-Decisions-2026-04-10_0001.md` | D-040: Partnership-value bio frame adopted — distinct from LP-facing bios; frames each GP's contribution to the other partners |
 | 2026-04-10 | Hassan, Kazakhstan, six-years, lived-experience, differentiator | `decisions-learnings/Key-Decisions-2026-04-10_0001.md` | D-041: Hassan's 6 years living/working in Kazakhstan documented as primary branding element; dual-region lived experience |
 | 2026-04-10 | bio-language-standard, no-comparative-framing, no-AI-Memory-Brain | `decisions-learnings/Key-Decisions-2026-04-10_0001.md` | D-042: GP bios must not contain comparative language or AI Memory Brain operational references |
+| 2026-04-11 | advisory-board, pitch-document, docx, best-practices-research | `decisions-learnings/Key-Decisions-2026-04-11_1430.md` | D-043: Advisory Board pitch .docx created (external-facing) + best practices research .md created (internal reference) |
+| 2026-04-11 | advisory-board, compensation, equity, retainer, vesting | `decisions-learnings/Key-Decisions-2026-04-11_1430.md` | D-044: Advisory board compensation structure defined — 0.35–0.7% equity (4yr/1yr cliff) + $15K–$25K retainer + co-invest rights |
+| 2026-04-11 | advisory-board, size, profiles, 5-7-members | `decisions-learnings/Key-Decisions-2026-04-11_1430.md` | D-045: Advisory board target size 5–7 members across 5 profiles (E. Africa infra, C. Asia minerals, DFI, institutional, operator) |
+| 2026-04-11 | advisory-board, recruitment-sequencing, timeline, Q3-2026 | `decisions-learnings/Key-Decisions-2026-04-11_1430.md` | D-046: Recruitment priority order established; finalization target mid-2026, first quarterly meeting Q3 2026 |
 
 ---
 

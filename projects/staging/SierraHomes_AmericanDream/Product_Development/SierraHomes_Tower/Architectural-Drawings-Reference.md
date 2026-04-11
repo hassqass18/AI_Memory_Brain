@@ -16,10 +16,10 @@
 | Drawing No. | Title | Content |
 |-------------|-------|---------|
 | Cover | Title Sheet | Project name, developer, architect, table of contents |
-| 01 | Site Plan — Typical 1st–11th Floor Plan | Site layout, all 4 towers, built-up areas, site features |
+| 01 | Site Plan — Typical 1st–11th Floor Plan | Site layout, all 3 towers, built-up areas, site features |
 | 1 | Lincoln Tower — Typical 1st–11th Floor Plan | 3BHK, 2 units/floor, unit IDs LC.1-01 through LC.11-22 |
 | 2 | Washington Tower — Typical 1st–11th Floor Plan | 3BHK, 2 units/floor, unit IDs WA.1-01 through WA.11-22 |
-| 3 | Benjamin-Franklin Tower — Typical 1st–11th Floor Plan | 2BHK (Benjamin) + smaller units (Franklin) |
+| 3 | Benjamin-Benjamin-Franklin Tower — Typical 1st–11th Floor Plan | 2BHK (Benjamin) + smaller units (Franklin) |
 | 4 | Detailed Plan — 3BHK | Detailed room layout for 3-bedroom unit |
 | 5 | Detailed Plan — 2BHK | Detailed room layout for 2-bedroom unit |
 | 6 | Detailed Plan — 1BHK | Detailed room layout for 1-bedroom unit |
@@ -31,20 +31,20 @@
 **Site: Plot MN/I/1691, Nyali, Mombasa County**
 
 ### Site Layout
-- **4 towers** arranged on the plot: Lincoln (NE), Washington (S-centre), Franklin (W), Benjamin (W, attached to Franklin)
+- **3 towers** arranged on the plot: Lincoln (NE), Washington (S-centre), Franklin (W), Benjamin (W, attached to Franklin)
 - **9M access road** on the north-west boundary
 - **Gate** at the northern entry
 - **Swimming pool** — located between Washington and Lincoln Towers (south-east quadrant)
 - **Central garden** between the towers
 - **Children's play area** — north-east corner of site
-- **Manicured lawn** — western boundary (Franklin Tower side)
-- **Lifts** confirmed in all 4 towers
+- **Manicured lawn** — western boundary (Benjamin-Franklin Tower side)
+- **Lifts** confirmed in all 3 towers
 
 ### Total Built-Up Areas (from Drawing 01)
 
 | Tower / Building | Built-Up Area (sqft) |
 |-----------------|---------------------:|
-| Franklin–Benjamin Tower (combined) | 54,651.96 |
+| Franklin–Benjamin-Benjamin-Franklin Tower (combined) | 54,651.96 |
 | Lincoln Tower | 59,278.01 |
 | Washington Tower | 59,278.01 |
 | **Total Built-Up** | **173,207.98** |
@@ -124,7 +124,7 @@
 
 ---
 
-## Benjamin–Franklin Tower (Drawing No. 3)
+## Benjamin–Benjamin-Franklin Tower (Drawing No. 3)
 
 **Type:** Combined building housing two tower types
 **Floors:** 1st to 11th (11 floors) for both towers
@@ -133,7 +133,7 @@
 **All measurements:** Imperial (feet)
 **Building footprint:** 94' × 68' (total combined building width × depth)
 
-### Franklin Tower (West side of combined building)
+### Benjamin-Franklin Tower (West side of combined building)
 - **Unit type:** Smaller unit — priced as 1BR tier
 - **Unit size:** 966.44 sq ft
 - **Units per floor:** 2 (FK.X-01 and FK.X-02)
@@ -141,7 +141,7 @@
 - **Layout:** Living Room, Kitchen, Bedroom (×2), Bathroom, Balcony, Laundry/Yard
 - **Floor-to-ceiling:** 10 feet
 
-### Unit ID Numbering (Franklin Tower)
+### Unit ID Numbering (Benjamin-Franklin Tower)
 | Floor | Unit IDs |
 |-------|----------|
 | 1st | FK.1-01 & FK.1-02 |
@@ -156,7 +156,7 @@
 | 10th | FK.10-19 & FK.10-20 |
 | 11th | FK.11-21 & FK.11-22 |
 
-### Benjamin Tower (East side of combined building)
+### Benjamin-Benjamin-Franklin Tower (East side of combined building)
 - **Unit type:** 2 Bedroom (2BHK)
 - **Unit size:** 1,311.18 sq ft
 - **Units per floor:** 2 (BNJ.X-01 and BNJ.X-02)
@@ -168,7 +168,7 @@
 - Central passage/lobby between Franklin and Benjamin: **413.12 sq ft** per floor
 - Two lifts confirmed in the combined building
 
-### Unit ID Numbering (Benjamin Tower)
+### Unit ID Numbering (Benjamin-Benjamin-Franklin Tower)
 | Floor | Unit IDs |
 |-------|----------|
 | 1st | BNJ.1-01 & BNJ.1-02 |

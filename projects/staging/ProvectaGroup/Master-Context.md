@@ -4,7 +4,7 @@
 **Category:** Consulting & Operations Firm
 **Owner:** Hassan Wilson — Founder & Managing Director
 **Stage:** Staging (Active Operations)
-**Last Updated:** 2026-04-10
+**Last Updated:** 2026-04-11
 
 ---
 
@@ -42,7 +42,9 @@ Provecta Group is a boutique consulting and operations firm delivering Revenue O
 |-------|---------------|--------|
 | Provecta Group Website | `pgco.world` (Netlify) | ✅ Live — SSL provisioned |
 | AI Memory Brain Landing Page | `pgco.world/AIMemoryBrain/Marketing/ai-memory-brain-landing.html` | ✅ Live — Mobile optimized |
-| Zoho CRM | Zoho One account | 🔄 Live — 34 custom fields active; workflow rule + Campaigns lists pending manual UI setup |
+| Zoho CRM | Zoho One account | 🔄 Live — 34 custom fields active; workflow rule pending manual UI setup |
+| Zoho Campaigns | Zoho One account | 🔄 Live — RevOps Prospects + AI Prospects lists created; email templates built; workflows pending canvas wiring |
+| Email Images (hosted) | `pgco.world/assets/emails/` | ✅ Live — earth-header-tall.jpg, provecta-logo.png, signature.png |
 | Netlify PAT | `nfp_KBFqbNdJn1x92MxGkyLyH2Te7rRaTKw7583d` | ✅ Active — Expires ~2026-07-10 |
 | Netlify Site ID | `0ac794dd-d20a-400d-b764-ec974fd4b6ea` | ✅ Active |
 
@@ -61,7 +63,10 @@ Provecta Group is a boutique consulting and operations firm delivering Revenue O
 | Premier Realty Proposal | `Premier_Realty_Proposal_2026.docx` | ✅ Complete |
 | Premier Realty Market Analysis | `Premier_Realty_Market_Analysis_2026.docx` | ✅ Complete |
 | Construction Cost Review | `Operations/Construction Cost and Contract Review Transcript.txt` | ✅ Archived |
-| Zoho Nurture Campaigns | `zoho-integration/NURTURE-CAMPAIGNS.md` | 📋 Plan ready — sequences not yet built in Campaigns UI |
+| Zoho Nurture Campaigns | `zoho-integration/NURTURE-CAMPAIGNS.md` | 📋 Plan ready — email HTML complete; workflows pending canvas wiring in Campaigns UI |
+| RevOps Email Templates | `zoho-integration/revops-nurture-emails-branded.html` | ✅ Complete — 5 emails, mobile optimized, hosted images, correct Zoho merge tags |
+| AI Audit Email Templates | `zoho-integration/ai-audit-nurture-emails-branded.html` | ✅ Complete — 6 emails, mobile optimized, hosted images, correct Zoho merge tags |
+| Standalone Email Previews | `zoho-integration/standalone-previews/` | ✅ Complete — 11 individual HTML files for mobile browser testing |
 | RevOps Audit Blueprint | `RevOps_Audit_Zoho_Blueprint_v1.docx` | ✅ Complete — 39 questions, 34 CRM fields, scoring matrix, discovery call framework |
 | RevOps Audit Netlify Fn | `zoho-integration/netlify/functions/revops-audit.js` | ✅ Updated — full 39-field mapping; ready to deploy |
 

@@ -12,7 +12,7 @@
 
 ## What Is This Folder?
 
-This is the **AI context memory** for the SierraHomes_AmericanDream project — a 108-unit residential apartment complex in Nyali, Mombasa, Kenya. It contains everything an AI assistant needs to understand the project, pick up where the last session left off, and execute work without losing context between sessions.
+This is the **AI context memory** for the SierraHomes_AmericanDream project — a 88-unit residential apartment complex in Nyali, Mombasa, Kenya. It contains everything an AI assistant needs to understand the project, pick up where the last session left off, and execute work without losing context between sessions.
 
 **This folder is NOT construction documents or source code.** It is a structured knowledge base that lives inside the `AI_Memory_Brain` repository.
 
@@ -39,7 +39,7 @@ Execute `agents/plan-release.md` — the iterative release planning protocol.
 | Item | Detail |
 |------|--------|
 | Location | Nyali, Mombasa, Kenya |
-| Scale | 108 units — Ground + 11 floors |
+| Scale | 88 units — Ground + 11 floors |
 | Unit Mix | 24×1BR · 36×2BR · 48×3BR |
 | Total GFA | 195,996 sqft / 18,208 sqm |
 | Dev Cost | KES 909,961,921 |

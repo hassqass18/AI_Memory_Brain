@@ -33,13 +33,13 @@
 **Label:** `[Human]`
 **Status:** Complete
 
-**Description:** During project initialization, the unit count was initially entered as 106. Upon final confirmation with Hassan, the correct total is 108 units (24×1BR + 36×2BR + 48×3BR). All project memory documents updated to reflect 108 units.
+**Description:** During project initialization, the unit count was initially entered as 106, then corrected to 108, then corrected again (2026-04-11) to **88 units** (22×1BR + 22×2BR + 44×3BR, 3 towers — Benjamin-Franklin Tower is one combined building). All project memory documents updated.
 
 **Files Updated:**
 - `Master-AI-Context.md` — unit count corrected
 - `Product_Development/SierraHomes_Tower/SierraHomes_AmericanDream_architecture.md` — unit count corrected
 - `README.md` — unit count corrected
-- `Product_Development/Releases/SierraHomes-phase1-pre-launch.md` — created with correct 108 unit count
+- `Product_Development/Releases/SierraHomes-phase1-pre-launch.md` — created with correct 88 unit count
 
 **Decision Reference:** KD-001
 

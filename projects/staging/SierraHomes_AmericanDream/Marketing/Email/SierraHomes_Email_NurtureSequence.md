@@ -149,9 +149,9 @@
 | `{{EMAIL_BODY_PARA_1}}` | Every unit at American Dream Apartments was designed with one philosophy: space is not a luxury, it's a right. Our 1-bedrooms start at 966 sqft (90 m²) (90 m²) (90 m²) — larger than many 2-bedroom apartments in the market. Our 3-bedrooms in Lincoln and Washington Towers reach 2,617 sqft (243 m²) (243 m²) (243 m²) — genuinely expansive family homes. |
 | `{{EMAIL_BODY_PARA_2}}` | Every layout features open-plan living, private balconies, and finishes that reflect the American-style standard the development is named for. Pre-launch pricing is available now across all unit types — and once the permit lands, these prices will not be repeated. |
 | `{{STAT_1_VALUE}}` | KES 10M |
-| `{{STAT_1_LABEL}}` | 1-Bedroom · 966 sqft (90 m²) (90 m²) · Franklin Tower |
+| `{{STAT_1_LABEL}}` | 1-Bedroom · 966 sqft (90 m²) (90 m²) · Benjamin-Franklin Tower |
 | `{{STAT_2_VALUE}}` | KES 17M |
-| `{{STAT_2_LABEL}}` | 2-Bedroom · 1,311 sqft (122 m²) (122 m²) · Franklin Tower |
+| `{{STAT_2_LABEL}}` | 2-Bedroom · 1,311 sqft (122 m²) (122 m²) · Benjamin-Franklin Tower |
 | `{{STAT_3_VALUE}}` | KES 23M |
 | `{{STAT_3_LABEL}}` | 3-Bedroom · 2,617 sqft (243 m²) (243 m²) · Lincoln & Washington |
 | `{{FEATURE_EYEBROW}}` | Payment Structure |

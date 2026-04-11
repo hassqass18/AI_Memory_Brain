@@ -5,7 +5,7 @@
 **Category:** Investment Fund Formation
 **Owner:** Andre "Hassan" Wilson — Regional CIO, East Africa
 **Stage:** Staging (Active Formation — LP Conversations April 2026)
-**Last Updated:** 2026-04-10
+**Last Updated:** 2026-04-11
 
 ---
 
@@ -35,7 +35,8 @@
 - **GP Agreement:** `MSIFS_GP_Agreement_DRAFT (2).docx` 🔄 In review
 - **Scope of Responsibility:** `MSIFS_Scope_of_Responsibility DRAFT.docx` 🔄 In review
 - **Infrastructure Finance Model:** `MSIFS_Infrastructure_Finance_Model_v2.xlsx` ✅ v2 complete
-- **Advisory Board Pitch:** `MSIFS-Advisory-Board-Pitch.docx` ✅ Complete
+- **Advisory Board Pitch:** `MSIFS-Advisory-Board-Pitch.docx` ✅ Complete (updated April 2026 — full professional pitch with fund thesis, GP team, 5 advisory roles, compensation structure, and formal ask)
+- **Advisory Board Best Practices Research:** `Advisory-Board-Pitch-Best-Practices.md` ✅ Complete (April 2026 — internal reference on outreach, personalization, compensation benchmarks, recruitment sequencing)
 - **Advisory Board Candidates:** `Potential Advisory Board Candidates.xlsx` ✅ Available
 - **Project Overview:** `MSIFS_Project_Overview_Feb2026.docx` ✅ Background
 - **GP Partnership Bios:** `GP-Branding/MSIFS-GP-Partnership-Bios.docx` ✅ Complete (April 2026) — 3-tier bios (80/175/350 words) for all 4 GPs, partnership-value frame

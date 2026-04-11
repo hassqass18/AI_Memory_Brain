@@ -112,7 +112,7 @@ Examples:
 | Feature | Location | Notes |
 |---------|----------|-------|
 | Lobby / Reception | Ground Floor | 24-hour staffed |
-| Lifts (Elevators) | All floors | Minimum 2 lifts for 108 units |
+| Lifts (Elevators) | All floors | Minimum 2 lifts for 88 units |
 | Stairwells | All floors | Minimum 2 fire-rated stairwells |
 | Parking | Basement or Podium | Ratio TBD — confirm with architect |
 | Bin Stores / Waste | Ground Floor | |

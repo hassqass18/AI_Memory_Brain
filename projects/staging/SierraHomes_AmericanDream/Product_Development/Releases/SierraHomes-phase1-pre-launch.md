@@ -153,14 +153,14 @@ Establish the legal, financial, marketing, and sales foundation required to laun
 - [ ] **P1-SAL-001** — Set Up Zoho CRM — SierraHomes Pipeline
   - **Owner:** `[AI+Human]`
   - **Priority:** 🔴 High
-  - **Description:** Configure Zoho CRM for SierraHomes_AmericanDream: create pipeline stages (Enquiry → Qualified → Reservation → SPA Signed → Completed Sale), unit availability tracker (108 units by type), custom fields for buyer profile (diaspora/local, finance type, preferred unit type).
+  - **Description:** Configure Zoho CRM for SierraHomes_AmericanDream: create pipeline stages (Enquiry → Qualified → Reservation → SPA Signed → Completed Sale), unit availability tracker (88 units by type), custom fields for buyer profile (diaspora/local, finance type, preferred unit type).
   - **Acceptance Criteria:** CRM live and ready to log first enquiries; Hassan can access and operate.
   - **Status:** Not Started
 
 - [ ] **P1-SAL-002** — Build Unit Availability Tracker
   - **Owner:** `[AI]`
   - **Priority:** 🔴 High
-  - **Description:** Create a unit availability and sales tracker spreadsheet: all 108 units (24×1BR, 36×2BR, 48×3BR), status (Available / Reserved / SPA Signed / Sold), buyer name, price, deposit received, and balance. Linked to CRM where possible.
+  - **Description:** Create a unit availability and sales tracker spreadsheet: all 88 units (24×1BR, 36×2BR, 48×3BR), status (Available / Reserved / SPA Signed / Sold), buyer name, price, deposit received, and balance. Linked to CRM where possible.
   - **Acceptance Criteria:** Tracker in `Sales/`; updated in real-time by AI as units are reserved.
   - **Status:** Not Started
 

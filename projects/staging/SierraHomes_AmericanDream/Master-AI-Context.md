@@ -22,12 +22,12 @@
 
 ## 1. Project Overview
 
-SierraHomes_AmericanDream is a **108-unit residential apartment complex** in **Nyali, Mombasa, Kenya** on **Plot MN/I/1691** — a 4-tower complex (Lincoln, Washington, Franklin, Benjamin Towers), each 11 floors.
+SierraHomes_AmericanDream is a **88-unit residential apartment complex** in **Nyali, Mombasa, Kenya** on **Plot MN/I/1691** — a 3-tower complex (Lincoln, Washington, Franklin, Benjamin-Benjamin-Franklin Tower (Franklin Wing) (Benjamin Wing)s), each 11 floors.
 
 **Developer:** Sierra USA Homes Ltd. | **Architect:** Ecotecture Ltd.
 **Website:** sierrausahomes.com | **Email:** sales@sierrausahomes.com
 
-**Sales model:** For-sale only. Land acquired via **22% equity deal** — landowners receive 23 units + KES 42M cash. Developer sells 85 units (63 off-plan + 22 on-market).
+**Sales model:** For-sale only. Land acquired via **22% equity deal** — landowners receive ~19 units + KES 42M cash. Developer sells 85 units (⚠️TBC off-plan + 22 on-market).
 
 ### Current Financials (updated 2026-04-10)
 
@@ -35,9 +35,9 @@ SierraHomes_AmericanDream is a **108-unit residential apartment complex** in **N
 |--------|-------|
 | Off-plan revenue | KES 1,060,000,000 |
 | On-market revenue | KES 660,000,000 |
-| **Total gross revenue** | **KES 1,720,000,000** |
-| Net developer profit | KES 810,038,079 |
-| **ROI** | **89%** |
+| **Total gross revenue** | **KES ⚠️TBC** |
+| Net developer profit | KES ⚠️TBC |
+| **ROI** | **⚠️TBC** |
 
 ### Current Unit Pricing (updated 2026-04-10)
 
@@ -189,7 +189,7 @@ SierraHomes_AmericanDream is a **108-unit residential apartment complex** in **N
 | `Finance/SierraHomes_CashFlowModel_2026-04-10.xlsx` | Cash flow model |
 | `Investment/SierraHomes_InvestorDeck_2026-04-10.pptx` | 15-slide investor deck |
 | `Investment/SierraHomes_InvestorReturns_2026-04-10.xlsx` | Investor returns analysis |
-| `Sales/SierraHomes_UnitTracker_2026-04-10.xlsx` | 108-unit tracker |
+| `Sales/SierraHomes_UnitTracker_2026-04-10.xlsx` | 88-unit tracker |
 
 ---
 
@@ -199,7 +199,7 @@ SierraHomes_AmericanDream is a **108-unit residential apartment complex** in **N
 |---------|------|--------------|
 | 1 | 2026-03-29 | Project initialized, GitHub repo set up |
 | 2 | 2026-03-30 | Financial modelling, architecture confirmed |
-| 3 | 2026-03-30 | 4-tower design, land deal (22%) finalized |
+| 3 | 2026-03-30 | 3-tower design, land deal (22%) finalized |
 | 4 | 2026-03-31 | Marketing materials, buyer personas |
 | 5 | 2026-04-10 | Pricing update (1BR 10M/2BR 17M/3BR 23M), all financials rebuilt |
 | 6 | 2026-04-10 | Banner redesigns B2/B3/B4, brochure, sqft+sqm everywhere |
@@ -216,7 +216,7 @@ SierraHomes_AmericanDream is a **108-unit residential apartment complex** in **N
 | Phase 1 — Pre-Launch | Active | ~15% — Marketing suite complete, permit blocked by Rajab's overdue drawings |
 | Phase 2 — Off-Plan Launch | Pending | Marketing materials ready to deploy |
 | Phase 3 — Construction | Pending | Q3 2027 – Aug 2029 |
-| Phase 4 — Handover & Sell-Out | Pending | Target: KES 1,720,000,000 |
+| Phase 4 — Handover & Sell-Out | Pending | Target: KES ⚠️TBC |
 
 ---
 
