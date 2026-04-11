@@ -974,6 +974,11 @@
       .announcement-bar { padding: 10px 24px; }
       .nav { padding: 0 24px; }
       .hero { padding: 80px 24px 64px; }
+      .proof-strip { padding: 22px 24px; }
+      .problem { padding-left: 24px; padding-right: 24px; }
+      .how { padding-left: 24px; padding-right: 24px; }
+      .testimonial { padding-left: 24px; padding-right: 24px; }
+      .faq { padding-left: 24px; padding-right: 24px; }
       .pricing-header,
       .compare-header,
       .faq-inner { padding-left: 24px; padding-right: 24px; }
@@ -1079,9 +1084,46 @@
         min-height: auto;
       }
 
+      /* Proof strip */
+      .proof-strip {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 18px 16px;
+        justify-content: flex-start;
+      }
+      .proof-label { white-space: normal; }
+
+      /* Problem section */
+      .problem { padding-left: 16px; padding-right: 16px; }
+      .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      /* How it works section */
+      .how { padding-left: 16px; padding-right: 16px; }
+      .how-steps {
+        grid-template-columns: 1fr;
+        border-left: none;
+      }
+      .how-step {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-bottom: 32px;
+        margin-bottom: 8px;
+      }
+      .how-step:last-child { border-bottom: none; margin-bottom: 0; }
+
+      /* Testimonial */
+      .testimonial { padding-left: 16px; padding-right: 16px; }
+
       /* FAQ */
+      .faq { padding-left: 16px; padding-right: 16px; }
       .faq-inner { padding: 0 16px; }
       .faq-ctas { flex-direction: column; gap: 14px; }
+
+      /* Pricing tier desc */
+      .tier-desc { min-height: auto; }
 
       /* CTA banner */
       .cta-banner { padding: 48px 16px; }
@@ -1091,6 +1133,21 @@
       footer { padding: 36px 16px 20px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+
+      /* Modal */
+      .modal-overlay {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 20px 0;
+      }
+      .modal {
+        padding: 32px 20px;
+        margin: 0 16px;
+        max-width: calc(100% - 32px);
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
     }
 
     @media (max-width: 480px) {
@@ -1154,7 +1211,7 @@
     </div>
     <div class="hero-ctas">
       <button class="cta-primary" onclick="openModal()">Get started ↗</button>
-      <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Book a Demo" class="cta-secondary">Book a demo ↗</a>
+      <a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener" class="cta-secondary">Book a demo ↗</a>
     </div>
   </section>
 
@@ -1304,7 +1361,7 @@
           <li class="excluded"><span class="fi">✗</span> Dedicated engineer</li>
           <li class="excluded"><span class="fi">✗</span> Unlimited projects</li>
         </ul>
-        <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Done-For-You SMB" class="tier-cta primary">
+        <a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener" class="tier-cta primary">
           Book a discovery call <span>↗</span>
         </a>
       </div>
@@ -1329,7 +1386,7 @@
           <li class="included"><span class="fi">✓</span> Unlimited projects</li>
           <li class="included"><span class="fi">✓</span> Roadmap influence</li>
         </ul>
-        <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Enterprise Partnership" class="tier-cta">
+        <a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener" class="tier-cta">
           Get a demo <span>↗</span>
         </a>
       </div>
@@ -1358,7 +1415,7 @@
           <li class="excluded"><span class="fi">✗</span> 1:1 support</li>
           <li class="excluded"><span class="fi">✗</span> Managed maintenance</li>
         </ul>
-        <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Community Membership" class="tier-cta">
+        <a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener" class="tier-cta">
           Join Community <span>↗</span>
         </a>
       </div>
@@ -1817,7 +1874,7 @@
 
       <div class="faq-ctas">
         <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain Question" class="btn-ghost">Ask a question ↗</a>
-        <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Book a Demo" class="btn-ghost">Book a demo ↗</a>
+        <a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener" class="btn-ghost">Book a demo ↗</a>
       </div>
     </div>
   </section>
@@ -1830,7 +1887,7 @@
       <p>Stop re-briefing your AI every session. AI Memory Brain gives your assistant the context it needs — permanently.</p>
       <div class="cta-group">
         <button class="btn-primary" onclick="openModal()">Get Blueprint — $297 ↗</button>
-        <a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Done-For-You" class="btn-ghost">Talk to us about Done-For-You ↗</a>
+        <a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener" class="btn-ghost">Talk to us about Done-For-You ↗</a>
       </div>
     </div>
   </section>
@@ -1843,9 +1900,9 @@
         <ul>
           <li><a href="#how-it-works">How it works</a></li>
           <li><a href="#" onclick="openModal(); return false;">Blueprint — $297 (founding)</a></li>
-          <li><a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Done-For-You SMB">Done-For-You Setup</a></li>
-          <li><a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Enterprise">Enterprise Partnership</a></li>
-          <li><a href="mailto:hassan.qaseem@gc-usa.com?subject=AI Memory Brain — Demo">Book a Demo</a></li>
+          <li><a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener">Done-For-You Setup</a></li>
+          <li><a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener">Enterprise Partnership</a></li>
+          <li><a href="https://calendar.app.google/KTvMDZxSRr5ktPVeA" target="_blank" rel="noopener">Book a Demo</a></li>
         </ul>
       </div>
       <div class="footer-col">

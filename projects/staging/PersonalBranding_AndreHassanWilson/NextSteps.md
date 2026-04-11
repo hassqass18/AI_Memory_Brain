@@ -9,7 +9,7 @@
 
 ## Immediate Priorities
 
-- [ ] Enable Creator Mode on LinkedIn (mobile app — Settings > Creator Mode)
+- [x] Enable Creator Mode on LinkedIn — LinkedIn retired Creator Mode (March 2024). Completed equivalent: enabled "Make follow primary" in Settings > Visibility > Followers (2026-04-11)
 - [ ] Publish first LinkedIn post (from AMB content calendar)
 - [ ] Build 3 project case studies (Kazakhstan bilateral, Kenya SierraHomes, AMB launch)
 - [ ] Record LinkedIn profile video (60-second brand intro)

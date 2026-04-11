@@ -49,6 +49,8 @@
 | KD-029 | 2026-04-11 | PMO | Project files consolidated — canonical folder is staging/SierraHomes_AmericanDream; AI Training folder retired | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 | KD-030 | 2026-04-11 | PMO | Master-Context.md updated — Available Agents expanded (Product_Dev, Security, TechSupport) + Available Deliverables section added | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11.md` |
 | KD-031 | 2026-04-11 | Architecture | Unit count corrected to 88 (22×1BR + 22×2BR + 44×3BR); 3 towers; Benjamin-Franklin is one combined building | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11_0900.md` |
+| KD-032 | 2026-04-11 | Finance/Sales | Sales programme: 19 landowner + 21 off-plan (20×3BR + 1×2BR) + 48 on-market = KES 1,500M total revenue | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11_0900.md` |
+| KD-033 | 2026-04-11 | Finance | Excel model rebuilt for 88-unit model: 9 sheets, hard KES 660M, dev cost KES 784M, net profit KES 715.9M, ROI 91.3% | Confirmed | `decisions-learnings/Key-Decisions-2026-04-11_0900.md` |
 
 ---
 
@@ -56,19 +58,19 @@
 
 | Keyword | Relevant Decision IDs |
 |---------|----------------------|
-| Units / unit mix / count | KD-001, KD-015 |
-| Development cost / budget / construction cost | KD-002, KD-017, KD-021 |
+| Units / unit mix / count | KD-001, KD-015, KD-031 |
+| Development cost / budget / construction cost | KD-002, KD-017, KD-031, KD-033 |
 | Pricing / price / off-plan / on-market | KD-003, KD-020 |
-| Sales model / off-plan / on-plan / split | KD-004, KD-021 |
+| Sales model / off-plan / on-plan / split | KD-004, KD-021, KD-032 |
 | Financing / equity / investor / gap | KD-005, KD-021 |
 | Sales priority / sales order / margin | KD-006 |
 | Unit size / sqft / sqm / floor area | KD-007, KD-015, KD-023 |
 | Sales launch / reservations / pre-permit | KD-008 |
 | Marketing / differentiator / rooftop / amenity | KD-009, KD-022, KD-027 |
 | Construction / timeline / programme / permits | KD-010 |
-| Tower / building / site / plot | KD-015 |
-| Land / landowner / equity deal | KD-016 |
-| Revenue / profit / ROI / ROC | KD-018, KD-021 |
+| Tower / building / site / plot | KD-015, KD-031 |
+| Land / landowner / equity deal | KD-016, KD-032 |
+| Revenue / profit / ROI / ROC | KD-018, KD-021, KD-032, KD-033 |
 | GitHub / git / push / automation | KD-014 |
 | Zoho / CRM / projects / MCP | KD-019 |
 | Branding / company name / Provecta Group | KD-024 |
@@ -79,6 +81,8 @@
 | Folder / staging / consolidation | KD-029 |
 | Master-Context / deliverables / agents / index | KD-030 |
 | Unit count / 88 units / tower count / Benjamin-Franklin | KD-031 |
+| Sales programme / landowner units / off-plan split | KD-032 |
+| Excel financial model / cash flow model | KD-033 |
 
 ---
 

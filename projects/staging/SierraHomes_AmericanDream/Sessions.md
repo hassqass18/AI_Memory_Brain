@@ -18,10 +18,11 @@
 | 6 | 2026-04-10 | Banner redesigns: B2 (all floor plans + prices), B3 (all 7 amenities with SVG icons), B4 (location map started). Images embedded as base64. Floor plan display fixed. | Continued from KD-020–023 | `session-summary/AI-Session-Summary-2026-04-10_2149.md` |
 | 7 | 2026-04-11 | Realistic map (OSM-verified POI pins, CartoDB tiles), Provecta Group retired, website/email updated, SVG amenity icons on B1, 7 amenity PNGs exported, QR code on B1, banners exported to PDF, all files consolidated into staging/ | KD-024 to KD-029 | `session-summary/AI-Session-Summary-2026-04-11.md` |
 | 8 | 2026-04-11 | Master-Context.md updated — Available Agents table expanded (Product_Development, Security, TechSupport added); Available Deliverables & Content Files section created indexing all project files by department | KD-030 | *(root-level session — no separate project session file)* |
+| 9 | 2026-04-11 | Full production session: 12 social media posts (1080×1080 HTML + PNG), all project files corrected to 88 units / 3 towers / Benjamin-Franklin combined, sales programme rebuilt (19 landowner + 21 off-plan + 48 on-market = KES 1,500M revenue), full 9-sheet Excel financial model built (146 formulas, 0 errors, ROI 91.3%). | KD-031, KD-032, KD-033 | `session-summary/AI-Session-Summary-2026-04-11_0900.md` |
 
 ---
 
-## Session Count: 8
+## Session Count: 9
 
 ---
 
