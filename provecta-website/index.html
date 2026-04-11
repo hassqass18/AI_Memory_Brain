@@ -2502,7 +2502,7 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
   /* ── FORM SUBMIT ── */
-  function submitAuditForm() {
+  async function submitAuditForm() {
     const required = ['firstName', 'lastName', 'email', 'company'];
     let valid = true;
     required.forEach(id => {
@@ -2526,11 +2526,43 @@
 
     if (!valid) return;
 
-    // Simulate submission
-    document.getElementById('auditForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    // Disable button & show loading state
+    const btn = document.querySelector('.form-submit');
+    const originalText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = 'Submitting…';
 
-    // In production: POST to your backend / CRM / Zapier webhook here
+    try {
+      const payload = {
+        firstName: document.getElementById('firstName').value.trim(),
+        lastName:  document.getElementById('lastName').value.trim(),
+        email:     document.getElementById('email').value.trim(),
+        company:   document.getElementById('company').value.trim(),
+        role:      document.getElementById('role').value,
+        crm:       document.getElementById('crm').value,
+        challenge: document.getElementById('challenge').value.trim(),
+      };
+
+      const res = await fetch('/.netlify/functions/zoho-crm-lead', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error || 'Submission failed. Please try again.');
+      }
+
+      // Success — show thank-you state
+      document.getElementById('auditForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      alert(err.message || 'Something went wrong. Please try again.');
+    }
   }
 
   /* ── Smooth scroll for anchor links ── */
